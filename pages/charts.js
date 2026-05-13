@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import StatChart from "../components/StatChart";
 import PlayerComparison from "../components/PlayerComparison";
@@ -50,11 +51,14 @@ export default function Charts() {
       <Head>
         <title>Charts — BEST</title>
       </Head>
-      <div className="min-h-screen bg-gray-950 text-white">
+      <div className="min-h-screen bg-gray-950 text-white flex flex-col">
         <header className="border-b border-gray-800 px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-black tracking-tight text-emerald-400">BEST</Link>
+          <div className="flex items-center gap-3">
+            <Image src="/logo/logobml.png" alt="BestMostLast" width={40} height={40} className="rounded" />
+            <span className="text-xl font-black tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">BestMostLast</span>
+          </div>
           <nav className="flex gap-6 text-sm font-medium text-gray-400">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-cyan-400 transition-colors">Home</Link>
             <Link href="/charts" className="text-white">Charts</Link>
           </nav>
         </header>
@@ -110,6 +114,31 @@ export default function Charts() {
             </div>
           )}
         </main>
+
+        <footer className="border-t border-gray-800 px-6 py-8 mt-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-2">
+                <Image src="/logo/logobml.png" alt="BestMostLast" width={32} height={32} className="rounded" />
+                <span className="font-bold text-gray-300">BestMostLast</span>
+              </div>
+              <div className="flex gap-4">
+                <a href="https://x.com/bestmostlast" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  Twitter
+                </a>
+                <a href="https://www.youtube.com/@bestmostlast" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  YouTube
+                </a>
+                <a href="https://www.instagram.com/bestmostlast" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  Instagram
+                </a>
+              </div>
+            </div>
+            <div className="text-center text-xs text-gray-600">
+              <p>© 2026 BestMostLast. Sports data journalism. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   );
