@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python / scratch tooling
+/venv
+__pycache__/
+*.pyc
+
+# WC26 pipeline: source code is tracked, but deps + rendered output are not
+/scripts/wc26/shorts/node_modules
+/scripts/wc26/**/export/
+/scripts/wc26/shorts/_shared/
+/scripts/**/node_modules
+
+# large media / generated render outputs (keep out of git)
+*.mp4
+/public/data/top20.mp4
+/logo
