@@ -156,7 +156,9 @@ export default function MatchPage({ m }) {
                         <p className="text-xs font-bold text-data uppercase tracking-widest mb-1">
                           {i === 0 ? m.teamA : m.teamB}
                         </p>
-                        <p className="text-silver text-sm">{m.watch[i] || "—"}</p>
+                        <p className={m.watch[i] ? "text-silver text-sm" : "text-steel text-sm italic"}>
+                          {m.watch[i] || "Lineup TBC"}
+                        </p>
                       </div>
                     ))}
                   </div>

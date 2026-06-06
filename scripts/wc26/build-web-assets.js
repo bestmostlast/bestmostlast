@@ -15,7 +15,7 @@
  * Originals stay in scripts/ — the repo only commits the optimized derivatives.
  *
  * This is a LOCAL authoring step, not a deploy step: it reads source assets
- * that are gitignored (_shared/flags, */export/short.png) and source CSVs, so
+ * that are gitignored (_shared/flags, the export/short.png stills) and source CSVs, so
  * it cannot run on Vercel. Run it locally after re-rendering shorts or editing
  * the CSVs, then COMMIT the regenerated public/wc26/ — that committed output is
  * what deploys.

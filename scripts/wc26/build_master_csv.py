@@ -9,10 +9,32 @@ Usage: python3 scripts/wc26/build_master_csv.py
 """
 import csv
 import os
+import re
 
 HERE = os.path.dirname(__file__)
 SHORT = os.path.join(HERE, "data", "h2h_short.csv")
 OUT = os.path.join(HERE, "data", "master_cards.csv")
+
+# Strip a trailing WC-goal count like " (3)" — its presence flags a historical
+# all-time scorer that must never appear in the players-to-watch list.
+_GOALS = re.compile(r"\s*\(\d+\)\s*$")
+
+
+def watch(best1, best2, star1):
+    """Players to watch = expected 2026 participants only.
+
+    Priority: the filled starting XI (Best1/Best2), else a single curated CURRENT
+    star (Star1). Any value carrying a "(N)" goal count is a historical scorer and
+    is rejected. Returns "" when nothing qualifies (site shows "Lineup TBC").
+    """
+    picks = []
+    for v in (best1, best2, star1):
+        v = (v or "").strip()
+        if not v or _GOALS.search(v):  # blank or historical "(N)" entry → skip
+            continue
+        if v not in picks:
+            picks.append(v)
+    return ", ".join(picks[:2])
 
 
 def main():
@@ -46,10 +68,14 @@ def main():
             "S2_H2H_GF": f"{g('H2H_GF_a','')} | {g('H2H_GF_b','')}",
             "S2_H2H_GA": f"{g('H2H_GA_a','')} | {g('H2H_GA_b','')}",
             # --- S3 scorers / players to watch ---
+            # AllTime = historical WC top scorers (informational / photo grid).
             "S3_AllTime_A": f"{g('Top1_a','')}, {g('Top2_a','')}",
             "S3_AllTime_B": f"{g('Top1_b','')}, {g('Top2_b','')}",
-            "S3_Watch_A": f"{g('Best1_a','') or g('Star1_a','')}, {g('Best2_a','') or g('Star2_a','')}",
-            "S3_Watch_B": f"{g('Best1_b','') or g('Star1_b','')}, {g('Best2_b','') or g('Star2_b','')}",
+            # Watch = ONLY expected 2026 players: the starting XI (Best1/Best2) or a
+            # curated CURRENT star (Star1). NEVER Star2/Top — those are historical /
+            # retired scorers (e.g. Suat Mamat 1954). Blank → "Lineup TBC" on site.
+            "S3_Watch_A": watch(g('Best1_a',''), g('Best2_a',''), g('Star1_a','')),
+            "S3_Watch_B": watch(g('Best1_b',''), g('Best2_b',''), g('Star1_b','')),
             # --- S4 storyline (headline + hook per team) ---
             "S4_Headline_A": g("Headline_a", ""),
             "S4_Hook_A": g("Hook_a", ""),
