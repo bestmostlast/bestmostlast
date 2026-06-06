@@ -2,6 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "../components/SiteFooter";
 
 export default function Home() {
   const [latestStats, setLatestStats] = useState([]);
@@ -24,87 +26,85 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>BestMostLast — Premier League Stats</title>
-        <meta name="description" content="Beautiful Premier League data journalism" />
+        <title>BestMostLast — Sports Data Journalism</title>
+        <meta name="description" content="Best · Most · Last — beautiful sports data journalism" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="min-h-screen bg-gray-950 text-white flex flex-col">
-        <header className="border-b border-gray-800 px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Image src="/logo/logobml.png" alt="BestMostLast" width={40} height={40} className="rounded" />
-            <span className="text-xl font-black tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">BestMostLast</span>
-          </div>
-          <nav className="flex gap-6 text-sm font-medium text-gray-400">
-            <Link href="/" className="text-white">Home</Link>
-            <Link href="/charts" className="hover:text-cyan-400 transition-colors">Charts</Link>
-          </nav>
-        </header>
+      <div className="min-h-screen bg-ink text-silver flex flex-col">
+        <SiteHeader active="/" />
 
-        <main className="max-w-4xl mx-auto px-6 py-16">
-          <h1 className="text-5xl font-black tracking-tight mb-4">
-            Premier League<br />
-            <span className="text-emerald-400">Data Stories</span>
-          </h1>
-          <p className="text-gray-400 text-lg mb-12 max-w-xl">
-            Real-time stats, beautiful charts, and deep dives into the Premier League.
-          </p>
+        <main className="max-w-6xl w-full mx-auto px-6 py-16">
+          {/* Hero */}
+          <section className="mb-16">
+            <h1 className="text-5xl md:text-6xl font-black tracking-tight mb-4 text-silver">
+              Best · Most · Last
+            </h1>
+            <p className="text-steel text-lg mb-8 max-w-xl">
+              Performance × popularity, ranked over time. Sports data journalism
+              rendered as living charts and short-form video.
+            </p>
+            <Link
+              href="/wc26"
+              className="inline-flex items-center gap-2 bg-brand hover:brightness-110 text-ink font-bold px-6 py-3 rounded-full transition"
+            >
+              World Cup 2026 →
+            </Link>
+          </section>
+
+          {/* WC26 promo strip */}
+          <Link
+            href="/wc26"
+            className="block mb-16 rounded-2xl border border-shadow bg-gunmetal/40 hover:bg-gunmetal/60 transition p-6"
+          >
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest text-gold mb-1">
+                  New
+                </p>
+                <h2 className="text-2xl font-black text-silver">
+                  WC 2026 — every match, decoded
+                </h2>
+                <p className="text-steel text-sm mt-1">
+                  72 group-stage matchup cards: records, head-to-head, players to
+                  watch.
+                </p>
+              </div>
+              <span className="text-data font-bold whitespace-nowrap">
+                Explore →
+              </span>
+            </div>
+          </Link>
 
           {latestStats.length > 0 && (
             <section>
-              <h2 className="text-xl font-bold mb-4 text-gray-300">Top Scorers</h2>
+              <h2 className="text-xl font-bold mb-4 text-silver">Top Scorers</h2>
               <div className="grid gap-3">
                 {latestStats.map((s, i) => (
-                  <div key={i} className="flex items-center justify-between bg-gray-900 rounded-xl px-5 py-4 border border-gray-800">
+                  <div
+                    key={i}
+                    className="flex items-center justify-between bg-gunmetal/40 rounded-xl px-5 py-4 border border-shadow"
+                  >
                     <div>
-                      <span className="font-bold text-white">{s.player}</span>
-                      <span className="ml-2 text-sm text-gray-500">{s.team}</span>
+                      <span className="font-bold text-silver">{s.player}</span>
+                      <span className="ml-2 text-sm text-steel">{s.team}</span>
                     </div>
-                    <span className="text-2xl font-black text-emerald-400">{s.goals}</span>
+                    <span className="text-2xl font-black text-data">{s.goals}</span>
                   </div>
                 ))}
               </div>
               <div className="mt-6">
-                <Link href="/charts" className="inline-block bg-emerald-500 hover:bg-emerald-400 text-black font-bold px-6 py-3 rounded-full transition-colors">
+                <Link
+                  href="/charts"
+                  className="inline-block bg-gunmetal hover:bg-navy text-silver font-bold px-6 py-3 rounded-full transition-colors"
+                >
                   View All Charts →
                 </Link>
               </div>
             </section>
           )}
-
-          {latestStats.length === 0 && (
-            <div className="text-center py-24 text-gray-600">
-              <p className="text-lg">Add data to <code className="text-gray-500">public/data/premier-league.csv</code> to get started.</p>
-              <Link href="/charts" className="mt-6 inline-block bg-emerald-500 hover:bg-emerald-400 text-black font-bold px-6 py-3 rounded-full transition-colors">
-                Explore Charts →
-              </Link>
-            </div>
-          )}
         </main>
 
-        <footer className="border-t border-gray-800 px-6 py-8 mt-16">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-2">
-                <Image src="/logo/logobml.png" alt="BestMostLast" width={32} height={32} className="rounded" />
-                <span className="font-bold text-gray-300">BestMostLast</span>
-              </div>
-              <div className="flex gap-4">
-                <a href="https://x.com/bestmostlast" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  Twitter
-                </a>
-                <a href="https://www.youtube.com/@bestmostlast" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  YouTube
-                </a>
-                <a href="https://www.instagram.com/bestmostlast" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  Instagram
-                </a>
-              </div>
-            </div>
-            <div className="text-center text-xs text-gray-600">
-              <p>© 2026 BestMostLast. Sports data journalism. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+        <SiteFooter />
       </div>
     </>
   );

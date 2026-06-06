@@ -1,0 +1,4894 @@
+{
+  "generated": "2026-06-06T06:42:35.005Z",
+  "count": 104,
+  "matches": [
+    {
+      "no": 1,
+      "slug": "m001-mexico-vs-south-africa",
+      "phase": "group",
+      "group": "A",
+      "matchday": 1,
+      "date": "2026-06-11",
+      "time": "19:00 CET · 13:00 EST",
+      "venue": "Estadio Azteca",
+      "city": "Mexico City",
+      "teamA": "Mexico",
+      "teamB": "South Africa",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "17",
+        "3"
+      ],
+      "played": [
+        "60",
+        "9"
+      ],
+      "ppg": [
+        "66(1.1)",
+        "10(1.11)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "1",
+        "l": "0"
+      },
+      "headline": [
+        "17 TRIES · NEVER PAST THE QUARTERS",
+        "3 WORLD CUPS · OUT TO MAKE THEIR MARK"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "ALL TO PLAY FOR"
+      ],
+      "watch": [
+        "Sánchez, Gallardo",
+        "Mokoena, Williams"
+      ]
+    },
+    {
+      "no": 2,
+      "slug": "m002-south-korea-vs-czech-republic",
+      "phase": "group",
+      "group": "A",
+      "matchday": 1,
+      "date": "2026-06-12",
+      "time": "",
+      "venue": "Estadio Akron",
+      "city": "Zapopan",
+      "teamA": "South Korea",
+      "teamB": "Czech Republic",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "11",
+        "1"
+      ],
+      "played": [
+        "38",
+        "3"
+      ],
+      "ppg": [
+        "31(0.82)",
+        "3(1.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "SEMI-FINALISTS · THE NEARLY MEN",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "SON CARRIES KOREA'S HOPES",
+        "OUT TO MAKE THEIR MARK"
+      ],
+      "watch": [
+        "Heung-min Son, Heung-min Son (3)",
+        ", Tomáš Rosický (2)"
+      ]
+    },
+    {
+      "no": 3,
+      "slug": "m003-canada-vs-bosnia-herzegovina",
+      "phase": "group",
+      "group": "B",
+      "matchday": 1,
+      "date": "2026-06-12",
+      "time": "",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "teamA": "Canada",
+      "teamB": "Bosnia & Herzegovina",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "2",
+        "1"
+      ],
+      "played": [
+        "6",
+        "3"
+      ],
+      "ppg": [
+        "0(0.0)",
+        "3(1.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "2 WORLD CUPS · OUT TO MAKE THEIR MARK",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "THE BIG STAGE AWAITS",
+        "EYES ON THE FINAL SQUAD"
+      ],
+      "watch": [
+        ", Alphonso Davies (1)",
+        ", Sead Kolašinac (1)"
+      ]
+    },
+    {
+      "no": 4,
+      "slug": "m004-usa-vs-paraguay",
+      "phase": "group",
+      "group": "D",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "time": "",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles",
+      "teamA": "USA",
+      "teamB": "Paraguay",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "11",
+        "8"
+      ],
+      "played": [
+        "37",
+        "27"
+      ],
+      "ppg": [
+        "35(0.95)",
+        "31(1.15)"
+      ],
+      "h2h": {
+        "w": "1",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "SEMI-FINALISTS · THE NEARLY MEN",
+        "QUARTER-FINALS THEIR FINEST HOUR"
+      ],
+      "hook": [
+        "ALL TO PLAY FOR",
+        "THE BIG STAGE AWAITS"
+      ],
+      "watch": [
+        ", Timothy Weah (1)",
+        ", Nelson Cuevas (3)"
+      ]
+    },
+    {
+      "no": 5,
+      "slug": "m005-qatar-vs-switzerland",
+      "phase": "group",
+      "group": "B",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "time": "",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "teamA": "Qatar",
+      "teamB": "Switzerland",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "1",
+        "12"
+      ],
+      "played": [
+        "3",
+        "40"
+      ],
+      "ppg": [
+        "0(0.0)",
+        "47(1.18)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ON THE GREATEST STAGE",
+        "12 TRIES · NEVER PAST THE QUARTERS"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "ALL TO PLAY FOR"
+      ],
+      "watch": [
+        ", Mohammed Muntari (1)",
+        ", Xherdan Shaqiri (5)"
+      ]
+    },
+    {
+      "no": 6,
+      "slug": "m006-brazil-vs-morocco",
+      "phase": "group",
+      "group": "C",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "time": "",
+      "venue": "MetLife Stadium",
+      "city": "New Jersey",
+      "teamA": "Brazil",
+      "teamB": "Morocco",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "22",
+        "6"
+      ],
+      "played": [
+        "113",
+        "23"
+      ],
+      "ppg": [
+        "244(2.16)",
+        "22(0.96)"
+      ],
+      "h2h": {
+        "w": "1",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "5-TIME WORLD CHAMPIONS",
+        "SEMI-FINALISTS · THE NEARLY MEN"
+      ],
+      "hook": [
+        "VINI JR. — THE NEW KING?",
+        "READY FOR THE STAGE"
+      ],
+      "watch": [
+        "Vinicius Junior, Neymar (8)",
+        ", Youssef En-Nesyri (3)"
+      ]
+    },
+    {
+      "no": 7,
+      "slug": "m007-haiti-vs-scotland",
+      "phase": "group",
+      "group": "C",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "time": "",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "teamA": "Haiti",
+      "teamB": "Scotland",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "1",
+        "8"
+      ],
+      "played": [
+        "3",
+        "23"
+      ],
+      "ppg": [
+        "0(0.0)",
+        "19(0.83)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ON THE GREATEST STAGE",
+        "8 TRIES · CHASING A FIRST KNOCKOUT"
+      ],
+      "hook": [
+        "OUT TO MAKE THEIR MARK",
+        "READY FOR THE STAGE"
+      ],
+      "watch": [
+        ", Emmanuel Sanon (2)",
+        ", Joe Jordan (4)"
+      ]
+    },
+    {
+      "no": 8,
+      "slug": "m008-australia-vs-turkey",
+      "phase": "group",
+      "group": "D",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "time": "",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "teamA": "Australia",
+      "teamB": "Turkey",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "6",
+        "2"
+      ],
+      "played": [
+        "20",
+        "10"
+      ],
+      "ppg": [
+        "16(0.8)",
+        "16(1.6)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ROUND OF 16 · OUT TO GO FURTHER",
+        "SEMI-FINALISTS · THE NEARLY MEN"
+      ],
+      "hook": [
+        "THE BIG STAGE AWAITS",
+        "CAN ARDA SHINE AGAIN?"
+      ],
+      "watch": [
+        ", Mile Jedinak (3)",
+        "Arda Güler, Suat Mamat (3)"
+      ]
+    },
+    {
+      "no": 9,
+      "slug": "m009-germany-vs-curacao",
+      "phase": "group",
+      "group": "E",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "time": "",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "teamA": "Germany",
+      "teamB": "Curacao",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "20",
+        "0"
+      ],
+      "played": [
+        "111",
+        "0"
+      ],
+      "ppg": [
+        "225(2.03)",
+        "0(0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "4-TIME WORLD CHAMPIONS",
+        "FIRST-EVER WORLD CUP"
+      ],
+      "hook": [
+        "OUT TO MAKE THEIR MARK",
+        "EYES ON THE FINAL SQUAD"
+      ],
+      "watch": [
+        ", Toni Kroos (3)",
+        ","
+      ]
+    },
+    {
+      "no": 10,
+      "slug": "m010-netherlands-vs-japan",
+      "phase": "group",
+      "group": "F",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "time": "",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "teamA": "Netherlands",
+      "teamB": "Japan",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "11",
+        "7"
+      ],
+      "played": [
+        "55",
+        "25"
+      ],
+      "ppg": [
+        "104(1.89)",
+        "27(1.08)"
+      ],
+      "h2h": {
+        "w": "1",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "RUNNERS-UP ONCE · STILL CHASING THE CROWN",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "THE BIG STAGE AWAITS",
+        "THE BIG STAGE AWAITS"
+      ],
+      "watch": [
+        ", Memphis Depay (3)",
+        ", Keisuke Honda (4)"
+      ]
+    },
+    {
+      "no": 11,
+      "slug": "m011-ivory-coast-vs-ecuador",
+      "phase": "group",
+      "group": "E",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "time": "",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "teamA": "Ivory Coast",
+      "teamB": "Ecuador",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "3",
+        "4"
+      ],
+      "played": [
+        "9",
+        "13"
+      ],
+      "ppg": [
+        "10(1.11)",
+        "17(1.31)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "3 WORLD CUPS · OUT TO MAKE THEIR MARK",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "ALL TO PLAY FOR"
+      ],
+      "watch": [
+        ", Didier Drogba (2)",
+        ", Enner Valencia (6)"
+      ]
+    },
+    {
+      "no": 12,
+      "slug": "m012-sweden-vs-tunisia",
+      "phase": "group",
+      "group": "F",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "time": "",
+      "venue": "Estadio BBVA",
+      "city": "Guadalupe",
+      "teamA": "Sweden",
+      "teamB": "Tunisia",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "12",
+        "6"
+      ],
+      "played": [
+        "51",
+        "18"
+      ],
+      "ppg": [
+        "70(1.37)",
+        "14(0.78)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "RUNNERS-UP ONCE · STILL CHASING THE CROWN",
+        "6 WORLD CUPS · EYEING A BREAKTHROUGH"
+      ],
+      "hook": [
+        "READY FOR THE STAGE",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        ", Andreas Granqvist (2)",
+        ", Wahbi Khazri (3)"
+      ]
+    },
+    {
+      "no": 13,
+      "slug": "m013-spain-vs-cape-verde",
+      "phase": "group",
+      "group": "H",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "time": "",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "teamA": "Spain",
+      "teamB": "Cape Verde",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "16",
+        "0"
+      ],
+      "played": [
+        "66",
+        "0"
+      ],
+      "ppg": [
+        "110(1.67)",
+        "0(0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "1x CHAMPIONS · CHASING MORE GLORY",
+        "FIRST-EVER WORLD CUP"
+      ],
+      "hook": [
+        "OUT TO MAKE THEIR MARK",
+        "ALL TO PLAY FOR"
+      ],
+      "watch": [
+        ", Diego Costa (3)",
+        ","
+      ]
+    },
+    {
+      "no": 14,
+      "slug": "m014-belgium-vs-egypt",
+      "phase": "group",
+      "group": "G",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "time": "",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "teamA": "Belgium",
+      "teamB": "Egypt",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "14",
+        "3"
+      ],
+      "played": [
+        "51",
+        "7"
+      ],
+      "ppg": [
+        "73(1.43)",
+        "2(0.29)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "SEMI-FINALISTS · THE NEARLY MEN",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "SALAH — THE PHARAOH RETURNS"
+      ],
+      "watch": [
+        ", Romelu Lukaku (5)",
+        "Mohamed Salah, Mohamed Salah (2)"
+      ]
+    },
+    {
+      "no": 15,
+      "slug": "m015-saudi-arabia-vs-uruguay",
+      "phase": "group",
+      "group": "H",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "time": "",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "teamA": "Saudi Arabia",
+      "teamB": "Uruguay",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "6",
+        "14"
+      ],
+      "played": [
+        "19",
+        "59"
+      ],
+      "ppg": [
+        "14(0.74)",
+        "88(1.49)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "1"
+      },
+      "headline": [
+        "ROUND OF 16 · OUT TO GO FURTHER",
+        "2x CHAMPIONS · CHASING MORE GLORY"
+      ],
+      "hook": [
+        "EYES ON THE FINAL SQUAD",
+        "THE BIG STAGE AWAITS"
+      ],
+      "watch": [
+        ", Salem Al-Dawsari (3)",
+        ", Luis Suárez (7)"
+      ]
+    },
+    {
+      "no": 16,
+      "slug": "m016-iran-vs-new-zealand",
+      "phase": "group",
+      "group": "G",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "time": "",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles",
+      "teamA": "Iran",
+      "teamB": "New Zealand",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "6",
+        "2"
+      ],
+      "played": [
+        "18",
+        "6"
+      ],
+      "ppg": [
+        "13(0.72)",
+        "3(0.5)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "6 WORLD CUPS · EYEING A BREAKTHROUGH",
+        "2 WORLD CUPS · OUT TO MAKE THEIR MARK"
+      ],
+      "hook": [
+        "THE BIG STAGE AWAITS",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        ", Mehdi Taremi (2)",
+        ", Steve Sumner (1)"
+      ]
+    },
+    {
+      "no": 17,
+      "slug": "m017-france-vs-senegal",
+      "phase": "group",
+      "group": "I",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "time": "",
+      "venue": "MetLife Stadium",
+      "city": "New Jersey",
+      "teamA": "France",
+      "teamB": "Senegal",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "16",
+        "3"
+      ],
+      "played": [
+        "73",
+        "12"
+      ],
+      "ppg": [
+        "131(1.79)",
+        "18(1.5)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "1"
+      },
+      "headline": [
+        "2x CHAMPIONS · CHASING MORE GLORY",
+        "QUARTER-FINALS THEIR FINEST HOUR"
+      ],
+      "hook": [
+        "MBAPPÉ — THE HEIR TO THE THRONE",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        "Kylian Mbappé, Kylian Mbappé (12)",
+        ", M'Baye Niang (1)"
+      ]
+    },
+    {
+      "no": 18,
+      "slug": "m018-iraq-vs-norway",
+      "phase": "group",
+      "group": "I",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "time": "",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "teamA": "Iraq",
+      "teamB": "Norway",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "1",
+        "3"
+      ],
+      "played": [
+        "3",
+        "8"
+      ],
+      "ppg": [
+        "0(0.0)",
+        "9(1.12)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ON THE GREATEST STAGE",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "HAALAND — THE GOAL MACHINE"
+      ],
+      "watch": [
+        ", Ahmed Radhi (1)",
+        "Erling Haaland, Kjetil Rekdal (2)"
+      ]
+    },
+    {
+      "no": 19,
+      "slug": "m019-argentina-vs-algeria",
+      "phase": "group",
+      "group": "J",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "time": "",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "teamA": "Argentina",
+      "teamB": "Algeria",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "18",
+        "4"
+      ],
+      "played": [
+        "88",
+        "13"
+      ],
+      "ppg": [
+        "158(1.8)",
+        "12(0.92)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "3x CHAMPIONS · CHASING MORE GLORY",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "MESSI — THE LAST DANCE",
+        "OUT TO MAKE THEIR MARK"
+      ],
+      "watch": [
+        "Lionel Messi, Lionel Messi (13)",
+        ", Salah Assad (2)"
+      ]
+    },
+    {
+      "no": 20,
+      "slug": "m020-austria-vs-jordan",
+      "phase": "group",
+      "group": "J",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "time": "",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "teamA": "Austria",
+      "teamB": "Jordan",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "7",
+        "0"
+      ],
+      "played": [
+        "29",
+        "0"
+      ],
+      "ppg": [
+        "40(1.38)",
+        "0(0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "SEMI-FINALISTS · THE NEARLY MEN",
+        "FIRST-EVER WORLD CUP"
+      ],
+      "hook": [
+        "OUT TO MAKE THEIR MARK",
+        "EYES ON THE FINAL SQUAD"
+      ],
+      "watch": [
+        ", Erich Probst (6)",
+        ","
+      ]
+    },
+    {
+      "no": 21,
+      "slug": "m021-portugal-vs-dr-congo",
+      "phase": "group",
+      "group": "K",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "time": "",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "teamA": "Portugal",
+      "teamB": "DR Congo",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "8",
+        "1"
+      ],
+      "played": [
+        "35",
+        "3"
+      ],
+      "ppg": [
+        "57(1.63)",
+        "0(0.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "SEMI-FINALISTS · THE NEARLY MEN",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "RONALDO — ONE LAST CROWN?",
+        "EYES ON THE FINAL SQUAD"
+      ],
+      "watch": [
+        "Cristiano Ronaldo, Cristiano Ronaldo (8)",
+        ","
+      ]
+    },
+    {
+      "no": 22,
+      "slug": "m022-england-vs-croatia",
+      "phase": "group",
+      "group": "L",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "time": "",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "teamA": "England",
+      "teamB": "Croatia",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "16",
+        "6"
+      ],
+      "played": [
+        "74",
+        "30"
+      ],
+      "ppg": [
+        "118(1.59)",
+        "47(1.57)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "1"
+      },
+      "headline": [
+        "1x CHAMPIONS · CHASING MORE GLORY",
+        "RUNNERS-UP ONCE · STILL CHASING THE CROWN"
+      ],
+      "hook": [
+        "KANE HUNTS THE CROWN",
+        "MODRIĆ — ONE MORE MIRACLE?"
+      ],
+      "watch": [
+        "Harry Kane, Harry Kane (8)",
+        "Luka Modrić, Ivan Perišić (6)"
+      ]
+    },
+    {
+      "no": 23,
+      "slug": "m023-ghana-vs-panama",
+      "phase": "group",
+      "group": "L",
+      "matchday": 1,
+      "date": "2026-06-18",
+      "time": "",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "teamA": "Ghana",
+      "teamB": "Panama",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "4",
+        "1"
+      ],
+      "played": [
+        "15",
+        "3"
+      ],
+      "ppg": [
+        "18(1.2)",
+        "0(0.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "QUARTER-FINALS THEIR FINEST HOUR",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "ALL TO PLAY FOR",
+        "READY FOR THE STAGE"
+      ],
+      "watch": [
+        ", André Ayew (3)",
+        ", Felipe Baloy (1)"
+      ]
+    },
+    {
+      "no": 24,
+      "slug": "m024-uzbekistan-vs-colombia",
+      "phase": "group",
+      "group": "K",
+      "matchday": 1,
+      "date": "2026-06-18",
+      "time": "",
+      "venue": "Estadio Azteca",
+      "city": "Mexico City",
+      "teamA": "Uzbekistan",
+      "teamB": "Colombia",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "0",
+        "6"
+      ],
+      "played": [
+        "0",
+        "22"
+      ],
+      "ppg": [
+        "0(0)",
+        "30(1.36)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "FIRST-EVER WORLD CUP",
+        "QUARTER-FINALS THEIR FINEST HOUR"
+      ],
+      "hook": [
+        "EYES ON THE FINAL SQUAD",
+        "READY FOR THE STAGE"
+      ],
+      "watch": [
+        ",",
+        ", Yerry Mina (3)"
+      ]
+    },
+    {
+      "no": 25,
+      "slug": "m025-czech-republic-vs-south-africa",
+      "phase": "group",
+      "group": "A",
+      "matchday": 2,
+      "date": "2026-06-18",
+      "time": "",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "teamA": "Czech Republic",
+      "teamB": "South Africa",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "1",
+        "3"
+      ],
+      "played": [
+        "3",
+        "9"
+      ],
+      "ppg": [
+        "3(1.0)",
+        "10(1.11)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ON THE GREATEST STAGE",
+        "3 WORLD CUPS · OUT TO MAKE THEIR MARK"
+      ],
+      "hook": [
+        "OUT TO MAKE THEIR MARK",
+        "ALL TO PLAY FOR"
+      ],
+      "watch": [
+        ", Tomáš Rosický (2)",
+        ", Benni McCarthy (2)"
+      ]
+    },
+    {
+      "no": 26,
+      "slug": "m026-switzerland-vs-bosnia-herzegovina",
+      "phase": "group",
+      "group": "B",
+      "matchday": 2,
+      "date": "2026-06-18",
+      "time": "",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles",
+      "teamA": "Switzerland",
+      "teamB": "Bosnia & Herzegovina",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "12",
+        "1"
+      ],
+      "played": [
+        "40",
+        "3"
+      ],
+      "ppg": [
+        "47(1.18)",
+        "3(1.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "12 TRIES · NEVER PAST THE QUARTERS",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "ALL TO PLAY FOR",
+        "EYES ON THE FINAL SQUAD"
+      ],
+      "watch": [
+        ", Xherdan Shaqiri (5)",
+        ", Sead Kolašinac (1)"
+      ]
+    },
+    {
+      "no": 27,
+      "slug": "m027-canada-vs-qatar",
+      "phase": "group",
+      "group": "B",
+      "matchday": 2,
+      "date": "2026-06-18",
+      "time": "",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "teamA": "Canada",
+      "teamB": "Qatar",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "2",
+        "1"
+      ],
+      "played": [
+        "6",
+        "3"
+      ],
+      "ppg": [
+        "0(0.0)",
+        "0(0.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "2 WORLD CUPS · OUT TO MAKE THEIR MARK",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "THE BIG STAGE AWAITS",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        ", Alphonso Davies (1)",
+        ", Mohammed Muntari (1)"
+      ]
+    },
+    {
+      "no": 28,
+      "slug": "m028-mexico-vs-south-korea",
+      "phase": "group",
+      "group": "A",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "time": "",
+      "venue": "Estadio Akron",
+      "city": "Zapopan",
+      "teamA": "Mexico",
+      "teamB": "South Korea",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "17",
+        "11"
+      ],
+      "played": [
+        "60",
+        "38"
+      ],
+      "ppg": [
+        "66(1.1)",
+        "31(0.82)"
+      ],
+      "h2h": {
+        "w": "2",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "17 TRIES · NEVER PAST THE QUARTERS",
+        "SEMI-FINALISTS · THE NEARLY MEN"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "SON CARRIES KOREA'S HOPES"
+      ],
+      "watch": [
+        ", Javier Hernández (4)",
+        "Heung-min Son, Heung-min Son (3)"
+      ]
+    },
+    {
+      "no": 29,
+      "slug": "m029-usa-vs-australia",
+      "phase": "group",
+      "group": "D",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "time": "",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "teamA": "USA",
+      "teamB": "Australia",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "11",
+        "6"
+      ],
+      "played": [
+        "37",
+        "20"
+      ],
+      "ppg": [
+        "35(0.95)",
+        "16(0.8)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "SEMI-FINALISTS · THE NEARLY MEN",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "ALL TO PLAY FOR",
+        "THE BIG STAGE AWAITS"
+      ],
+      "watch": [
+        ", Timothy Weah (1)",
+        ", Mile Jedinak (3)"
+      ]
+    },
+    {
+      "no": 30,
+      "slug": "m030-scotland-vs-morocco",
+      "phase": "group",
+      "group": "C",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "time": "",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "teamA": "Scotland",
+      "teamB": "Morocco",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "8",
+        "6"
+      ],
+      "played": [
+        "23",
+        "23"
+      ],
+      "ppg": [
+        "19(0.83)",
+        "22(0.96)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "1"
+      },
+      "headline": [
+        "8 TRIES · CHASING A FIRST KNOCKOUT",
+        "SEMI-FINALISTS · THE NEARLY MEN"
+      ],
+      "hook": [
+        "READY FOR THE STAGE",
+        "READY FOR THE STAGE"
+      ],
+      "watch": [
+        ", Joe Jordan (4)",
+        ", Youssef En-Nesyri (3)"
+      ]
+    },
+    {
+      "no": 31,
+      "slug": "m031-brazil-vs-haiti",
+      "phase": "group",
+      "group": "C",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "time": "",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "teamA": "Brazil",
+      "teamB": "Haiti",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "22",
+        "1"
+      ],
+      "played": [
+        "113",
+        "3"
+      ],
+      "ppg": [
+        "244(2.16)",
+        "0(0.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "5-TIME WORLD CHAMPIONS",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "VINI JR. — THE NEW KING?",
+        "OUT TO MAKE THEIR MARK"
+      ],
+      "watch": [
+        "Vinicius Junior, Neymar (8)",
+        ", Emmanuel Sanon (2)"
+      ]
+    },
+    {
+      "no": 32,
+      "slug": "m032-turkey-vs-paraguay",
+      "phase": "group",
+      "group": "D",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "time": "",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "teamA": "Turkey",
+      "teamB": "Paraguay",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "2",
+        "8"
+      ],
+      "played": [
+        "10",
+        "27"
+      ],
+      "ppg": [
+        "16(1.6)",
+        "31(1.15)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "SEMI-FINALISTS · THE NEARLY MEN",
+        "QUARTER-FINALS THEIR FINEST HOUR"
+      ],
+      "hook": [
+        "CAN ARDA SHINE AGAIN?",
+        "THE BIG STAGE AWAITS"
+      ],
+      "watch": [
+        "Arda Güler, Suat Mamat (3)",
+        ", Nelson Cuevas (3)"
+      ]
+    },
+    {
+      "no": 33,
+      "slug": "m033-netherlands-vs-sweden",
+      "phase": "group",
+      "group": "F",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "time": "",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "teamA": "Netherlands",
+      "teamB": "Sweden",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "11",
+        "12"
+      ],
+      "played": [
+        "55",
+        "51"
+      ],
+      "ppg": [
+        "104(1.89)",
+        "70(1.37)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "1",
+        "l": "0"
+      },
+      "headline": [
+        "RUNNERS-UP ONCE · STILL CHASING THE CROWN",
+        "RUNNERS-UP ONCE · STILL CHASING THE CROWN"
+      ],
+      "hook": [
+        "THE BIG STAGE AWAITS",
+        "READY FOR THE STAGE"
+      ],
+      "watch": [
+        ", Memphis Depay (3)",
+        ", Andreas Granqvist (2)"
+      ]
+    },
+    {
+      "no": 34,
+      "slug": "m034-germany-vs-ivory-coast",
+      "phase": "group",
+      "group": "E",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "time": "",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "teamA": "Germany",
+      "teamB": "Ivory Coast",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "20",
+        "3"
+      ],
+      "played": [
+        "111",
+        "9"
+      ],
+      "ppg": [
+        "225(2.03)",
+        "10(1.11)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "4-TIME WORLD CHAMPIONS",
+        "3 WORLD CUPS · OUT TO MAKE THEIR MARK"
+      ],
+      "hook": [
+        "OUT TO MAKE THEIR MARK",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        ", Toni Kroos (3)",
+        ", Didier Drogba (2)"
+      ]
+    },
+    {
+      "no": 35,
+      "slug": "m035-ecuador-vs-curacao",
+      "phase": "group",
+      "group": "E",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "time": "",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "teamA": "Ecuador",
+      "teamB": "Curacao",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "4",
+        "0"
+      ],
+      "played": [
+        "13",
+        "0"
+      ],
+      "ppg": [
+        "17(1.31)",
+        "0(0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ROUND OF 16 · OUT TO GO FURTHER",
+        "FIRST-EVER WORLD CUP"
+      ],
+      "hook": [
+        "ALL TO PLAY FOR",
+        "EYES ON THE FINAL SQUAD"
+      ],
+      "watch": [
+        ", Enner Valencia (6)",
+        ","
+      ]
+    },
+    {
+      "no": 36,
+      "slug": "m036-tunisia-vs-japan",
+      "phase": "group",
+      "group": "F",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "time": "",
+      "venue": "Estadio BBVA",
+      "city": "Guadalupe",
+      "teamA": "Tunisia",
+      "teamB": "Japan",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "6",
+        "7"
+      ],
+      "played": [
+        "18",
+        "25"
+      ],
+      "ppg": [
+        "14(0.78)",
+        "27(1.08)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "1"
+      },
+      "headline": [
+        "6 WORLD CUPS · EYEING A BREAKTHROUGH",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "THE BIG STAGE AWAITS"
+      ],
+      "watch": [
+        ", Wahbi Khazri (3)",
+        ", Keisuke Honda (4)"
+      ]
+    },
+    {
+      "no": 37,
+      "slug": "m037-spain-vs-saudi-arabia",
+      "phase": "group",
+      "group": "H",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "time": "",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "teamA": "Spain",
+      "teamB": "Saudi Arabia",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "16",
+        "6"
+      ],
+      "played": [
+        "66",
+        "19"
+      ],
+      "ppg": [
+        "110(1.67)",
+        "14(0.74)"
+      ],
+      "h2h": {
+        "w": "1",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "1x CHAMPIONS · CHASING MORE GLORY",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "OUT TO MAKE THEIR MARK",
+        "EYES ON THE FINAL SQUAD"
+      ],
+      "watch": [
+        ", Diego Costa (3)",
+        ", Salem Al-Dawsari (3)"
+      ]
+    },
+    {
+      "no": 38,
+      "slug": "m038-belgium-vs-iran",
+      "phase": "group",
+      "group": "G",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "time": "",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles",
+      "teamA": "Belgium",
+      "teamB": "Iran",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "14",
+        "6"
+      ],
+      "played": [
+        "51",
+        "18"
+      ],
+      "ppg": [
+        "73(1.43)",
+        "13(0.72)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "SEMI-FINALISTS · THE NEARLY MEN",
+        "6 WORLD CUPS · EYEING A BREAKTHROUGH"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "THE BIG STAGE AWAITS"
+      ],
+      "watch": [
+        ", Romelu Lukaku (5)",
+        ", Mehdi Taremi (2)"
+      ]
+    },
+    {
+      "no": 39,
+      "slug": "m039-uruguay-vs-cape-verde",
+      "phase": "group",
+      "group": "H",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "time": "",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "teamA": "Uruguay",
+      "teamB": "Cape Verde",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "14",
+        "0"
+      ],
+      "played": [
+        "59",
+        "0"
+      ],
+      "ppg": [
+        "88(1.49)",
+        "0(0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "2x CHAMPIONS · CHASING MORE GLORY",
+        "FIRST-EVER WORLD CUP"
+      ],
+      "hook": [
+        "THE BIG STAGE AWAITS",
+        "ALL TO PLAY FOR"
+      ],
+      "watch": [
+        ", Luis Suárez (7)",
+        ","
+      ]
+    },
+    {
+      "no": 40,
+      "slug": "m040-new-zealand-vs-egypt",
+      "phase": "group",
+      "group": "G",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "time": "",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "teamA": "New Zealand",
+      "teamB": "Egypt",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "2",
+        "3"
+      ],
+      "played": [
+        "6",
+        "7"
+      ],
+      "ppg": [
+        "3(0.5)",
+        "2(0.29)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "2 WORLD CUPS · OUT TO MAKE THEIR MARK",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "SALAH — THE PHARAOH RETURNS"
+      ],
+      "watch": [
+        ", Steve Sumner (1)",
+        "Mohamed Salah, Mohamed Salah (2)"
+      ]
+    },
+    {
+      "no": 41,
+      "slug": "m041-argentina-vs-austria",
+      "phase": "group",
+      "group": "J",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "time": "",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "teamA": "Argentina",
+      "teamB": "Austria",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "18",
+        "7"
+      ],
+      "played": [
+        "88",
+        "29"
+      ],
+      "ppg": [
+        "158(1.8)",
+        "40(1.38)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "3x CHAMPIONS · CHASING MORE GLORY",
+        "SEMI-FINALISTS · THE NEARLY MEN"
+      ],
+      "hook": [
+        "MESSI — THE LAST DANCE",
+        "OUT TO MAKE THEIR MARK"
+      ],
+      "watch": [
+        "Lionel Messi, Lionel Messi (13)",
+        ", Erich Probst (6)"
+      ]
+    },
+    {
+      "no": 42,
+      "slug": "m042-france-vs-iraq",
+      "phase": "group",
+      "group": "I",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "time": "",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "teamA": "France",
+      "teamB": "Iraq",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "16",
+        "1"
+      ],
+      "played": [
+        "73",
+        "3"
+      ],
+      "ppg": [
+        "131(1.79)",
+        "0(0.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "2x CHAMPIONS · CHASING MORE GLORY",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "MBAPPÉ — THE HEIR TO THE THRONE",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        "Kylian Mbappé, Kylian Mbappé (12)",
+        ", Ahmed Radhi (1)"
+      ]
+    },
+    {
+      "no": 43,
+      "slug": "m043-norway-vs-senegal",
+      "phase": "group",
+      "group": "I",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "time": "",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "teamA": "Norway",
+      "teamB": "Senegal",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "3",
+        "3"
+      ],
+      "played": [
+        "8",
+        "12"
+      ],
+      "ppg": [
+        "9(1.12)",
+        "18(1.5)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ROUND OF 16 · OUT TO GO FURTHER",
+        "QUARTER-FINALS THEIR FINEST HOUR"
+      ],
+      "hook": [
+        "HAALAND — THE GOAL MACHINE",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        "Erling Haaland, Kjetil Rekdal (2)",
+        ", M'Baye Niang (1)"
+      ]
+    },
+    {
+      "no": 44,
+      "slug": "m044-jordan-vs-algeria",
+      "phase": "group",
+      "group": "J",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "time": "",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "teamA": "Jordan",
+      "teamB": "Algeria",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "0",
+        "4"
+      ],
+      "played": [
+        "0",
+        "13"
+      ],
+      "ppg": [
+        "0(0)",
+        "12(0.92)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "FIRST-EVER WORLD CUP",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "EYES ON THE FINAL SQUAD",
+        "OUT TO MAKE THEIR MARK"
+      ],
+      "watch": [
+        ",",
+        ", Salah Assad (2)"
+      ]
+    },
+    {
+      "no": 45,
+      "slug": "m045-portugal-vs-uzbekistan",
+      "phase": "group",
+      "group": "K",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "time": "",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "teamA": "Portugal",
+      "teamB": "Uzbekistan",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "8",
+        "0"
+      ],
+      "played": [
+        "35",
+        "0"
+      ],
+      "ppg": [
+        "57(1.63)",
+        "0(0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "SEMI-FINALISTS · THE NEARLY MEN",
+        "FIRST-EVER WORLD CUP"
+      ],
+      "hook": [
+        "RONALDO — ONE LAST CROWN?",
+        "EYES ON THE FINAL SQUAD"
+      ],
+      "watch": [
+        "Cristiano Ronaldo, Cristiano Ronaldo (8)",
+        ","
+      ]
+    },
+    {
+      "no": 46,
+      "slug": "m046-england-vs-ghana",
+      "phase": "group",
+      "group": "L",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "time": "",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "teamA": "England",
+      "teamB": "Ghana",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "16",
+        "4"
+      ],
+      "played": [
+        "74",
+        "15"
+      ],
+      "ppg": [
+        "118(1.59)",
+        "18(1.2)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "1x CHAMPIONS · CHASING MORE GLORY",
+        "QUARTER-FINALS THEIR FINEST HOUR"
+      ],
+      "hook": [
+        "KANE HUNTS THE CROWN",
+        "ALL TO PLAY FOR"
+      ],
+      "watch": [
+        "Harry Kane, Harry Kane (8)",
+        ", André Ayew (3)"
+      ]
+    },
+    {
+      "no": 47,
+      "slug": "m047-panama-vs-croatia",
+      "phase": "group",
+      "group": "L",
+      "matchday": 2,
+      "date": "2026-06-24",
+      "time": "",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "teamA": "Panama",
+      "teamB": "Croatia",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "1",
+        "6"
+      ],
+      "played": [
+        "3",
+        "30"
+      ],
+      "ppg": [
+        "0(0.0)",
+        "47(1.57)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ON THE GREATEST STAGE",
+        "RUNNERS-UP ONCE · STILL CHASING THE CROWN"
+      ],
+      "hook": [
+        "READY FOR THE STAGE",
+        "MODRIĆ — ONE MORE MIRACLE?"
+      ],
+      "watch": [
+        ", Felipe Baloy (1)",
+        "Luka Modrić, Ivan Perišić (6)"
+      ]
+    },
+    {
+      "no": 48,
+      "slug": "m048-colombia-vs-dr-congo",
+      "phase": "group",
+      "group": "K",
+      "matchday": 2,
+      "date": "2026-06-24",
+      "time": "",
+      "venue": "Estadio Akron",
+      "city": "Zapopan",
+      "teamA": "Colombia",
+      "teamB": "DR Congo",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "6",
+        "1"
+      ],
+      "played": [
+        "22",
+        "3"
+      ],
+      "ppg": [
+        "30(1.36)",
+        "0(0.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "QUARTER-FINALS THEIR FINEST HOUR",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "READY FOR THE STAGE",
+        "EYES ON THE FINAL SQUAD"
+      ],
+      "watch": [
+        ", Yerry Mina (3)",
+        ","
+      ]
+    },
+    {
+      "no": 49,
+      "slug": "m049-switzerland-vs-canada",
+      "phase": "group",
+      "group": "B",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "time": "",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "teamA": "Switzerland",
+      "teamB": "Canada",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "12",
+        "2"
+      ],
+      "played": [
+        "40",
+        "6"
+      ],
+      "ppg": [
+        "47(1.18)",
+        "0(0.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "12 TRIES · NEVER PAST THE QUARTERS",
+        "2 WORLD CUPS · OUT TO MAKE THEIR MARK"
+      ],
+      "hook": [
+        "ALL TO PLAY FOR",
+        "THE BIG STAGE AWAITS"
+      ],
+      "watch": [
+        ", Xherdan Shaqiri (5)",
+        ", Alphonso Davies (1)"
+      ]
+    },
+    {
+      "no": 50,
+      "slug": "m050-bosnia-herzegovina-vs-qatar",
+      "phase": "group",
+      "group": "B",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "time": "",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "teamA": "Bosnia & Herzegovina",
+      "teamB": "Qatar",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "1",
+        "1"
+      ],
+      "played": [
+        "3",
+        "3"
+      ],
+      "ppg": [
+        "3(1.0)",
+        "0(0.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ON THE GREATEST STAGE",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "EYES ON THE FINAL SQUAD",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        ", Sead Kolašinac (1)",
+        ", Mohammed Muntari (1)"
+      ]
+    },
+    {
+      "no": 51,
+      "slug": "m051-morocco-vs-haiti",
+      "phase": "group",
+      "group": "C",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "time": "",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "teamA": "Morocco",
+      "teamB": "Haiti",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "6",
+        "1"
+      ],
+      "played": [
+        "23",
+        "3"
+      ],
+      "ppg": [
+        "22(0.96)",
+        "0(0.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "SEMI-FINALISTS · THE NEARLY MEN",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "READY FOR THE STAGE",
+        "OUT TO MAKE THEIR MARK"
+      ],
+      "watch": [
+        ", Youssef En-Nesyri (3)",
+        ", Emmanuel Sanon (2)"
+      ]
+    },
+    {
+      "no": 52,
+      "slug": "m052-scotland-vs-brazil",
+      "phase": "group",
+      "group": "C",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "time": "",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "teamA": "Scotland",
+      "teamB": "Brazil",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "8",
+        "22"
+      ],
+      "played": [
+        "23",
+        "113"
+      ],
+      "ppg": [
+        "19(0.83)",
+        "244(2.16)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "1",
+        "l": "3"
+      },
+      "headline": [
+        "8 TRIES · CHASING A FIRST KNOCKOUT",
+        "5-TIME WORLD CHAMPIONS"
+      ],
+      "hook": [
+        "READY FOR THE STAGE",
+        "VINI JR. — THE NEW KING?"
+      ],
+      "watch": [
+        ", Joe Jordan (4)",
+        "Vinicius Junior, Neymar (8)"
+      ]
+    },
+    {
+      "no": 53,
+      "slug": "m053-south-africa-vs-south-korea",
+      "phase": "group",
+      "group": "A",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "time": "",
+      "venue": "Estadio BBVA",
+      "city": "Guadalupe",
+      "teamA": "South Africa",
+      "teamB": "South Korea",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "3",
+        "11"
+      ],
+      "played": [
+        "9",
+        "38"
+      ],
+      "ppg": [
+        "10(1.11)",
+        "31(0.82)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "3 WORLD CUPS · OUT TO MAKE THEIR MARK",
+        "SEMI-FINALISTS · THE NEARLY MEN"
+      ],
+      "hook": [
+        "ALL TO PLAY FOR",
+        "SON CARRIES KOREA'S HOPES"
+      ],
+      "watch": [
+        ", Benni McCarthy (2)",
+        "Heung-min Son, Heung-min Son (3)"
+      ]
+    },
+    {
+      "no": 54,
+      "slug": "m054-czech-republic-vs-mexico",
+      "phase": "group",
+      "group": "A",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "time": "",
+      "venue": "Estadio Azteca",
+      "city": "Mexico City",
+      "teamA": "Czech Republic",
+      "teamB": "Mexico",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "1",
+        "17"
+      ],
+      "played": [
+        "3",
+        "60"
+      ],
+      "ppg": [
+        "3(1.0)",
+        "66(1.1)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ON THE GREATEST STAGE",
+        "17 TRIES · NEVER PAST THE QUARTERS"
+      ],
+      "hook": [
+        "OUT TO MAKE THEIR MARK",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        ", Tomáš Rosický (2)",
+        ", Javier Hernández (4)"
+      ]
+    },
+    {
+      "no": 55,
+      "slug": "m055-curacao-vs-ivory-coast",
+      "phase": "group",
+      "group": "E",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "time": "",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "teamA": "Curacao",
+      "teamB": "Ivory Coast",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "0",
+        "3"
+      ],
+      "played": [
+        "0",
+        "9"
+      ],
+      "ppg": [
+        "0(0)",
+        "10(1.11)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "FIRST-EVER WORLD CUP",
+        "3 WORLD CUPS · OUT TO MAKE THEIR MARK"
+      ],
+      "hook": [
+        "EYES ON THE FINAL SQUAD",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        ",",
+        ", Didier Drogba (2)"
+      ]
+    },
+    {
+      "no": 56,
+      "slug": "m056-ecuador-vs-germany",
+      "phase": "group",
+      "group": "E",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "time": "",
+      "venue": "MetLife Stadium",
+      "city": "New Jersey",
+      "teamA": "Ecuador",
+      "teamB": "Germany",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "4",
+        "20"
+      ],
+      "played": [
+        "13",
+        "111"
+      ],
+      "ppg": [
+        "17(1.31)",
+        "225(2.03)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "1"
+      },
+      "headline": [
+        "ROUND OF 16 · OUT TO GO FURTHER",
+        "4-TIME WORLD CHAMPIONS"
+      ],
+      "hook": [
+        "ALL TO PLAY FOR",
+        "OUT TO MAKE THEIR MARK"
+      ],
+      "watch": [
+        ", Enner Valencia (6)",
+        ", Toni Kroos (3)"
+      ]
+    },
+    {
+      "no": 57,
+      "slug": "m057-tunisia-vs-netherlands",
+      "phase": "group",
+      "group": "F",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "time": "",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "teamA": "Tunisia",
+      "teamB": "Netherlands",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "6",
+        "11"
+      ],
+      "played": [
+        "18",
+        "55"
+      ],
+      "ppg": [
+        "14(0.78)",
+        "104(1.89)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "6 WORLD CUPS · EYEING A BREAKTHROUGH",
+        "RUNNERS-UP ONCE · STILL CHASING THE CROWN"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "THE BIG STAGE AWAITS"
+      ],
+      "watch": [
+        ", Wahbi Khazri (3)",
+        ", Memphis Depay (3)"
+      ]
+    },
+    {
+      "no": 58,
+      "slug": "m058-japan-vs-sweden",
+      "phase": "group",
+      "group": "F",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "time": "",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "teamA": "Japan",
+      "teamB": "Sweden",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "7",
+        "12"
+      ],
+      "played": [
+        "25",
+        "51"
+      ],
+      "ppg": [
+        "27(1.08)",
+        "70(1.37)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ROUND OF 16 · OUT TO GO FURTHER",
+        "RUNNERS-UP ONCE · STILL CHASING THE CROWN"
+      ],
+      "hook": [
+        "THE BIG STAGE AWAITS",
+        "READY FOR THE STAGE"
+      ],
+      "watch": [
+        ", Keisuke Honda (4)",
+        ", Andreas Granqvist (2)"
+      ]
+    },
+    {
+      "no": 59,
+      "slug": "m059-turkey-vs-usa",
+      "phase": "group",
+      "group": "D",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "time": "",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles",
+      "teamA": "Turkey",
+      "teamB": "USA",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "2",
+        "11"
+      ],
+      "played": [
+        "10",
+        "37"
+      ],
+      "ppg": [
+        "16(1.6)",
+        "35(0.95)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "SEMI-FINALISTS · THE NEARLY MEN",
+        "SEMI-FINALISTS · THE NEARLY MEN"
+      ],
+      "hook": [
+        "CAN ARDA SHINE AGAIN?",
+        "ALL TO PLAY FOR"
+      ],
+      "watch": [
+        "Arda Güler, Suat Mamat (3)",
+        ", Timothy Weah (1)"
+      ]
+    },
+    {
+      "no": 60,
+      "slug": "m060-paraguay-vs-australia",
+      "phase": "group",
+      "group": "D",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "time": "",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "teamA": "Paraguay",
+      "teamB": "Australia",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "8",
+        "6"
+      ],
+      "played": [
+        "27",
+        "20"
+      ],
+      "ppg": [
+        "31(1.15)",
+        "16(0.8)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "QUARTER-FINALS THEIR FINEST HOUR",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "THE BIG STAGE AWAITS",
+        "THE BIG STAGE AWAITS"
+      ],
+      "watch": [
+        ", Nelson Cuevas (3)",
+        ", Mile Jedinak (3)"
+      ]
+    },
+    {
+      "no": 61,
+      "slug": "m061-norway-vs-france",
+      "phase": "group",
+      "group": "I",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "time": "",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "teamA": "Norway",
+      "teamB": "France",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "3",
+        "16"
+      ],
+      "played": [
+        "8",
+        "73"
+      ],
+      "ppg": [
+        "9(1.12)",
+        "131(1.79)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ROUND OF 16 · OUT TO GO FURTHER",
+        "2x CHAMPIONS · CHASING MORE GLORY"
+      ],
+      "hook": [
+        "HAALAND — THE GOAL MACHINE",
+        "MBAPPÉ — THE HEIR TO THE THRONE"
+      ],
+      "watch": [
+        "Erling Haaland, Kjetil Rekdal (2)",
+        "Kylian Mbappé, Kylian Mbappé (12)"
+      ]
+    },
+    {
+      "no": 62,
+      "slug": "m062-senegal-vs-iraq",
+      "phase": "group",
+      "group": "I",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "time": "",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "teamA": "Senegal",
+      "teamB": "Iraq",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "3",
+        "1"
+      ],
+      "played": [
+        "12",
+        "3"
+      ],
+      "ppg": [
+        "18(1.5)",
+        "0(0.0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "QUARTER-FINALS THEIR FINEST HOUR",
+        "ON THE GREATEST STAGE"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        ", M'Baye Niang (1)",
+        ", Ahmed Radhi (1)"
+      ]
+    },
+    {
+      "no": 63,
+      "slug": "m063-cape-verde-vs-saudi-arabia",
+      "phase": "group",
+      "group": "H",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "time": "",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "teamA": "Cape Verde",
+      "teamB": "Saudi Arabia",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "0",
+        "6"
+      ],
+      "played": [
+        "0",
+        "19"
+      ],
+      "ppg": [
+        "0(0)",
+        "14(0.74)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "FIRST-EVER WORLD CUP",
+        "ROUND OF 16 · OUT TO GO FURTHER"
+      ],
+      "hook": [
+        "ALL TO PLAY FOR",
+        "EYES ON THE FINAL SQUAD"
+      ],
+      "watch": [
+        ",",
+        ", Salem Al-Dawsari (3)"
+      ]
+    },
+    {
+      "no": 64,
+      "slug": "m064-uruguay-vs-spain",
+      "phase": "group",
+      "group": "H",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "time": "",
+      "venue": "Estadio Akron",
+      "city": "Zapopan",
+      "teamA": "Uruguay",
+      "teamB": "Spain",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "14",
+        "16"
+      ],
+      "played": [
+        "59",
+        "66"
+      ],
+      "ppg": [
+        "88(1.49)",
+        "110(1.67)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "2",
+        "l": "0"
+      },
+      "headline": [
+        "2x CHAMPIONS · CHASING MORE GLORY",
+        "1x CHAMPIONS · CHASING MORE GLORY"
+      ],
+      "hook": [
+        "THE BIG STAGE AWAITS",
+        "OUT TO MAKE THEIR MARK"
+      ],
+      "watch": [
+        ", Luis Suárez (7)",
+        ", Diego Costa (3)"
+      ]
+    },
+    {
+      "no": 65,
+      "slug": "m065-new-zealand-vs-belgium",
+      "phase": "group",
+      "group": "G",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "time": "",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "teamA": "New Zealand",
+      "teamB": "Belgium",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "2",
+        "14"
+      ],
+      "played": [
+        "6",
+        "51"
+      ],
+      "ppg": [
+        "3(0.5)",
+        "73(1.43)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "2 WORLD CUPS · OUT TO MAKE THEIR MARK",
+        "SEMI-FINALISTS · THE NEARLY MEN"
+      ],
+      "hook": [
+        "WHO STEPS UP?",
+        "WHO STEPS UP?"
+      ],
+      "watch": [
+        ", Steve Sumner (1)",
+        ", Romelu Lukaku (5)"
+      ]
+    },
+    {
+      "no": 66,
+      "slug": "m066-egypt-vs-iran",
+      "phase": "group",
+      "group": "G",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "time": "",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "teamA": "Egypt",
+      "teamB": "Iran",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "3",
+        "6"
+      ],
+      "played": [
+        "7",
+        "18"
+      ],
+      "ppg": [
+        "2(0.29)",
+        "13(0.72)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ROUND OF 16 · OUT TO GO FURTHER",
+        "6 WORLD CUPS · EYEING A BREAKTHROUGH"
+      ],
+      "hook": [
+        "SALAH — THE PHARAOH RETURNS",
+        "THE BIG STAGE AWAITS"
+      ],
+      "watch": [
+        "Mohamed Salah, Mohamed Salah (2)",
+        ", Mehdi Taremi (2)"
+      ]
+    },
+    {
+      "no": 67,
+      "slug": "m067-panama-vs-england",
+      "phase": "group",
+      "group": "L",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "time": "",
+      "venue": "MetLife Stadium",
+      "city": "New Jersey",
+      "teamA": "Panama",
+      "teamB": "England",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "1",
+        "16"
+      ],
+      "played": [
+        "3",
+        "74"
+      ],
+      "ppg": [
+        "0(0.0)",
+        "118(1.59)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "1"
+      },
+      "headline": [
+        "ON THE GREATEST STAGE",
+        "1x CHAMPIONS · CHASING MORE GLORY"
+      ],
+      "hook": [
+        "READY FOR THE STAGE",
+        "KANE HUNTS THE CROWN"
+      ],
+      "watch": [
+        ", Felipe Baloy (1)",
+        "Harry Kane, Harry Kane (8)"
+      ]
+    },
+    {
+      "no": 68,
+      "slug": "m068-croatia-vs-ghana",
+      "phase": "group",
+      "group": "L",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "time": "",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "teamA": "Croatia",
+      "teamB": "Ghana",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "6",
+        "4"
+      ],
+      "played": [
+        "30",
+        "15"
+      ],
+      "ppg": [
+        "47(1.57)",
+        "18(1.2)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "RUNNERS-UP ONCE · STILL CHASING THE CROWN",
+        "QUARTER-FINALS THEIR FINEST HOUR"
+      ],
+      "hook": [
+        "MODRIĆ — ONE MORE MIRACLE?",
+        "ALL TO PLAY FOR"
+      ],
+      "watch": [
+        "Luka Modrić, Ivan Perišić (6)",
+        ", André Ayew (3)"
+      ]
+    },
+    {
+      "no": 69,
+      "slug": "m069-colombia-vs-portugal",
+      "phase": "group",
+      "group": "K",
+      "matchday": 3,
+      "date": "2026-06-28",
+      "time": "",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "teamA": "Colombia",
+      "teamB": "Portugal",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "6",
+        "8"
+      ],
+      "played": [
+        "22",
+        "35"
+      ],
+      "ppg": [
+        "30(1.36)",
+        "57(1.63)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "QUARTER-FINALS THEIR FINEST HOUR",
+        "SEMI-FINALISTS · THE NEARLY MEN"
+      ],
+      "hook": [
+        "READY FOR THE STAGE",
+        "RONALDO — ONE LAST CROWN?"
+      ],
+      "watch": [
+        ", Yerry Mina (3)",
+        "Cristiano Ronaldo, Cristiano Ronaldo (8)"
+      ]
+    },
+    {
+      "no": 70,
+      "slug": "m070-dr-congo-vs-uzbekistan",
+      "phase": "group",
+      "group": "K",
+      "matchday": 3,
+      "date": "2026-06-28",
+      "time": "",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "teamA": "DR Congo",
+      "teamB": "Uzbekistan",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "1",
+        "0"
+      ],
+      "played": [
+        "3",
+        "0"
+      ],
+      "ppg": [
+        "0(0.0)",
+        "0(0)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "ON THE GREATEST STAGE",
+        "FIRST-EVER WORLD CUP"
+      ],
+      "hook": [
+        "EYES ON THE FINAL SQUAD",
+        "EYES ON THE FINAL SQUAD"
+      ],
+      "watch": [
+        ",",
+        ","
+      ]
+    },
+    {
+      "no": 71,
+      "slug": "m071-algeria-vs-austria",
+      "phase": "group",
+      "group": "J",
+      "matchday": 3,
+      "date": "2026-06-28",
+      "time": "",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "teamA": "Algeria",
+      "teamB": "Austria",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "4",
+        "7"
+      ],
+      "played": [
+        "13",
+        "29"
+      ],
+      "ppg": [
+        "12(0.92)",
+        "40(1.38)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "1"
+      },
+      "headline": [
+        "ROUND OF 16 · OUT TO GO FURTHER",
+        "SEMI-FINALISTS · THE NEARLY MEN"
+      ],
+      "hook": [
+        "OUT TO MAKE THEIR MARK",
+        "OUT TO MAKE THEIR MARK"
+      ],
+      "watch": [
+        ", Salah Assad (2)",
+        ", Erich Probst (6)"
+      ]
+    },
+    {
+      "no": 72,
+      "slug": "m072-jordan-vs-argentina",
+      "phase": "group",
+      "group": "J",
+      "matchday": 3,
+      "date": "2026-06-28",
+      "time": "",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "teamA": "Jordan",
+      "teamB": "Argentina",
+      "status": "drawn",
+      "hasThumb": true,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "0",
+        "18"
+      ],
+      "played": [
+        "0",
+        "88"
+      ],
+      "ppg": [
+        "0(0)",
+        "158(1.8)"
+      ],
+      "h2h": {
+        "w": "0",
+        "d": "0",
+        "l": "0"
+      },
+      "headline": [
+        "FIRST-EVER WORLD CUP",
+        "3x CHAMPIONS · CHASING MORE GLORY"
+      ],
+      "hook": [
+        "EYES ON THE FINAL SQUAD",
+        "MESSI — THE LAST DANCE"
+      ],
+      "watch": [
+        ",",
+        "Lionel Messi, Lionel Messi (13)"
+      ]
+    },
+    {
+      "no": 73,
+      "slug": "m073-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-06-28",
+      "time": "",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 74,
+      "slug": "m074-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-06-29",
+      "time": "",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 75,
+      "slug": "m075-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-06-29",
+      "time": "",
+      "venue": "Estadio BBVA",
+      "city": "Monterrey",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 76,
+      "slug": "m076-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-06-29",
+      "time": "",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 77,
+      "slug": "m077-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-06-30",
+      "time": "",
+      "venue": "MetLife Stadium",
+      "city": "New Jersey",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 78,
+      "slug": "m078-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-06-30",
+      "time": "",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 79,
+      "slug": "m079-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-06-30",
+      "time": "",
+      "venue": "Estadio Azteca",
+      "city": "Mexico City",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 80,
+      "slug": "m080-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-01",
+      "time": "",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 81,
+      "slug": "m081-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-01",
+      "time": "",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 82,
+      "slug": "m082-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-01",
+      "time": "",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 83,
+      "slug": "m083-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-02",
+      "time": "",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 84,
+      "slug": "m084-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-02",
+      "time": "",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 85,
+      "slug": "m085-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-02",
+      "time": "",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 86,
+      "slug": "m086-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-03",
+      "time": "",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 87,
+      "slug": "m087-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-03",
+      "time": "",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 88,
+      "slug": "m088-r32",
+      "phase": "r32",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-03",
+      "time": "",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 89,
+      "slug": "m089-r16",
+      "phase": "r16",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-04",
+      "time": "",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 90,
+      "slug": "m090-r16",
+      "phase": "r16",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-04",
+      "time": "",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 91,
+      "slug": "m091-r16",
+      "phase": "r16",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-05",
+      "time": "",
+      "venue": "MetLife Stadium",
+      "city": "New Jersey",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 92,
+      "slug": "m092-r16",
+      "phase": "r16",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-05",
+      "time": "",
+      "venue": "Estadio Azteca",
+      "city": "Mexico City",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 93,
+      "slug": "m093-r16",
+      "phase": "r16",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-06",
+      "time": "",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 94,
+      "slug": "m094-r16",
+      "phase": "r16",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-06",
+      "time": "",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 95,
+      "slug": "m095-r16",
+      "phase": "r16",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-07",
+      "time": "",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 96,
+      "slug": "m096-r16",
+      "phase": "r16",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-07",
+      "time": "",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 97,
+      "slug": "m097-qf",
+      "phase": "qf",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-09",
+      "time": "",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 98,
+      "slug": "m098-qf",
+      "phase": "qf",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-10",
+      "time": "",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 99,
+      "slug": "m099-qf",
+      "phase": "qf",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-11",
+      "time": "",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 100,
+      "slug": "m100-qf",
+      "phase": "qf",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-11",
+      "time": "",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 101,
+      "slug": "m101-sf",
+      "phase": "sf",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-14",
+      "time": "",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 102,
+      "slug": "m102-sf",
+      "phase": "sf",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-15",
+      "time": "",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 103,
+      "slug": "m103-third",
+      "phase": "third",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-18",
+      "time": "",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    },
+    {
+      "no": 104,
+      "slug": "m104-final",
+      "phase": "final",
+      "group": "",
+      "matchday": 0,
+      "date": "2026-07-19",
+      "time": "",
+      "venue": "MetLife Stadium",
+      "city": "New Jersey",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "status": "bracket",
+      "hasThumb": false,
+      "hasVideo": false,
+      "youtubeId": null,
+      "videoUrl": null,
+      "worldCups": [
+        "",
+        ""
+      ],
+      "played": [
+        "",
+        ""
+      ],
+      "ppg": [
+        "",
+        ""
+      ],
+      "h2h": {
+        "w": "",
+        "d": "",
+        "l": ""
+      },
+      "headline": [
+        "",
+        ""
+      ],
+      "hook": [
+        "",
+        ""
+      ],
+      "watch": [
+        "",
+        ""
+      ]
+    }
+  ]
+}

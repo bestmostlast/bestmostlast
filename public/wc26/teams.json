@@ -1,0 +1,3051 @@
+{
+  "generated": "2026-06-06T06:42:35.006Z",
+  "count": 48,
+  "teams": [
+    {
+      "name": "Algeria",
+      "flag": "Algeria.png",
+      "matches": [
+        {
+          "slug": "m019-argentina-vs-algeria",
+          "no": 19,
+          "group": "J",
+          "matchday": 1,
+          "opponent": "Argentina",
+          "home": false
+        },
+        {
+          "slug": "m044-jordan-vs-algeria",
+          "no": 44,
+          "group": "J",
+          "matchday": 2,
+          "opponent": "Jordan",
+          "home": false
+        },
+        {
+          "slug": "m071-algeria-vs-austria",
+          "no": 71,
+          "group": "J",
+          "matchday": 3,
+          "opponent": "Austria",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "DZA",
+        "appearances": 4,
+        "titles": 0,
+        "best": "Round of 16",
+        "played": 13,
+        "w": 3,
+        "d": 3,
+        "l": 7,
+        "gf": 13,
+        "ga": 19,
+        "ppg": 0.92
+      },
+      "topScorers": [
+        {
+          "player": "Salah Assad",
+          "goals": 2,
+          "years": "1982"
+        },
+        {
+          "player": "Islam Slimani",
+          "goals": 2,
+          "years": "2014"
+        },
+        {
+          "player": "Abdelmoumene Djabou",
+          "goals": 2,
+          "years": "2014"
+        },
+        {
+          "player": "Rabah Madjer",
+          "goals": 1,
+          "years": "1982"
+        },
+        {
+          "player": "Lakhdar Belloumi",
+          "goals": 1,
+          "years": "1982"
+        }
+      ]
+    },
+    {
+      "name": "Argentina",
+      "flag": "Argentina.png",
+      "matches": [
+        {
+          "slug": "m019-argentina-vs-algeria",
+          "no": 19,
+          "group": "J",
+          "matchday": 1,
+          "opponent": "Algeria",
+          "home": true
+        },
+        {
+          "slug": "m041-argentina-vs-austria",
+          "no": 41,
+          "group": "J",
+          "matchday": 2,
+          "opponent": "Austria",
+          "home": true
+        },
+        {
+          "slug": "m072-jordan-vs-argentina",
+          "no": 72,
+          "group": "J",
+          "matchday": 3,
+          "opponent": "Jordan",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "ARG",
+        "appearances": 18,
+        "titles": 2,
+        "best": "Champions",
+        "played": 88,
+        "w": 47,
+        "d": 17,
+        "l": 24,
+        "gf": 152,
+        "ga": 101,
+        "ppg": 1.8
+      },
+      "topScorers": [
+        {
+          "player": "Lionel Messi",
+          "goals": 13,
+          "years": "2006;2014;2018;2022"
+        },
+        {
+          "player": "Gabriel Batistuta",
+          "goals": 10,
+          "years": "1994;1998;2002"
+        },
+        {
+          "player": "Guillermo Stábile",
+          "goals": 8,
+          "years": "1930"
+        },
+        {
+          "player": "Diego Maradona",
+          "goals": 8,
+          "years": "1982;1986;1994"
+        },
+        {
+          "player": "Mario Kempes",
+          "goals": 6,
+          "years": "1978"
+        }
+      ]
+    },
+    {
+      "name": "Australia",
+      "flag": "Australia.png",
+      "matches": [
+        {
+          "slug": "m008-australia-vs-turkey",
+          "no": 8,
+          "group": "D",
+          "matchday": 1,
+          "opponent": "Turkey",
+          "home": true
+        },
+        {
+          "slug": "m029-usa-vs-australia",
+          "no": 29,
+          "group": "D",
+          "matchday": 2,
+          "opponent": "USA",
+          "home": false
+        },
+        {
+          "slug": "m060-paraguay-vs-australia",
+          "no": 60,
+          "group": "D",
+          "matchday": 3,
+          "opponent": "Paraguay",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "AUS",
+        "appearances": 6,
+        "titles": 0,
+        "best": "Round of 16",
+        "played": 20,
+        "w": 4,
+        "d": 4,
+        "l": 12,
+        "gf": 17,
+        "ga": 37,
+        "ppg": 0.8
+      },
+      "topScorers": [
+        {
+          "player": "Tim Cahill",
+          "goals": 5,
+          "years": "2006;2010;2014"
+        },
+        {
+          "player": "Mile Jedinak",
+          "goals": 3,
+          "years": "2014;2018"
+        },
+        {
+          "player": "Brett Holman",
+          "goals": 2,
+          "years": "2010"
+        },
+        {
+          "player": "Colin Curran",
+          "goals": 1,
+          "years": "1974"
+        },
+        {
+          "player": "John Aloisi",
+          "goals": 1,
+          "years": "2006"
+        }
+      ]
+    },
+    {
+      "name": "Austria",
+      "flag": "Austria.png",
+      "matches": [
+        {
+          "slug": "m020-austria-vs-jordan",
+          "no": 20,
+          "group": "J",
+          "matchday": 1,
+          "opponent": "Jordan",
+          "home": true
+        },
+        {
+          "slug": "m041-argentina-vs-austria",
+          "no": 41,
+          "group": "J",
+          "matchday": 2,
+          "opponent": "Argentina",
+          "home": false
+        },
+        {
+          "slug": "m071-algeria-vs-austria",
+          "no": 71,
+          "group": "J",
+          "matchday": 3,
+          "opponent": "Algeria",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "AUT",
+        "appearances": 7,
+        "titles": 0,
+        "best": "Third place",
+        "played": 29,
+        "w": 12,
+        "d": 4,
+        "l": 13,
+        "gf": 43,
+        "ga": 47,
+        "ppg": 1.38
+      },
+      "topScorers": [
+        {
+          "player": "Erich Probst",
+          "goals": 6,
+          "years": "1954"
+        },
+        {
+          "player": "Hans Krankl",
+          "goals": 5,
+          "years": "1978;1982"
+        },
+        {
+          "player": "Ernst Stojaspal",
+          "goals": 3,
+          "years": "1954"
+        },
+        {
+          "player": "Theodor Wagner",
+          "goals": 3,
+          "years": "1954"
+        },
+        {
+          "player": "Alfred Körner",
+          "goals": 3,
+          "years": "1954;1958"
+        }
+      ]
+    },
+    {
+      "name": "Belgium",
+      "flag": "Belgium.png",
+      "matches": [
+        {
+          "slug": "m014-belgium-vs-egypt",
+          "no": 14,
+          "group": "G",
+          "matchday": 1,
+          "opponent": "Egypt",
+          "home": true
+        },
+        {
+          "slug": "m038-belgium-vs-iran",
+          "no": 38,
+          "group": "G",
+          "matchday": 2,
+          "opponent": "Iran",
+          "home": true
+        },
+        {
+          "slug": "m065-new-zealand-vs-belgium",
+          "no": 65,
+          "group": "G",
+          "matchday": 3,
+          "opponent": "New Zealand",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "BEL",
+        "appearances": 14,
+        "titles": 0,
+        "best": "Third place",
+        "played": 51,
+        "w": 21,
+        "d": 10,
+        "l": 20,
+        "gf": 69,
+        "ga": 74,
+        "ppg": 1.43
+      },
+      "topScorers": [
+        {
+          "player": "Marc Wilmots",
+          "goals": 5,
+          "years": "1998;2002"
+        },
+        {
+          "player": "Romelu Lukaku",
+          "goals": 5,
+          "years": "2014;2018"
+        },
+        {
+          "player": "Jan Ceulemans",
+          "goals": 4,
+          "years": "1986;1990"
+        },
+        {
+          "player": "Léopold Anoul",
+          "goals": 3,
+          "years": "1954"
+        },
+        {
+          "player": "Enzo Scifo",
+          "goals": 3,
+          "years": "1986;1990"
+        }
+      ]
+    },
+    {
+      "name": "Bosnia & Herzegovina",
+      "flag": "Bosnia & Herzegovina.png",
+      "matches": [
+        {
+          "slug": "m003-canada-vs-bosnia-herzegovina",
+          "no": 3,
+          "group": "B",
+          "matchday": 1,
+          "opponent": "Canada",
+          "home": false
+        },
+        {
+          "slug": "m026-switzerland-vs-bosnia-herzegovina",
+          "no": 26,
+          "group": "B",
+          "matchday": 2,
+          "opponent": "Switzerland",
+          "home": false
+        },
+        {
+          "slug": "m050-bosnia-herzegovina-vs-qatar",
+          "no": 50,
+          "group": "B",
+          "matchday": 3,
+          "opponent": "Qatar",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "BIH",
+        "appearances": 1,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 3,
+        "w": 1,
+        "d": 0,
+        "l": 2,
+        "gf": 4,
+        "ga": 4,
+        "ppg": 1
+      },
+      "topScorers": [
+        {
+          "player": "Sead Kolašinac",
+          "goals": 1,
+          "years": "2014"
+        },
+        {
+          "player": "Vedad Ibišević",
+          "goals": 1,
+          "years": "2014"
+        },
+        {
+          "player": "Edin Džeko",
+          "goals": 1,
+          "years": "2014"
+        },
+        {
+          "player": "Miralem Pjanić",
+          "goals": 1,
+          "years": "2014"
+        },
+        {
+          "player": "Avdija Vršajević",
+          "goals": 1,
+          "years": "2014"
+        }
+      ]
+    },
+    {
+      "name": "Brazil",
+      "flag": "Brazil.png",
+      "matches": [
+        {
+          "slug": "m006-brazil-vs-morocco",
+          "no": 6,
+          "group": "C",
+          "matchday": 1,
+          "opponent": "Morocco",
+          "home": true
+        },
+        {
+          "slug": "m031-brazil-vs-haiti",
+          "no": 31,
+          "group": "C",
+          "matchday": 2,
+          "opponent": "Haiti",
+          "home": true
+        },
+        {
+          "slug": "m052-scotland-vs-brazil",
+          "no": 52,
+          "group": "C",
+          "matchday": 3,
+          "opponent": "Scotland",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "BRA",
+        "appearances": 22,
+        "titles": 4,
+        "best": "Champions",
+        "played": 113,
+        "w": 75,
+        "d": 19,
+        "l": 19,
+        "gf": 235,
+        "ga": 107,
+        "ppg": 2.16
+      },
+      "topScorers": [
+        {
+          "player": "Ronaldo",
+          "goals": 15,
+          "years": "1998;2002;2006"
+        },
+        {
+          "player": "Pelé",
+          "goals": 12,
+          "years": "1958;1962;1966;1970"
+        },
+        {
+          "player": "Ademir",
+          "goals": 9,
+          "years": "1950"
+        },
+        {
+          "player": "Vavá",
+          "goals": 9,
+          "years": "1958;1962"
+        },
+        {
+          "player": "Jairzinho",
+          "goals": 9,
+          "years": "1970;1974"
+        }
+      ]
+    },
+    {
+      "name": "Canada",
+      "flag": "Canada.png",
+      "matches": [
+        {
+          "slug": "m003-canada-vs-bosnia-herzegovina",
+          "no": 3,
+          "group": "B",
+          "matchday": 1,
+          "opponent": "Bosnia & Herzegovina",
+          "home": true
+        },
+        {
+          "slug": "m027-canada-vs-qatar",
+          "no": 27,
+          "group": "B",
+          "matchday": 2,
+          "opponent": "Qatar",
+          "home": true
+        },
+        {
+          "slug": "m049-switzerland-vs-canada",
+          "no": 49,
+          "group": "B",
+          "matchday": 3,
+          "opponent": "Switzerland",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "CAN",
+        "appearances": 2,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 6,
+        "w": 0,
+        "d": 0,
+        "l": 6,
+        "gf": 2,
+        "ga": 12,
+        "ppg": 0
+      },
+      "topScorers": [
+        {
+          "player": "Alphonso Davies",
+          "goals": 1,
+          "years": "2022"
+        }
+      ]
+    },
+    {
+      "name": "Cape Verde",
+      "flag": "Cape Verde.png",
+      "matches": [
+        {
+          "slug": "m013-spain-vs-cape-verde",
+          "no": 13,
+          "group": "H",
+          "matchday": 1,
+          "opponent": "Spain",
+          "home": false
+        },
+        {
+          "slug": "m039-uruguay-vs-cape-verde",
+          "no": 39,
+          "group": "H",
+          "matchday": 2,
+          "opponent": "Uruguay",
+          "home": false
+        },
+        {
+          "slug": "m063-cape-verde-vs-saudi-arabia",
+          "no": 63,
+          "group": "H",
+          "matchday": 3,
+          "opponent": "Saudi Arabia",
+          "home": true
+        }
+      ],
+      "record": null,
+      "topScorers": []
+    },
+    {
+      "name": "Colombia",
+      "flag": "Colombia.png",
+      "matches": [
+        {
+          "slug": "m024-uzbekistan-vs-colombia",
+          "no": 24,
+          "group": "K",
+          "matchday": 1,
+          "opponent": "Uzbekistan",
+          "home": false
+        },
+        {
+          "slug": "m048-colombia-vs-dr-congo",
+          "no": 48,
+          "group": "K",
+          "matchday": 2,
+          "opponent": "DR Congo",
+          "home": true
+        },
+        {
+          "slug": "m069-colombia-vs-portugal",
+          "no": 69,
+          "group": "K",
+          "matchday": 3,
+          "opponent": "Portugal",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "COL",
+        "appearances": 6,
+        "titles": 0,
+        "best": "Quarter-final",
+        "played": 22,
+        "w": 9,
+        "d": 3,
+        "l": 10,
+        "gf": 32,
+        "ga": 30,
+        "ppg": 1.36
+      },
+      "topScorers": [
+        {
+          "player": "James Rodríguez",
+          "goals": 6,
+          "years": "2014"
+        },
+        {
+          "player": "Yerry Mina",
+          "goals": 3,
+          "years": "2018"
+        },
+        {
+          "player": "Bernardo Redín",
+          "goals": 2,
+          "years": "1990"
+        },
+        {
+          "player": "Adolfo Valencia",
+          "goals": 2,
+          "years": "1994"
+        },
+        {
+          "player": "Juan Fernando Quintero",
+          "goals": 2,
+          "years": "2014;2018"
+        }
+      ]
+    },
+    {
+      "name": "Croatia",
+      "flag": "Croatia.png",
+      "matches": [
+        {
+          "slug": "m022-england-vs-croatia",
+          "no": 22,
+          "group": "L",
+          "matchday": 1,
+          "opponent": "England",
+          "home": false
+        },
+        {
+          "slug": "m047-panama-vs-croatia",
+          "no": 47,
+          "group": "L",
+          "matchday": 2,
+          "opponent": "Panama",
+          "home": false
+        },
+        {
+          "slug": "m068-croatia-vs-ghana",
+          "no": 68,
+          "group": "L",
+          "matchday": 3,
+          "opponent": "Ghana",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "CRO",
+        "appearances": 6,
+        "titles": 0,
+        "best": "Final",
+        "played": 30,
+        "w": 13,
+        "d": 8,
+        "l": 9,
+        "gf": 43,
+        "ga": 33,
+        "ppg": 1.57
+      },
+      "topScorers": [
+        {
+          "player": "Davor Šuker",
+          "goals": 6,
+          "years": "1998"
+        },
+        {
+          "player": "Ivan Perišić",
+          "goals": 6,
+          "years": "2014;2018;2022"
+        },
+        {
+          "player": "Mario Mandžukić",
+          "goals": 6,
+          "years": "2014;2018"
+        },
+        {
+          "player": "Andrej Kramarić",
+          "goals": 3,
+          "years": "2018;2022"
+        },
+        {
+          "player": "Robert Prosinečki",
+          "goals": 2,
+          "years": "1998"
+        }
+      ]
+    },
+    {
+      "name": "Curacao",
+      "flag": "Curacao.png",
+      "matches": [
+        {
+          "slug": "m009-germany-vs-curacao",
+          "no": 9,
+          "group": "E",
+          "matchday": 1,
+          "opponent": "Germany",
+          "home": false
+        },
+        {
+          "slug": "m035-ecuador-vs-curacao",
+          "no": 35,
+          "group": "E",
+          "matchday": 2,
+          "opponent": "Ecuador",
+          "home": false
+        },
+        {
+          "slug": "m055-curacao-vs-ivory-coast",
+          "no": 55,
+          "group": "E",
+          "matchday": 3,
+          "opponent": "Ivory Coast",
+          "home": true
+        }
+      ],
+      "record": null,
+      "topScorers": []
+    },
+    {
+      "name": "Czech Republic",
+      "flag": "Czech Republic.png",
+      "matches": [
+        {
+          "slug": "m002-south-korea-vs-czech-republic",
+          "no": 2,
+          "group": "A",
+          "matchday": 1,
+          "opponent": "South Korea",
+          "home": false
+        },
+        {
+          "slug": "m025-czech-republic-vs-south-africa",
+          "no": 25,
+          "group": "A",
+          "matchday": 2,
+          "opponent": "South Africa",
+          "home": true
+        },
+        {
+          "slug": "m054-czech-republic-vs-mexico",
+          "no": 54,
+          "group": "A",
+          "matchday": 3,
+          "opponent": "Mexico",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "CZE",
+        "appearances": 1,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 3,
+        "w": 1,
+        "d": 0,
+        "l": 2,
+        "gf": 3,
+        "ga": 4,
+        "ppg": 1
+      },
+      "topScorers": [
+        {
+          "player": "Tomáš Rosický",
+          "goals": 2,
+          "years": "2006"
+        },
+        {
+          "player": "Jan Koller",
+          "goals": 1,
+          "years": "2006"
+        }
+      ]
+    },
+    {
+      "name": "DR Congo",
+      "flag": "DR Congo.png",
+      "matches": [
+        {
+          "slug": "m021-portugal-vs-dr-congo",
+          "no": 21,
+          "group": "K",
+          "matchday": 1,
+          "opponent": "Portugal",
+          "home": false
+        },
+        {
+          "slug": "m048-colombia-vs-dr-congo",
+          "no": 48,
+          "group": "K",
+          "matchday": 2,
+          "opponent": "Colombia",
+          "home": false
+        },
+        {
+          "slug": "m070-dr-congo-vs-uzbekistan",
+          "no": 70,
+          "group": "K",
+          "matchday": 3,
+          "opponent": "Uzbekistan",
+          "home": true
+        }
+      ],
+      "record": null,
+      "topScorers": []
+    },
+    {
+      "name": "Ecuador",
+      "flag": "Ecuador.png",
+      "matches": [
+        {
+          "slug": "m011-ivory-coast-vs-ecuador",
+          "no": 11,
+          "group": "E",
+          "matchday": 1,
+          "opponent": "Ivory Coast",
+          "home": false
+        },
+        {
+          "slug": "m035-ecuador-vs-curacao",
+          "no": 35,
+          "group": "E",
+          "matchday": 2,
+          "opponent": "Curacao",
+          "home": true
+        },
+        {
+          "slug": "m056-ecuador-vs-germany",
+          "no": 56,
+          "group": "E",
+          "matchday": 3,
+          "opponent": "Germany",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "ECU",
+        "appearances": 4,
+        "titles": 0,
+        "best": "Round of 16",
+        "played": 13,
+        "w": 5,
+        "d": 2,
+        "l": 6,
+        "gf": 14,
+        "ga": 14,
+        "ppg": 1.31
+      },
+      "topScorers": [
+        {
+          "player": "Enner Valencia",
+          "goals": 6,
+          "years": "2014;2022"
+        },
+        {
+          "player": "Agustín Delgado",
+          "goals": 3,
+          "years": "2002;2006"
+        },
+        {
+          "player": "Carlos Tenorio",
+          "goals": 2,
+          "years": "2006"
+        },
+        {
+          "player": "Édison Méndez",
+          "goals": 1,
+          "years": "2002"
+        },
+        {
+          "player": "Iván Kaviedes",
+          "goals": 1,
+          "years": "2006"
+        }
+      ]
+    },
+    {
+      "name": "Egypt",
+      "flag": "Egypt.png",
+      "matches": [
+        {
+          "slug": "m014-belgium-vs-egypt",
+          "no": 14,
+          "group": "G",
+          "matchday": 1,
+          "opponent": "Belgium",
+          "home": false
+        },
+        {
+          "slug": "m040-new-zealand-vs-egypt",
+          "no": 40,
+          "group": "G",
+          "matchday": 2,
+          "opponent": "New Zealand",
+          "home": false
+        },
+        {
+          "slug": "m066-egypt-vs-iran",
+          "no": 66,
+          "group": "G",
+          "matchday": 3,
+          "opponent": "Iran",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "EGY",
+        "appearances": 3,
+        "titles": 0,
+        "best": "Round of 16",
+        "played": 7,
+        "w": 0,
+        "d": 2,
+        "l": 5,
+        "gf": 5,
+        "ga": 12,
+        "ppg": 0.29
+      },
+      "topScorers": [
+        {
+          "player": "Abdulrahman Fawzi",
+          "goals": 2,
+          "years": "1934"
+        },
+        {
+          "player": "Mohamed Salah",
+          "goals": 2,
+          "years": "2018"
+        },
+        {
+          "player": "Magdi Abdelghani",
+          "goals": 1,
+          "years": "1990"
+        },
+        {
+          "player": "Ahmed Fathy",
+          "goals": 1,
+          "years": "2018"
+        }
+      ]
+    },
+    {
+      "name": "England",
+      "flag": "England.png",
+      "matches": [
+        {
+          "slug": "m022-england-vs-croatia",
+          "no": 22,
+          "group": "L",
+          "matchday": 1,
+          "opponent": "Croatia",
+          "home": true
+        },
+        {
+          "slug": "m046-england-vs-ghana",
+          "no": 46,
+          "group": "L",
+          "matchday": 2,
+          "opponent": "Ghana",
+          "home": true
+        },
+        {
+          "slug": "m067-panama-vs-england",
+          "no": 67,
+          "group": "L",
+          "matchday": 3,
+          "opponent": "Panama",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "ENG",
+        "appearances": 16,
+        "titles": 1,
+        "best": "Champions",
+        "played": 74,
+        "w": 32,
+        "d": 22,
+        "l": 20,
+        "gf": 104,
+        "ga": 68,
+        "ppg": 1.59
+      },
+      "topScorers": [
+        {
+          "player": "Gary Lineker",
+          "goals": 10,
+          "years": "1986;1990"
+        },
+        {
+          "player": "Harry Kane",
+          "goals": 8,
+          "years": "2018;2022"
+        },
+        {
+          "player": "Geoff Hurst",
+          "goals": 5,
+          "years": "1966;1970"
+        },
+        {
+          "player": "Bobby Charlton",
+          "goals": 4,
+          "years": "1962;1966"
+        },
+        {
+          "player": "Michael Owen",
+          "goals": 4,
+          "years": "1998;2002"
+        }
+      ]
+    },
+    {
+      "name": "France",
+      "flag": "France.png",
+      "matches": [
+        {
+          "slug": "m017-france-vs-senegal",
+          "no": 17,
+          "group": "I",
+          "matchday": 1,
+          "opponent": "Senegal",
+          "home": true
+        },
+        {
+          "slug": "m042-france-vs-iraq",
+          "no": 42,
+          "group": "I",
+          "matchday": 2,
+          "opponent": "Iraq",
+          "home": true
+        },
+        {
+          "slug": "m061-norway-vs-france",
+          "no": 61,
+          "group": "I",
+          "matchday": 3,
+          "opponent": "Norway",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "FRA",
+        "appearances": 16,
+        "titles": 2,
+        "best": "Champions",
+        "played": 73,
+        "w": 39,
+        "d": 14,
+        "l": 20,
+        "gf": 136,
+        "ga": 85,
+        "ppg": 1.79
+      },
+      "topScorers": [
+        {
+          "player": "Just Fontaine",
+          "goals": 13,
+          "years": "1958"
+        },
+        {
+          "player": "Kylian Mbappé",
+          "goals": 12,
+          "years": "2018;2022"
+        },
+        {
+          "player": "Thierry Henry",
+          "goals": 6,
+          "years": "1998;2006"
+        },
+        {
+          "player": "Michel Platini",
+          "goals": 5,
+          "years": "1978;1982;1986"
+        },
+        {
+          "player": "Zinedine Zidane",
+          "goals": 5,
+          "years": "1998;2006"
+        }
+      ]
+    },
+    {
+      "name": "Germany",
+      "flag": "Germany.png",
+      "matches": [
+        {
+          "slug": "m009-germany-vs-curacao",
+          "no": 9,
+          "group": "E",
+          "matchday": 1,
+          "opponent": "Curacao",
+          "home": true
+        },
+        {
+          "slug": "m034-germany-vs-ivory-coast",
+          "no": 34,
+          "group": "E",
+          "matchday": 2,
+          "opponent": "Ivory Coast",
+          "home": true
+        },
+        {
+          "slug": "m056-ecuador-vs-germany",
+          "no": 56,
+          "group": "E",
+          "matchday": 3,
+          "opponent": "Ecuador",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "GER",
+        "appearances": 20,
+        "titles": 4,
+        "best": "Champions",
+        "played": 111,
+        "w": 68,
+        "d": 21,
+        "l": 22,
+        "gf": 230,
+        "ga": 126,
+        "ppg": 2.03
+      },
+      "topScorers": [
+        {
+          "player": "Miroslav Klose",
+          "goals": 16,
+          "years": "2002;2006;2010;2014"
+        },
+        {
+          "player": "Gerd Müller",
+          "goals": 14,
+          "years": "1970;1974"
+        },
+        {
+          "player": "Jürgen Klinsmann",
+          "goals": 11,
+          "years": "1990;1994;1998"
+        },
+        {
+          "player": "Helmut Rahn",
+          "goals": 10,
+          "years": "1954;1958"
+        },
+        {
+          "player": "Thomas Müller",
+          "goals": 10,
+          "years": "2010;2014"
+        }
+      ]
+    },
+    {
+      "name": "Ghana",
+      "flag": "Ghana.png",
+      "matches": [
+        {
+          "slug": "m023-ghana-vs-panama",
+          "no": 23,
+          "group": "L",
+          "matchday": 1,
+          "opponent": "Panama",
+          "home": true
+        },
+        {
+          "slug": "m046-england-vs-ghana",
+          "no": 46,
+          "group": "L",
+          "matchday": 2,
+          "opponent": "England",
+          "home": false
+        },
+        {
+          "slug": "m068-croatia-vs-ghana",
+          "no": 68,
+          "group": "L",
+          "matchday": 3,
+          "opponent": "Croatia",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "GHA",
+        "appearances": 4,
+        "titles": 0,
+        "best": "Quarter-final",
+        "played": 15,
+        "w": 5,
+        "d": 3,
+        "l": 7,
+        "gf": 18,
+        "ga": 23,
+        "ppg": 1.2
+      },
+      "topScorers": [
+        {
+          "player": "Asamoah Gyan",
+          "goals": 6,
+          "years": "2006;2010;2014"
+        },
+        {
+          "player": "André Ayew",
+          "goals": 3,
+          "years": "2014;2022"
+        },
+        {
+          "player": "Sulley Muntari",
+          "goals": 2,
+          "years": "2006;2010"
+        },
+        {
+          "player": "Mohammed Kudus",
+          "goals": 2,
+          "years": "2022"
+        },
+        {
+          "player": "Haminu Draman",
+          "goals": 1,
+          "years": "2006"
+        }
+      ]
+    },
+    {
+      "name": "Haiti",
+      "flag": "Haiti.png",
+      "matches": [
+        {
+          "slug": "m007-haiti-vs-scotland",
+          "no": 7,
+          "group": "C",
+          "matchday": 1,
+          "opponent": "Scotland",
+          "home": true
+        },
+        {
+          "slug": "m031-brazil-vs-haiti",
+          "no": 31,
+          "group": "C",
+          "matchday": 2,
+          "opponent": "Brazil",
+          "home": false
+        },
+        {
+          "slug": "m051-morocco-vs-haiti",
+          "no": 51,
+          "group": "C",
+          "matchday": 3,
+          "opponent": "Morocco",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "HTI",
+        "appearances": 1,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 3,
+        "w": 0,
+        "d": 0,
+        "l": 3,
+        "gf": 2,
+        "ga": 14,
+        "ppg": 0
+      },
+      "topScorers": [
+        {
+          "player": "Emmanuel Sanon",
+          "goals": 2,
+          "years": "1974"
+        }
+      ]
+    },
+    {
+      "name": "Iran",
+      "flag": "Iran.png",
+      "matches": [
+        {
+          "slug": "m016-iran-vs-new-zealand",
+          "no": 16,
+          "group": "G",
+          "matchday": 1,
+          "opponent": "New Zealand",
+          "home": true
+        },
+        {
+          "slug": "m038-belgium-vs-iran",
+          "no": 38,
+          "group": "G",
+          "matchday": 2,
+          "opponent": "Belgium",
+          "home": false
+        },
+        {
+          "slug": "m066-egypt-vs-iran",
+          "no": 66,
+          "group": "G",
+          "matchday": 3,
+          "opponent": "Egypt",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "IRN",
+        "appearances": 6,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 18,
+        "w": 3,
+        "d": 4,
+        "l": 11,
+        "gf": 13,
+        "ga": 31,
+        "ppg": 0.72
+      },
+      "topScorers": [
+        {
+          "player": "Mehdi Taremi",
+          "goals": 2,
+          "years": "2022"
+        },
+        {
+          "player": "Andranik Eskandarian",
+          "goals": 1,
+          "years": "1978"
+        },
+        {
+          "player": "Iraj Danaeifard",
+          "goals": 1,
+          "years": "1978"
+        },
+        {
+          "player": "Hassan Roshan",
+          "goals": 1,
+          "years": "1978"
+        },
+        {
+          "player": "Hamid Estili",
+          "goals": 1,
+          "years": "1998"
+        }
+      ]
+    },
+    {
+      "name": "Iraq",
+      "flag": "Iraq.png",
+      "matches": [
+        {
+          "slug": "m018-iraq-vs-norway",
+          "no": 18,
+          "group": "I",
+          "matchday": 1,
+          "opponent": "Norway",
+          "home": true
+        },
+        {
+          "slug": "m042-france-vs-iraq",
+          "no": 42,
+          "group": "I",
+          "matchday": 2,
+          "opponent": "France",
+          "home": false
+        },
+        {
+          "slug": "m062-senegal-vs-iraq",
+          "no": 62,
+          "group": "I",
+          "matchday": 3,
+          "opponent": "Senegal",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "IRQ",
+        "appearances": 1,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 3,
+        "w": 0,
+        "d": 0,
+        "l": 3,
+        "gf": 1,
+        "ga": 4,
+        "ppg": 0
+      },
+      "topScorers": [
+        {
+          "player": "Ahmed Radhi",
+          "goals": 1,
+          "years": "1986"
+        }
+      ]
+    },
+    {
+      "name": "Ivory Coast",
+      "flag": "Ivory Coast.png",
+      "matches": [
+        {
+          "slug": "m011-ivory-coast-vs-ecuador",
+          "no": 11,
+          "group": "E",
+          "matchday": 1,
+          "opponent": "Ecuador",
+          "home": true
+        },
+        {
+          "slug": "m034-germany-vs-ivory-coast",
+          "no": 34,
+          "group": "E",
+          "matchday": 2,
+          "opponent": "Germany",
+          "home": false
+        },
+        {
+          "slug": "m055-curacao-vs-ivory-coast",
+          "no": 55,
+          "group": "E",
+          "matchday": 3,
+          "opponent": "Curacao",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "CIV",
+        "appearances": 3,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 9,
+        "w": 3,
+        "d": 1,
+        "l": 5,
+        "gf": 13,
+        "ga": 14,
+        "ppg": 1.11
+      },
+      "topScorers": [
+        {
+          "player": "Didier Drogba",
+          "goals": 2,
+          "years": "2006;2010"
+        },
+        {
+          "player": "Aruna Dindane",
+          "goals": 2,
+          "years": "2006"
+        },
+        {
+          "player": "Wilfried Bony",
+          "goals": 2,
+          "years": "2014"
+        },
+        {
+          "player": "Gervinho",
+          "goals": 2,
+          "years": "2014"
+        },
+        {
+          "player": "Bakari Koné",
+          "goals": 1,
+          "years": "2006"
+        }
+      ]
+    },
+    {
+      "name": "Japan",
+      "flag": "Japan.png",
+      "matches": [
+        {
+          "slug": "m010-netherlands-vs-japan",
+          "no": 10,
+          "group": "F",
+          "matchday": 1,
+          "opponent": "Netherlands",
+          "home": false
+        },
+        {
+          "slug": "m036-tunisia-vs-japan",
+          "no": 36,
+          "group": "F",
+          "matchday": 2,
+          "opponent": "Tunisia",
+          "home": false
+        },
+        {
+          "slug": "m058-japan-vs-sweden",
+          "no": 58,
+          "group": "F",
+          "matchday": 3,
+          "opponent": "Sweden",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "JPN",
+        "appearances": 7,
+        "titles": 0,
+        "best": "Round of 16",
+        "played": 25,
+        "w": 7,
+        "d": 6,
+        "l": 12,
+        "gf": 25,
+        "ga": 33,
+        "ppg": 1.08
+      },
+      "topScorers": [
+        {
+          "player": "Keisuke Honda",
+          "goals": 4,
+          "years": "2010;2014;2018"
+        },
+        {
+          "player": "Junichi Inamoto",
+          "goals": 2,
+          "years": "2002"
+        },
+        {
+          "player": "Shinji Okazaki",
+          "goals": 2,
+          "years": "2010;2014"
+        },
+        {
+          "player": "Takashi Inui",
+          "goals": 2,
+          "years": "2018"
+        },
+        {
+          "player": "Ritsu Dōan",
+          "goals": 2,
+          "years": "2022"
+        }
+      ]
+    },
+    {
+      "name": "Jordan",
+      "flag": "Jordan.png",
+      "matches": [
+        {
+          "slug": "m020-austria-vs-jordan",
+          "no": 20,
+          "group": "J",
+          "matchday": 1,
+          "opponent": "Austria",
+          "home": false
+        },
+        {
+          "slug": "m044-jordan-vs-algeria",
+          "no": 44,
+          "group": "J",
+          "matchday": 2,
+          "opponent": "Algeria",
+          "home": true
+        },
+        {
+          "slug": "m072-jordan-vs-argentina",
+          "no": 72,
+          "group": "J",
+          "matchday": 3,
+          "opponent": "Argentina",
+          "home": true
+        }
+      ],
+      "record": null,
+      "topScorers": []
+    },
+    {
+      "name": "Mexico",
+      "flag": "Mexico.png",
+      "matches": [
+        {
+          "slug": "m001-mexico-vs-south-africa",
+          "no": 1,
+          "group": "A",
+          "matchday": 1,
+          "opponent": "South Africa",
+          "home": true
+        },
+        {
+          "slug": "m028-mexico-vs-south-korea",
+          "no": 28,
+          "group": "A",
+          "matchday": 2,
+          "opponent": "South Korea",
+          "home": true
+        },
+        {
+          "slug": "m054-czech-republic-vs-mexico",
+          "no": 54,
+          "group": "A",
+          "matchday": 3,
+          "opponent": "Czech Republic",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "MEX",
+        "appearances": 17,
+        "titles": 0,
+        "best": "Quarter-final",
+        "played": 60,
+        "w": 17,
+        "d": 15,
+        "l": 28,
+        "gf": 62,
+        "ga": 101,
+        "ppg": 1.1
+      },
+      "topScorers": [
+        {
+          "player": "Luis Hernández",
+          "goals": 4,
+          "years": "1998"
+        },
+        {
+          "player": "Javier Hernández",
+          "goals": 4,
+          "years": "2010;2014;2018"
+        },
+        {
+          "player": "Manuel Rosas",
+          "goals": 3,
+          "years": "1930"
+        },
+        {
+          "player": "Cuauhtémoc Blanco",
+          "goals": 3,
+          "years": "1998;2002;2010"
+        },
+        {
+          "player": "Rafael Márquez",
+          "goals": 3,
+          "years": "2006;2010;2014"
+        }
+      ]
+    },
+    {
+      "name": "Morocco",
+      "flag": "Morocco.png",
+      "matches": [
+        {
+          "slug": "m006-brazil-vs-morocco",
+          "no": 6,
+          "group": "C",
+          "matchday": 1,
+          "opponent": "Brazil",
+          "home": false
+        },
+        {
+          "slug": "m030-scotland-vs-morocco",
+          "no": 30,
+          "group": "C",
+          "matchday": 2,
+          "opponent": "Scotland",
+          "home": false
+        },
+        {
+          "slug": "m051-morocco-vs-haiti",
+          "no": 51,
+          "group": "C",
+          "matchday": 3,
+          "opponent": "Haiti",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "MAR",
+        "appearances": 6,
+        "titles": 0,
+        "best": "Third place",
+        "played": 23,
+        "w": 5,
+        "d": 7,
+        "l": 11,
+        "gf": 20,
+        "ga": 27,
+        "ppg": 0.96
+      },
+      "topScorers": [
+        {
+          "player": "Youssef En-Nesyri",
+          "goals": 3,
+          "years": "2018;2022"
+        },
+        {
+          "player": "Abderrazak Khairi",
+          "goals": 2,
+          "years": "1986"
+        },
+        {
+          "player": "Abdeljalil Hadda",
+          "goals": 2,
+          "years": "1998"
+        },
+        {
+          "player": "Salaheddine Bassir",
+          "goals": 2,
+          "years": "1998"
+        },
+        {
+          "player": "Houmane Jarir",
+          "goals": 1,
+          "years": "1970"
+        }
+      ]
+    },
+    {
+      "name": "Netherlands",
+      "flag": "Netherlands.png",
+      "matches": [
+        {
+          "slug": "m010-netherlands-vs-japan",
+          "no": 10,
+          "group": "F",
+          "matchday": 1,
+          "opponent": "Japan",
+          "home": true
+        },
+        {
+          "slug": "m033-netherlands-vs-sweden",
+          "no": 33,
+          "group": "F",
+          "matchday": 2,
+          "opponent": "Sweden",
+          "home": true
+        },
+        {
+          "slug": "m057-tunisia-vs-netherlands",
+          "no": 57,
+          "group": "F",
+          "matchday": 3,
+          "opponent": "Tunisia",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "NED",
+        "appearances": 11,
+        "titles": 0,
+        "best": "Final",
+        "played": 55,
+        "w": 30,
+        "d": 14,
+        "l": 11,
+        "gf": 96,
+        "ga": 52,
+        "ppg": 1.89
+      },
+      "topScorers": [
+        {
+          "player": "Johnny Rep",
+          "goals": 7,
+          "years": "1974;1978"
+        },
+        {
+          "player": "Rob Rensenbrink",
+          "goals": 6,
+          "years": "1974;1978"
+        },
+        {
+          "player": "Dennis Bergkamp",
+          "goals": 6,
+          "years": "1994;1998"
+        },
+        {
+          "player": "Arjen Robben",
+          "goals": 6,
+          "years": "2006;2010;2014"
+        },
+        {
+          "player": "Robin van Persie",
+          "goals": 6,
+          "years": "2006;2010;2014"
+        }
+      ]
+    },
+    {
+      "name": "New Zealand",
+      "flag": "New Zealand.png",
+      "matches": [
+        {
+          "slug": "m016-iran-vs-new-zealand",
+          "no": 16,
+          "group": "G",
+          "matchday": 1,
+          "opponent": "Iran",
+          "home": false
+        },
+        {
+          "slug": "m040-new-zealand-vs-egypt",
+          "no": 40,
+          "group": "G",
+          "matchday": 2,
+          "opponent": "Egypt",
+          "home": true
+        },
+        {
+          "slug": "m065-new-zealand-vs-belgium",
+          "no": 65,
+          "group": "G",
+          "matchday": 3,
+          "opponent": "Belgium",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "NZL",
+        "appearances": 2,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 6,
+        "w": 0,
+        "d": 3,
+        "l": 3,
+        "gf": 4,
+        "ga": 14,
+        "ppg": 0.5
+      },
+      "topScorers": [
+        {
+          "player": "Steve Sumner",
+          "goals": 1,
+          "years": "1982"
+        },
+        {
+          "player": "Steve Wooddin",
+          "goals": 1,
+          "years": "1982"
+        },
+        {
+          "player": "Winston Reid",
+          "goals": 1,
+          "years": "2010"
+        },
+        {
+          "player": "Shane Smeltz",
+          "goals": 1,
+          "years": "2010"
+        }
+      ]
+    },
+    {
+      "name": "Norway",
+      "flag": "Norway.png",
+      "matches": [
+        {
+          "slug": "m018-iraq-vs-norway",
+          "no": 18,
+          "group": "I",
+          "matchday": 1,
+          "opponent": "Iraq",
+          "home": false
+        },
+        {
+          "slug": "m043-norway-vs-senegal",
+          "no": 43,
+          "group": "I",
+          "matchday": 2,
+          "opponent": "Senegal",
+          "home": true
+        },
+        {
+          "slug": "m061-norway-vs-france",
+          "no": 61,
+          "group": "I",
+          "matchday": 3,
+          "opponent": "France",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "NOR",
+        "appearances": 3,
+        "titles": 0,
+        "best": "Round of 16",
+        "played": 8,
+        "w": 2,
+        "d": 3,
+        "l": 3,
+        "gf": 7,
+        "ga": 8,
+        "ppg": 1.13
+      },
+      "topScorers": [
+        {
+          "player": "Kjetil Rekdal",
+          "goals": 2,
+          "years": "1994;1998"
+        },
+        {
+          "player": "Arne Brustad",
+          "goals": 1,
+          "years": "1938"
+        },
+        {
+          "player": "Dan Eggen",
+          "goals": 1,
+          "years": "1998"
+        },
+        {
+          "player": "Håvard Flo",
+          "goals": 1,
+          "years": "1998"
+        },
+        {
+          "player": "Tore André Flo",
+          "goals": 1,
+          "years": "1998"
+        }
+      ]
+    },
+    {
+      "name": "Panama",
+      "flag": "Panama.png",
+      "matches": [
+        {
+          "slug": "m023-ghana-vs-panama",
+          "no": 23,
+          "group": "L",
+          "matchday": 1,
+          "opponent": "Ghana",
+          "home": false
+        },
+        {
+          "slug": "m047-panama-vs-croatia",
+          "no": 47,
+          "group": "L",
+          "matchday": 2,
+          "opponent": "Croatia",
+          "home": true
+        },
+        {
+          "slug": "m067-panama-vs-england",
+          "no": 67,
+          "group": "L",
+          "matchday": 3,
+          "opponent": "England",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "PAN",
+        "appearances": 1,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 3,
+        "w": 0,
+        "d": 0,
+        "l": 3,
+        "gf": 2,
+        "ga": 11,
+        "ppg": 0
+      },
+      "topScorers": [
+        {
+          "player": "Felipe Baloy",
+          "goals": 1,
+          "years": "2018"
+        }
+      ]
+    },
+    {
+      "name": "Paraguay",
+      "flag": "Paraguay.png",
+      "matches": [
+        {
+          "slug": "m004-usa-vs-paraguay",
+          "no": 4,
+          "group": "D",
+          "matchday": 1,
+          "opponent": "USA",
+          "home": false
+        },
+        {
+          "slug": "m032-turkey-vs-paraguay",
+          "no": 32,
+          "group": "D",
+          "matchday": 2,
+          "opponent": "Turkey",
+          "home": false
+        },
+        {
+          "slug": "m060-paraguay-vs-australia",
+          "no": 60,
+          "group": "D",
+          "matchday": 3,
+          "opponent": "Australia",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "PRY",
+        "appearances": 8,
+        "titles": 0,
+        "best": "Quarter-final",
+        "played": 27,
+        "w": 7,
+        "d": 10,
+        "l": 10,
+        "gf": 30,
+        "ga": 38,
+        "ppg": 1.15
+      },
+      "topScorers": [
+        {
+          "player": "Nelson Cuevas",
+          "goals": 3,
+          "years": "2002;2006"
+        },
+        {
+          "player": "Florencio Amarilla",
+          "goals": 2,
+          "years": "1958"
+        },
+        {
+          "player": "Jorge Lino Romero",
+          "goals": 2,
+          "years": "1958"
+        },
+        {
+          "player": "Juan Bautista Agüero",
+          "goals": 2,
+          "years": "1958"
+        },
+        {
+          "player": "José Parodi",
+          "goals": 2,
+          "years": "1958"
+        }
+      ]
+    },
+    {
+      "name": "Portugal",
+      "flag": "Portugal.png",
+      "matches": [
+        {
+          "slug": "m021-portugal-vs-dr-congo",
+          "no": 21,
+          "group": "K",
+          "matchday": 1,
+          "opponent": "DR Congo",
+          "home": true
+        },
+        {
+          "slug": "m045-portugal-vs-uzbekistan",
+          "no": 45,
+          "group": "K",
+          "matchday": 2,
+          "opponent": "Uzbekistan",
+          "home": true
+        },
+        {
+          "slug": "m069-colombia-vs-portugal",
+          "no": 69,
+          "group": "K",
+          "matchday": 3,
+          "opponent": "Colombia",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "POR",
+        "appearances": 8,
+        "titles": 0,
+        "best": "Third place",
+        "played": 35,
+        "w": 17,
+        "d": 6,
+        "l": 12,
+        "gf": 61,
+        "ga": 41,
+        "ppg": 1.63
+      },
+      "topScorers": [
+        {
+          "player": "Eusébio",
+          "goals": 9,
+          "years": "1966"
+        },
+        {
+          "player": "Cristiano Ronaldo",
+          "goals": 8,
+          "years": "2006;2010;2014;2018;2022"
+        },
+        {
+          "player": "Pauleta",
+          "goals": 4,
+          "years": "2002;2006"
+        },
+        {
+          "player": "José Augusto",
+          "goals": 3,
+          "years": "1966"
+        },
+        {
+          "player": "José Torres",
+          "goals": 3,
+          "years": "1966"
+        }
+      ]
+    },
+    {
+      "name": "Qatar",
+      "flag": "Qatar.png",
+      "matches": [
+        {
+          "slug": "m005-qatar-vs-switzerland",
+          "no": 5,
+          "group": "B",
+          "matchday": 1,
+          "opponent": "Switzerland",
+          "home": true
+        },
+        {
+          "slug": "m027-canada-vs-qatar",
+          "no": 27,
+          "group": "B",
+          "matchday": 2,
+          "opponent": "Canada",
+          "home": false
+        },
+        {
+          "slug": "m050-bosnia-herzegovina-vs-qatar",
+          "no": 50,
+          "group": "B",
+          "matchday": 3,
+          "opponent": "Bosnia & Herzegovina",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "QAT",
+        "appearances": 1,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 3,
+        "w": 0,
+        "d": 0,
+        "l": 3,
+        "gf": 1,
+        "ga": 7,
+        "ppg": 0
+      },
+      "topScorers": [
+        {
+          "player": "Mohammed Muntari",
+          "goals": 1,
+          "years": "2022"
+        }
+      ]
+    },
+    {
+      "name": "Saudi Arabia",
+      "flag": "Saudi Arabia.png",
+      "matches": [
+        {
+          "slug": "m015-saudi-arabia-vs-uruguay",
+          "no": 15,
+          "group": "H",
+          "matchday": 1,
+          "opponent": "Uruguay",
+          "home": true
+        },
+        {
+          "slug": "m037-spain-vs-saudi-arabia",
+          "no": 37,
+          "group": "H",
+          "matchday": 2,
+          "opponent": "Spain",
+          "home": false
+        },
+        {
+          "slug": "m063-cape-verde-vs-saudi-arabia",
+          "no": 63,
+          "group": "H",
+          "matchday": 3,
+          "opponent": "Cape Verde",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "KSA",
+        "appearances": 6,
+        "titles": 0,
+        "best": "Round of 16",
+        "played": 19,
+        "w": 4,
+        "d": 2,
+        "l": 13,
+        "gf": 14,
+        "ga": 44,
+        "ppg": 0.74
+      },
+      "topScorers": [
+        {
+          "player": "Sami Al-Jaber",
+          "goals": 3,
+          "years": "1994;1998;2006"
+        },
+        {
+          "player": "Salem Al-Dawsari",
+          "goals": 3,
+          "years": "2018;2022"
+        },
+        {
+          "player": "Fuad Anwar",
+          "goals": 2,
+          "years": "1994"
+        },
+        {
+          "player": "Saeed Al-Owairan",
+          "goals": 1,
+          "years": "1994"
+        },
+        {
+          "player": "Fahad Al-Ghesheyan",
+          "goals": 1,
+          "years": "1994"
+        }
+      ]
+    },
+    {
+      "name": "Scotland",
+      "flag": "Scotland.png",
+      "matches": [
+        {
+          "slug": "m007-haiti-vs-scotland",
+          "no": 7,
+          "group": "C",
+          "matchday": 1,
+          "opponent": "Haiti",
+          "home": false
+        },
+        {
+          "slug": "m030-scotland-vs-morocco",
+          "no": 30,
+          "group": "C",
+          "matchday": 2,
+          "opponent": "Morocco",
+          "home": true
+        },
+        {
+          "slug": "m052-scotland-vs-brazil",
+          "no": 52,
+          "group": "C",
+          "matchday": 3,
+          "opponent": "Brazil",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "SCO",
+        "appearances": 8,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 23,
+        "w": 4,
+        "d": 7,
+        "l": 12,
+        "gf": 25,
+        "ga": 41,
+        "ppg": 0.83
+      },
+      "topScorers": [
+        {
+          "player": "Joe Jordan",
+          "goals": 4,
+          "years": "1974;1978;1982"
+        },
+        {
+          "player": "Kenny Dalglish",
+          "goals": 2,
+          "years": "1978;1982"
+        },
+        {
+          "player": "Archie Gemmill",
+          "goals": 2,
+          "years": "1978"
+        },
+        {
+          "player": "John Wark",
+          "goals": 2,
+          "years": "1982"
+        },
+        {
+          "player": "Jimmy Murray",
+          "goals": 1,
+          "years": "1958"
+        }
+      ]
+    },
+    {
+      "name": "Senegal",
+      "flag": "Senegal.png",
+      "matches": [
+        {
+          "slug": "m017-france-vs-senegal",
+          "no": 17,
+          "group": "I",
+          "matchday": 1,
+          "opponent": "France",
+          "home": false
+        },
+        {
+          "slug": "m043-norway-vs-senegal",
+          "no": 43,
+          "group": "I",
+          "matchday": 2,
+          "opponent": "Norway",
+          "home": false
+        },
+        {
+          "slug": "m062-senegal-vs-iraq",
+          "no": 62,
+          "group": "I",
+          "matchday": 3,
+          "opponent": "Iraq",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "SEN",
+        "appearances": 3,
+        "titles": 0,
+        "best": "Quarter-final",
+        "played": 12,
+        "w": 5,
+        "d": 3,
+        "l": 4,
+        "gf": 16,
+        "ga": 17,
+        "ppg": 1.5
+      },
+      "topScorers": [
+        {
+          "player": "Papa Bouba Diop",
+          "goals": 3,
+          "years": "2002"
+        },
+        {
+          "player": "Henri Camara",
+          "goals": 2,
+          "years": "2002"
+        },
+        {
+          "player": "Salif Diao",
+          "goals": 1,
+          "years": "2002"
+        },
+        {
+          "player": "Khalilou Fadiga",
+          "goals": 1,
+          "years": "2002"
+        },
+        {
+          "player": "M'Baye Niang",
+          "goals": 1,
+          "years": "2018"
+        }
+      ]
+    },
+    {
+      "name": "South Africa",
+      "flag": "South Africa.png",
+      "matches": [
+        {
+          "slug": "m001-mexico-vs-south-africa",
+          "no": 1,
+          "group": "A",
+          "matchday": 1,
+          "opponent": "Mexico",
+          "home": false
+        },
+        {
+          "slug": "m025-czech-republic-vs-south-africa",
+          "no": 25,
+          "group": "A",
+          "matchday": 2,
+          "opponent": "Czech Republic",
+          "home": false
+        },
+        {
+          "slug": "m053-south-africa-vs-south-korea",
+          "no": 53,
+          "group": "A",
+          "matchday": 3,
+          "opponent": "South Korea",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "RSA",
+        "appearances": 3,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 9,
+        "w": 2,
+        "d": 4,
+        "l": 3,
+        "gf": 11,
+        "ga": 16,
+        "ppg": 1.11
+      },
+      "topScorers": [
+        {
+          "player": "Benni McCarthy",
+          "goals": 2,
+          "years": "1998;2002"
+        },
+        {
+          "player": "Shaun Bartlett",
+          "goals": 2,
+          "years": "1998"
+        },
+        {
+          "player": "Pierre Issa",
+          "goals": 1,
+          "years": "1998"
+        },
+        {
+          "player": "Teboho Mokoena",
+          "goals": 1,
+          "years": "2002"
+        },
+        {
+          "player": "Quinton Fortune",
+          "goals": 1,
+          "years": "2002"
+        }
+      ]
+    },
+    {
+      "name": "South Korea",
+      "flag": "South Korea.png",
+      "matches": [
+        {
+          "slug": "m002-south-korea-vs-czech-republic",
+          "no": 2,
+          "group": "A",
+          "matchday": 1,
+          "opponent": "Czech Republic",
+          "home": true
+        },
+        {
+          "slug": "m028-mexico-vs-south-korea",
+          "no": 28,
+          "group": "A",
+          "matchday": 2,
+          "opponent": "Mexico",
+          "home": false
+        },
+        {
+          "slug": "m053-south-africa-vs-south-korea",
+          "no": 53,
+          "group": "A",
+          "matchday": 3,
+          "opponent": "South Africa",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "KOR",
+        "appearances": 11,
+        "titles": 0,
+        "best": "Third place",
+        "played": 38,
+        "w": 7,
+        "d": 10,
+        "l": 21,
+        "gf": 39,
+        "ga": 78,
+        "ppg": 0.82
+      },
+      "topScorers": [
+        {
+          "player": "Jung-hwan Ahn",
+          "goals": 3,
+          "years": "2002;2006"
+        },
+        {
+          "player": "Ji-sung Park",
+          "goals": 3,
+          "years": "2002;2006;2010"
+        },
+        {
+          "player": "Heung-min Son",
+          "goals": 3,
+          "years": "2014;2018"
+        },
+        {
+          "player": "Myung-bo Hong",
+          "goals": 2,
+          "years": "1994"
+        },
+        {
+          "player": "Sun-hong Hwang",
+          "goals": 2,
+          "years": "1994;2002"
+        }
+      ]
+    },
+    {
+      "name": "Spain",
+      "flag": "Spain.png",
+      "matches": [
+        {
+          "slug": "m013-spain-vs-cape-verde",
+          "no": 13,
+          "group": "H",
+          "matchday": 1,
+          "opponent": "Cape Verde",
+          "home": true
+        },
+        {
+          "slug": "m037-spain-vs-saudi-arabia",
+          "no": 37,
+          "group": "H",
+          "matchday": 2,
+          "opponent": "Saudi Arabia",
+          "home": true
+        },
+        {
+          "slug": "m064-uruguay-vs-spain",
+          "no": 64,
+          "group": "H",
+          "matchday": 3,
+          "opponent": "Uruguay",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "ESP",
+        "appearances": 16,
+        "titles": 1,
+        "best": "Champions",
+        "played": 66,
+        "w": 31,
+        "d": 17,
+        "l": 18,
+        "gf": 108,
+        "ga": 74,
+        "ppg": 1.67
+      },
+      "topScorers": [
+        {
+          "player": "David Villa",
+          "goals": 9,
+          "years": "2006;2010;2014"
+        },
+        {
+          "player": "Emilio Butragueño",
+          "goals": 5,
+          "years": "1986"
+        },
+        {
+          "player": "Fernando Hierro",
+          "goals": 5,
+          "years": "1994;1998;2002"
+        },
+        {
+          "player": "Raúl",
+          "goals": 5,
+          "years": "1998;2002;2006"
+        },
+        {
+          "player": "Fernando Morientes",
+          "goals": 5,
+          "years": "1998;2002"
+        }
+      ]
+    },
+    {
+      "name": "Sweden",
+      "flag": "Sweden.png",
+      "matches": [
+        {
+          "slug": "m012-sweden-vs-tunisia",
+          "no": 12,
+          "group": "F",
+          "matchday": 1,
+          "opponent": "Tunisia",
+          "home": true
+        },
+        {
+          "slug": "m033-netherlands-vs-sweden",
+          "no": 33,
+          "group": "F",
+          "matchday": 2,
+          "opponent": "Netherlands",
+          "home": false
+        },
+        {
+          "slug": "m058-japan-vs-sweden",
+          "no": 58,
+          "group": "F",
+          "matchday": 3,
+          "opponent": "Japan",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "SWE",
+        "appearances": 12,
+        "titles": 0,
+        "best": "Final",
+        "played": 51,
+        "w": 19,
+        "d": 13,
+        "l": 19,
+        "gf": 80,
+        "ga": 73,
+        "ppg": 1.37
+      },
+      "topScorers": [
+        {
+          "player": "Kennet Andersson",
+          "goals": 5,
+          "years": "1994"
+        },
+        {
+          "player": "Henrik Larsson",
+          "goals": 5,
+          "years": "1994;2002;2006"
+        },
+        {
+          "player": "Agne Simonsson",
+          "goals": 4,
+          "years": "1958"
+        },
+        {
+          "player": "Kurt Hamrin",
+          "goals": 4,
+          "years": "1958"
+        },
+        {
+          "player": "Ralf Edström",
+          "goals": 4,
+          "years": "1974"
+        }
+      ]
+    },
+    {
+      "name": "Switzerland",
+      "flag": "Switzerland.png",
+      "matches": [
+        {
+          "slug": "m005-qatar-vs-switzerland",
+          "no": 5,
+          "group": "B",
+          "matchday": 1,
+          "opponent": "Qatar",
+          "home": false
+        },
+        {
+          "slug": "m026-switzerland-vs-bosnia-herzegovina",
+          "no": 26,
+          "group": "B",
+          "matchday": 2,
+          "opponent": "Bosnia & Herzegovina",
+          "home": true
+        },
+        {
+          "slug": "m049-switzerland-vs-canada",
+          "no": 49,
+          "group": "B",
+          "matchday": 3,
+          "opponent": "Canada",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "SUI",
+        "appearances": 12,
+        "titles": 0,
+        "best": "Quarter-final",
+        "played": 40,
+        "w": 13,
+        "d": 8,
+        "l": 19,
+        "gf": 51,
+        "ga": 71,
+        "ppg": 1.18
+      },
+      "topScorers": [
+        {
+          "player": "Josef Hügi",
+          "goals": 6,
+          "years": "1954"
+        },
+        {
+          "player": "Xherdan Shaqiri",
+          "goals": 5,
+          "years": "2014;2018;2022"
+        },
+        {
+          "player": "André Abegglen",
+          "goals": 4,
+          "years": "1934;1938"
+        },
+        {
+          "player": "Robert Ballaman",
+          "goals": 4,
+          "years": "1954"
+        },
+        {
+          "player": "Leopold Kielholz",
+          "goals": 3,
+          "years": "1934"
+        }
+      ]
+    },
+    {
+      "name": "Tunisia",
+      "flag": "Tunisia.png",
+      "matches": [
+        {
+          "slug": "m012-sweden-vs-tunisia",
+          "no": 12,
+          "group": "F",
+          "matchday": 1,
+          "opponent": "Sweden",
+          "home": false
+        },
+        {
+          "slug": "m036-tunisia-vs-japan",
+          "no": 36,
+          "group": "F",
+          "matchday": 2,
+          "opponent": "Japan",
+          "home": true
+        },
+        {
+          "slug": "m057-tunisia-vs-netherlands",
+          "no": 57,
+          "group": "F",
+          "matchday": 3,
+          "opponent": "Netherlands",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "TUN",
+        "appearances": 6,
+        "titles": 0,
+        "best": "Group stage",
+        "played": 18,
+        "w": 3,
+        "d": 5,
+        "l": 10,
+        "gf": 14,
+        "ga": 26,
+        "ppg": 0.78
+      },
+      "topScorers": [
+        {
+          "player": "Wahbi Khazri",
+          "goals": 3,
+          "years": "2018;2022"
+        },
+        {
+          "player": "Ali Kaabi",
+          "goals": 1,
+          "years": "1978"
+        },
+        {
+          "player": "Néjib Ghommidh",
+          "goals": 1,
+          "years": "1978"
+        },
+        {
+          "player": "Mokhtar Dhouib",
+          "goals": 1,
+          "years": "1978"
+        },
+        {
+          "player": "Skander Souayah",
+          "goals": 1,
+          "years": "1998"
+        }
+      ]
+    },
+    {
+      "name": "Turkey",
+      "flag": "Turkey.png",
+      "matches": [
+        {
+          "slug": "m008-australia-vs-turkey",
+          "no": 8,
+          "group": "D",
+          "matchday": 1,
+          "opponent": "Australia",
+          "home": false
+        },
+        {
+          "slug": "m032-turkey-vs-paraguay",
+          "no": 32,
+          "group": "D",
+          "matchday": 2,
+          "opponent": "Paraguay",
+          "home": true
+        },
+        {
+          "slug": "m059-turkey-vs-usa",
+          "no": 59,
+          "group": "D",
+          "matchday": 3,
+          "opponent": "USA",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "TUR",
+        "appearances": 2,
+        "titles": 0,
+        "best": "Third place",
+        "played": 10,
+        "w": 5,
+        "d": 1,
+        "l": 4,
+        "gf": 20,
+        "ga": 17,
+        "ppg": 1.6
+      },
+      "topScorers": [
+        {
+          "player": "Suat Mamat",
+          "goals": 3,
+          "years": "1954"
+        },
+        {
+          "player": "Burhan Sargun",
+          "goals": 3,
+          "years": "1954"
+        },
+        {
+          "player": "İlhan Mansız",
+          "goals": 3,
+          "years": "2002"
+        },
+        {
+          "player": "Lefter Küçükandonyadis",
+          "goals": 2,
+          "years": "1954"
+        },
+        {
+          "player": "Hasan Şaş",
+          "goals": 2,
+          "years": "2002"
+        }
+      ]
+    },
+    {
+      "name": "Uruguay",
+      "flag": "Uruguay.png",
+      "matches": [
+        {
+          "slug": "m015-saudi-arabia-vs-uruguay",
+          "no": 15,
+          "group": "H",
+          "matchday": 1,
+          "opponent": "Saudi Arabia",
+          "home": false
+        },
+        {
+          "slug": "m039-uruguay-vs-cape-verde",
+          "no": 39,
+          "group": "H",
+          "matchday": 2,
+          "opponent": "Cape Verde",
+          "home": true
+        },
+        {
+          "slug": "m064-uruguay-vs-spain",
+          "no": 64,
+          "group": "H",
+          "matchday": 3,
+          "opponent": "Spain",
+          "home": true
+        }
+      ],
+      "record": {
+        "code": "URU",
+        "appearances": 14,
+        "titles": 1,
+        "best": "Champions",
+        "played": 59,
+        "w": 25,
+        "d": 13,
+        "l": 21,
+        "gf": 89,
+        "ga": 76,
+        "ppg": 1.49
+      },
+      "topScorers": [
+        {
+          "player": "Oscar Míguez",
+          "goals": 8,
+          "years": "1950;1954"
+        },
+        {
+          "player": "Luis Suárez",
+          "goals": 7,
+          "years": "2010;2014;2018"
+        },
+        {
+          "player": "Diego Forlán",
+          "goals": 6,
+          "years": "2002;2010"
+        },
+        {
+          "player": "Pedro Cea",
+          "goals": 5,
+          "years": "1930"
+        },
+        {
+          "player": "Juan Alberto Schiaffino",
+          "goals": 5,
+          "years": "1950;1954"
+        }
+      ]
+    },
+    {
+      "name": "USA",
+      "flag": "USA.png",
+      "matches": [
+        {
+          "slug": "m004-usa-vs-paraguay",
+          "no": 4,
+          "group": "D",
+          "matchday": 1,
+          "opponent": "Paraguay",
+          "home": true
+        },
+        {
+          "slug": "m029-usa-vs-australia",
+          "no": 29,
+          "group": "D",
+          "matchday": 2,
+          "opponent": "Australia",
+          "home": true
+        },
+        {
+          "slug": "m059-turkey-vs-usa",
+          "no": 59,
+          "group": "D",
+          "matchday": 3,
+          "opponent": "Turkey",
+          "home": false
+        }
+      ],
+      "record": {
+        "code": "USA",
+        "appearances": 11,
+        "titles": 0,
+        "best": "Third place",
+        "played": 37,
+        "w": 9,
+        "d": 8,
+        "l": 20,
+        "gf": 40,
+        "ga": 66,
+        "ppg": 0.95
+      },
+      "topScorers": [
+        {
+          "player": "Landon Donovan",
+          "goals": 5,
+          "years": "2002;2010"
+        },
+        {
+          "player": "Bert Patenaude",
+          "goals": 4,
+          "years": "1930"
+        },
+        {
+          "player": "Clint Dempsey",
+          "goals": 4,
+          "years": "2006;2010;2014"
+        },
+        {
+          "player": "Brian McBride",
+          "goals": 3,
+          "years": "1998;2002"
+        },
+        {
+          "player": "Bart McGhee",
+          "goals": 1,
+          "years": "1930"
+        }
+      ]
+    },
+    {
+      "name": "Uzbekistan",
+      "flag": "Uzbekistan.png",
+      "matches": [
+        {
+          "slug": "m024-uzbekistan-vs-colombia",
+          "no": 24,
+          "group": "K",
+          "matchday": 1,
+          "opponent": "Colombia",
+          "home": true
+        },
+        {
+          "slug": "m045-portugal-vs-uzbekistan",
+          "no": 45,
+          "group": "K",
+          "matchday": 2,
+          "opponent": "Portugal",
+          "home": false
+        },
+        {
+          "slug": "m070-dr-congo-vs-uzbekistan",
+          "no": 70,
+          "group": "K",
+          "matchday": 3,
+          "opponent": "DR Congo",
+          "home": false
+        }
+      ],
+      "record": null,
+      "topScorers": []
+    }
+  ]
+}

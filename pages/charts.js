@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import StatChart from "../components/StatChart";
 import PlayerComparison from "../components/PlayerComparison";
+import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "../components/SiteFooter";
 
 function parseCSV(text) {
   const lines = text.trim().split("\n");
@@ -51,29 +51,20 @@ export default function Charts() {
       <Head>
         <title>Charts — BEST</title>
       </Head>
-      <div className="min-h-screen bg-gray-950 text-white flex flex-col">
-        <header className="border-b border-gray-800 px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Image src="/logo/logobml.png" alt="BestMostLast" width={40} height={40} className="rounded" />
-            <span className="text-xl font-black tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">BestMostLast</span>
-          </div>
-          <nav className="flex gap-6 text-sm font-medium text-gray-400">
-            <Link href="/" className="hover:text-cyan-400 transition-colors">Home</Link>
-            <Link href="/charts" className="text-white">Charts</Link>
-          </nav>
-        </header>
+      <div className="min-h-screen bg-ink text-silver flex flex-col">
+        <SiteHeader active="/charts" />
 
-        <main className="max-w-4xl mx-auto px-6 py-12">
-          <h1 className="text-3xl font-black mb-8">Charts</h1>
+        <main className="max-w-4xl w-full mx-auto px-6 py-12">
+          <h1 className="text-3xl font-black mb-8 text-silver">Charts</h1>
 
           {data.length === 0 ? (
-            <div className="text-center py-24 text-gray-600">
-              <p>No data yet. Add rows to <code className="text-gray-500">public/data/premier-league.csv</code></p>
+            <div className="text-center py-24 text-steel">
+              <p>No data yet. Add rows to <code className="text-silver">public/data/premier-league.csv</code></p>
             </div>
           ) : (
             <div className="space-y-10">
               <section>
-                <h2 className="text-lg font-bold text-gray-300 mb-3">Player Goal Timeline</h2>
+                <h2 className="text-lg font-bold text-silver mb-3">Player Goal Timeline</h2>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {players.map((p) => (
                     <button
@@ -81,8 +72,8 @@ export default function Charts() {
                       onClick={() => setActivePlayer(p)}
                       className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                         activePlayer === p
-                          ? "bg-emerald-500 text-black"
-                          : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                          ? "bg-brand text-ink"
+                          : "bg-gunmetal text-steel hover:bg-navy"
                       }`}
                     >
                       {p}
@@ -93,7 +84,7 @@ export default function Charts() {
               </section>
 
               <section>
-                <h2 className="text-lg font-bold text-gray-300 mb-3">Compare Players (up to 4)</h2>
+                <h2 className="text-lg font-bold text-silver mb-3">Compare Players (up to 4)</h2>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {players.map((p) => (
                     <button
@@ -101,8 +92,8 @@ export default function Charts() {
                       onClick={() => togglePlayer(p)}
                       className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                         selected.includes(p)
-                          ? "bg-indigo-500 text-white"
-                          : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                          ? "bg-data text-ink"
+                          : "bg-gunmetal text-steel hover:bg-navy"
                       }`}
                     >
                       {p}
@@ -115,30 +106,7 @@ export default function Charts() {
           )}
         </main>
 
-        <footer className="border-t border-gray-800 px-6 py-8 mt-16">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-2">
-                <Image src="/logo/logobml.png" alt="BestMostLast" width={32} height={32} className="rounded" />
-                <span className="font-bold text-gray-300">BestMostLast</span>
-              </div>
-              <div className="flex gap-4">
-                <a href="https://x.com/bestmostlast" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  Twitter
-                </a>
-                <a href="https://www.youtube.com/@bestmostlast" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  YouTube
-                </a>
-                <a href="https://www.instagram.com/bestmostlast" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  Instagram
-                </a>
-              </div>
-            </div>
-            <div className="text-center text-xs text-gray-600">
-              <p>© 2026 BestMostLast. Sports data journalism. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+        <SiteFooter />
       </div>
     </>
   );
