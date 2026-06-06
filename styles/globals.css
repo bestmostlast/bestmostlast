@@ -14,9 +14,9 @@
   --bml-silver: #b9bdbd;
   --bml-gold: #b0a88f;
 
-  /* functional accents (kept from existing brand system) */
-  --bml-orange: #ff6a2b; /* CTAs */
-  --bml-data: #4f93c2;   /* steel-blue data viz */
+  /* functional accents — both drawn from the cool bmlpalette family */
+  --bml-blue: #4f93c2;   /* primary CTA / active accent (steel-blue) */
+  --bml-data: #7fb3d5;   /* lighter steel-blue for data viz / badges */
 
   --background: var(--bml-ink);
   --foreground: var(--bml-silver);
@@ -31,7 +31,7 @@
   --color-steel: var(--bml-steel);
   --color-silver: var(--bml-silver);
   --color-gold: var(--bml-gold);
-  --color-brand: var(--bml-orange);
+  --color-brand: var(--bml-blue);
   --color-data: var(--bml-data);
 
   --color-background: var(--background);

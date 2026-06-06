@@ -1,42 +1,18 @@
 import Head from "next/head";
-import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useState } from "react";
 import StatChart from "../components/StatChart";
 import PlayerComparison from "../components/PlayerComparison";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
-function parseCSV(text) {
-  const lines = text.trim().split("\n");
-  const headers = lines[0].split(",");
-  return lines.slice(1).map((line) => {
-    const vals = line.split(",");
-    return Object.fromEntries(
-      headers.map((h, i) => [h.trim(), isNaN(vals[i]) ? vals[i]?.trim() : +vals[i]])
-    );
-  });
-}
-
 export default function Charts() {
-  const [data, setData] = useState([]);
-  const [players, setPlayers] = useState([]);
+  // No live dataset wired up yet — the player-timeline charts go live once real
+  // sourced data lands. (The previous demo CSV was removed.)
+  const [data] = useState([]);
+  const [players] = useState([]);
   const [selected, setSelected] = useState([]);
   const [activePlayer, setActivePlayer] = useState(null);
-
-  useEffect(() => {
-    fetch("/data/premier-league.csv")
-      .then((r) => r.text())
-      .then((text) => {
-        const rows = parseCSV(text);
-        setData(rows);
-        const unique = [...new Set(rows.map((r) => r.player))];
-        setPlayers(unique);
-        if (unique.length > 0) {
-          setActivePlayer(unique[0]);
-          setSelected(unique.slice(0, 2));
-        }
-      })
-      .catch(() => {});
-  }, []);
 
   const playerData = data.filter((r) => r.player === activePlayer);
 
@@ -58,8 +34,23 @@ export default function Charts() {
           <h1 className="text-3xl font-black mb-8 text-silver">Charts</h1>
 
           {data.length === 0 ? (
-            <div className="text-center py-24 text-steel">
-              <p>No data yet. Add rows to <code className="text-silver">public/data/premier-league.csv</code></p>
+            <div className="rounded-2xl border border-shadow bg-gunmetal/40 px-6 py-16 text-center">
+              <p className="text-xs font-bold uppercase tracking-widest text-gold mb-2">
+                Coming soon
+              </p>
+              <h2 className="text-2xl font-black text-silver mb-2">
+                Interactive charts are on the way
+              </h2>
+              <p className="text-steel max-w-md mx-auto mb-6">
+                Player and team timelines built on real, sourced data. In the
+                meantime, explore the World Cup 2026 matchups.
+              </p>
+              <Link
+                href="/wc26"
+                className="inline-block bg-brand hover:brightness-110 text-ink font-bold px-6 py-3 rounded-full transition"
+              >
+                World Cup 2026 →
+              </Link>
             </div>
           ) : (
             <div className="space-y-10">
