@@ -1,28 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
 export default function Home() {
-  const [latestStats, setLatestStats] = useState([]);
-
-  useEffect(() => {
-    fetch("/data/premier-league.csv")
-      .then((r) => r.text())
-      .then((text) => {
-        const lines = text.trim().split("\n").slice(1);
-        const rows = lines.map((l) => {
-          const [player, team, goals, week, competition, date, avg7, avg30] = l.split(",");
-          return { player, team, goals: +goals, week: +week, competition, date, avg7: +avg7, avg30: +avg30 };
-        });
-        const sorted = [...rows].sort((a, b) => b.goals - a.goals).slice(0, 5);
-        setLatestStats(sorted);
-      })
-      .catch(() => {});
-  }, []);
-
   return (
     <>
       <Head>
@@ -81,34 +63,6 @@ export default function Home() {
               </span>
             </div>
           </Link>
-
-          {latestStats.length > 0 && (
-            <section>
-              <h2 className="text-xl font-bold mb-4 text-silver">Top Scorers</h2>
-              <div className="grid gap-3">
-                {latestStats.map((s, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center justify-between bg-gunmetal/40 rounded-xl px-5 py-4 border border-shadow"
-                  >
-                    <div>
-                      <span className="font-bold text-silver">{s.player}</span>
-                      <span className="ml-2 text-sm text-steel">{s.team}</span>
-                    </div>
-                    <span className="text-2xl font-black text-data">{s.goals}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6">
-                <Link
-                  href="/charts"
-                  className="inline-block bg-gunmetal hover:bg-navy text-silver font-bold px-6 py-3 rounded-full transition-colors"
-                >
-                  View All Charts →
-                </Link>
-              </div>
-            </section>
-          )}
         </main>
 
         <SiteFooter />

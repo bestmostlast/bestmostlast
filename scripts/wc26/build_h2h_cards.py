@@ -167,7 +167,12 @@ def make_comment(stats, ha, opp):
 # The player to HIGHLIGHT on S4 per nation (the "face" of the team for 2026),
 # which is NOT always the all-time/recent top scorer (e.g. Türkiye → Arda Güler).
 # These names must have a photo in _shared/highlight/ or _shared/players/.
+# Curated CURRENT marquee player per 2026 nation — the "player to watch".
+# These are present-day internationals expected in the 2026 squad (verified
+# against published WC2026 squads for the less-familiar teams), NEVER historical
+# top scorers. Used for S3 watch-list + S4 hook when no starting XI is filled.
 STAR_BY_TEAM = {
+    # marquee
     "Argentina": "Lionel Messi",
     "Portugal": "Cristiano Ronaldo",
     "Türkiye": "Arda Güler",
@@ -180,6 +185,48 @@ STAR_BY_TEAM = {
     "Poland": "Robert Lewandowski",
     "Croatia": "Luka Modrić",
     "South Korea": "Heung-min Son",
+    # rest of the field (current stars)
+    "Spain": "Lamine Yamal",
+    "Germany": "Jamal Musiala",
+    "Netherlands": "Virgil van Dijk",
+    "Belgium": "Kevin De Bruyne",
+    "Uruguay": "Federico Valverde",
+    "Colombia": "Luis Díaz",
+    "Morocco": "Achraf Hakimi",
+    "Japan": "Kaoru Mitoma",
+    "Senegal": "Sadio Mané",
+    "Switzerland": "Granit Xhaka",
+    "Austria": "Marcel Sabitzer",
+    "Mexico": "Santiago Giménez",
+    "USA": "Christian Pulisic",
+    "Ecuador": "Moisés Caicedo",
+    "Australia": "Jackson Irvine",
+    "Algeria": "Riyad Mahrez",
+    "Ivory Coast": "Sébastien Haller",
+    "Ghana": "Mohammed Kudus",
+    "Tunisia": "Hannibal Mejbri",
+    "Czech Republic": "Patrik Schick",
+    "Sweden": "Alexander Isak",
+    "Scotland": "Scott McTominay",
+    "Canada": "Alphonso Davies",
+    "Iran": "Mehdi Taremi",
+    "Saudi Arabia": "Salem Al-Dawsari",
+    "Qatar": "Akram Afif",
+    "Iraq": "Aymen Hussein",
+    "South Africa": "Percy Tau",
+    "Paraguay": "Miguel Almirón",
+    "Panama": "Aníbal Godoy",
+    "New Zealand": "Chris Wood",
+    "Bosnia & Herzegovina": "Edin Džeko",
+    "Bosnia and Herzegovina": "Edin Džeko",
+    "DR Congo": "Cédric Bakambu",
+    "Haiti": "Duckens Nazon",
+    # 2026 debutants (verified vs published squads)
+    "Cape Verde": "Ryan Mendes",
+    "Curacao": "Tahith Chong",
+    "Curaçao": "Tahith Chong",
+    "Jordan": "Mousa Al-Tamari",
+    "Uzbekistan": "Abdukodir Khusanov",
 }
 
 # Hand-curated newspaper hooks for marquee players (override the template).
