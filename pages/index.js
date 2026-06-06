@@ -35,6 +35,14 @@ export default function Home() {
         <main className="max-w-6xl w-full mx-auto px-6 py-16">
           {/* Hero */}
           <section className="mb-16">
+            <Image
+              src="/logo/new/crown-simple.png"
+              alt=""
+              width={72}
+              height={72}
+              priority
+              className="mb-5 opacity-95"
+            />
             <h1 className="text-5xl md:text-6xl font-black tracking-tight mb-4 text-silver">
               Best · Most · Last
             </h1>

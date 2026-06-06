@@ -13,7 +13,7 @@ export default function SiteFooter() {
         <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
           <div className="flex items-center gap-2">
             <Image
-              src="/logo/new/crown-mark.png"
+              src="/logo/new/crown.png"
               alt="BestMostLast"
               width={28}
               height={28}

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useMemo } from "react";
 import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "../../components/SiteFooter";
@@ -37,9 +38,18 @@ export default function WC26Hub({ matches, groups }) {
         <main className="max-w-6xl w-full mx-auto px-6 py-12 flex-1">
           {/* Hero */}
           <section className="mb-10">
-            <p className="text-xs font-bold uppercase tracking-widest text-gold mb-2">
-              June 11 – July 19, 2026
-            </p>
+            <div className="flex items-center gap-3 mb-2">
+              <Image
+                src="/logo/new/crown-simple.png"
+                alt=""
+                width={40}
+                height={40}
+                className="opacity-90"
+              />
+              <p className="text-xs font-bold uppercase tracking-widest text-gold">
+                June 11 – July 19, 2026
+              </p>
+            </div>
             <h1 className="text-4xl md:text-5xl font-black tracking-tight text-silver mb-3">
               World Cup 2026
             </h1>

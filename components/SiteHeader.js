@@ -13,7 +13,7 @@ export default function SiteHeader({ active = "/" }) {
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <Image
-            src="/logo/new/crown-mark.png"
+            src="/logo/new/crown-simple.png"
             alt="BestMostLast"
             width={36}
             height={36}
