@@ -28,7 +28,6 @@ export default function Home() {
       <Head>
         <title>BestMostLast — Sports Data Journalism</title>
         <meta name="description" content="Best · Most · Last — beautiful sports data journalism" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen bg-ink text-silver flex flex-col">
         <SiteHeader active="/" />
