@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WC26 H2H Short — card renderer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800&family=Anton&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Barlow Semi Condensed',sans-serif; background:#0f0f13; color:#e0e0e0; display:flex; gap:24px; padding:24px; }
+  #panel { width:320px; flex:0 0 320px; }
+  #panel h1 { font-size:18px; color:#fff; margin-bottom:12px; }
+  .field { margin-bottom:12px; }
+  .field label { display:block; font-size:11px; text-transform:uppercase; letter-spacing:.5px; color:#888; margin-bottom:4px; }
+  .field input, .field select { width:100%; background:#1e1e28; border:1px solid #333; color:#e0e0e0; padding:8px; border-radius:6px; font-size:13px; }
+  button { width:100%; padding:10px; border:none; border-radius:6px; font-weight:700; cursor:pointer; margin-top:6px; background:#5865f2; color:#fff; }
+  button.sec { background:#2d2d3a; color:#ccc; }
+  .hint { font-size:11px; color:#666; margin-top:6px; line-height:1.4; }
+  #stage { flex:1; display:flex; justify-content:center; align-items:flex-start; }
+  canvas { width:405px; height:720px; box-shadow:0 8px 40px rgba(0,0,0,.6); border-radius:8px; }
+</style>
+</head>
+<body>
+  <div id="panel">
+    <h1>WC26 H2H Short</h1>
+    <div class="field">
+      <label>H2H data CSV (h2h_flat.csv)</label>
+      <input type="file" id="csvFile" accept=".csv" />
+    </div>
+    <div class="field">
+      <label>Match</label>
+      <select id="matchSel"><option>load CSV first…</option></select>
+    </div>
+    <div class="field">
+      <label>Stadium background (jpg/png)</label>
+      <input type="file" id="bgFile" accept="image/*" />
+    </div>
+    <div class="field">
+      <label>Flag — Team A (left)</label>
+      <input type="file" id="flagA" accept="image/*" />
+    </div>
+    <div class="field">
+      <label>Flag — Team B (right)</label>
+      <input type="file" id="flagB" accept="image/*" />
+    </div>
+    <div class="field">
+      <label>Stadium name</label>
+      <input type="text" id="stadium" placeholder="Estadio Azteca" />
+    </div>
+    <div class="field">
+      <label>Date & time (top line)</label>
+      <input type="text" id="datetime" placeholder="June 11, 2026 · 19:00" />
+    </div>
+    <button id="render">Redraw</button>
+    <button id="exportPng" class="sec">Export PNG</button>
+    <p class="hint">Logo auto-loads from _shared/brand/bml-logo.png. Flags/stadium are per-game — drop them in or wire by slug for batch. Canvas is 1080×1920 (shown at 0.375×).</p>
+  </div>
+  <div id="stage"><canvas id="c" width="1080" height="1920"></canvas></div>
+
+<script>
+const ctx = document.getElementById('c').getContext('2d');
+const W = 1080, H = 1920;
+let rows = [], byMatch = {}, current = null;
+const assets = { bg:null, flagA:null, flagB:null, logo:null, splashLogo:null, splashCombo:null, headerBg:null, crownWM:null, players:{}, highlight:{}, fans:{} };
+
+// dominant flag colour per nation (bright enough to read on dark bg).
+const TEAM_COLORS = {
+  'Mexico':'#1f9e4a','South Africa':'#e8c500','Brazil':'#ffd000','Argentina':'#6cace4',
+  'Germany':'#f2c200','France':'#3b6fd4','Spain':'#e23b3b','Italy':'#3b8fe0','England':'#e23b3b',
+  'Netherlands':'#ff7a1a','Portugal':'#e23b3b','Belgium':'#f2c200','Croatia':'#e23b3b',
+  'Uruguay':'#6cace4','Colombia':'#ffdd00','USA':'#4d7dd6','United States':'#4d7dd6',
+  'Japan':'#e23b3b','South Korea':'#3b6fd4','Morocco':'#1f9e4a','Senegal':'#1f9e4a',
+  'Ghana':'#ffd000','Nigeria':'#1f9e4a','Cameroon':'#1f9e4a','Australia':'#f2c200',
+  'Turkey':'#e23b3b','Türkiye':'#e23b3b','Switzerland':'#e23b3b','Poland':'#e23b3b',
+  'Denmark':'#e23b3b','Sweden':'#f2c200','Canada':'#e23b3b','Qatar':'#7a1f3d',
+  'Saudi Arabia':'#1f9e4a','Iran':'#1f9e4a','Ecuador':'#ffd000','Paraguay':'#e23b3b',
+  'Costa Rica':'#e23b3b','Serbia':'#e23b3b','Wales':'#e23b3b','Scotland':'#3b6fd4',
+  'Czech Republic':'#3b6fd4','Tunisia':'#e23b3b','Egypt':'#e23b3b','Algeria':'#1f9e4a',
+  'Norway':'#e23b3b','Austria':'#e23b3b','Greece':'#3b6fd4','Russia':'#e23b3b',
+  'Curacao':'#3b6fd4','Haiti':'#3b6fd4','Jordan':'#e23b3b','Uzbekistan':'#3b8fe0',
+  'New Zealand':'#cfd6e4','Bosnia & Herzegovina':'#3b6fd4','Bolivia':'#1f9e4a',
+  'Peru':'#e23b3b','Chile':'#e23b3b','Panama':'#e23b3b','Honduras':'#3b6fd4',
+};
+const teamColor = (name, fb) => TEAM_COLORS[name] || fb || '#ffffff';
+
+// per-team KIT: {p1, p2, type}. type: solid | vstripe | hstripe | sash | halves
+const KITS = {
+  'Argentina':{p1:'#7cc3e8',p2:'#ffffff',type:'vstripe'},
+  'Mexico':{p1:'#1f9e4a',p2:'#ffffff',type:'solid'},
+  'South Africa':{p1:'#e8c500',p2:'#1f7a3a',type:'solid'},
+  'Brazil':{p1:'#ffd000',p2:'#1f9e4a',type:'solid'},
+  'Germany':{p1:'#ffffff',p2:'#111111',type:'solid'},
+  'France':{p1:'#1d2b6b',p2:'#ffffff',type:'solid'},
+  'England':{p1:'#ffffff',p2:'#d6122a',type:'solid'},
+  'Spain':{p1:'#c8102e',p2:'#ffd000',type:'solid'},
+  'Italy':{p1:'#1f6fd0',p2:'#ffffff',type:'solid'},
+  'Netherlands':{p1:'#ff7a1a',p2:'#111111',type:'solid'},
+  'Portugal':{p1:'#c8102e',p2:'#1f6e3a',type:'solid'},
+  'Croatia':{p1:'#e23b3b',p2:'#ffffff',type:'checker'},
+  'Uruguay':{p1:'#74b3e0',p2:'#111111',type:'solid'},
+  'Belgium':{p1:'#d6122a',p2:'#ffd000',type:'solid'},
+  'Peru':{p1:'#ffffff',p2:'#d6122a',type:'sash'},
+  'USA':{p1:'#ffffff',p2:'#1d2b6b',type:'solid'},
+  'United States':{p1:'#ffffff',p2:'#1d2b6b',type:'solid'},
+  'Japan':{p1:'#1d2b6b',p2:'#ffffff',type:'solid'},
+  'South Korea':{p1:'#d6122a',p2:'#1d2b6b',type:'solid'},
+  'Morocco':{p1:'#c1272d',p2:'#1f7a3a',type:'solid'},
+  'Türkiye':{p1:'#e30a17',p2:'#ffffff',type:'solid'},
+  'Turkey':{p1:'#e30a17',p2:'#ffffff',type:'solid'},
+  'Nigeria':{p1:'#1f9e4a',p2:'#ffffff',type:'solid'},
+  'Senegal':{p1:'#1f9e4a',p2:'#ffffff',type:'solid'},
+  'Ghana':{p1:'#ffffff',p2:'#d6122a',type:'solid'},
+  'Cameroon':{p1:'#1f7a3a',p2:'#d6122a',type:'solid'},
+  'Australia':{p1:'#ffd000',p2:'#1f7a3a',type:'solid'},
+  'Canada':{p1:'#d6122a',p2:'#ffffff',type:'solid'},
+  'Switzerland':{p1:'#d6122a',p2:'#ffffff',type:'solid'},
+  'Poland':{p1:'#ffffff',p2:'#d6122a',type:'solid'},
+  'Denmark':{p1:'#d6122a',p2:'#ffffff',type:'solid'},
+  'Colombia':{p1:'#ffd000',p2:'#1d2b6b',type:'solid'},
+  'Ecuador':{p1:'#ffd000',p2:'#1d2b6b',type:'solid'},
+  'Scotland':{p1:'#1f4fb0',p2:'#ffffff',type:'solid'},
+  'Czech Republic':{p1:'#c8102e',p2:'#1f4fb0',type:'solid'},
+  'Qatar':{p1:'#7a1f3d',p2:'#ffffff',type:'solid'},
+  'Saudi Arabia':{p1:'#1f7a3a',p2:'#ffffff',type:'solid'},
+  'Iran':{p1:'#ffffff',p2:'#1f7a3a',type:'solid'},
+};
+function kitOf(team, accent){
+  return KITS[team] || {p1:(accent&&accent[0]==='#'?accent:'#888'), p2:'#ffffff', type:'solid'};
+}
+
+// auto-load brand art: lady emblem (header tint) + BEST crown logo (splash).
+(async () => {
+  for (const p of ['_shared/brand/bml-lady.png','./_shared/brand/bml-lady.png','shorts/_shared/brand/bml-lady.png']) {
+    try { assets.logo = await loadImg(p); break; } catch {}
+  }
+  for (const p of ['_shared/brand/bmlcrown.png','./_shared/brand/bmlcrown.png','shorts/_shared/brand/bmlcrown.png']) {
+    try { assets.splashLogo = await loadImg(p); break; } catch {}     // crown (between flags)
+  }
+  for (const p of ['_shared/brand/bmlbannerandcrown.png','./_shared/brand/bmlbannerandcrown.png','shorts/_shared/brand/bmlbannerandcrown.png']) {
+    try { assets.splashCombo = await loadImg(p); break; } catch {}    // splash (banner+crown)
+  }
+  for (const p of ['_shared/brand/bmlbannerandcrown.png','./_shared/brand/bmlbannerandcrown.png','shorts/_shared/brand/bmlbannerandcrown.png']) {
+    try { assets.headerBg = await loadImg(p); break; } catch {}       // header bg (banner+crown)
+  }
+  for (const p of ['_shared/brand/crown_wm.png','./_shared/brand/crown_wm.png','shorts/_shared/brand/crown_wm.png']) {
+    try { assets.crownWM = await loadImg(p); break; } catch {}        // body watermark crown
+  }
+  draw();
+})();
+
+function loadImg(src){ return new Promise((res,rej)=>{ const i=new Image(); i.crossOrigin='anonymous'; i.onload=()=>res(i); i.onerror=rej; i.src=src; }); }
+function fileImg(input, key){ input.addEventListener('change', e=>{ const f=e.target.files[0]; if(!f) return; const u=URL.createObjectURL(f); loadImg(u).then(img=>{ assets[key]=img; draw(); }); }); }
+fileImg(document.getElementById('bgFile'),'bg');
+fileImg(document.getElementById('flagA'),'flagA');
+fileImg(document.getElementById('flagB'),'flagB');
+
+document.getElementById('csvFile').addEventListener('change', e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=()=>{ parseCSV(r.result); };
+  r.readAsText(f);
+});
+function parseCSV(text){
+  const lines=text.trim().split('\n').map(l=>l.split(',').map(v=>v.trim().replace(/^"|"$/g,'')));
+  const head=lines[0]; rows=[]; byMatch={};
+  for(let i=1;i<lines.length;i++){ const o={}; head.forEach((h,j)=>o[h]=lines[i][j]); rows.push(o); byMatch[o.match_no]=o; }
+  const sel=document.getElementById('matchSel'); sel.innerHTML='';
+  rows.forEach(o=>{ const op=document.createElement('option'); op.value=o.match_no; op.textContent=`M${o.match_no}: ${o.team_a} vs ${o.team_b}`; sel.appendChild(op); });
+  sel.onchange=()=>selectMatch(sel.value); selectMatch(rows[0].match_no);
+}
+function selectMatch(n){
+  current=byMatch[n];
+  document.getElementById('stadium').value = current.stadium||'';
+  document.getElementById('datetime').value = current.datetime||'';
+  draw();
+}
+document.getElementById('render').onclick=draw;
+document.getElementById('matchSel').onchange=e=>selectMatch(e.target.value);
+document.getElementById('exportPng').onclick=()=>{ const a=document.createElement('a'); a.download=`short_m${current?current.match_no:'x'}.png`; a.href=document.getElementById('c').toDataURL('image/png'); a.click(); };
+
+// ---- DRAW ----  t = animation progress 0..1 (1 = final still)
+function num(v, t){ // count-up integers; pass floats through near the end
+  const f = parseFloat(v); if (isNaN(f)) return v;
+  if (t >= 1) return v;
+  const cur = f * easeOut(t);
+  return Number.isInteger(f) ? String(Math.round(cur)) : cur.toFixed(1);
+}
+function easeOut(t){ return 1 - Math.pow(1 - t, 3); }
+function draw(t){
+  if (t === undefined) t = 1;
+  ctx.clearRect(0,0,W,H);
+  // 1. BACKGROUND bands:
+  //    top → flag-bottom : BML banner tint
+  //    flag-bottom → HEADER_H : solid BLACK (team-name row)
+  //    HEADER_H → foot : stadium photo (unchanged)
+  ctx.fillStyle='#0d0d12'; ctx.fillRect(0,0,W,H);
+  // header band layout (flags raised since stadium/date moved BELOW the names):
+  //   0 → NAMES_BOT : black, banner+crown bg behind flags
+  //   NAMES_BOT → STAD_BOT : stadium-name band (1 tone < black)
+  //   STAD_BOT → DATE_BOT  : date/time band     (2 tones < black)
+  //   DATE_BOT → foot : stadium photo
+  // bands: names(black,72) · stadium(INK,72). Date/time moved BETWEEN the flags (no band).
+  const BANDH=72;
+  const FLAG_BOTTOM=372+136+72;
+  const NAMES_BOT=FLAG_BOTTOM+BANDH;                // black names band = 72
+  const STAD_BOT=NAMES_BOT+BANDH;                   // stadium-name band = 72
+  const DATE_BOT=STAD_BOT;                          // (no separate date band)
+  // banner+crown bg
+  const hbg = assets.headerBg;
+  if(hbg){
+    ctx.save();
+    ctx.beginPath(); ctx.rect(0, 0, W, FLAG_BOTTOM); ctx.clip();
+    const iw=hbg.width, ih=hbg.height;
+    const dw=W*1.04*1.05*0.95, dh=dw*ih/iw;
+    ctx.globalAlpha=0.52;
+    const raise=105+62-60+136-72;
+    ctx.drawImage(hbg, W/2-dw/2, -8-raise, dw, dh);
+    ctx.restore();
+  }
+  // black behind flags + names
+  ctx.fillStyle='#000000'; ctx.fillRect(0, FLAG_BOTTOM, W, NAMES_BOT-FLAG_BOTTOM);
+  // stadium-name band (INK)
+  ctx.fillStyle='#0E1518'; ctx.fillRect(0, NAMES_BOT, W, STAD_BOT-NAMES_BOT);
+  // STADIUM PHOTO: starts at the stadium-band lower border; panned DOWN 150px, 0.8x
+  const HEADER_H = STAD_BOT;
+  if(assets.bg){
+    ctx.save();
+    ctx.beginPath(); ctx.rect(0, HEADER_H, W, H-HEADER_H); ctx.clip();
+    ctx.globalAlpha=0.55;
+    coverDrawPan(assets.bg, 0, 150, 0.8);          // panned down 150px, scaled 0.8x
+    ctx.restore();
+  }
+  ctx.fillStyle='rgba(10,10,18,0.28)'; ctx.fillRect(0, HEADER_H, W, H-HEADER_H);
+  // CROWN WATERMARK on the body (S1-S5): full-width, centered, 20% opacity, behind content
+  if(assets.crownWM){
+    const im=assets.crownWM, asp=im.width/im.height;
+    const dw=W, dh=dw/asp;
+    const bodyCy=(STAD_BOT+H)/2 - 100;            // moved up 100px
+    ctx.save();
+    ctx.beginPath(); ctx.rect(0, STAD_BOT, W, H-STAD_BOT); ctx.clip();
+    ctx.globalAlpha=0.10;                         // 90% transparent (10% more)
+    ctx.drawImage(im, W/2-dw/2, bodyCy-dh/2, dw, dh);
+    ctx.restore();
+  }
+  window._bands={FLAG_BOTTOM, NAMES_BOT, STAD_BOT, DATE_BOT};
+  if(!current){ ctx.fillStyle='#666'; ctx.font='40px Barlow Semi Condensed'; ctx.textAlign='center'; ctx.fillText('Load h2h_flat.csv →',W/2,H/2); return; }
+
+  // colors used across screens
+  const C={ green:'#23a83f', gray:'#6f7588', silver:'#9aa3b8',
+            red:'#e23b3b', blue:'#2f7fd6', purple:'#8c44e0', white:'#c9cede',
+            navy:'#1c2c5b', black:'#111114',
+            yg1:'#e8d56a', yg2:'#e6c635', yg3:'#cfa50f', yg4:'#b07e00' };
+
+  // 6-SCREEN timeline (39s): S0 splash 5 · S1 records 10 · S2 H2H 6 · S3 scorers 6 · S4 storyline 6 · S5 lineups 6
+  // t boundaries: 5/39=.128 · 15/39=.385 · 21/39=.538 · 27/39=.692 · 33/39=.846 · 1.0
+  const S0=0.128, S1=0.385, S2=0.538, S3=0.692, S4=0.846;
+
+  // S0 — BML LADY splash on BLACK with Ken-Burns zoom.
+  if(t < S0){
+    drawSplash(t/S0);
+    return;
+  }
+
+  // header (date/stadium/flags/names) — from S1 onward, with entrance.
+  drawHeader(t, S0, C);
+
+  // body screens
+  if(t < S1)       phaseRecords(t, S0+0.02, S1-0.02, C);
+  else if(t < S2)  phaseH2H(t, S1+0.02, S2-0.02, C);
+  else if(t < S3)  phaseScorers(t, S2+0.02, S3-0.02, C);
+  else if(t < S4)  phaseComments(t, S3+0.02, S4-0.02, C);
+  else             phaseLineups(t, S4+0.02, 0.99, C);
+
+  drawFooter(t);
+}
+
+// S0 — BLACK bg, CROWN logo on top + WIDE banner below, Ken-Burns zoom + fade.
+function drawSplash(p){
+  ctx.fillStyle='#000'; ctx.fillRect(0,0,W,H);
+  let alpha=1;
+  if(p<0.30) alpha=p/0.30; else if(p>0.80) alpha=(1-p)/0.20;
+  alpha=Math.max(0,Math.min(1,alpha));
+  const zoom=1.0+0.10*p;                           // gentle Ken Burns
+  const im=assets.splashCombo;
+  if(!im) return;
+  // crop 20% off the TOP of the source, recenter the remaining 80%
+  const sy=im.height*0.20, sh=im.height*0.80, sw=im.width;
+  const asp=sw/sh;
+  const dw=W*0.94*zoom, dh=dw/asp;                 // fit to width, centered
+  ctx.save(); ctx.globalAlpha=alpha;
+  ctx.drawImage(im, 0, sy, sw, sh, W/2-dw/2, H/2-dh/2, dw, dh);
+  ctx.restore();
+}
+
+// header (date/stadium/flags/names + lady emblem), entrance eased after splash.
+function drawHeader(t, S0, C){
+  const a=current.team_a, b=current.team_b;
+  const stadium=document.getElementById('stadium').value||current.venue||'';
+  const dt=document.getElementById('datetime').value||'';
+  const e=easeOut(Math.min(1,(t-S0)/0.10));
+  const bands=window._bands||{FLAG_BOTTOM:580,NAMES_BOT:652,STAD_BOT:724,DATE_BOT:796};
+  // flags (0.95x) at natural aspect — moved further DOWN (+72)
+  // UNIFORM flag box — both flags identical W×H (3:2), height 0.9x then −5%.
+  const G=40, flagH=210*0.9*0.95, flagW=flagH*1.5, flagY=168+136+72;
+  const colA=G+flagW/2, colB=W-G-flagW/2;
+  const slide=(1-e)*W*0.55;
+  drawFlag(assets.flagA, colA-slide, flagY, flagW, flagH);
+  drawFlag(assets.flagB, colB+slide, flagY, flagW, flagH);
+  // DATE (row 1) + TIME (row 2) BETWEEN the flags, transparent, aligned to flag bottom.
+  // split "June 11 2026 · 19:00 CET · 13:00 EST" → date · cet · est
+  const parts=(dt||'').split(' · ');
+  let dateStr=(parts[0]||'').replace(/\s*\d{4}\s*$/,'').trim();   // drop the year (2026)
+  const cetStr=parts[1]||'', estStr=parts[2]||'';
+  const gapW=(colB-flagW/2)-(colA+flagW/2);       // centre gap width
+  const dtW=gapW*0.85;
+  ctx.save(); ctx.globalAlpha=e;
+  // date: GRAY, distributed
+  dtSpacedRow(dateStr, flagY+flagH-46, Math.min(dtW*0.5*1.5, gapW-20), '#9aa0b5', '600');
+  // time: CET gunmetal + EST navy, NO gap between, centered, max width 0.7x of prev.
+  const timeSize=Math.round(34*0.7*1.5);
+  ctx.font='300 '+timeSize+'px Barlow Semi Condensed';
+  const sep='  ';                                 // tiny separator, no big gap
+  const wCet=ctx.measureText(cetStr).width, wSep=ctx.measureText(sep).width, wEst=ctx.measureText(estStr).width;
+  const natural=wCet+wSep+wEst;
+  const targetW=Math.min(natural, (dtW*1.5)*0.7); // 0.7x of the previous distributed width
+  // scale font down if needed to fit targetW
+  if(natural>targetW){ const s=Math.round(timeSize*targetW/natural); ctx.font='300 '+s+'px Barlow Semi Condensed'; }
+  const w1=ctx.measureText(cetStr).width, ws=ctx.measureText(sep).width, w2=ctx.measureText(estStr).width;
+  const tot=w1+ws+w2, ty=flagY+flagH-6;
+  let x=W/2-tot/2; ctx.textAlign='left'; ctx.textBaseline='alphabetic';
+  ctx.fillStyle='#8aa2ab'; ctx.fillText(cetStr, x, ty);          // CET — light gunmetal/steel
+  ctx.fillStyle='#5d6470'; ctx.fillText(sep, x+w1, ty);          // tiny faint separator
+  ctx.fillStyle='#8aa6c8'; ctx.fillText(estStr, x+w1+ws, ty);   // EST — light navy
+  ctx.restore();
+  // team names (in the black band under the flags)
+  const nameY=flagY+flagH+58;
+  ctx.save(); ctx.globalAlpha=e; ctx.textAlign='center';
+  ctx.fillStyle=teamColor(a,'#fff'); fitText(a.toUpperCase(), colA, nameY, flagW+60, 56);
+  ctx.fillStyle=teamColor(b,'#fff'); fitText(b.toUpperCase(), colB, nameY, flagW+60, 56);
+  ctx.restore();
+  // stadium-name band (date/time now between flags, so only stadium here)
+  ctx.save(); ctx.globalAlpha=e; ctx.textAlign='center';
+  ctx.fillStyle='#ffd24a'; ctx.font='500 46px Barlow Semi Condensed';
+  ctx.fillText(stadium.toUpperCase(), W/2, (bands.NAMES_BOT+bands.STAD_BOT)/2+16);
+  ctx.restore();
+}
+
+
+// S4 — NEWSPAPER: two framed articles filling the top and bottom halves (small gap).
+function phaseComments(t, s, e, C){
+  const a=phaseAlpha(t,s);
+  ctx.save(); ctx.globalAlpha=a;
+  sectionTitle('THE STORYLINE', TITLE_Y);
+  // two stacked halves — side margins AND the between-gap all equal (G)
+  const G=26, fw=W-2*G, fh=(FRAME_H-G)/2;
+  const fyA=FRAME_TOP, fyB=FRAME_TOP+fh+G;
+  frame(G, fyA, fw, fh, teamColor(current.team_a,C.yg2));
+  frame(G, fyB, fw, fh, teamColor(current.team_b,C.blue));
+  drawArticle('a', current.team_a, current.Headline_a, current.Hook_a, fyA, fh, teamColor(current.team_a,C.yg2));
+  drawArticle('b', current.team_b, current.Headline_b, current.Hook_b, fyB, fh, teamColor(current.team_b,C.blue));
+  ctx.restore();
+}
+// S5 — expected STARTING XI, two side-by-side frames (unified geometry).
+function phaseLineups(t, s, e, C){
+  const a=phaseAlpha(t,s);
+  ctx.save(); ctx.globalAlpha=a;
+  sectionTitle('EXPECTED LINEUPS', TITLE_Y);
+  const G=26, fw=(W-3*G)/2;                       // equal side + center gaps
+  const ax=G, bx=G+fw+G, fy=FRAME_TOP, fh=FRAME_H;
+  frame(ax, fy, fw, fh, teamColor(current.team_a,C.yg2));
+  frame(bx, fy, fw, fh, teamColor(current.team_b,C.blue));
+  drawXI(ax+fw/2, fw, fy, current.team_a, 'a', teamColor(current.team_a,C.yg2));
+  drawXI(bx+fw/2, fw, fy, current.team_b, 'b', teamColor(current.team_b,C.blue));
+  ctx.restore();
+}
+function drawXI(cx, fw, fy, team, suf, accent){
+  // (team name removed — it's already under the flag)
+  // 11 players: "## Name", font 1.15x. Coach goes BELOW the last player, same size.
+  const numFont='700 35px Barlow Semi Condensed';      // 30 * 1.15
+  const nameFont='400 37px Barlow Semi Condensed';     // 32 * 1.15
+  const lx=cx-fw*0.40; let y=fy+72; const step=82*0.9;
+  for(let i=1;i<=11;i++){
+    if(i%2===0){
+      ctx.save(); ctx.fillStyle='rgba(0,0,0,0.10)';
+      roundRect(cx-fw*0.44, y-step*0.62, fw*0.88, step, 8); ctx.fill(); ctx.restore();
+    }
+    const num=current[`P${i}num_${suf}`]||'', name=current[`P${i}name_${suf}`]||'';
+    ctx.textAlign='left';
+    ctx.fillStyle=accent; ctx.font=numFont;
+    ctx.fillText((num||'–').padStart(2,' '), lx, y);
+    ctx.fillStyle= name? '#e6e9f0' : 'rgba(255,255,255,0.30)';
+    ctx.font=nameFont;
+    ctx.fillText(name||'— to be named —', lx+62, y);
+    y+=step;
+  }
+  // coach below the last player — same font size as players
+  const coach=current['Coach_'+suf]||'';
+  ctx.textAlign='left'; ctx.fillStyle='rgba(200,206,220,0.85)'; ctx.font=nameFont;
+  ctx.fillText(coach?('Coach: '+coach):'Coach: TBD', lx, y+18);
+}
+
+// translucent panel — fill only, NO border.
+function drawS4Frame(x, y, w, h, accent){
+  ctx.save();
+  ctx.fillStyle='rgba(255,255,255,0.06)'; roundRect(x,y,w,h,26); ctx.fill();
+  ctx.restore();
+}
+function hexA(hex, a){   // #rrggbb -> rgba()
+  const n=parseInt((hex||'#888').slice(1),16);
+  return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`;
+}
+// article centered in its framed half. Photo left, text right, vertically centered.
+function drawArticle(side, team, headline, hook, fy, fh, accent){
+  if(!headline) return;
+  const cy=fy+fh/2;
+  const photo = assets.highlight[side];
+  const pr=145, PX=190, PY=cy;                   // photo radius (0.95x of previous) + center
+  // photo (circle, top-anchored crop)
+  ctx.save();
+  ctx.beginPath(); ctx.arc(PX,PY,pr,0,Math.PI*2); ctx.closePath();
+  if(photo){ ctx.clip(); coverCircle(photo,PX,PY,pr); }
+  else { ctx.fillStyle='rgba(255,255,255,0.08)'; ctx.fill();
+         ctx.fillStyle='rgba(255,255,255,0.30)'; ctx.font='170px Barlow Semi Condensed';
+         ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('👤',PX,PY+4); ctx.textBaseline='alphabetic'; }
+  ctx.restore();
+  // text column right of the photo
+  const tx=PX+pr+38, rw=(W-44-30)-tx;
+  ctx.textAlign='left';
+  const lines=wrapText(headline||'', rw, '800', 64, 3);
+  const lineH=66, kickH=58, hookH=hook?56:0;
+  const blockH=kickH + lines.length*lineH + hookH;
+  let yy=cy - blockH/2 + 44;
+  ctx.fillStyle=accent; ctx.font='600 48px Barlow Semi Condensed';
+  ctx.fillText((team||'').toUpperCase(), tx, yy); yy+=kickH;
+  ctx.fillStyle='#ffffff';
+  for(const ln of lines){ ctx.font='800 64px Barlow Semi Condensed'; ctx.fillText(ln, tx, yy); yy+=lineH; }
+  if(hook){
+    ctx.fillStyle='rgba(205,210,224,0.95)'; ctx.font='italic 300 40px Barlow Semi Condensed';
+    ctx.fillText('“'+hook+'”', tx, yy+14);
+  }
+}
+// greedy word-wrap to maxW at a given weight/size, capped at maxLines.
+function wrapText(txt, maxW, weight, size, maxLines){
+  ctx.font=weight+' '+size+'px Barlow Semi Condensed';
+  const words=txt.split(' '); const lines=[]; let cur='';
+  for(const w of words){
+    const test=cur?cur+' '+w:w;
+    if(ctx.measureText(test).width<=maxW || !cur){ cur=test; }
+    else { lines.push(cur); cur=w; if(lines.length===maxLines-1) break; }
+  }
+  if(cur) lines.push(cur);
+  return lines.slice(0,maxLines);
+}
+
+// --- shared layout rhythm (equal vertical spacing everywhere) ---
+const TITLE_Y = 640;     // section title baseline (equal gap below header names)
+const BODY_Y  = 740;     // first body row baseline
+const GAP     = 100;     // equal vertical spacing between rows (2x the old ~50)
+
+// --- UNIFIED FRAME GEOMETRY (same on every screen) ---
+const FRAME_TOP = 736;   // top of body frames (just under the stadium band)
+const FRAME_BOT = 1752;  // bottom y — frozen so frames never reach the footer
+const FRAME_H   = FRAME_BOT - FRAME_TOP;
+const FRAME_X   = 44;    // left/right margin
+const FRAME_GAP = 26;    // EQUAL gap (matches the col3 gap) for stacked/side frames
+// helper: team-tinted translucent frame — fill only, NO border.
+function frame(x, y, w, h, accent){
+  ctx.save();
+  ctx.fillStyle='rgba(255,255,255,0.06)'; roundRect(x,y,w,h,26); ctx.fill();
+  ctx.restore();
+}
+// geometry for the 3 stat columns with EQUAL gaps (edge gaps == inner gaps).
+// col1 + col2 + col3 widths chosen so all four gaps (edge·inner·inner·edge) match.
+function col3geom(){
+  const gap=26;                          // single equal gap used 4x
+  const total=W-4*gap;                   // width available for the 3 columns
+  const lw=total*0.26, cw=total*0.48;    // side cols wider than before, center widest
+  const lx=gap, cx=lx+lw+gap, rx=cx+cw+gap;
+  return {y:FRAME_TOP, h:FRAME_H, gap, lw, cw, lx, cx, rx};
+}
+function frame3cols(accA, accB){
+  const g=col3geom();
+  frame(g.lx, g.y, g.lw, g.h, accA);                       // team A values
+  frame(g.cx, g.y, g.cw, g.h, 'rgba(120,126,140,0.85)');   // center labels (DARKER gray)
+  frame(g.rx, g.y, g.lw, g.h, accB);                       // team B values
+}
+
+// fade helper: eases in over [s, s+0.06] of the phase window
+function phaseAlpha(t, s){ return easeOut(Math.max(0, Math.min(1, (t-s)/0.06))); }
+
+// PHASE 1 — all-time records stat table
+function phaseRecords(t, s, e, C){
+  const a = phaseAlpha(t, s);
+  // count-up finishes ~1.5s (0.045 t) BEFORE the phase ends → numbers settle/hold.
+  const settle=0.045;
+  const localT = Math.max(0, Math.min(1, (t-s)/((e-s)-settle)));
+  ctx.save(); ctx.globalAlpha=a;
+  sectionTitle('ALL-TIME WORLD CUP RECORD', TITLE_Y);
+  const rows4=[
+    ['single','🏆','WORLD CUPS ATTENDED', C.yg1, 'WCs','',false,true],
+    ['single','🥇','CUPS WON',    C.yg2,    'Won','',  true, true],
+    ['dual',  '⭐','BEST (AVG) PLACE', C.yg3,'High','Avg'],
+    ['single','🎮','PLAYED',      C.silver, 'GP'],
+    ['single','✅','WON (%)',      C.green,  'W','',false,false,null, pctOf('W','GP')],
+    ['single','🤝','DRAWN (%)',    C.gray,   'D','',false,false,null, pctOf('D','GP')],
+    ['single','❌','LOST (%)',     C.red,    'L','',false,false,null, pctOf('L','GP')],
+    ['dual',  '⚽','GOALS FOR',   C.blue,   'GF','GFpg'],
+    ['dual',  '🥅','GOALS AGAINST',C.purple,'GA','GApg'],
+    ['dual',  '🏅','POINTS (PPG)',C.black,  'P','PPG','',false,C.silver],
+  ];
+  layoutStatRows(rows4, FRAME_TOP, localT, col3geom(),
+                 teamColor(current.team_a,C.yg2), teamColor(current.team_b,C.blue));
+  ctx.restore();
+}
+// TOP-aligned rows with a FIXED step; the 3 frames END right after the last row.
+function layoutStatRows(rows, fy, localT, g, accA, accB){
+  const padTop=52, padBot=34, step=87;             // fixed row height (content-driven)
+  const n=rows.length;
+  const fh=padTop+n*step+padBot;                   // frame height fits the rows exactly
+  // frames sized to the content
+  frame(g.lx, fy, g.lw, fh, accA);
+  frame(g.cx, fy, g.cw, fh, 'rgba(120,126,140,0.85)');
+  frame(g.rx, fy, g.lw, fh, accB);
+  // alternating row tint (even rows +10% darker), inside the frames
+  for(let i=0;i<n;i++){
+    if(i%2===1){
+      const ry=fy+padTop+i*step;
+      ctx.save(); ctx.fillStyle='rgba(0,0,0,0.10)';
+      roundRect(g.lx+4, ry, g.lw-8, step, 10); ctx.fill();
+      roundRect(g.cx+4, ry, g.cw-8, step, 10); ctx.fill();
+      roundRect(g.rx+4, ry, g.lw-8, step, 10); ctx.fill();
+      ctx.restore();
+    }
+  }
+  for(let i=0;i<n;i++){
+    const y=fy+padTop+i*step+step*0.5+12;           // baseline centered in the band
+    drawStatRow(rows[i], y, localT, g);
+  }
+  return fy+fh;                                     // bottom of the data frames
+}
+
+// PHASE 2 — head to head (equal spacing = same rhythm as phase 1 area)
+function phaseH2H(t, s, e, C){
+  const a = phaseAlpha(t, s);
+  const localT = Math.max(0, Math.min(1, (t-s)/(e-s)));
+  ctx.save(); ctx.globalAlpha=a;
+  sectionTitle('HEAD TO HEAD', TITLE_Y);
+  const h2h=[
+    ['single','✅','WON (%)',  C.green, 'H2H_W','',false,false,null, pctOf('H2H_W','H2H_GP')],
+    ['single','🤝','DRAWN (%)',C.gray,  'H2H_D','',false,false,null, pctOf('H2H_D','H2H_GP')],
+    ['single','❌','LOST (%)', C.red,   'H2H_L','',false,false,null, pctOf('H2H_L','H2H_GP')],
+    ['single','⚽','GOALS FOR',   C.blue,  'H2H_GF','',false,false,null, perGame('H2H_GF','H2H_GP')],
+    ['single','🥅','GOALS AGAINST',C.purple,'H2H_GA','',false,false,null, perGame('H2H_GA','H2H_GP')],
+  ];
+  // top-aligned at FRAME_TOP (same as S1); frame ends after the 5 rows.
+  const dataBot = layoutStatRows(h2h, FRAME_TOP, localT, col3geom(),
+                 teamColor(current.team_a,C.yg2), teamColor(current.team_b,C.blue));
+  // FAN PHOTOS — two frames (L/R) filling the empty area below the data, same gaps.
+  const G=26, fw=(W-3*G)/2;
+  const fanY=dataBot+G, fanH=FRAME_BOT-fanY;       // fill down to the frozen bottom
+  const ax=G, bx=G+fw+G;
+  drawFanPanel(ax, fanY, fw, fanH, current.team_a, teamColor(current.team_a,C.yg2));
+  drawFanPanel(bx, fanY, fw, fanH, current.team_b, teamColor(current.team_b,C.blue));
+  ctx.restore();
+}
+// a fan panel: supplied photo stretched to fill, else cartoon stick-figure fans.
+function drawFanPanel(x, y, w, h, team, accent){
+  ctx.save();
+  // clip to a rounded frame
+  roundRect(x,y,w,h,26); ctx.clip();
+  const photo = assets.fans && assets.fans[team];
+  if(photo){
+    ctx.drawImage(photo, x, y, w, h);             // stretch to fill the frame
+    ctx.fillStyle='rgba(10,10,18,0.20)'; ctx.fillRect(x,y,w,h);
+  } else {
+    // team-specific drawn KIT (stripes/two-tone/sash + number), copyright-free.
+    ctx.fillStyle='rgba(20,22,30,0.5)'; ctx.fillRect(x,y,w,h);
+    drawKit(x+w/2, y+h*0.5, Math.min(w*0.62, h*0.84), team, accent);
+  }
+  ctx.restore();
+}
+// a single simple FAN: head + the team jersey as the torso + shorts + raised arms.
+function drawFan(cx, cy, Hh, col){
+  ctx.save();
+  // proportions relative to total figure height Hh
+  const headR=Hh*0.12;
+  const headCy=cy-Hh*0.34;
+  const skin='#e7c9a9', dark='rgba(0,0,0,0.35)';
+  // legs/shorts (behind jersey)
+  ctx.fillStyle='#2a2e3a';
+  const shY=cy+Hh*0.06, shW=Hh*0.30, shH=Hh*0.22;
+  ctx.fillRect(cx-shW/2, shY, shW, shH);
+  ctx.fillStyle=skin; // lower legs
+  ctx.fillRect(cx-shW*0.42, shY+shH, shW*0.34, Hh*0.16);
+  ctx.fillRect(cx+shW*0.08, shY+shH, shW*0.34, Hh*0.16);
+  // head
+  ctx.fillStyle=skin; ctx.strokeStyle=dark; ctx.lineWidth=Math.max(2,Hh*0.01);
+  ctx.beginPath(); ctx.arc(cx, headCy, headR, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+  // raised arms in skin (cheering), drawn before jersey so sleeves overlap
+  ctx.strokeStyle=skin; ctx.lineCap='round'; ctx.lineWidth=Hh*0.05;
+  ctx.beginPath(); ctx.moveTo(cx-Hh*0.16, cy-Hh*0.16); ctx.lineTo(cx-Hh*0.30, cy-Hh*0.40); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(cx+Hh*0.16, cy-Hh*0.16); ctx.lineTo(cx+Hh*0.30, cy-Hh*0.40); ctx.stroke();
+  // the JERSEY as the torso
+  drawJersey(cx, cy-Hh*0.10, Hh*0.50, col);
+  ctx.restore();
+}
+
+// build the jersey outline path (shirt only). top of shirt at `topY`, height Hh.
+// Wider-than-before proportions so the shirt looks short, not elongated.
+function jerseyPath(cx, topY, Hh){
+  const w=Hh*1.02, h=Hh;                 // shirt wider than tall → short look
+  const L=cx-w/2, T=topY, R=cx+w/2, B=topY+h;
+  const sh=h*0.34, sw=w*0.24, nk=w*0.15;
+  ctx.beginPath();
+  ctx.moveTo(cx-nk, T+h*0.07);
+  ctx.lineTo(L+sw, T+h*0.02); ctx.lineTo(L, T+sh*0.5); ctx.lineTo(L+sw*0.55, T+sh);
+  ctx.lineTo(L+sw*0.95, T+sh*0.9); ctx.lineTo(L+sw*0.86, B);
+  ctx.lineTo(R-sw*0.86, B); ctx.lineTo(R-sw*0.95, T+sh*0.9); ctx.lineTo(R-sw*0.55, T+sh);
+  ctx.lineTo(R, T+sh*0.5); ctx.lineTo(R-sw, T+h*0.02); ctx.lineTo(cx+nk, T+h*0.07);
+  ctx.quadraticCurveTo(cx, T+h*0.18, cx-nk, T+h*0.07);
+  ctx.closePath();
+  return {L,T,R,B,w,h,nk,sh,sw};
+}
+// shorts path: as WIDE as the jersey, RECTANGULAR legs, notch between them.
+// `fullW` = jersey width (shirt's w). topY = top, Hh = height.
+function shortsPath(cx, topY, Hh, fullW){
+  const w=fullW, h=Hh, L=cx-w/2, R=cx+w/2, T=topY, B=topY+h, gap=w*0.12;
+  ctx.beginPath();
+  ctx.moveTo(L, T);                          // waist left
+  ctx.lineTo(R, T);                          // waist right
+  ctx.lineTo(R, B);                          // right leg outer (straight down)
+  ctx.lineTo(cx+gap/2, B);                   // right leg inner-bottom
+  ctx.lineTo(cx+gap/2, T+h*0.40);            // up into the notch (right)
+  ctx.lineTo(cx-gap/2, T+h*0.40);            // across the notch
+  ctx.lineTo(cx-gap/2, B);                   // left leg inner-bottom
+  ctx.lineTo(L, B);                          // left leg outer-bottom
+  ctx.closePath();                           // back up to waist left
+  return {L,T,R,B,w,h};
+}
+
+// team-specific cartoon KIT: bold flat jersey + pattern + number, drop shadow.
+function drawKit(cx, cy, Hh, team, accent){
+  const k=kitOf(team, accent);
+  const OUT='#14161d', lw=Math.max(4,Hh*0.020);
+  // layout: shirt (62%) + gap (6%) + shorts (32%), centered vertically at cy
+  const shirtH=Hh*0.62, gap=Hh*0.06, shortH=Hh*0.30;
+  const shirtTop=cy-Hh*0.5, shortTop=shirtTop+shirtH+gap;
+  const shirtW=shirtH*1.02;                  // jersey width
+  const kitW=shirtW*0.60;                     // shorts width (0.95x of previous)
+  ctx.save();
+  // drop shadow (whole kit)
+  ctx.save(); ctx.globalAlpha=0.30; ctx.fillStyle='#000';
+  jerseyPath(cx+Hh*0.02, shirtTop+Hh*0.03, shirtH); ctx.fill();
+  shortsPath(cx+Hh*0.02, shortTop+Hh*0.03, shortH, kitW); ctx.fill(); ctx.restore();
+
+  // ---- SHIRT ----
+  const bb=jerseyPath(cx, shirtTop, shirtH);
+  ctx.save(); ctx.clip();
+  const {L,T,R,B,w,h}=bb;
+  ctx.fillStyle=k.p1; ctx.fillRect(L-6,T-6,w+12,h+12);
+  ctx.fillStyle=k.p2;
+  if(k.type==='vstripe'){ const n=6, sw=w/n; for(let i=1;i<n;i+=2) ctx.fillRect(L+i*sw,T,sw,h); }
+  else if(k.type==='hstripe'){ const n=5, sh=h/n; for(let i=1;i<n;i+=2) ctx.fillRect(L,T+i*sh,w,sh); }
+  else if(k.type==='sash'){ ctx.beginPath(); ctx.moveTo(L,T+h*0.34); ctx.lineTo(L+w*0.30,T);
+    ctx.lineTo(R,B-h*0.30); ctx.lineTo(R-w*0.30,B); ctx.closePath(); ctx.fill(); }
+  else if(k.type==='halves'){ ctx.fillRect(cx,T,w/2,h); }
+  else if(k.type==='checker'){ const c=6, cw=w/c, ch=h/c;
+    for(let r=0;r<c;r++) for(let col=0;col<c;col++) if((r+col)%2) ctx.fillRect(L+col*cw,T+r*ch,cw,ch); }
+  // cuffs + hem trim
+  ctx.fillStyle=k.p2;
+  ctx.fillRect(L, T+h*0.26, w*0.10, h*0.06);
+  ctx.fillRect(R-w*0.10, T+h*0.26, w*0.10, h*0.06);
+  ctx.fillRect(L+w*0.16, B-h*0.07, w*0.68, h*0.06);
+  ctx.fillStyle='rgba(255,255,255,0.12)'; ctx.fillRect(L, T, w*0.5, h*0.30);
+  ctx.restore();
+  ctx.strokeStyle=OUT; ctx.lineWidth=lw; ctx.lineJoin='round';
+  jerseyPath(cx,shirtTop,shirtH); ctx.stroke();
+  // collar
+  ctx.lineWidth=lw*0.7;
+  ctx.beginPath(); ctx.moveTo(cx-bb.nk,T+h*0.07); ctx.quadraticCurveTo(cx,T+h*0.18,cx+bb.nk,T+h*0.07); ctx.stroke();
+  // number on shirt
+  const numCol = isLight(k.p1)? '#15151b' : '#ffffff';
+  ctx.fillStyle=numCol; ctx.strokeStyle=isLight(k.p1)?'rgba(255,255,255,0.5)':'rgba(0,0,0,0.35)';
+  ctx.lineWidth=lw*0.5; ctx.textAlign='center';
+  ctx.font=`800 ${Math.round(shirtH*0.42)}px Barlow Semi Condensed`;
+  const ny=shirtTop+shirtH*0.66; ctx.strokeText('10', cx, ny); ctx.fillText('10', cx, ny);
+
+  // ---- SHORTS ----  (p2 main, p1 stripes on BOTH outer sides)
+  const sb=shortsPath(cx, shortTop, shortH, kitW);
+  ctx.save(); ctx.clip();
+  ctx.fillStyle=k.p2; ctx.fillRect(sb.L-6,sb.T-6,sb.w+12,sb.h+12);
+  ctx.fillStyle=k.p1;
+  const stw=sb.w*0.08;
+  ctx.fillRect(sb.L, sb.T, stw, sb.h);            // left side stripe
+  ctx.fillRect(sb.R-stw, sb.T, stw, sb.h);        // right side stripe
+  ctx.fillStyle='rgba(255,255,255,0.10)'; ctx.fillRect(sb.L, sb.T, sb.w*0.5, sb.h*0.4);
+  ctx.restore();
+  ctx.strokeStyle=OUT; ctx.lineWidth=lw; shortsPath(cx, shortTop, shortH, kitW); ctx.stroke();
+  ctx.restore();
+}
+function isLight(hex){
+  const n=parseInt((hex||'#888').slice(1),16);
+  const r=(n>>16)&255,g=(n>>8)&255,b=n&255;
+  return (0.299*r+0.587*g+0.114*b) > 150;
+}
+
+// PHASE 3 — GOAL SCORERS as a 2x2 frame grid:
+//   row A: ALL-TIME    [team1 2 players] [team2 2 players]
+//   row B: CURRENT     [team1 2 players] [team2 2 players]
+function phaseScorers(t, s, e, C){
+  const a = phaseAlpha(t, s);
+  ctx.save(); ctx.globalAlpha=a;
+  sectionTitle('GOAL SCORERS', TITLE_Y);
+  const G=26, fw=(W-3*G)/2;
+  const ax=G, bx=G+fw+G;
+  const accA=teamColor(current.team_a,C.yg2), accB=teamColor(current.team_b,C.blue);
+  // vertical layout: [labelA][frameRow A][labelB][frameRow B], all gaps = G
+  const labelH=44, rowH=(FRAME_H-2*labelH-3*G)/2;
+  const lyA=FRAME_TOP, ryA=lyA+labelH+G;
+  const lyB=ryA+rowH+G, ryB=lyB+labelH+G;
+  ctx.textAlign='center';
+  // ALL-TIME row
+  ctx.fillStyle='rgba(232,213,106,0.9)'; ctx.font='500 34px Barlow Semi Condensed';
+  ctx.fillText('— ALL-TIME TOP SCORERS —', W/2, lyA+34);
+  frame(ax, ryA, fw, rowH, accA); frame(bx, ryA, fw, rowH, accB);
+  drawPlayerPair(current.Top1_a, current.Top2_a, ax, fw, ryA, rowH, C.yg1);
+  drawPlayerPair(current.Top1_b, current.Top2_b, bx, fw, ryA, rowH, C.yg1);
+  // PLAYERS TO WATCH row (top scorers from the starting XI when available)
+  ctx.fillStyle='rgba(47,127,214,0.95)'; ctx.font='500 34px Barlow Semi Condensed';
+  ctx.fillText('— PLAYERS TO WATCH —', W/2, lyB+34);
+  frame(ax, ryB, fw, rowH, accA); frame(bx, ryB, fw, rowH, accB);
+  drawPlayerPair(current.Best1_a||current.Star1_a, current.Best2_a||current.Star2_a, ax, fw, ryB, rowH, C.blue);
+  drawPlayerPair(current.Best1_b||current.Star1_b, current.Best2_b||current.Star2_b, bx, fw, ryB, rowH, C.blue);
+  ctx.restore();
+}
+// two players side by side, vertically centered within a frame [fx..fx+fw, fy..fy+fh]
+function drawPlayerPair(p1, p2, fx, fw, fy, fh, accent){
+  const cy=fy+fh*0.46-30, dx=fw*0.25;        // moved up 30px in the frame
+  drawPlayerBlock(p1, fx+fw/2-dx, cy, accent);
+  drawPlayerBlock(p2, fx+fw/2+dx, cy, accent);
+}
+// faint rounded panel to cluster a team's players
+function drawContainer(x, y, w, h, accent){
+  ctx.save();
+  ctx.fillStyle='rgba(255,255,255,0.05)';      // ~95% transparent
+  roundRect(x, y, w, h, 24); ctx.fill();
+  ctx.strokeStyle='rgba(255,255,255,0.10)'; ctx.lineWidth=2; ctx.stroke();
+  ctx.restore();
+}
+
+// a centered section heading — silver, transparent
+function sectionTitle(txt, y, col){ /* section titles removed per spec — no-op */ }
+
+// compact player item: circular photo + name + "G goals" stacked, centered at cx.
+function drawPlayerBlock(val, cx, y, accent){
+  if(!val) return;
+  const name=(val||'').replace(/\s*\(\d+\)\s*$/,'').trim();
+  const goals=(val.match(/\((\d+)\)\s*$/)||[])[1]||'';
+  const img=assets.players[name];
+  const R=84;
+  // circular photo, NO border
+  ctx.save();
+  ctx.beginPath(); ctx.arc(cx, y, R, 0, Math.PI*2); ctx.closePath();
+  if(img){ ctx.clip(); coverCircle(img, cx, y, R); }
+  else { ctx.fillStyle='rgba(255,255,255,0.10)'; ctx.fill();
+         ctx.fillStyle='rgba(255,255,255,0.35)'; ctx.font='84px Barlow Semi Condensed';
+         ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('👤', cx, y+4); ctx.textBaseline='alphabetic'; }
+  ctx.restore();
+  // name on two lines (first name = DARK gray / SURNAME = gray), goals = same gray
+  const GRAY='#5b606e', SILVER='#9aa0b5';   // first=dark gray, surname=gray
+  const parts=name.trim().split(' ');
+  const surname=parts[parts.length-1];
+  const first=parts.length>1 ? parts.slice(0,-1).join(' ') : '';
+  ctx.textAlign='center';
+  let ny=y+R+42;
+  if(first){
+    ctx.fillStyle=GRAY; fitLine(first, cx, ny, 290, '300', 30); ny+=38;
+  }
+  ctx.fillStyle=SILVER; fitLine(surname.toUpperCase(), cx, ny, 290, '600', 34); ny+=44;
+  ctx.fillStyle=SILVER; ctx.font='600 34px Barlow Semi Condensed';
+  ctx.fillText(goals+(goals?' ⚽':''), cx, ny);
+}
+// draw image to cover a circle of radius R; anchor strongly to the TOP so the
+// HEAD is always visible (portraits put the face in the upper ~25-35%).
+function coverCircle(img, cx, cy, R){
+  const s=Math.max(2*R/img.width, 2*R/img.height);
+  const w=img.width*s, h=img.height*s;
+  // Anchor the TOP of the scaled image to the top of the circle so the head
+  // (always near the top of a portrait) stays fully in frame. Only pull up if
+  // the image is much taller than the circle, to avoid huge empty space.
+  const top = cy - R;
+  const overflow = h - 2*R;                   // how much taller than the circle
+  const drawY = top - Math.min(overflow*0.10, overflow); // show from near the very top
+  ctx.drawImage(img, cx-w/2, drawY, w, h);
+}
+// fit a single line to maxW with a given weight + starting size
+function fitLine(txt, cx, y, maxW, weight, startSize){
+  let size=startSize; ctx.textAlign='center';
+  do { ctx.font=weight+' '+size+'px Barlow Semi Condensed'; if(ctx.measureText(txt).width<=maxW) break; size-=1; } while(size>16);
+  ctx.fillText(txt, cx, y);
+}
+
+// FOOTER: two letter-spaced lines, equal width (0.75x), tighter spacing (0.6x), smaller font (0.8x).
+function drawFooter(t){
+  const targetW=W*0.60;                // 0.80 * 0.75
+  const y2=H-56, y1=y2-58;             // 0.6x line spacing (~58px apart)
+  const pulse=0.85+0.15*Math.sin(t*Math.PI*8);
+  ctx.save(); ctx.globalAlpha=pulse;
+  drawSpacedToWidth('WORLD CUP 2026', y1, targetW, 'rgba(255,210,74,0.92)');
+  ctx.restore();
+  drawSpacedToWidth('BESTMOSTLAST.COM', y2, targetW, 'rgba(207,214,228,0.55)');
+}
+function drawSpacedToWidth(txt, y, targetW, color){
+  ctx.fillStyle=color;
+  let size=32; ctx.font='300 '+size+'px Barlow Semi Condensed';   // 0.8x of 40
+  while(ctx.measureText(txt).width>targetW*0.66 && size>16){ size-=1; ctx.font='300 '+size+'px Barlow Semi Condensed'; }
+  const chars=[...txt];
+  const baseW=chars.reduce((s,c)=>s+ctx.measureText(c).width,0);
+  const gap=(targetW-baseW)/Math.max(1,chars.length-1);
+  let x=W/2-targetW/2; ctx.textAlign='left';
+  for(const c of chars){ ctx.fillText(c,x,y); x+=ctx.measureText(c).width+gap; }
+}
+// date/time row: biggest font that fits targetW, then letter-spaced to fill it.
+function dtSpacedRow(txt, y, targetW, color, weight){
+  if(!txt) return;
+  ctx.fillStyle=color;
+  let size=44; ctx.font=weight+' '+size+'px Barlow Semi Condensed';
+  while(ctx.measureText(txt).width>targetW && size>16){ size-=1; ctx.font=weight+' '+size+'px Barlow Semi Condensed'; }
+  const chars=[...txt];
+  const baseW=chars.reduce((s,c)=>s+ctx.measureText(c).width,0);
+  const gap=(targetW-baseW)/Math.max(1,chars.length-1);
+  let x=W/2-targetW/2; ctx.textAlign='left';
+  for(const c of chars){ ctx.fillText(c,x,y); x+=ctx.measureText(c).width+gap; }
+}
+
+// one stat row. In stat-column mode (geom passed): col1 LEFT-aligned (pill then paren),
+// col3 RIGHT-aligned with PAREN FIRST then pill at the far right. Indented from borders.
+function drawStatRow(r, y, t, geom){
+  const [type, icon, label, col, keyM, keyA, dashIfZero, blackText, textCol, paren] = r;
+  const tc = textCol || col;
+  ctx.fillStyle=tc; ctx.textAlign='center';
+  ctx.font='300 36px Barlow Semi Condensed';
+  ctx.fillText(icon + '  ' + label, W/2, y-2);
+  const dash = v => (dashIfZero && (v==='0' || v===0 || parseFloat(v)===0)) ? '–' : v;
+  const mainA = dash(num(current[keyM+'_a'], t)), mainB = dash(num(current[keyM+'_b'], t));
+  const ink = blackText ? '#15151b' : '#ffffff';
+  let pa='', pb='';
+  if(paren){ pa='('+paren('a',t)+')'; pb='('+paren('b',t)+')'; }
+  else if(type==='dual'){ pa='('+num(current[keyA+'_a'],t)+')'; pb='('+num(current[keyA+'_b'],t)+')'; }
+  if(geom){
+    const ind=20;                                  // indent from frame side borders
+    // col1: [pill] (paren) starting at the left edge + indent
+    drawPill(mainA, pa, geom.lx+ind, y, 'left', col, ink, tc);
+    // col3: (paren) [pill] ending at the right edge - indent  → pill far right, paren first
+    drawPillR(mainB, pb, geom.rx+geom.lw-ind, y, col, ink, tc);
+  } else {
+    drawPill(mainA, pa, W*0.07, y, 'left',  col, ink, tc);
+    drawPill(mainB, pb, W*0.93, y, 'right', col, ink, tc);
+  }
+}
+// right-anchored: paren (thin) then PILL, pill's right edge at x.
+function drawPillR(main, paren, x, y, col, ink, parenCol){
+  const fMain='600 50px Barlow Semi Condensed', fAvg='300 36px Barlow Semi Condensed';
+  ctx.textBaseline='alphabetic';
+  ctx.font=fMain; const wMain=ctx.measureText(main).width;
+  const padX=22, chipH=64, chipW=wMain+padX*2, gap=paren?10:0;
+  const chipX=x-chipW;
+  // chip at far right
+  ctx.fillStyle=col; roundRect(chipX, y-chipH+18, chipW, chipH, 14); ctx.fill();
+  ctx.fillStyle=ink||'#ffffff'; ctx.font=fMain; ctx.textAlign='center';
+  ctx.fillText(main, chipX+chipW/2, y);
+  // paren to the LEFT of the chip (so order reads "(paren)  pill")
+  if(paren){ ctx.fillStyle=parenCol||col; ctx.font=fAvg; ctx.textAlign='right';
+    ctx.fillText(paren, chipX-gap, y); }
+}
+// computed parentheticals (use eased count-up t so they animate with the numbers)
+function pctOf(numKey, denKey){
+  return (side,t)=>{ const d=parseFloat(current[denKey+'_'+side])||0; if(!d) return '0%';
+    const n=parseFloat(num(current[numKey+'_'+side],t))||0; return (n/d*100).toFixed(1)+'%'; };
+}
+function perGame(numKey, denKey){
+  return (side,t)=>{ const d=parseFloat(current[denKey+'_'+side])||0; if(!d) return '0.0';
+    const n=parseFloat(num(current[numKey+'_'+side],t))||0; return (n/d).toFixed(2); };
+}
+// rounded chip (row color, ink number) + optional thin "(avg)".
+// LEFT column:  [pill] (avg)   — pill hugs the left/outer edge.
+// RIGHT column: (avg) [pill]   — MIRRORED, pill hugs the right/outer edge.
+function drawPill(main, avg, x, y, align, col, ink, avgCol){
+  const fMain='600 50px Barlow Semi Condensed', fAvg='300 36px Barlow Semi Condensed';
+  ctx.textBaseline='alphabetic';
+  ctx.font=fMain; const wMain=ctx.measureText(main).width;
+  ctx.font=fAvg;  const wAvg = avg ? ctx.measureText(avg+' ').width : 0;
+  const padX=22, chipH=64, chipW=wMain+padX*2, gap=avg?8:0;
+  const total = chipW + wAvg + gap;
+  // chipX = left edge of the chip; avgX = left edge of the avg text
+  let chipX, avgX;
+  if(align==='center'){          // [pill] (avg)  whole block centered at x
+    const startX = x - total/2;
+    chipX = startX;       avgX = startX + chipW + gap;
+  } else if(align==='left'){     // [pill] (avg)   anchored at x (outer-left)
+    chipX = x;            avgX = x + chipW + gap;
+  } else {                       // (avg) [pill]   anchored so pill ends at x (outer-right)
+    chipX = x - chipW;    avgX = x - chipW - gap - wAvg;
+  }
+  // chip
+  ctx.fillStyle=col; roundRect(chipX, y-chipH+18, chipW, chipH, 14); ctx.fill();
+  // number centered in chip
+  ctx.fillStyle=ink||'#ffffff'; ctx.font=fMain; ctx.textAlign='center';
+  ctx.fillText(main, chipX+chipW/2, y);
+  // thin avg (avgCol overrides for dark pills like navy)
+  if(avg){ ctx.fillStyle=avgCol||col; ctx.font=fAvg; ctx.textAlign='left'; ctx.fillText(avg, avgX, y); }
+}
+function fitText(txt, cx, y, maxW, startSize){
+  let size=startSize||46; ctx.textAlign='center';
+  do { ctx.font='500 '+size+'px Barlow Semi Condensed'; if(ctx.measureText(txt).width<=maxW) break; size-=2; } while(size>22);
+  ctx.fillText(txt, cx, y);
+}
+// light-weight fit (for the top-scorer name line)
+function fitText2(txt, cx, y, maxW){
+  let size=34; ctx.textAlign='center';
+  do { ctx.font='400 '+size+'px Barlow Semi Condensed'; if(ctx.measureText(txt).width<=maxW) break; size-=1; } while(size>18);
+  ctx.fillText(txt, cx, y);
+}
+function coverDraw(img){ const ir=img.width/img.height, cr=W/H; let dw,dh; if(ir>cr){ dh=H; dw=H*ir; } else { dw=W; dh=W/ir; } ctx.drawImage(img,(W-dw)/2,(H-dh)/2,dw,dh); }
+// cover-draw with a pan offset (ox,oy) and a scale multiplier.
+function coverDrawPan(img, ox, oy, scale){
+  const ir=img.width/img.height, cr=W/H; let dw,dh;
+  if(ir>cr){ dh=H; dw=H*ir; } else { dw=W; dh=W/ir; }
+  dw*=scale; dh*=scale;
+  ctx.drawImage(img, (W-dw)/2+ox, (H-dh)/2+oy, dw, dh);
+}
+function drawFlag(img,cx,y,w,h){
+  const x=cx-w/2;
+  if(img){
+    ctx.save(); roundRect(x,y,w,h,12); ctx.clip();
+    // COVER the box while preserving the flag's aspect (no horizontal/vertical stretch)
+    const s=Math.max(w/img.width, h/img.height);
+    const dw=img.width*s, dh=img.height*s;
+    ctx.drawImage(img, cx-dw/2, y+h/2-dh/2, dw, dh);
+    ctx.restore();
+    ctx.strokeStyle='rgba(255,255,255,0.3)'; ctx.lineWidth=3; roundRect(x,y,w,h,12); ctx.stroke();
+  } else { ctx.fillStyle='rgba(255,255,255,0.08)'; roundRect(x,y,w,h,12); ctx.fill(); }
+}
+function roundRect(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+draw();
+</script>
+</body>
+</html>

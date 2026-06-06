@@ -1,0 +1,105 @@
+match_no,slug,phase,group,matchday,date,time,venue,city,country,team_a,team_b,status
+1,m001-mexico-vs-south-africa,group,A,1,2026-06-11,19:00 CET · 13:00 EST,Estadio Azteca,Mexico City,Mexico,Mexico,South Africa,drawn
+2,m002-south-korea-vs-czech-republic,group,A,1,2026-06-12,,Estadio Akron,Zapopan,Mexico,South Korea,Czech Republic,drawn
+3,m003-canada-vs-bosnia-herzegovina,group,B,1,2026-06-12,,BMO Field,Toronto,Canada,Canada,Bosnia & Herzegovina,drawn
+4,m004-usa-vs-paraguay,group,D,1,2026-06-13,,SoFi Stadium,Los Angeles,USA,USA,Paraguay,drawn
+5,m005-qatar-vs-switzerland,group,B,1,2026-06-13,,Levi's Stadium,Santa Clara,USA,Qatar,Switzerland,drawn
+6,m006-brazil-vs-morocco,group,C,1,2026-06-13,,MetLife Stadium,New Jersey,USA,Brazil,Morocco,drawn
+7,m007-haiti-vs-scotland,group,C,1,2026-06-14,,Gillette Stadium,Foxborough,USA,Haiti,Scotland,drawn
+8,m008-australia-vs-turkey,group,D,1,2026-06-14,,BC Place,Vancouver,Canada,Australia,Turkey,drawn
+9,m009-germany-vs-curacao,group,E,1,2026-06-14,,NRG Stadium,Houston,USA,Germany,Curacao,drawn
+10,m010-netherlands-vs-japan,group,F,1,2026-06-14,,AT&T Stadium,Arlington,USA,Netherlands,Japan,drawn
+11,m011-ivory-coast-vs-ecuador,group,E,1,2026-06-15,,Lincoln Financial Field,Philadelphia,USA,Ivory Coast,Ecuador,drawn
+12,m012-sweden-vs-tunisia,group,F,1,2026-06-15,,Estadio BBVA,Guadalupe,Mexico,Sweden,Tunisia,drawn
+13,m013-spain-vs-cape-verde,group,H,1,2026-06-15,,Mercedes-Benz Stadium,Atlanta,USA,Spain,Cape Verde,drawn
+14,m014-belgium-vs-egypt,group,G,1,2026-06-15,,Lumen Field,Seattle,USA,Belgium,Egypt,drawn
+15,m015-saudi-arabia-vs-uruguay,group,H,1,2026-06-15,,Hard Rock Stadium,Miami,USA,Saudi Arabia,Uruguay,drawn
+16,m016-iran-vs-new-zealand,group,G,1,2026-06-16,,SoFi Stadium,Los Angeles,USA,Iran,New Zealand,drawn
+17,m017-france-vs-senegal,group,I,1,2026-06-16,,MetLife Stadium,New Jersey,USA,France,Senegal,drawn
+18,m018-iraq-vs-norway,group,I,1,2026-06-16,,Gillette Stadium,Foxborough,USA,Iraq,Norway,drawn
+19,m019-argentina-vs-algeria,group,J,1,2026-06-17,,Arrowhead Stadium,Kansas City,USA,Argentina,Algeria,drawn
+20,m020-austria-vs-jordan,group,J,1,2026-06-17,,Levi's Stadium,Santa Clara,USA,Austria,Jordan,drawn
+21,m021-portugal-vs-dr-congo,group,K,1,2026-06-17,,NRG Stadium,Houston,USA,Portugal,DR Congo,drawn
+22,m022-england-vs-croatia,group,L,1,2026-06-17,,AT&T Stadium,Arlington,USA,England,Croatia,drawn
+23,m023-ghana-vs-panama,group,L,1,2026-06-18,,BMO Field,Toronto,Canada,Ghana,Panama,drawn
+24,m024-uzbekistan-vs-colombia,group,K,1,2026-06-18,,Estadio Azteca,Mexico City,Mexico,Uzbekistan,Colombia,drawn
+25,m025-czech-republic-vs-south-africa,group,A,2,2026-06-18,,Mercedes-Benz Stadium,Atlanta,USA,Czech Republic,South Africa,drawn
+26,m026-switzerland-vs-bosnia-herzegovina,group,B,2,2026-06-18,,SoFi Stadium,Los Angeles,USA,Switzerland,Bosnia & Herzegovina,drawn
+27,m027-canada-vs-qatar,group,B,2,2026-06-18,,BC Place,Vancouver,Canada,Canada,Qatar,drawn
+28,m028-mexico-vs-south-korea,group,A,2,2026-06-19,,Estadio Akron,Zapopan,Mexico,Mexico,South Korea,drawn
+29,m029-usa-vs-australia,group,D,2,2026-06-19,,Lumen Field,Seattle,USA,USA,Australia,drawn
+30,m030-scotland-vs-morocco,group,C,2,2026-06-19,,Gillette Stadium,Foxborough,USA,Scotland,Morocco,drawn
+31,m031-brazil-vs-haiti,group,C,2,2026-06-20,,Lincoln Financial Field,Philadelphia,USA,Brazil,Haiti,drawn
+32,m032-turkey-vs-paraguay,group,D,2,2026-06-20,,Levi's Stadium,Santa Clara,USA,Turkey,Paraguay,drawn
+33,m033-netherlands-vs-sweden,group,F,2,2026-06-20,,NRG Stadium,Houston,USA,Netherlands,Sweden,drawn
+34,m034-germany-vs-ivory-coast,group,E,2,2026-06-20,,BMO Field,Toronto,Canada,Germany,Ivory Coast,drawn
+35,m035-ecuador-vs-curacao,group,E,2,2026-06-21,,Arrowhead Stadium,Kansas City,USA,Ecuador,Curacao,drawn
+36,m036-tunisia-vs-japan,group,F,2,2026-06-21,,Estadio BBVA,Guadalupe,Mexico,Tunisia,Japan,drawn
+37,m037-spain-vs-saudi-arabia,group,H,2,2026-06-21,,Mercedes-Benz Stadium,Atlanta,USA,Spain,Saudi Arabia,drawn
+38,m038-belgium-vs-iran,group,G,2,2026-06-21,,SoFi Stadium,Los Angeles,USA,Belgium,Iran,drawn
+39,m039-uruguay-vs-cape-verde,group,H,2,2026-06-21,,Hard Rock Stadium,Miami,USA,Uruguay,Cape Verde,drawn
+40,m040-new-zealand-vs-egypt,group,G,2,2026-06-22,,BC Place,Vancouver,Canada,New Zealand,Egypt,drawn
+41,m041-argentina-vs-austria,group,J,2,2026-06-22,,AT&T Stadium,Arlington,USA,Argentina,Austria,drawn
+42,m042-france-vs-iraq,group,I,2,2026-06-22,,Lincoln Financial Field,Philadelphia,USA,France,Iraq,drawn
+43,m043-norway-vs-senegal,group,I,2,2026-06-23,,BMO Field,Toronto,Canada,Norway,Senegal,drawn
+44,m044-jordan-vs-algeria,group,J,2,2026-06-23,,Levi's Stadium,Santa Clara,USA,Jordan,Algeria,drawn
+45,m045-portugal-vs-uzbekistan,group,K,2,2026-06-23,,NRG Stadium,Houston,USA,Portugal,Uzbekistan,drawn
+46,m046-england-vs-ghana,group,L,2,2026-06-23,,Gillette Stadium,Foxborough,USA,England,Ghana,drawn
+47,m047-panama-vs-croatia,group,L,2,2026-06-24,,Gillette Stadium,Foxborough,USA,Panama,Croatia,drawn
+48,m048-colombia-vs-dr-congo,group,K,2,2026-06-24,,Estadio Akron,Zapopan,Mexico,Colombia,DR Congo,drawn
+49,m049-switzerland-vs-canada,group,B,3,2026-06-24,,BC Place,Vancouver,Canada,Switzerland,Canada,drawn
+50,m050-bosnia-herzegovina-vs-qatar,group,B,3,2026-06-24,,Lumen Field,Seattle,USA,Bosnia & Herzegovina,Qatar,drawn
+51,m051-morocco-vs-haiti,group,C,3,2026-06-24,,Mercedes-Benz Stadium,Atlanta,USA,Morocco,Haiti,drawn
+52,m052-scotland-vs-brazil,group,C,3,2026-06-24,,Hard Rock Stadium,Miami,USA,Scotland,Brazil,drawn
+53,m053-south-africa-vs-south-korea,group,A,3,2026-06-25,,Estadio BBVA,Guadalupe,Mexico,South Africa,South Korea,drawn
+54,m054-czech-republic-vs-mexico,group,A,3,2026-06-25,,Estadio Azteca,Mexico City,Mexico,Czech Republic,Mexico,drawn
+55,m055-curacao-vs-ivory-coast,group,E,3,2026-06-25,,Lincoln Financial Field,Philadelphia,USA,Curacao,Ivory Coast,drawn
+56,m056-ecuador-vs-germany,group,E,3,2026-06-25,,MetLife Stadium,New Jersey,USA,Ecuador,Germany,drawn
+57,m057-tunisia-vs-netherlands,group,F,3,2026-06-26,,Arrowhead Stadium,Kansas City,USA,Tunisia,Netherlands,drawn
+58,m058-japan-vs-sweden,group,F,3,2026-06-26,,AT&T Stadium,Arlington,USA,Japan,Sweden,drawn
+59,m059-turkey-vs-usa,group,D,3,2026-06-26,,SoFi Stadium,Los Angeles,USA,Turkey,USA,drawn
+60,m060-paraguay-vs-australia,group,D,3,2026-06-26,,Levi's Stadium,Santa Clara,USA,Paraguay,Australia,drawn
+61,m061-norway-vs-france,group,I,3,2026-06-26,,Gillette Stadium,Foxborough,USA,Norway,France,drawn
+62,m062-senegal-vs-iraq,group,I,3,2026-06-26,,BMO Field,Toronto,Canada,Senegal,Iraq,drawn
+63,m063-cape-verde-vs-saudi-arabia,group,H,3,2026-06-27,,NRG Stadium,Houston,USA,Cape Verde,Saudi Arabia,drawn
+64,m064-uruguay-vs-spain,group,H,3,2026-06-27,,Estadio Akron,Zapopan,Mexico,Uruguay,Spain,drawn
+65,m065-new-zealand-vs-belgium,group,G,3,2026-06-27,,BC Place,Vancouver,Canada,New Zealand,Belgium,drawn
+66,m066-egypt-vs-iran,group,G,3,2026-06-27,,Lumen Field,Seattle,USA,Egypt,Iran,drawn
+67,m067-panama-vs-england,group,L,3,2026-06-27,,MetLife Stadium,New Jersey,USA,Panama,England,drawn
+68,m068-croatia-vs-ghana,group,L,3,2026-06-27,,Lincoln Financial Field,Philadelphia,USA,Croatia,Ghana,drawn
+69,m069-colombia-vs-portugal,group,K,3,2026-06-28,,Hard Rock Stadium,Miami,USA,Colombia,Portugal,drawn
+70,m070-dr-congo-vs-uzbekistan,group,K,3,2026-06-28,,Mercedes-Benz Stadium,Atlanta,USA,DR Congo,Uzbekistan,drawn
+71,m071-algeria-vs-austria,group,J,3,2026-06-28,,Arrowhead Stadium,Kansas City,USA,Algeria,Austria,drawn
+72,m072-jordan-vs-argentina,group,J,3,2026-06-28,,AT&T Stadium,Arlington,USA,Jordan,Argentina,drawn
+73,m073-r32,r32,,,2026-06-28,,SoFi Stadium,Los Angeles,USA,TBD,TBD,bracket
+74,m074-r32,r32,,,2026-06-29,,Gillette Stadium,Foxborough,USA,TBD,TBD,bracket
+75,m075-r32,r32,,,2026-06-29,,Estadio BBVA,Monterrey,Mexico,TBD,TBD,bracket
+76,m076-r32,r32,,,2026-06-29,,NRG Stadium,Houston,USA,TBD,TBD,bracket
+77,m077-r32,r32,,,2026-06-30,,MetLife Stadium,New Jersey,USA,TBD,TBD,bracket
+78,m078-r32,r32,,,2026-06-30,,AT&T Stadium,Arlington,USA,TBD,TBD,bracket
+79,m079-r32,r32,,,2026-06-30,,Estadio Azteca,Mexico City,Mexico,TBD,TBD,bracket
+80,m080-r32,r32,,,2026-07-01,,Mercedes-Benz Stadium,Atlanta,USA,TBD,TBD,bracket
+81,m081-r32,r32,,,2026-07-01,,Levi's Stadium,Santa Clara,USA,TBD,TBD,bracket
+82,m082-r32,r32,,,2026-07-01,,Lumen Field,Seattle,USA,TBD,TBD,bracket
+83,m083-r32,r32,,,2026-07-02,,BMO Field,Toronto,Canada,TBD,TBD,bracket
+84,m084-r32,r32,,,2026-07-02,,SoFi Stadium,Los Angeles,USA,TBD,TBD,bracket
+85,m085-r32,r32,,,2026-07-02,,BC Place,Vancouver,Canada,TBD,TBD,bracket
+86,m086-r32,r32,,,2026-07-03,,Hard Rock Stadium,Miami,USA,TBD,TBD,bracket
+87,m087-r32,r32,,,2026-07-03,,Arrowhead Stadium,Kansas City,USA,TBD,TBD,bracket
+88,m088-r32,r32,,,2026-07-03,,AT&T Stadium,Arlington,USA,TBD,TBD,bracket
+89,m089-r16,r16,,,2026-07-04,,Lincoln Financial Field,Philadelphia,USA,TBD,TBD,bracket
+90,m090-r16,r16,,,2026-07-04,,NRG Stadium,Houston,USA,TBD,TBD,bracket
+91,m091-r16,r16,,,2026-07-05,,MetLife Stadium,New Jersey,USA,TBD,TBD,bracket
+92,m092-r16,r16,,,2026-07-05,,Estadio Azteca,Mexico City,Mexico,TBD,TBD,bracket
+93,m093-r16,r16,,,2026-07-06,,AT&T Stadium,Arlington,USA,TBD,TBD,bracket
+94,m094-r16,r16,,,2026-07-06,,Lumen Field,Seattle,USA,TBD,TBD,bracket
+95,m095-r16,r16,,,2026-07-07,,Mercedes-Benz Stadium,Atlanta,USA,TBD,TBD,bracket
+96,m096-r16,r16,,,2026-07-07,,BC Place,Vancouver,Canada,TBD,TBD,bracket
+97,m097-qf,qf,,,2026-07-09,,Gillette Stadium,Foxborough,USA,TBD,TBD,bracket
+98,m098-qf,qf,,,2026-07-10,,SoFi Stadium,Los Angeles,USA,TBD,TBD,bracket
+99,m099-qf,qf,,,2026-07-11,,Hard Rock Stadium,Miami,USA,TBD,TBD,bracket
+100,m100-qf,qf,,,2026-07-11,,Arrowhead Stadium,Kansas City,USA,TBD,TBD,bracket
+101,m101-sf,sf,,,2026-07-14,,AT&T Stadium,Arlington,USA,TBD,TBD,bracket
+102,m102-sf,sf,,,2026-07-15,,Mercedes-Benz Stadium,Atlanta,USA,TBD,TBD,bracket
+103,m103-third,third,,,2026-07-18,,Hard Rock Stadium,Miami,USA,TBD,TBD,bracket
+104,m104-final,final,,,2026-07-19,,MetLife Stadium,New Jersey,USA,TBD,TBD,bracket

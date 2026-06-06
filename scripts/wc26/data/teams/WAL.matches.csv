@@ -1,0 +1,9 @@
+code,team,year,stage,match_no_wc,opponent,opponent_code,gf,ga,result,host,note
+WAL,Wales,1958,group,1,Hungary,HUN,1,1,D,,
+WAL,Wales,1958,group,2,Mexico,MEX,1,1,D,,
+WAL,Wales,1958,group,3,Sweden,SWE,0,0,D,,
+WAL,Wales,1958,group,4,Hungary,HUN,2,1,W,,
+WAL,Wales,1958,qf,5,Brazil,BRA,0,1,L,,
+WAL,Wales,2022,group,6,United States,USA,1,1,D,,
+WAL,Wales,2022,group,7,Iran,IRN,0,2,L,,
+WAL,Wales,2022,group,8,England,ENG,0,3,L,,

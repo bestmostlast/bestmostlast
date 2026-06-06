@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WC26 Match Preview Storyboard",
+  "description": "One file per fixture. The single source of truth for one preview Short: every text string, stat, color and asset is pre-computed by generate_previews.py so the assembler and the web page (/wc26/<slug>) both render from it without recomputing.",
+  "type": "object",
+  "required": ["slug", "fixture", "beats", "render", "cta"],
+  "properties": {
+    "slug": { "type": "string", "description": "Stable id, matches fixtures.csv (e.g. mex-vs-tbd-m01)." },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "data_complete": {
+      "type": "boolean",
+      "description": "false while any beat still uses a fallback/placeholder (e.g. teams not drawn, or WC.csv missing). Assembler may still render a draft."
+    },
+
+    "fixture": {
+      "type": "object",
+      "required": ["match_no", "phase", "date", "team_a", "team_b"],
+      "properties": {
+        "match_no": { "type": "integer" },
+        "phase": { "enum": ["group", "r32", "r16", "qf", "sf", "final", "third"] },
+        "group": { "type": ["string", "null"] },
+        "matchday": { "type": ["integer", "null"] },
+        "date": { "type": "string", "format": "date" },
+        "kickoff_local": { "type": "string" },
+        "venue": { "type": "string" },
+        "city": { "type": "string" },
+        "team_a": { "$ref": "#/$defs/team" },
+        "team_b": { "$ref": "#/$defs/team" }
+      }
+    },
+
+    "beats": {
+      "type": "array",
+      "description": "Fixed 5-beat skeleton, fixed order. Each beat's TYPE is fixed; its CONTENT is data-driven and may fall back when data is thin. Total target 35-45s.",
+      "items": { "$ref": "#/$defs/beat" }
+    },
+
+    "render": {
+      "type": "object",
+      "description": "Params handed to chart.html for the BML-duel beat clip.",
+      "properties": {
+        "resolution": { "type": "string", "default": "1080x1920" },
+        "duration_s": { "type": "number", "default": 9 },
+        "fps": { "type": "integer", "default": 30 },
+        "chart_csv": { "type": "string", "description": "Path to the 2-team wide cumulative CSV this preview's duel beat renders." }
+      }
+    },
+
+    "cta": {
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "url": { "type": "string" }
+      }
+    }
+  },
+
+  "$defs": {
+    "team": {
+      "type": "object",
+      "required": ["name", "code"],
+      "properties": {
+        "name": { "type": "string" },
+        "code": { "type": "string", "description": "FIFA 3-letter code, e.g. MEX." },
+        "flag": { "type": "string", "description": "Emoji or asset path." },
+        "color": { "type": "string", "description": "Hex line color for charts." }
+      }
+    },
+    "beat": {
+      "type": "object",
+      "required": ["id", "type", "seconds", "text"],
+      "properties": {
+        "id": { "type": "integer", "description": "1..5, render order." },
+        "type": {
+          "enum": ["hook", "h2h", "bml_duel", "players", "expect"],
+          "description": "hook=flags+teaser; h2h=past WC meetings; bml_duel=chart.html mini-race (the signature beat); players=1 player/side stat; expect=honours + prediction + CTA."
+        },
+        "seconds": { "type": "number" },
+        "text": {
+          "type": "object",
+          "description": "On-screen strings. Headline always present; sub optional.",
+          "properties": {
+            "headline": { "type": "string" },
+            "sub": { "type": "string" }
+          }
+        },
+        "stat": {
+          "type": "object",
+          "description": "The data backing this beat. Shape varies by beat type; see sample. May be null if fallback used.",
+          "additionalProperties": true
+        },
+        "fallback_used": {
+          "type": "boolean",
+          "description": "true when real data was thin and the beat used a generic framing (e.g. 'first-ever WC meeting')."
+        }
+      }
+    }
+  }
+}

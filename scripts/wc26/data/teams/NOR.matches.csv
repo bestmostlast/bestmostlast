@@ -1,0 +1,9 @@
+code,team,year,stage,match_no_wc,opponent,opponent_code,gf,ga,result,host,note
+NOR,Norway,1938,r16,1,Italy,ITA,1,2,L,,
+NOR,Norway,1994,group,2,Mexico,MEX,1,0,W,,
+NOR,Norway,1994,group,3,Italy,ITA,0,1,L,,
+NOR,Norway,1994,group,4,Republic of Ireland,IRL,0,0,D,,
+NOR,Norway,1998,group,5,Morocco,MAR,2,2,D,,
+NOR,Norway,1998,group,6,Scotland,SCO,1,1,D,,
+NOR,Norway,1998,group,7,Brazil,BRA,2,1,W,,
+NOR,Norway,1998,r16,8,Italy,ITA,0,1,L,,

@@ -1,0 +1,13 @@
+code,team,year,stage,match_no_wc,opponent,opponent_code,gf,ga,result,host,note
+SEN,Senegal,2002,group,1,France,FRA,1,0,W,,
+SEN,Senegal,2002,group,2,Denmark,DEN,1,1,D,,
+SEN,Senegal,2002,group,3,Uruguay,URU,3,3,D,,
+SEN,Senegal,2002,r16,4,Sweden,SWE,2,1,W,,
+SEN,Senegal,2002,qf,5,Turkey,TUR,0,1,L,,
+SEN,Senegal,2018,group,6,Poland,POL,2,1,W,,
+SEN,Senegal,2018,group,7,Japan,JPN,2,2,D,,
+SEN,Senegal,2018,group,8,Colombia,COL,0,1,L,,
+SEN,Senegal,2022,group,9,Netherlands,NED,0,2,L,,
+SEN,Senegal,2022,group,10,Qatar,QAT,3,1,W,,
+SEN,Senegal,2022,group,11,Ecuador,ECU,2,1,W,,
+SEN,Senegal,2022,r16,12,England,ENG,0,3,L,,

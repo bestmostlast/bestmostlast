@@ -1,0 +1,105 @@
+match_no,slug,phase,team_a,a_wcs,a_best,a_pwdl,a_gfga,team_b,b_wcs,b_best,b_pwdl,b_gfga,h2h_meetings,h2h_detail,a_resolved,b_resolved,status
+1,m001-mexico-vs-south-africa,group,Mexico,17,Quarter-final,60  17-15-28,62-101,South Africa,3,Group stage,9  2-4-3,11-16,1,2010 group: Mexico 1-1 South Africa,,,ok
+2,m002-south-korea-vs-czech-republic,group,South Korea,11,3rd,38  7-10-21,39-78,Czech Republic,1,Group stage,3  1-0-2,3-4,0,,,,ok
+3,m003-canada-vs-bosnia-herzegovina,group,Canada,2,Group stage,6  0-0-6,2-12,Bosnia & Herzegovina,1,Group stage,3  1-0-2,4-4,0,,,,ok
+4,m004-usa-vs-paraguay,group,USA,11,Semi-final,37  9-8-20,40-66,Paraguay,8,Quarter-final,27  7-10-10,30-38,1,1930 group: United States 3-0 Paraguay,,,ok
+5,m005-qatar-vs-switzerland,group,Qatar,1,Group stage,3  0-0-3,1-7,Switzerland,12,Quarter-final,40  13-8-19,51-71,0,,,,ok
+6,m006-brazil-vs-morocco,group,Brazil,22,WINNERS,113  75-19-19,235-107,Morocco,6,3rd,23  5-7-11,20-27,1,1998 group: Brazil 3-0 Morocco,,,ok
+7,m007-haiti-vs-scotland,group,Haiti,1,Group stage,3  0-0-3,2-14,Scotland,8,Group stage,23  4-7-12,25-41,0,,,,ok
+8,m008-australia-vs-turkey,group,Australia,6,Round of 16,20  4-4-12,17-37,Turkey,2,3rd,10  5-1-4,20-17,0,,,,ok
+9,m009-germany-vs-curacao,group,Germany,20,WINNERS,111  68-21-22,230-126,Curacao,0,Debut,0  0-0-0,0-0,0,,,NO-DATA,ok
+10,m010-netherlands-vs-japan,group,Netherlands,11,Runners-up,55  30-14-11,96-52,Japan,7,Round of 16,25  7-6-12,25-33,1,2010 group: Netherlands 1-0 Japan,,,ok
+11,m011-ivory-coast-vs-ecuador,group,Ivory Coast,3,Group stage,9  3-1-5,13-14,Ecuador,4,Round of 16,13  5-2-6,14-14,0,,,,ok
+12,m012-sweden-vs-tunisia,group,Sweden,12,Runners-up,51  19-13-19,80-73,Tunisia,6,Group stage,18  3-5-10,14-26,0,,,,ok
+13,m013-spain-vs-cape-verde,group,Spain,16,WINNERS,66  31-17-18,108-74,Cape Verde,0,Debut,0  0-0-0,0-0,0,,,NO-DATA,ok
+14,m014-belgium-vs-egypt,group,Belgium,14,3rd,51  21-10-20,69-74,Egypt,3,Round of 16,7  0-2-5,5-12,0,,,,ok
+15,m015-saudi-arabia-vs-uruguay,group,Saudi Arabia,6,Round of 16,19  4-2-13,14-44,Uruguay,14,WINNERS,59  25-13-21,89-76,1,2018 group: Saudi Arabia 0-1 Uruguay,,,ok
+16,m016-iran-vs-new-zealand,group,Iran,6,Group stage,18  3-4-11,13-31,New Zealand,2,Group stage,6  0-3-3,4-14,0,,,,ok
+17,m017-france-vs-senegal,group,France,16,WINNERS,73  39-14-20,136-85,Senegal,3,Quarter-final,12  5-3-4,16-17,1,2002 group: France 0-1 Senegal,,,ok
+18,m018-iraq-vs-norway,group,Iraq,1,Group stage,3  0-0-3,1-4,Norway,3,Round of 16,8  2-3-3,7-8,0,,,,ok
+19,m019-argentina-vs-algeria,group,Argentina,18,WINNERS,88  47-17-24,152-101,Algeria,4,Round of 16,13  3-3-7,13-19,0,,,,ok
+20,m020-austria-vs-jordan,group,Austria,7,3rd,29  12-4-13,43-47,Jordan,0,Debut,0  0-0-0,0-0,0,,,NO-DATA,ok
+21,m021-portugal-vs-dr-congo,group,Portugal,8,3rd,35  17-6-12,61-41,DR Congo,1,Group stage,3  0-0-3,0-14,0,,,,ok
+22,m022-england-vs-croatia,group,England,16,WINNERS,74  32-22-20,104-68,Croatia,6,Runners-up,30  13-8-9,43-33,1,2018 sf: England 1-2 Croatia,,,ok
+23,m023-ghana-vs-panama,group,Ghana,4,Quarter-final,15  5-3-7,18-23,Panama,1,Group stage,3  0-0-3,2-11,0,,,,ok
+24,m024-uzbekistan-vs-colombia,group,Uzbekistan,0,Debut,0  0-0-0,0-0,Colombia,6,Quarter-final,22  9-3-10,32-30,0,,NO-DATA,,ok
+25,m025-czech-republic-vs-south-africa,group,Czech Republic,1,Group stage,3  1-0-2,3-4,South Africa,3,Group stage,9  2-4-3,11-16,0,,,,ok
+26,m026-switzerland-vs-bosnia-herzegovina,group,Switzerland,12,Quarter-final,40  13-8-19,51-71,Bosnia & Herzegovina,1,Group stage,3  1-0-2,4-4,0,,,,ok
+27,m027-canada-vs-qatar,group,Canada,2,Group stage,6  0-0-6,2-12,Qatar,1,Group stage,3  0-0-3,1-7,0,,,,ok
+28,m028-mexico-vs-south-korea,group,Mexico,17,Quarter-final,60  17-15-28,62-101,South Korea,11,3rd,38  7-10-21,39-78,2,1998 group: Mexico 3-1 South Korea | 2018 group: Mexico 2-1 South Korea,,,ok
+29,m029-usa-vs-australia,group,USA,11,Semi-final,37  9-8-20,40-66,Australia,6,Round of 16,20  4-4-12,17-37,0,,,,ok
+30,m030-scotland-vs-morocco,group,Scotland,8,Group stage,23  4-7-12,25-41,Morocco,6,3rd,23  5-7-11,20-27,1,1998 group: Scotland 0-3 Morocco,,,ok
+31,m031-brazil-vs-haiti,group,Brazil,22,WINNERS,113  75-19-19,235-107,Haiti,1,Group stage,3  0-0-3,2-14,0,,,,ok
+32,m032-turkey-vs-paraguay,group,Turkey,2,3rd,10  5-1-4,20-17,Paraguay,8,Quarter-final,27  7-10-10,30-38,0,,,,ok
+33,m033-netherlands-vs-sweden,group,Netherlands,11,Runners-up,55  30-14-11,96-52,Sweden,12,Runners-up,51  19-13-19,80-73,1,1974 group: Netherlands 0-0 Sweden,,,ok
+34,m034-germany-vs-ivory-coast,group,Germany,20,WINNERS,111  68-21-22,230-126,Ivory Coast,3,Group stage,9  3-1-5,13-14,0,,,,ok
+35,m035-ecuador-vs-curacao,group,Ecuador,4,Round of 16,13  5-2-6,14-14,Curacao,0,Debut,0  0-0-0,0-0,0,,,NO-DATA,ok
+36,m036-tunisia-vs-japan,group,Tunisia,6,Group stage,18  3-5-10,14-26,Japan,7,Round of 16,25  7-6-12,25-33,1,2002 group: Tunisia 0-2 Japan,,,ok
+37,m037-spain-vs-saudi-arabia,group,Spain,16,WINNERS,66  31-17-18,108-74,Saudi Arabia,6,Round of 16,19  4-2-13,14-44,1,2006 group: Spain 1-0 Saudi Arabia,,,ok
+38,m038-belgium-vs-iran,group,Belgium,14,3rd,51  21-10-20,69-74,Iran,6,Group stage,18  3-4-11,13-31,0,,,,ok
+39,m039-uruguay-vs-cape-verde,group,Uruguay,14,WINNERS,59  25-13-21,89-76,Cape Verde,0,Debut,0  0-0-0,0-0,0,,,NO-DATA,ok
+40,m040-new-zealand-vs-egypt,group,New Zealand,2,Group stage,6  0-3-3,4-14,Egypt,3,Round of 16,7  0-2-5,5-12,0,,,,ok
+41,m041-argentina-vs-austria,group,Argentina,18,WINNERS,88  47-17-24,152-101,Austria,7,3rd,29  12-4-13,43-47,0,,,,ok
+42,m042-france-vs-iraq,group,France,16,WINNERS,73  39-14-20,136-85,Iraq,1,Group stage,3  0-0-3,1-4,0,,,,ok
+43,m043-norway-vs-senegal,group,Norway,3,Round of 16,8  2-3-3,7-8,Senegal,3,Quarter-final,12  5-3-4,16-17,0,,,,ok
+44,m044-jordan-vs-algeria,group,Jordan,0,Debut,0  0-0-0,0-0,Algeria,4,Round of 16,13  3-3-7,13-19,0,,NO-DATA,,ok
+45,m045-portugal-vs-uzbekistan,group,Portugal,8,3rd,35  17-6-12,61-41,Uzbekistan,0,Debut,0  0-0-0,0-0,0,,,NO-DATA,ok
+46,m046-england-vs-ghana,group,England,16,WINNERS,74  32-22-20,104-68,Ghana,4,Quarter-final,15  5-3-7,18-23,0,,,,ok
+47,m047-panama-vs-croatia,group,Panama,1,Group stage,3  0-0-3,2-11,Croatia,6,Runners-up,30  13-8-9,43-33,0,,,,ok
+48,m048-colombia-vs-dr-congo,group,Colombia,6,Quarter-final,22  9-3-10,32-30,DR Congo,1,Group stage,3  0-0-3,0-14,0,,,,ok
+49,m049-switzerland-vs-canada,group,Switzerland,12,Quarter-final,40  13-8-19,51-71,Canada,2,Group stage,6  0-0-6,2-12,0,,,,ok
+50,m050-bosnia-herzegovina-vs-qatar,group,Bosnia & Herzegovina,1,Group stage,3  1-0-2,4-4,Qatar,1,Group stage,3  0-0-3,1-7,0,,,,ok
+51,m051-morocco-vs-haiti,group,Morocco,6,3rd,23  5-7-11,20-27,Haiti,1,Group stage,3  0-0-3,2-14,0,,,,ok
+52,m052-scotland-vs-brazil,group,Scotland,8,Group stage,23  4-7-12,25-41,Brazil,22,WINNERS,113  75-19-19,235-107,4,1974 group: Scotland 0-0 Brazil | 1982 group: Scotland 1-4 Brazil | 1990 group: Scotland 0-1 Brazil | 1998 group: Scotland 1-2 Brazil,,,ok
+53,m053-south-africa-vs-south-korea,group,South Africa,3,Group stage,9  2-4-3,11-16,South Korea,11,3rd,38  7-10-21,39-78,0,,,,ok
+54,m054-czech-republic-vs-mexico,group,Czech Republic,1,Group stage,3  1-0-2,3-4,Mexico,17,Quarter-final,60  17-15-28,62-101,0,,,,ok
+55,m055-curacao-vs-ivory-coast,group,Curacao,0,Debut,0  0-0-0,0-0,Ivory Coast,3,Group stage,9  3-1-5,13-14,0,,NO-DATA,,ok
+56,m056-ecuador-vs-germany,group,Ecuador,4,Round of 16,13  5-2-6,14-14,Germany,20,WINNERS,111  68-21-22,230-126,1,2006 group: Ecuador 0-3 Germany,,,ok
+57,m057-tunisia-vs-netherlands,group,Tunisia,6,Group stage,18  3-5-10,14-26,Netherlands,11,Runners-up,55  30-14-11,96-52,0,,,,ok
+58,m058-japan-vs-sweden,group,Japan,7,Round of 16,25  7-6-12,25-33,Sweden,12,Runners-up,51  19-13-19,80-73,0,,,,ok
+59,m059-turkey-vs-usa,group,Turkey,2,3rd,10  5-1-4,20-17,USA,11,Semi-final,37  9-8-20,40-66,0,,,,ok
+60,m060-paraguay-vs-australia,group,Paraguay,8,Quarter-final,27  7-10-10,30-38,Australia,6,Round of 16,20  4-4-12,17-37,0,,,,ok
+61,m061-norway-vs-france,group,Norway,3,Round of 16,8  2-3-3,7-8,France,16,WINNERS,73  39-14-20,136-85,0,,,,ok
+62,m062-senegal-vs-iraq,group,Senegal,3,Quarter-final,12  5-3-4,16-17,Iraq,1,Group stage,3  0-0-3,1-4,0,,,,ok
+63,m063-cape-verde-vs-saudi-arabia,group,Cape Verde,0,Debut,0  0-0-0,0-0,Saudi Arabia,6,Round of 16,19  4-2-13,14-44,0,,NO-DATA,,ok
+64,m064-uruguay-vs-spain,group,Uruguay,14,WINNERS,59  25-13-21,89-76,Spain,16,WINNERS,66  31-17-18,108-74,2,1950 group: Uruguay 2-2 Spain | 1990 group: Uruguay 0-0 Spain,,,ok
+65,m065-new-zealand-vs-belgium,group,New Zealand,2,Group stage,6  0-3-3,4-14,Belgium,14,3rd,51  21-10-20,69-74,0,,,,ok
+66,m066-egypt-vs-iran,group,Egypt,3,Round of 16,7  0-2-5,5-12,Iran,6,Group stage,18  3-4-11,13-31,0,,,,ok
+67,m067-panama-vs-england,group,Panama,1,Group stage,3  0-0-3,2-11,England,16,WINNERS,74  32-22-20,104-68,1,2018 group: Panama 1-6 England,,,ok
+68,m068-croatia-vs-ghana,group,Croatia,6,Runners-up,30  13-8-9,43-33,Ghana,4,Quarter-final,15  5-3-7,18-23,0,,,,ok
+69,m069-colombia-vs-portugal,group,Colombia,6,Quarter-final,22  9-3-10,32-30,Portugal,8,3rd,35  17-6-12,61-41,0,,,,ok
+70,m070-dr-congo-vs-uzbekistan,group,DR Congo,1,Group stage,3  0-0-3,0-14,Uzbekistan,0,Debut,0  0-0-0,0-0,0,,,NO-DATA,ok
+71,m071-algeria-vs-austria,group,Algeria,4,Round of 16,13  3-3-7,13-19,Austria,7,3rd,29  12-4-13,43-47,1,1982 group: Algeria 0-2 Austria,,,ok
+72,m072-jordan-vs-argentina,group,Jordan,0,Debut,0  0-0-0,0-0,Argentina,18,WINNERS,88  47-17-24,152-101,0,,NO-DATA,,ok
+73,m073-r32,r32,,,,,,,,,,,,,,,TBD
+74,m074-r32,r32,,,,,,,,,,,,,,,TBD
+75,m075-r32,r32,,,,,,,,,,,,,,,TBD
+76,m076-r32,r32,,,,,,,,,,,,,,,TBD
+77,m077-r32,r32,,,,,,,,,,,,,,,TBD
+78,m078-r32,r32,,,,,,,,,,,,,,,TBD
+79,m079-r32,r32,,,,,,,,,,,,,,,TBD
+80,m080-r32,r32,,,,,,,,,,,,,,,TBD
+81,m081-r32,r32,,,,,,,,,,,,,,,TBD
+82,m082-r32,r32,,,,,,,,,,,,,,,TBD
+83,m083-r32,r32,,,,,,,,,,,,,,,TBD
+84,m084-r32,r32,,,,,,,,,,,,,,,TBD
+85,m085-r32,r32,,,,,,,,,,,,,,,TBD
+86,m086-r32,r32,,,,,,,,,,,,,,,TBD
+87,m087-r32,r32,,,,,,,,,,,,,,,TBD
+88,m088-r32,r32,,,,,,,,,,,,,,,TBD
+89,m089-r16,r16,,,,,,,,,,,,,,,TBD
+90,m090-r16,r16,,,,,,,,,,,,,,,TBD
+91,m091-r16,r16,,,,,,,,,,,,,,,TBD
+92,m092-r16,r16,,,,,,,,,,,,,,,TBD
+93,m093-r16,r16,,,,,,,,,,,,,,,TBD
+94,m094-r16,r16,,,,,,,,,,,,,,,TBD
+95,m095-r16,r16,,,,,,,,,,,,,,,TBD
+96,m096-r16,r16,,,,,,,,,,,,,,,TBD
+97,m097-qf,qf,,,,,,,,,,,,,,,TBD
+98,m098-qf,qf,,,,,,,,,,,,,,,TBD
+99,m099-qf,qf,,,,,,,,,,,,,,,TBD
+100,m100-qf,qf,,,,,,,,,,,,,,,TBD
+101,m101-sf,sf,,,,,,,,,,,,,,,TBD
+102,m102-sf,sf,,,,,,,,,,,,,,,TBD
+103,m103-third,third,,,,,,,,,,,,,,,TBD
+104,m104-final,final,,,,,,,,,,,,,,,TBD

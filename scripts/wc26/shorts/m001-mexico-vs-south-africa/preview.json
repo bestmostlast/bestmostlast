@@ -1,0 +1,95 @@
+{
+  "_NOTE": "REAL opener (match 1). Stats are best-effort illustrative placeholders until WC.csv exists — flagged per beat with verify:true. data_complete=false until verified against WC.csv.",
+
+  "slug": "m001-mexico-vs-south-africa",
+  "generated_at": "2026-06-03T00:00:00Z",
+  "data_complete": false,
+
+  "fixture": {
+    "match_no": 1,
+    "phase": "group",
+    "group": "A",
+    "matchday": 1,
+    "date": "2026-06-11",
+    "kickoff_local": "19:00",
+    "venue": "Estadio Azteca",
+    "city": "Mexico City",
+    "team_a": { "name": "Mexico",       "code": "MEX", "flag": "🇲🇽", "color": "#006847" },
+    "team_b": { "name": "South Africa", "code": "RSA", "flag": "🇿🇦", "color": "#007a4d" }
+  },
+
+  "beats": [
+    {
+      "id": 1, "type": "hook", "seconds": 3,
+      "text": {
+        "headline": "MEXICO 🇲🇽 vs 🇿🇦 SOUTH AFRICA",
+        "sub": "The World Cup begins · Estadio Azteca · June 11"
+      },
+      "stat": { "teaser": "The first match of WC26 — and the Azteca's record 3rd World Cup opener.", "verify": true }
+    },
+    {
+      "id": 2, "type": "h2h", "seconds": 7,
+      "text": {
+        "headline": "THEY'VE DONE THIS BEFORE",
+        "sub": "2010 World Cup OPENER: Mexico 1–1 South Africa"
+      },
+      "stat": {
+        "framing": "past_wc_meeting",
+        "meetings": 1,
+        "last_meeting": "2010 (opener)",
+        "score": "1–1",
+        "note": "These two opened the 2010 World Cup — Tshabalala's iconic goal, Márquez equalised. Now they open 2026. Mexico's 17th finals vs South Africa's 4th.",
+        "verify": false
+      },
+      "fallback_used": false
+    },
+    {
+      "id": 3, "type": "bml_duel", "seconds": 11,
+      "text": {
+        "headline": "MOST WORLD CUP GOALS — ALL TIME",
+        "sub": "Cumulative, 1930 → 2022"
+      },
+      "stat": {
+        "metric": "team_goals_for",
+        "team_a_total": 60,
+        "team_b_total": 11,
+        "note": "Mexico ~60 across 16 tournaments; South Africa ~11 across 3. The gap IS the story.",
+        "verify": true
+      }
+    },
+    {
+      "id": 4, "type": "players", "seconds": 8,
+      "text": { "headline": "PLAYERS TO WATCH", "sub": "One stat, one number" },
+      "stat": {
+        "team_a_player": { "name": "Santiago Giménez", "headline": "Mexico's #9 — leads the line on home soil" },
+        "team_b_player": { "name": "Lyle Foster",      "headline": "South Africa's spearhead — Premier League pedigree" },
+        "verify": true
+      }
+    },
+    {
+      "id": 5, "type": "expect", "seconds": 9,
+      "text": {
+        "headline": "WHAT TO EXPECT",
+        "sub": "Mexico best: QF (1970, 1986) · South Africa best: Group stage"
+      },
+      "stat": {
+        "prediction_frame": "Mexico have reached 7 straight Round of 16s and open at home; South Africa, back after 16 years, chase a first WC knockout berth.",
+        "honours_a": "Best: Quarter-final (1970, 1986)",
+        "honours_b": "Best: Group stage (hosts 2010)",
+        "verify": true
+      }
+    }
+  ],
+
+  "render": {
+    "resolution": "1080x1920",
+    "duration_s": 11,
+    "fps": 30,
+    "chart_csv": "chart/chart.csv"
+  },
+
+  "cta": {
+    "text": "Full breakdown → bestmostlast.com",
+    "url": "https://bestmostlast.com/wc26/m001-mexico-vs-south-africa"
+  }
+}

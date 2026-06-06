@@ -1,0 +1,1513 @@
+Stat,Team A,Team B
+MATCH 1,Mexico,South Africa
+,Mexico,South Africa
+WCs,17,3
+High,6.5,24
+Avg,17.2,24
+GP,60,9
+W,17,2
+D,15,4
+L,28,3
+GF,62,11
+GA,101,16
+P,66,10
+PPG,1.1,1.11
+— H2H —,,
+GP,1,1
+W,0,0
+D,1,1
+L,0,0
+GF,1,1
+GA,1,1
+,,
+MATCH 2,South Korea,Czech Republic
+,South Korea,Czech Republic
+WCs,11,1
+High,3.5,24
+Avg,20.0,24
+GP,38,3
+W,7,1
+D,10,0
+L,21,2
+GF,39,3
+GA,78,4
+P,31,3
+PPG,0.82,1.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 3,Canada,Bosnia & Herzegovina
+,Canada,Bosnia & Herzegovina
+WCs,2,1
+High,24,24
+Avg,24,24
+GP,6,3
+W,0,1
+D,0,0
+L,6,2
+GF,2,4
+GA,12,4
+P,0,3
+PPG,0.0,1.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 4,USA,Paraguay
+,USA,Paraguay
+WCs,11,8
+High,3.5,6.5
+Avg,15.3,17.5
+GP,37,27
+W,9,7
+D,8,10
+L,20,10
+GF,40,30
+GA,66,38
+P,35,31
+PPG,0.95,1.15
+— H2H —,,
+GP,1,1
+W,1,0
+D,0,0
+L,0,1
+GF,3,0
+GA,0,3
+,,
+MATCH 5,Qatar,Switzerland
+,Qatar,Switzerland
+WCs,1,12
+High,24,6.5
+Avg,24,14.8
+GP,3,40
+W,0,13
+D,0,8
+L,3,19
+GF,1,51
+GA,7,71
+P,0,47
+PPG,0.0,1.18
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 6,Brazil,Morocco
+,Brazil,Morocco
+WCs,22,6
+High,1,3.5
+Avg,8.6,18.7
+GP,113,23
+W,75,5
+D,19,7
+L,19,11
+GF,235,20
+GA,107,27
+P,244,22
+PPG,2.16,0.96
+— H2H —,,
+GP,1,1
+W,1,0
+D,0,0
+L,0,1
+GF,3,0
+GA,0,3
+,,
+MATCH 7,Haiti,Scotland
+,Haiti,Scotland
+WCs,1,8
+High,24,24
+Avg,24,24
+GP,3,23
+W,0,4
+D,0,7
+L,3,12
+GF,2,25
+GA,14,41
+P,0,19
+PPG,0.0,0.83
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 8,Australia,Turkey
+,Australia,Turkey
+WCs,6,2
+High,12.5,3.5
+Avg,20.2,13.8
+GP,20,10
+W,4,5
+D,4,1
+L,12,4
+GF,17,20
+GA,37,17
+P,16,16
+PPG,0.8,1.6
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 9,Germany,Curacao
+,Germany,Curacao
+WCs,20,0
+High,1,0
+Avg,6.1,0
+GP,111,0
+W,68,0
+D,21,0
+L,22,0
+GF,230,0
+GA,126,0
+P,225,0
+PPG,2.03,0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 10,Netherlands,Japan
+,Netherlands,Japan
+WCs,11,7
+High,2,12.5
+Avg,6.9,17.4
+GP,55,25
+W,30,7
+D,14,6
+L,11,12
+GF,96,25
+GA,52,33
+P,104,27
+PPG,1.89,1.08
+— H2H —,,
+GP,1,1
+W,1,0
+D,0,0
+L,0,1
+GF,1,0
+GA,0,1
+,,
+MATCH 11,Ivory Coast,Ecuador
+,Ivory Coast,Ecuador
+WCs,3,4
+High,24,12.5
+Avg,24,21.1
+GP,9,13
+W,3,5
+D,1,2
+L,5,6
+GF,13,14
+GA,14,14
+P,10,17
+PPG,1.11,1.31
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 12,Sweden,Tunisia
+,Sweden,Tunisia
+WCs,12,6
+High,2,24
+Avg,13.0,24
+GP,51,18
+W,19,3
+D,13,5
+L,19,10
+GF,80,14
+GA,73,26
+P,70,14
+PPG,1.37,0.78
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 13,Spain,Cape Verde
+,Spain,Cape Verde
+WCs,16,0
+High,1,0
+Avg,14.6,0
+GP,66,0
+W,31,0
+D,17,0
+L,18,0
+GF,108,0
+GA,74,0
+P,110,0
+PPG,1.67,0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 14,Belgium,Egypt
+,Belgium,Egypt
+WCs,14,3
+High,3.5,12.5
+Avg,14.9,20.2
+GP,51,7
+W,21,0
+D,10,2
+L,20,5
+GF,69,5
+GA,74,12
+P,73,2
+PPG,1.43,0.29
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 15,Saudi Arabia,Uruguay
+,Saudi Arabia,Uruguay
+WCs,6,14
+High,12.5,1
+Avg,22.1,13.0
+GP,19,59
+W,4,25
+D,2,13
+L,13,21
+GF,14,89
+GA,44,76
+P,14,88
+PPG,0.74,1.49
+— H2H —,,
+GP,1,1
+W,0,1
+D,0,0
+L,1,0
+GF,0,1
+GA,1,0
+,,
+MATCH 16,Iran,New Zealand
+,Iran,New Zealand
+WCs,6,2
+High,24,24
+Avg,24,24
+GP,18,6
+W,3,0
+D,4,3
+L,11,3
+GF,13,4
+GA,31,14
+P,13,3
+PPG,0.72,0.5
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 17,France,Senegal
+,France,Senegal
+WCs,16,3
+High,1,6.5
+Avg,11.6,14.3
+GP,73,12
+W,39,5
+D,14,3
+L,20,4
+GF,136,16
+GA,85,17
+P,131,18
+PPG,1.79,1.5
+— H2H —,,
+GP,1,1
+W,0,1
+D,0,0
+L,1,0
+GF,0,1
+GA,1,0
+,,
+MATCH 18,Iraq,Norway
+,Iraq,Norway
+WCs,1,3
+High,24,12.5
+Avg,24,16.3
+GP,3,8
+W,0,2
+D,0,3
+L,3,3
+GF,1,7
+GA,4,8
+P,0,9
+PPG,0.0,1.12
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 19,Argentina,Algeria
+,Argentina,Algeria
+WCs,18,4
+High,1,12.5
+Avg,9.5,21.1
+GP,88,13
+W,47,3
+D,17,3
+L,24,7
+GF,152,13
+GA,101,19
+P,158,12
+PPG,1.8,0.92
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 20,Austria,Jordan
+,Austria,Jordan
+WCs,7,0
+High,3.5,0
+Avg,14.9,0
+GP,29,0
+W,12,0
+D,4,0
+L,13,0
+GF,43,0
+GA,47,0
+P,40,0
+PPG,1.38,0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 21,Portugal,DR Congo
+,Portugal,DR Congo
+WCs,8,1
+High,3.5,24
+Avg,13.8,24
+GP,35,3
+W,17,0
+D,6,0
+L,12,3
+GF,61,0
+GA,41,14
+P,57,0
+PPG,1.63,0.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 22,England,Croatia
+,England,Croatia
+WCs,16,6
+High,1,2
+Avg,10.2,13.5
+GP,74,30
+W,32,13
+D,22,8
+L,20,9
+GF,104,43
+GA,68,33
+P,118,47
+PPG,1.59,1.57
+— H2H —,,
+GP,1,1
+W,0,1
+D,0,0
+L,1,0
+GF,1,2
+GA,2,1
+,,
+MATCH 23,Ghana,Panama
+,Ghana,Panama
+WCs,4,1
+High,6.5,24
+Avg,16.8,24
+GP,15,3
+W,5,0
+D,3,0
+L,7,3
+GF,18,2
+GA,23,11
+P,18,0
+PPG,1.2,0.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 24,Uzbekistan,Colombia
+,Uzbekistan,Colombia
+WCs,0,6
+High,0,6.5
+Avg,0,17.2
+GP,0,22
+W,0,9
+D,0,3
+L,0,10
+GF,0,32
+GA,0,30
+P,0,30
+PPG,0,1.36
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 25,Czech Republic,South Africa
+,Czech Republic,South Africa
+WCs,1,3
+High,24,24
+Avg,24,24
+GP,3,9
+W,1,2
+D,0,4
+L,2,3
+GF,3,11
+GA,4,16
+P,3,10
+PPG,1.0,1.11
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 26,Switzerland,Bosnia & Herzegovina
+,Switzerland,Bosnia & Herzegovina
+WCs,12,1
+High,6.5,24
+Avg,14.8,24
+GP,40,3
+W,13,1
+D,8,0
+L,19,2
+GF,51,4
+GA,71,4
+P,47,3
+PPG,1.18,1.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 27,Canada,Qatar
+,Canada,Qatar
+WCs,2,1
+High,24,24
+Avg,24,24
+GP,6,3
+W,0,0
+D,0,0
+L,6,3
+GF,2,1
+GA,12,7
+P,0,0
+PPG,0.0,0.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 28,Mexico,South Korea
+,Mexico,South Korea
+WCs,17,11
+High,6.5,3.5
+Avg,17.2,20.0
+GP,60,38
+W,17,7
+D,15,10
+L,28,21
+GF,62,39
+GA,101,78
+P,66,31
+PPG,1.1,0.82
+— H2H —,,
+GP,2,2
+W,2,0
+D,0,0
+L,0,2
+GF,5,2
+GA,2,5
+,,
+MATCH 29,USA,Australia
+,USA,Australia
+WCs,11,6
+High,3.5,12.5
+Avg,15.3,20.2
+GP,37,20
+W,9,4
+D,8,4
+L,20,12
+GF,40,17
+GA,66,37
+P,35,16
+PPG,0.95,0.8
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 30,Scotland,Morocco
+,Scotland,Morocco
+WCs,8,6
+High,24,3.5
+Avg,24,18.7
+GP,23,23
+W,4,5
+D,7,7
+L,12,11
+GF,25,20
+GA,41,27
+P,19,22
+PPG,0.83,0.96
+— H2H —,,
+GP,1,1
+W,0,1
+D,0,0
+L,1,0
+GF,0,3
+GA,3,0
+,,
+MATCH 31,Brazil,Haiti
+,Brazil,Haiti
+WCs,22,1
+High,1,24
+Avg,8.6,24
+GP,113,3
+W,75,0
+D,19,0
+L,19,3
+GF,235,2
+GA,107,14
+P,244,0
+PPG,2.16,0.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 32,Turkey,Paraguay
+,Turkey,Paraguay
+WCs,2,8
+High,3.5,6.5
+Avg,13.8,17.5
+GP,10,27
+W,5,7
+D,1,10
+L,4,10
+GF,20,30
+GA,17,38
+P,16,31
+PPG,1.6,1.15
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 33,Netherlands,Sweden
+,Netherlands,Sweden
+WCs,11,12
+High,2,2
+Avg,6.9,13.0
+GP,55,51
+W,30,19
+D,14,13
+L,11,19
+GF,96,80
+GA,52,73
+P,104,70
+PPG,1.89,1.37
+— H2H —,,
+GP,1,1
+W,0,0
+D,1,1
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 34,Germany,Ivory Coast
+,Germany,Ivory Coast
+WCs,20,3
+High,1,24
+Avg,6.1,24
+GP,111,9
+W,68,3
+D,21,1
+L,22,5
+GF,230,13
+GA,126,14
+P,225,10
+PPG,2.03,1.11
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 35,Ecuador,Curacao
+,Ecuador,Curacao
+WCs,4,0
+High,12.5,0
+Avg,21.1,0
+GP,13,0
+W,5,0
+D,2,0
+L,6,0
+GF,14,0
+GA,14,0
+P,17,0
+PPG,1.31,0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 36,Tunisia,Japan
+,Tunisia,Japan
+WCs,6,7
+High,24,12.5
+Avg,24,17.4
+GP,18,25
+W,3,7
+D,5,6
+L,10,12
+GF,14,25
+GA,26,33
+P,14,27
+PPG,0.78,1.08
+— H2H —,,
+GP,1,1
+W,0,1
+D,0,0
+L,1,0
+GF,0,2
+GA,2,0
+,,
+MATCH 37,Spain,Saudi Arabia
+,Spain,Saudi Arabia
+WCs,16,6
+High,1,12.5
+Avg,14.6,22.1
+GP,66,19
+W,31,4
+D,17,2
+L,18,13
+GF,108,14
+GA,74,44
+P,110,14
+PPG,1.67,0.74
+— H2H —,,
+GP,1,1
+W,1,0
+D,0,0
+L,0,1
+GF,1,0
+GA,0,1
+,,
+MATCH 38,Belgium,Iran
+,Belgium,Iran
+WCs,14,6
+High,3.5,24
+Avg,14.9,24
+GP,51,18
+W,21,3
+D,10,4
+L,20,11
+GF,69,13
+GA,74,31
+P,73,13
+PPG,1.43,0.72
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 39,Uruguay,Cape Verde
+,Uruguay,Cape Verde
+WCs,14,0
+High,1,0
+Avg,13.0,0
+GP,59,0
+W,25,0
+D,13,0
+L,21,0
+GF,89,0
+GA,76,0
+P,88,0
+PPG,1.49,0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 40,New Zealand,Egypt
+,New Zealand,Egypt
+WCs,2,3
+High,24,12.5
+Avg,24,20.2
+GP,6,7
+W,0,0
+D,3,2
+L,3,5
+GF,4,5
+GA,14,12
+P,3,2
+PPG,0.5,0.29
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 41,Argentina,Austria
+,Argentina,Austria
+WCs,18,7
+High,1,3.5
+Avg,9.5,14.9
+GP,88,29
+W,47,12
+D,17,4
+L,24,13
+GF,152,43
+GA,101,47
+P,158,40
+PPG,1.8,1.38
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 42,France,Iraq
+,France,Iraq
+WCs,16,1
+High,1,24
+Avg,11.6,24
+GP,73,3
+W,39,0
+D,14,0
+L,20,3
+GF,136,1
+GA,85,4
+P,131,0
+PPG,1.79,0.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 43,Norway,Senegal
+,Norway,Senegal
+WCs,3,3
+High,12.5,6.5
+Avg,16.3,14.3
+GP,8,12
+W,2,5
+D,3,3
+L,3,4
+GF,7,16
+GA,8,17
+P,9,18
+PPG,1.12,1.5
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 44,Jordan,Algeria
+,Jordan,Algeria
+WCs,0,4
+High,0,12.5
+Avg,0,21.1
+GP,0,13
+W,0,3
+D,0,3
+L,0,7
+GF,0,13
+GA,0,19
+P,0,12
+PPG,0,0.92
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 45,Portugal,Uzbekistan
+,Portugal,Uzbekistan
+WCs,8,0
+High,3.5,0
+Avg,13.8,0
+GP,35,0
+W,17,0
+D,6,0
+L,12,0
+GF,61,0
+GA,41,0
+P,57,0
+PPG,1.63,0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 46,England,Ghana
+,England,Ghana
+WCs,16,4
+High,1,6.5
+Avg,10.2,16.8
+GP,74,15
+W,32,5
+D,22,3
+L,20,7
+GF,104,18
+GA,68,23
+P,118,18
+PPG,1.59,1.2
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 47,Panama,Croatia
+,Panama,Croatia
+WCs,1,6
+High,24,2
+Avg,24,13.5
+GP,3,30
+W,0,13
+D,0,8
+L,3,9
+GF,2,43
+GA,11,33
+P,0,47
+PPG,0.0,1.57
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 48,Colombia,DR Congo
+,Colombia,DR Congo
+WCs,6,1
+High,6.5,24
+Avg,17.2,24
+GP,22,3
+W,9,0
+D,3,0
+L,10,3
+GF,32,0
+GA,30,14
+P,30,0
+PPG,1.36,0.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 49,Switzerland,Canada
+,Switzerland,Canada
+WCs,12,2
+High,6.5,24
+Avg,14.8,24
+GP,40,6
+W,13,0
+D,8,0
+L,19,6
+GF,51,2
+GA,71,12
+P,47,0
+PPG,1.18,0.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 50,Bosnia & Herzegovina,Qatar
+,Bosnia & Herzegovina,Qatar
+WCs,1,1
+High,24,24
+Avg,24,24
+GP,3,3
+W,1,0
+D,0,0
+L,2,3
+GF,4,1
+GA,4,7
+P,3,0
+PPG,1.0,0.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 51,Morocco,Haiti
+,Morocco,Haiti
+WCs,6,1
+High,3.5,24
+Avg,18.7,24
+GP,23,3
+W,5,0
+D,7,0
+L,11,3
+GF,20,2
+GA,27,14
+P,22,0
+PPG,0.96,0.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 52,Scotland,Brazil
+,Scotland,Brazil
+WCs,8,22
+High,24,1
+Avg,24,8.6
+GP,23,113
+W,4,75
+D,7,19
+L,12,19
+GF,25,235
+GA,41,107
+P,19,244
+PPG,0.83,2.16
+— H2H —,,
+GP,4,4
+W,0,3
+D,1,1
+L,3,0
+GF,2,7
+GA,7,2
+,,
+MATCH 53,South Africa,South Korea
+,South Africa,South Korea
+WCs,3,11
+High,24,3.5
+Avg,24,20.0
+GP,9,38
+W,2,7
+D,4,10
+L,3,21
+GF,11,39
+GA,16,78
+P,10,31
+PPG,1.11,0.82
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 54,Czech Republic,Mexico
+,Czech Republic,Mexico
+WCs,1,17
+High,24,6.5
+Avg,24,17.2
+GP,3,60
+W,1,17
+D,0,15
+L,2,28
+GF,3,62
+GA,4,101
+P,3,66
+PPG,1.0,1.1
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 55,Curacao,Ivory Coast
+,Curacao,Ivory Coast
+WCs,0,3
+High,0,24
+Avg,0,24
+GP,0,9
+W,0,3
+D,0,1
+L,0,5
+GF,0,13
+GA,0,14
+P,0,10
+PPG,0,1.11
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 56,Ecuador,Germany
+,Ecuador,Germany
+WCs,4,20
+High,12.5,1
+Avg,21.1,6.1
+GP,13,111
+W,5,68
+D,2,21
+L,6,22
+GF,14,230
+GA,14,126
+P,17,225
+PPG,1.31,2.03
+— H2H —,,
+GP,1,1
+W,0,1
+D,0,0
+L,1,0
+GF,0,3
+GA,3,0
+,,
+MATCH 57,Tunisia,Netherlands
+,Tunisia,Netherlands
+WCs,6,11
+High,24,2
+Avg,24,6.9
+GP,18,55
+W,3,30
+D,5,14
+L,10,11
+GF,14,96
+GA,26,52
+P,14,104
+PPG,0.78,1.89
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 58,Japan,Sweden
+,Japan,Sweden
+WCs,7,12
+High,12.5,2
+Avg,17.4,13.0
+GP,25,51
+W,7,19
+D,6,13
+L,12,19
+GF,25,80
+GA,33,73
+P,27,70
+PPG,1.08,1.37
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 59,Turkey,USA
+,Turkey,USA
+WCs,2,11
+High,3.5,3.5
+Avg,13.8,15.3
+GP,10,37
+W,5,9
+D,1,8
+L,4,20
+GF,20,40
+GA,17,66
+P,16,35
+PPG,1.6,0.95
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 60,Paraguay,Australia
+,Paraguay,Australia
+WCs,8,6
+High,6.5,12.5
+Avg,17.5,20.2
+GP,27,20
+W,7,4
+D,10,4
+L,10,12
+GF,30,17
+GA,38,37
+P,31,16
+PPG,1.15,0.8
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 61,Norway,France
+,Norway,France
+WCs,3,16
+High,12.5,1
+Avg,16.3,11.6
+GP,8,73
+W,2,39
+D,3,14
+L,3,20
+GF,7,136
+GA,8,85
+P,9,131
+PPG,1.12,1.79
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 62,Senegal,Iraq
+,Senegal,Iraq
+WCs,3,1
+High,6.5,24
+Avg,14.3,24
+GP,12,3
+W,5,0
+D,3,0
+L,4,3
+GF,16,1
+GA,17,4
+P,18,0
+PPG,1.5,0.0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 63,Cape Verde,Saudi Arabia
+,Cape Verde,Saudi Arabia
+WCs,0,6
+High,0,12.5
+Avg,0,22.1
+GP,0,19
+W,0,4
+D,0,2
+L,0,13
+GF,0,14
+GA,0,44
+P,0,14
+PPG,0,0.74
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 64,Uruguay,Spain
+,Uruguay,Spain
+WCs,14,16
+High,1,1
+Avg,13.0,14.6
+GP,59,66
+W,25,31
+D,13,17
+L,21,18
+GF,89,108
+GA,76,74
+P,88,110
+PPG,1.49,1.67
+— H2H —,,
+GP,2,2
+W,0,0
+D,2,2
+L,0,0
+GF,2,2
+GA,2,2
+,,
+MATCH 65,New Zealand,Belgium
+,New Zealand,Belgium
+WCs,2,14
+High,24,3.5
+Avg,24,14.9
+GP,6,51
+W,0,21
+D,3,10
+L,3,20
+GF,4,69
+GA,14,74
+P,3,73
+PPG,0.5,1.43
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 66,Egypt,Iran
+,Egypt,Iran
+WCs,3,6
+High,12.5,24
+Avg,20.2,24
+GP,7,18
+W,0,3
+D,2,4
+L,5,11
+GF,5,13
+GA,12,31
+P,2,13
+PPG,0.29,0.72
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 67,Panama,England
+,Panama,England
+WCs,1,16
+High,24,1
+Avg,24,10.2
+GP,3,74
+W,0,32
+D,0,22
+L,3,20
+GF,2,104
+GA,11,68
+P,0,118
+PPG,0.0,1.59
+— H2H —,,
+GP,1,1
+W,0,1
+D,0,0
+L,1,0
+GF,1,6
+GA,6,1
+,,
+MATCH 68,Croatia,Ghana
+,Croatia,Ghana
+WCs,6,4
+High,2,6.5
+Avg,13.5,16.8
+GP,30,15
+W,13,5
+D,8,3
+L,9,7
+GF,43,18
+GA,33,23
+P,47,18
+PPG,1.57,1.2
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 69,Colombia,Portugal
+,Colombia,Portugal
+WCs,6,8
+High,6.5,3.5
+Avg,17.2,13.8
+GP,22,35
+W,9,17
+D,3,6
+L,10,12
+GF,32,61
+GA,30,41
+P,30,57
+PPG,1.36,1.63
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 70,DR Congo,Uzbekistan
+,DR Congo,Uzbekistan
+WCs,1,0
+High,24,0
+Avg,24,0
+GP,3,0
+W,0,0
+D,0,0
+L,3,0
+GF,0,0
+GA,14,0
+P,0,0
+PPG,0.0,0
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,
+MATCH 71,Algeria,Austria
+,Algeria,Austria
+WCs,4,7
+High,12.5,3.5
+Avg,21.1,14.9
+GP,13,29
+W,3,12
+D,3,4
+L,7,13
+GF,13,43
+GA,19,47
+P,12,40
+PPG,0.92,1.38
+— H2H —,,
+GP,1,1
+W,0,1
+D,0,0
+L,1,0
+GF,0,2
+GA,2,0
+,,
+MATCH 72,Jordan,Argentina
+,Jordan,Argentina
+WCs,0,18
+High,0,1
+Avg,0,9.5
+GP,0,88
+W,0,47
+D,0,17
+L,0,24
+GF,0,152
+GA,0,101
+P,0,158
+PPG,0,1.8
+— H2H —,,
+GP,0,0
+W,0,0
+D,0,0
+L,0,0
+GF,0,0
+GA,0,0
+,,

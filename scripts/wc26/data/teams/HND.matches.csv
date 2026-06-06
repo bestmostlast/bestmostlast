@@ -1,0 +1,10 @@
+code,team,year,stage,match_no_wc,opponent,opponent_code,gf,ga,result,host,note
+HND,Honduras,1982,group,1,Spain,ESP,1,1,D,,
+HND,Honduras,1982,group,2,Northern Ireland,NIR,1,1,D,,
+HND,Honduras,1982,group,3,Yugoslavia,YUG,0,1,L,,
+HND,Honduras,2010,group,4,Chile,CHL,0,1,L,,
+HND,Honduras,2010,group,5,Spain,ESP,0,2,L,,
+HND,Honduras,2010,group,6,Switzerland,SUI,0,0,D,,
+HND,Honduras,2014,group,7,France,FRA,0,3,L,,
+HND,Honduras,2014,group,8,Ecuador,ECU,1,2,L,,
+HND,Honduras,2014,group,9,Switzerland,SUI,0,3,L,,
