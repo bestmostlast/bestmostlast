@@ -19,6 +19,7 @@ Requirements:
 import csv, json, os, subprocess, sys, time, hashlib, logging
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent))
 
 # Load .env.wc26 if present (put ANTHROPIC_API_KEY=sk-... there)
 _env_file = Path(__file__).parent / '.env.wc26'
@@ -106,46 +107,26 @@ def run(cmd, **kw):
         raise RuntimeError(f'Command failed: {cmd}')
     return result.stdout
 
-# ── Claude headline/comment generation ───────────────────────────────────────
+# ── DeepSeek headline/comment generation ─────────────────────────────────────
 
 def generate_headline_comment(row):
-    try:
-        import anthropic
-    except ImportError:
-        log.warning('anthropic not installed — using fallback headline')
-        return _fallback_headline(row), _fallback_comment(row)
-
-    api_key = os.environ.get('ANTHROPIC_API_KEY')
+    api_key = os.environ.get('DEEPSEEK_API_KEY')
     if not api_key:
-        log.warning('ANTHROPIC_API_KEY not set — using fallback headline')
+        log.warning('DEEPSEEK_API_KEY not set — using fallback headline')
         return _fallback_headline(row), _fallback_comment(row)
 
-    client = anthropic.Anthropic(api_key=api_key)
+    from openai import OpenAI
+    client = OpenAI(api_key=api_key, base_url='https://api.deepseek.com')
 
-    scorers_a = row.get('scorers_a', '')
-    scorers_b = row.get('scorers_b', '')
-    potm = row.get('potm_name', '')
-    potm_team = row.get('potm_team', '')
     poss_a = row.get('poss_a', '')
-    shots_a = row.get('shots_a', '')
-    shots_b = row.get('shots_b', '')
-    xg_a = row.get('xg_a', '')
-    xg_b = row.get('xg_b', '')
-    yellows_a = row.get('yellow_a', '0')
-    yellows_b = row.get('yellow_b', '0')
-    reds_a = row.get('red_a', '0')
-    reds_b = row.get('red_b', '0')
-    group = row.get('group', '')
-    matchday = row.get('matchday', '') if 'matchday' in row else ''
-
     prompt = f"""You write punchy, football-specific match result captions for YouTube Shorts.
 
 Match: {row['team_a']} {row['score_a']}–{row['score_b']} {row['team_b']}
-Group {group} | WC2026
-Scorers: {row['team_a']}: {scorers_a} | {row['team_b']}: {scorers_b}
-Player of the match: {potm} ({potm_team})
-Stats: Possession {poss_a}%–{100-int(poss_a) if poss_a else '?'}% | Shots {shots_a}–{shots_b} | xG {xg_a}–{xg_b}
-Cards: {row['team_a']} yellows {yellows_a} reds {reds_a} | {row['team_b']} yellows {yellows_b} reds {reds_b}
+Group {row.get('group','')} | WC2026
+Scorers: {row['team_a']}: {row.get('scorers_a','')} | {row['team_b']}: {row.get('scorers_b','')}
+Player of the match: {row.get('potm_name','')} ({row.get('potm_team','')})
+Stats: Possession {poss_a}%–{100-int(poss_a) if poss_a else '?'}% | Shots {row.get('shots_a','')}–{row.get('shots_b','')} | xG {row.get('xg_a','')}–{row.get('xg_b','')}
+Cards: {row['team_a']} Y{row.get('yellow_a','0')} R{row.get('red_a','0')} | {row['team_b']} Y{row.get('yellow_b','0')} R{row.get('red_b','0')}
 
 Write two things:
 1. HEADLINE: 6 words max. Punchy, specific, name the star or the moment. No generic phrases like "claim victory". Examples: "Giménez Lights Up the Azteca", "Son Brace Sinks the Czechs", "Late Drama Sends USA Through".
@@ -154,17 +135,18 @@ Write two things:
 Respond in this exact JSON format:
 {{"headline": "...", "comment": "..."}}"""
 
-    msg = client.messages.create(
-        model='claude-haiku-4-5-20251001',
-        max_tokens=120,
+    resp = client.chat.completions.create(
+        model='deepseek-chat',
         messages=[{'role': 'user', 'content': prompt}],
+        max_tokens=120,
+        response_format={'type': 'json_object'},
     )
-    text = msg.content[0].text.strip()
+    text = resp.choices[0].message.content.strip()
     try:
         data = json.loads(text)
         return data['headline'], data['comment']
     except Exception:
-        log.warning(f'Claude JSON parse failed: {text!r} — using fallback')
+        log.warning(f'DeepSeek JSON parse failed: {text!r} — using fallback')
         return _fallback_headline(row), _fallback_comment(row)
 
 def _fallback_headline(row):
@@ -262,13 +244,19 @@ def check_pre(fixtures, pre_rows_by_slug):
 # ── Post-match check ──────────────────────────────────────────────────────────
 
 def check_post(state):
-    prev_hash = state.get('results_hash', '')
-    curr_hash = results_hash()
-    if curr_hash == prev_hash:
-        return state  # no change
-
-    log.info('results.csv changed — scanning for new completed rows')
-    state['results_hash'] = curr_hash
+    # Pull fresh results from ESPN for today (and yesterday in case of late games)
+    now = datetime.now(timezone.utc)
+    for delta in (0, 1):
+        date_str = (now - timedelta(days=delta)).strftime('%Y%m%d')
+        try:
+            from fetch_results import poll_date, update_results
+            new_rows = poll_date(date_str)
+            if new_rows:
+                added = update_results(new_rows)
+                if added:
+                    log.info(f'ESPN: fetched {added} new result(s) for {date_str}')
+        except Exception as e:
+            log.warning(f'ESPN fetch failed for {date_str}: {e}')
 
     rows = parse_results()
     processed = set(state.get('post_processed', []))
