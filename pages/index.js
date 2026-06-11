@@ -8,7 +8,8 @@ import MatchCard from "../components/MatchCard";
 function UpcomingRow({ m }) {
   const ko = new Date(m.date + "T" + (m.time?.split("·")[0]?.trim()?.replace(" CET","") || "12:00") + ":00+01:00");
   const dateStr = ko.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
-  const timeStr = ko.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" }) + " CET";
+  const cetStr = ko.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }) + " CET";
+  const pstStr = ko.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "America/Los_Angeles" }) + " PST";
 
   return (
     <Link
@@ -23,7 +24,8 @@ function UpcomingRow({ m }) {
       </div>
       <div className="text-right shrink-0">
         <p className="text-[10px] text-steel">{dateStr}</p>
-        <p className="text-[11px] text-brand font-bold">{timeStr}</p>
+        <p className="text-[11px] text-brand font-bold leading-tight">{cetStr}</p>
+        <p className="text-[10px] font-bold leading-tight" style={{ color: "#1a3a6b" }}>{pstStr}</p>
       </div>
     </Link>
   );
