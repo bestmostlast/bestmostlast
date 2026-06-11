@@ -125,7 +125,7 @@ Match: {row['team_a']} {row['score_a']}–{row['score_b']} {row['team_b']}
 Group {row.get('group','')} | WC2026
 Scorers: {row['team_a']}: {row.get('scorers_a','')} | {row['team_b']}: {row.get('scorers_b','')}
 Player of the match: {row.get('potm_name','')} ({row.get('potm_team','')})
-Stats: Possession {poss_a}%–{100-int(poss_a) if poss_a else '?'}% | Shots {row.get('shots_a','')}–{row.get('shots_b','')} | xG {row.get('xg_a','')}–{row.get('xg_b','')}
+Stats: Possession {poss_a}%–{round(100-float(poss_a)) if poss_a else '?'}% | Shots {row.get('shots_a','')}–{row.get('shots_b','')}
 Cards: {row['team_a']} Y{row.get('yellow_a','0')} R{row.get('red_a','0')} | {row['team_b']} Y{row.get('yellow_b','0')} R{row.get('red_b','0')}
 
 Write two things:
