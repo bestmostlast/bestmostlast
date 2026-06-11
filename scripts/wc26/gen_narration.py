@@ -8,15 +8,14 @@ Usage:
 Writes audio to: scripts/wc26/shorts/<slug>/export/narration.mp3
 """
 
-import argparse, csv, json, os, sys, urllib.request, urllib.error
+import argparse, csv, json, os, re, sys, asyncio
 from pathlib import Path
 
 HERE    = Path(__file__).parent
 RESULTS = HERE / 'data' / 'results.csv'
 SHORTS  = HERE / 'shorts'
 
-VOICE_ID = 'TABZn6CDfjMNGrsnGzzD'  # WikiBrad — fast informative narrator
-MODEL_ID = 'eleven_turbo_v2'        # fastest + cheapest ElevenLabs model
+EDGE_VOICE = 'en-US-GuyNeural'  # Microsoft Edge TTS — free, no API key, sports broadcaster tone
 
 # Load .env.wc26
 _env = HERE / '.env.wc26'
@@ -139,38 +138,25 @@ Respond in this exact JSON:
         return f'<speak>{PAUSE.join(sentences)}</speak>'
     return '<speak>World Cup 2026. Pre-match analysis.</speak>'
 
+def strip_ssml(text):
+    """Convert SSML to plain text with pauses as silence markers for edge-tts."""
+    # edge-tts supports SSML natively — pass as-is
+    return text
+
+async def _generate_audio_async(text, out_path):
+    import edge_tts
+    # edge-tts supports SSML <break> tags natively
+    communicate = edge_tts.Communicate(text, EDGE_VOICE, rate='+10%')
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    await communicate.save(str(out_path))
+
 def generate_audio(text, out_path):
-    api_key = os.environ.get('ELEVENLABS_API_KEY')
-    if not api_key:
-        print('ELEVENLABS_API_KEY not set — skipping narration')
-        return False
-
-    url = f'https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}'
-    payload = json.dumps({
-        'text': text,
-        'model_id': MODEL_ID,
-        'apply_text_normalization': 'off',  # preserve SSML <break> tags
-        'voice_settings': {
-            'stability': 0.35,
-            'similarity_boost': 0.75,
-            'style': 0.4,
-            'use_speaker_boost': True,
-        },
-    }).encode()
-
-    req = urllib.request.Request(url, data=payload, headers={
-        'xi-api-key': api_key,
-        'Content-Type': 'application/json',
-        'Accept': 'audio/mpeg',
-    })
     try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            out_path.parent.mkdir(parents=True, exist_ok=True)
-            out_path.write_bytes(r.read())
+        asyncio.run(_generate_audio_async(text, out_path))
         print(f'Narration → {out_path}')
         return True
-    except urllib.error.HTTPError as e:
-        print(f'ElevenLabs error {e.code}: {e.read().decode()[:200]}')
+    except Exception as e:
+        print(f'edge-tts error: {e}')
         return False
 
 def main():
