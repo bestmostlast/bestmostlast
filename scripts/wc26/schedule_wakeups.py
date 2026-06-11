@@ -61,10 +61,23 @@ def schedule_sleep(dt, label):
 
 # ── 1. Pull ESPN schedule ──────────────────────────────────────────────────────
 
-print('Fetching WC26 schedule from ESPN...')
-data   = fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?limit=200&dates=20260611-20260720')
-events = data.get('events', [])
-print(f'Got {len(events)} events')
+print('Fetching WC26 schedule from ESPN (day by day)...')
+from datetime import date as date_type
+events = []
+d = date_type(2026, 6, 11)
+end = date_type(2026, 7, 20)
+while d <= end:
+    ds = d.strftime('%Y%m%d')
+    try:
+        day_data = fetch(f'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates={ds}')
+        day_events = day_data.get('events', [])
+        if day_events:
+            print(f'  {ds}: {len(day_events)} matches')
+        events.extend(day_events)
+    except Exception as e:
+        print(f'  {ds}: failed ({e})')
+    d += timedelta(days=1)
+print(f'Total: {len(events)} events')
 
 espn_times = {}
 for e in events:
