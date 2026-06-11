@@ -282,6 +282,15 @@ def check_post(state):
             row['headline'] = headline
             row['comment']  = comment
 
+        # Generate narration if not already there
+        narration_mp3 = SHORTS / slug / 'export' / 'narration.mp3'
+        if not narration_mp3.exists():
+            try:
+                run(['python3', 'scripts/wc26/gen_narration.py', '--slug', slug, '--post'], cwd=str(ROOT))
+                log.info(f'Narration generated: {slug}')
+            except Exception as e:
+                log.warning(f'Narration failed for {slug} (continuing without): {e}')
+
         # Render if result.mp4 not already there
         result_mp4 = SHORTS / slug / 'export' / 'result.mp4'
         if not result_mp4.exists():
