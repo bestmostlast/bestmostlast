@@ -39,7 +39,7 @@ SHORTS   = HERE / 'shorts'
 DONE     = HERE / 'data' / 'yt_upload_done.json'
 STATE    = HERE / 'data' / 'daemon_state.json'
 
-POLL_INTERVAL = 60   # seconds between checks
+POLL_INTERVAL = 900  # seconds between checks (15 min)
 PRE_WINDOW_H  = 3    # upload pre-short this many hours before kickoff
 
 logging.basicConfig(
