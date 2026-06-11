@@ -306,20 +306,26 @@ def check_post(state):
 # ── Main loop ─────────────────────────────────────────────────────────────────
 
 def main():
-    log.info('WC26 daemon starting…')
+    once = '--once' in sys.argv  # single-shot mode for launchd / pmset wakes
+
+    log.info(f'WC26 daemon starting ({"once" if once else "loop"} mode)…')
     fixtures = parse_fixtures()
     state    = load_state()
     refresh_hq()
 
     while True:
         try:
-            pre_rows   = parse_pre_csv()
+            pre_rows    = parse_pre_csv()
             pre_by_slug = {r['slug']: r for r in pre_rows}
             check_pre(fixtures, pre_by_slug)
             state = check_post(state)
             save_state(state)
         except Exception as e:
             log.error(f'Loop error: {e}', exc_info=True)
+
+        if once:
+            log.info('--once mode: exiting after single run')
+            break
 
         time.sleep(POLL_INTERVAL)
 
