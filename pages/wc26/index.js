@@ -35,7 +35,7 @@ export default function WC26Hub({ matches, groups }) {
       <div className="min-h-screen bg-ink text-silver flex flex-col">
         <SiteHeader active="/wc26" />
 
-        <main className="max-w-6xl w-full mx-auto px-6 py-12 flex-1">
+        <main className="max-w-6xl w-full mx-auto px-5 sm:px-6 py-12 flex-1">
           {/* Hero */}
           <section className="mb-10">
             <div className="flex items-center gap-3 mb-2">

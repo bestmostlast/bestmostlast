@@ -54,7 +54,7 @@ export default function Home() {
       <div className="min-h-screen bg-ink text-silver flex flex-col">
         <SiteHeader active="/" />
 
-        <main className="max-w-6xl w-full mx-auto px-4 py-8 flex-1">
+        <main className="max-w-6xl w-full mx-auto px-5 sm:px-4 py-8 flex-1">
           <div className="flex gap-6 items-start">
 
             {/* Left: videos */}

@@ -19,7 +19,7 @@ export default function TeamsIndex({ teams }) {
       <div className="min-h-screen bg-ink text-silver flex flex-col">
         <SiteHeader active="/wc26" />
 
-        <main className="max-w-6xl w-full mx-auto px-6 py-12 flex-1">
+        <main className="max-w-6xl w-full mx-auto px-5 sm:px-6 py-12 flex-1">
           <Link href="/wc26" className="text-steel hover:text-silver text-sm">
             ← WC 2026
           </Link>

@@ -6,11 +6,26 @@ import PlayerComparison from "../components/PlayerComparison";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
+const MOCK_PLAYERS = ["Messi", "Ronaldo", "Mbappé"];
+const MOCK_DATA = [
+  { week: 1, player: "Messi", goals: 2 },
+  { week: 2, player: "Messi", goals: 1 },
+  { week: 3, player: "Messi", goals: 3 },
+  { week: 1, player: "Ronaldo", goals: 1 },
+  { week: 2, player: "Ronaldo", goals: 2 },
+  { week: 3, player: "Ronaldo", goals: 1 },
+  { week: 1, player: "Mbappé", goals: 3 },
+  { week: 2, player: "Mbappé", goals: 2 },
+  { week: 3, player: "Mbappé", goals: 4 },
+];
+
 export default function Charts() {
   // No live dataset wired up yet — the player-timeline charts go live once real
   // sourced data lands. (The previous demo CSV was removed.)
-  const [data] = useState([]);
-  const [players] = useState([]);
+  // I've added mock data here to demonstrate the chart components.
+  const [data] = useState(MOCK_DATA);
+  const [players] = useState(MOCK_PLAYERS);
+
   const [selected, setSelected] = useState([]);
   const [activePlayer, setActivePlayer] = useState(null);
 
@@ -30,7 +45,7 @@ export default function Charts() {
       <div className="min-h-screen bg-ink text-silver flex flex-col">
         <SiteHeader active="/charts" />
 
-        <main className="max-w-4xl w-full mx-auto px-6 py-12">
+        <main className="max-w-4xl w-full mx-auto px-5 sm:px-6 py-12">
           <h1 className="text-3xl font-black mb-8 text-silver">Charts</h1>
 
           {data.length === 0 ? (
