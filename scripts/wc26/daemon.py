@@ -235,6 +235,14 @@ def check_pre(fixtures, pre_rows_by_slug):
         window_start = ko - timedelta(hours=PRE_WINDOW_H)
         if now >= window_start:
             log.info(f'PRE due: {slug} (kickoff {ko.isoformat()}, window opened {window_start.isoformat()})')
+            # Generate narration before upload
+            narration_mp3 = SHORTS / slug / 'export' / 'narration.mp3'
+            if not narration_mp3.exists():
+                try:
+                    run(['python3', 'scripts/wc26/gen_narration.py', '--slug', slug], cwd=str(ROOT))
+                    log.info(f'PRE narration generated: {slug}')
+                except Exception as e:
+                    log.warning(f'PRE narration failed for {slug} (continuing without): {e}')
             try:
                 upload(slug, 'pre')
                 log.info(f'PRE uploaded: {slug}')

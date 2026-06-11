@@ -19,9 +19,17 @@ const MAKE_MP4 = process.argv.includes('--mp4');   // node render_all.js --mp4
 const FPS = 30, SECS = 39;                          // 5-screen sequence, 31s total
 const NO_MUSIC = process.argv.includes('--no-music');
 
-const HERE = __dirname;
-const CSV = path.join(HERE, '..', 'data', 'h2h_short.csv');
-const BGM = path.join(HERE, '_shared', 'music', 'bgm.mp3');
+const HERE       = __dirname;
+const CSV        = path.join(HERE, '..', 'data', 'h2h_short.csv');
+const MUSIC_DIR  = path.join(HERE, '_shared', 'music');
+
+function pickMusic() {
+  try {
+    const tracks = fs.readdirSync(MUSIC_DIR).filter(f => /\.(mp3|wav|m4a)$/i.test(f));
+    if (!tracks.length) return null;
+    return path.join(MUSIC_DIR, tracks[Math.floor(Math.random() * tracks.length)]);
+  } catch { return null; }
+}
 
 function parseCSV(t){
   const L = t.trim().split('\n').map(l => l.split(',').map(v => v.trim().replace(/^"|"$/g,'')));
@@ -100,13 +108,41 @@ function parseCSV(t){
       const silent = path.join(outDir, '_silent.mp4');
       execFileSync('ffmpeg', ['-y', '-framerate', String(FPS), '-i', path.join(framesDir, 'f%04d.png'),
         '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', silent], { stdio: 'ignore' });
-      const out = path.join(outDir, 'short.mp4');
-      if (!NO_MUSIC && fs.existsSync(BGM)) {
-        // mux bgm, trimmed to clip length with a 2s fade-out
-        execFileSync('ffmpeg', ['-y', '-i', silent, '-i', BGM,
-          '-filter_complex', `[1:a]afade=t=out:st=${SECS-2}:d=2,atrim=0:${SECS}[a]`,
-          '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-shortest', out], { stdio: 'ignore' });
+      const out       = path.join(outDir, 'short.mp4');
+      const bgm       = !NO_MUSIC ? pickMusic() : null;
+      const narration = path.join(outDir, 'narration.mp3');
+      const hasNarr   = fs.existsSync(narration);
+      const hasBgm    = bgm && fs.existsSync(bgm);
+
+      if (hasBgm || hasNarr) {
+        const inputs = ['-y', '-i', silent];
+        if (hasBgm)  inputs.push('-i', bgm);
+        if (hasNarr) inputs.push('-i', narration);
+
+        let filterComplex, audioMap;
+        if (hasBgm && hasNarr) {
+          const bgmIdx = 1, narrIdx = 2;
+          filterComplex = `[${bgmIdx}:a]volume=0.18,afade=t=out:st=${SECS-2}:d=2,atrim=0:${SECS}[bgm];` +
+                          `[${narrIdx}:a]adelay=4000|4000[narr];` +
+                          `[bgm][narr]amix=inputs=2:normalize=0[a]`;
+          audioMap = '[a]';
+        } else if (hasBgm) {
+          filterComplex = `[1:a]afade=t=out:st=${SECS-2}:d=2,atrim=0:${SECS}[a]`;
+          audioMap = '[a]';
+        } else {
+          filterComplex = `[1:a]adelay=4000|4000[a]`;
+          audioMap = '[a]';
+        }
+
+        execFileSync('ffmpeg', [
+          ...inputs,
+          '-filter_complex', filterComplex,
+          '-map', '0:v', '-map', audioMap,
+          '-c:v', 'copy', '-c:a', 'aac', '-shortest', out,
+        ], { stdio: 'ignore' });
         fs.rmSync(silent, { force: true });
+        if (hasBgm)  console.log(`  ♫ music: ${path.basename(bgm)}`);
+        if (hasNarr) console.log(`  🎙 narration mixed in`);
       } else {
         fs.renameSync(silent, out);
       }
