@@ -80,18 +80,16 @@ Match data:
 - Shots: {shots_a}–{shots_b} | Possession: {poss_a}%–{poss_b}%
 - Cards: {team_a} Y{yellow_a} R{red_a} | {team_b} Y{yellow_b} R{red_b}
 
-Write a sports-broadcast narration in EXACTLY 6 short sentences that will be read aloud over a 30-second video:
-1. Open with the competition context (group, tournament)
-2. Announce the result naturally — say full scorer names and minutes naturally, like a commentator would
-3. Describe the key goal moment or turning point
-4. Give the stats (shots, possession) as a punchy comparison
-5. Mention cards or drama if notable, otherwise group standing impact
-6. Close with one sharp editorial line — what this result means
+Write a sports-broadcast narration in EXACTLY 4 punchy sentences read aloud over a video:
+1. Result: group, teams, score
+2. Scorers with minutes, natural commentator language
+3. One stat — shots or possession as a sharp comparison
+4. One editorial line — what this result means for the group
 
-Rules: natural spoken English only, no abbreviations, no raw CSV notation, no slash separators. Say "Jiménez scored in the 67th minute" not "R. Jiménez 67'". Keep each sentence under 15 words.
+Rules: natural spoken English, no abbreviations, no raw notation. Max 10 words per sentence. Say "Jiménez scored in the 67th" not "R. Jiménez 67'".
 
 Respond in this exact JSON:
-{{"sentences": ["sentence1", "sentence2", "sentence3", "sentence4", "sentence5", "sentence6"]}}"""
+{{"sentences": ["sentence1", "sentence2", "sentence3", "sentence4"]}}"""
 
     sentences = deepseek_narration(prompt)
     if not sentences:
@@ -117,18 +115,16 @@ def build_pre_script(slug):
 
         prompt = f"""You write spoken narration scripts for 30-second YouTube Shorts about football matches.
 
-Write a pre-match narration for {team_a} versus {team_b} at World Cup 2026 in EXACTLY 6 short sentences:
-1. Open: tournament context and fixture
-2. One sentence on {team_a}'s strength or recent form
-3. One sentence on {team_b}'s strength or recent form
-4. A head-to-head fact or historical note between these teams
-5. The key player or tactical matchup to watch
-6. Close with a punchy prediction or hype line
+Write a pre-match narration for {team_a} versus {team_b} at World Cup 2026 in EXACTLY 4 punchy sentences:
+1. Tournament context and fixture
+2. One team's key strength or danger man
+3. The other team's key strength or danger man
+4. One sharp prediction or hype line
 
-Rules: natural spoken English, under 15 words per sentence, no stats jargon.
+Rules: natural spoken English, max 10 words per sentence, no jargon.
 
 Respond in this exact JSON:
-{{"sentences": ["sentence1", "sentence2", "sentence3", "sentence4", "sentence5", "sentence6"]}}"""
+{{"sentences": ["sentence1", "sentence2", "sentence3", "sentence4"]}}"""
 
         sentences = deepseek_narration(prompt)
         if not sentences:
