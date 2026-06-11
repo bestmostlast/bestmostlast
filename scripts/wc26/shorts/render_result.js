@@ -111,14 +111,14 @@ function parseCSV(t){
           // music at -18dB under narration, fade out last 2s, narration at 0dB
           const bgmIdx  = 1, narrIdx = 2;
           filterComplex = `[${bgmIdx}:a]volume=0.18,afade=t=out:st=${SECS-2}:d=2,atrim=0:${SECS}[bgm];` +
-                          `[${narrIdx}:a]adelay=1500|1500[narr];` +
+                          `[${narrIdx}:a]adelay=4000|4000[narr];` +
                           `[bgm][narr]amix=inputs=2:normalize=0[a]`;
           audioMap = '[a]';
         } else if (hasBgm) {
           filterComplex = `[1:a]afade=t=out:st=${SECS-2}:d=2,atrim=0:${SECS}[a]`;
           audioMap = '[a]';
         } else {
-          filterComplex = `[1:a]adelay=1500|1500[a]`;
+          filterComplex = `[1:a]adelay=4000|4000[a]`;
           audioMap = '[a]';
         }
 

@@ -79,24 +79,30 @@ def build_post_script(row):
     if comment:
         editorial += comment
 
-    parts = [
+    PAUSE = '<break time="2.5s"/>'
+    sentences = [p for p in [
         f"Group {group}. World Cup 2026.",
         result_line,
         scorer_line,
         stats_line,
         editorial,
-    ]
-    return ' '.join(p for p in parts if p.strip())
+    ] if p.strip()]
+    return f'<speak>{PAUSE.join(sentences)}</speak>'
 
 def build_pre_script(slug):
-    # Pre-match: minimal — just team names and group from slug
-    # e.g. m002-south-korea-vs-czech-republic
     parts = slug.split('-vs-')
+    PAUSE = '<break time="2.5s"/>'
     if len(parts) == 2:
         team_a = parts[0].split('-', 1)[1].replace('-', ' ').title()
         team_b = parts[1].replace('-', ' ').title()
-        return f"World Cup 2026. {team_a} versus {team_b}. Head to head history, stats, and players to watch. Let's break it down."
-    return "World Cup 2026. Pre-match analysis."
+        sentences = [
+            f"World Cup 2026.",
+            f"{team_a} versus {team_b}.",
+            "Head to head history, stats, and players to watch.",
+            "Let's break it down.",
+        ]
+        return f'<speak>{PAUSE.join(sentences)}</speak>'
+    return '<speak>World Cup 2026. Pre-match analysis.</speak>'
 
 def generate_audio(text, out_path):
     api_key = os.environ.get('ELEVENLABS_API_KEY')
@@ -108,6 +114,7 @@ def generate_audio(text, out_path):
     payload = json.dumps({
         'text': text,
         'model_id': MODEL_ID,
+        'apply_text_normalization': 'off',  # preserve SSML <break> tags
         'voice_settings': {
             'stability': 0.35,
             'similarity_boost': 0.75,
