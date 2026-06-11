@@ -63,9 +63,9 @@
       "teamB": "Czech Republic",
       "status": "drawn",
       "hasThumb": true,
-      "hasVideo": false,
-      "youtubeId": null,
-      "videoUrl": null,
+      "hasVideo": true,
+      "youtubeId": "jKxvXb37s0k",
+      "videoUrl": "https://www.youtube.com/shorts/jKxvXb37s0k",
       "worldCups": [
         "11",
         "1"
