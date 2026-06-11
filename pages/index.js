@@ -1,10 +1,30 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
+import MatchCard from "../components/MatchCard";
 
 export default function Home() {
+  const [latestMatches, setLatestMatches] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchLatestMatches() {
+      try {
+        const response = await fetch("/api/latest-matches");
+        const data = await response.json();
+        setLatestMatches(data);
+      } catch (error) {
+        console.error("Failed to fetch latest matches:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchLatestMatches();
+  }, []);
+
   return (
     <>
       <Head>
@@ -63,6 +83,24 @@ export default function Home() {
               </span>
             </div>
           </Link>
+
+          {/* Dynamic Media Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold mb-4">Latest Matches</h2>
+            {loading ? (
+              <p className="text-steel">Loading match media...</p>
+            ) : latestMatches.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {latestMatches.map((m) => (
+                  <MatchCard m={m} key={m.slug} />
+                ))}
+              </div>
+            ) : (
+              <p className="text-steel">
+                Could not load match media at this time.
+              </p>
+            )}
+          </div>
         </main>
 
         <SiteFooter />

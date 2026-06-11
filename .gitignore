@@ -55,3 +55,6 @@ __pycache__/
 *.mp4
 /public/data/top20.mp4
 /logo
+scripts/wc26/client_secret.json
+scripts/wc26/yt_token.json
+scripts/wc26/.env.wc26

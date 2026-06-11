@@ -9,16 +9,16 @@
       "group": "A",
       "matchday": 1,
       "date": "2026-06-11",
-      "time": "19:00 CET · 13:00 EST",
+      "time": "19:00 CET \u00b7 13:00 EST",
       "venue": "Estadio Azteca",
       "city": "Mexico City",
       "teamA": "Mexico",
       "teamB": "South Africa",
       "status": "drawn",
       "hasThumb": true,
-      "hasVideo": false,
-      "youtubeId": null,
-      "videoUrl": null,
+      "hasVideo": true,
+      "youtubeId": "nVwmjVkVils",
+      "videoUrl": "https://www.youtube.com/shorts/nVwmjVkVils",
       "worldCups": [
         "17",
         "3"
@@ -37,17 +37,20 @@
         "l": "0"
       },
       "headline": [
-        "17 TRIES · NEVER PAST THE QUARTERS",
-        "3 WORLD CUPS · OUT TO MAKE THEIR MARK"
+        "17 TRIES \u00b7 NEVER PAST THE QUARTERS",
+        "3 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK"
       ],
       "hook": [
-        "CAN GIMÉNEZ DELIVER?",
+        "CAN GIM\u00c9NEZ DELIVER?",
         "TAU OUT TO MAKE HISTORY"
       ],
       "watch": [
-        "Sánchez, Gallardo",
+        "S\u00e1nchez, Gallardo",
         "Mokoena, Williams"
-      ]
+      ],
+      "youtubePostId": "r5vlOr2o4G4",
+      "postVideoUrl": "https://www.youtube.com/shorts/r5vlOr2o4G4",
+      "hasPostVideo": true
     },
     {
       "no": 2,
@@ -84,7 +87,7 @@
         "l": "0"
       },
       "headline": [
-        "SEMI-FINALISTS · THE NEARLY MEN",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN",
         "ON THE GREATEST STAGE"
       ],
       "hook": [
@@ -92,8 +95,8 @@
         "ALL EYES ON SCHICK"
       ],
       "watch": [
-        "Heung-min Son",
-        "Patrik Schick"
+        "Heung-min Son, Lee Jae-sung",
+        "Patrik Schick, Tom\u00e1\u0161 Sou\u010dek"
       ]
     },
     {
@@ -131,16 +134,16 @@
         "l": "0"
       },
       "headline": [
-        "2 WORLD CUPS · OUT TO MAKE THEIR MARK",
+        "2 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK",
         "ON THE GREATEST STAGE"
       ],
       "hook": [
         "ALL EYES ON DAVIES",
-        "CAN DŽEKO DELIVER?"
+        "CAN D\u017dEKO DELIVER?"
       ],
       "watch": [
-        "Alphonso Davies",
-        "Edin Džeko"
+        "Alphonso Davies, Jonathan David",
+        "Edin D\u017eeko, Ermedin Demirovi\u0107"
       ]
     },
     {
@@ -178,16 +181,16 @@
         "l": "0"
       },
       "headline": [
-        "SEMI-FINALISTS · THE NEARLY MEN",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN",
         "QUARTER-FINALS THEIR FINEST HOUR"
       ],
       "hook": [
-        "PULISIC — THE ONE TO WATCH",
-        "CAN ALMIRÓN DELIVER?"
+        "PULISIC \u2014 THE ONE TO WATCH",
+        "CAN ALMIR\u00d3N DELIVER?"
       ],
       "watch": [
-        "Christian Pulisic",
-        "Miguel Almirón"
+        "Christian Pulisic, Weston McKennie",
+        "Miguel Almir\u00f3n, Julio Enciso"
       ]
     },
     {
@@ -226,15 +229,15 @@
       },
       "headline": [
         "ON THE GREATEST STAGE",
-        "12 TRIES · NEVER PAST THE QUARTERS"
+        "12 TRIES \u00b7 NEVER PAST THE QUARTERS"
       ],
       "hook": [
         "AFIF LEADS THE CHARGE",
         "XHAKA LEADS THE CHARGE"
       ],
       "watch": [
-        "Akram Afif",
-        "Granit Xhaka"
+        "Akram Afif, Almoez Ali",
+        "Granit Xhaka, Xherdan Shaqiri"
       ]
     },
     {
@@ -273,15 +276,15 @@
       },
       "headline": [
         "5-TIME WORLD CHAMPIONS",
-        "SEMI-FINALISTS · THE NEARLY MEN"
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN"
       ],
       "hook": [
-        "VINI JR. — THE NEW KING?",
+        "VINI JR. \u2014 THE NEW KING?",
         "ALL EYES ON HAKIMI"
       ],
       "watch": [
-        "Vinicius Junior",
-        "Achraf Hakimi"
+        "Vinicius Junior, Rodrygo",
+        "Achraf Hakimi, Hakim Ziyech"
       ]
     },
     {
@@ -320,15 +323,15 @@
       },
       "headline": [
         "ON THE GREATEST STAGE",
-        "8 TRIES · CHASING A FIRST KNOCKOUT"
+        "8 TRIES \u00b7 CHASING A FIRST KNOCKOUT"
       ],
       "hook": [
-        "NAZON — THE TALISMAN",
-        "MCTOMINAY — THE ONE TO WATCH"
+        "NAZON \u2014 THE TALISMAN",
+        "MCTOMINAY \u2014 THE ONE TO WATCH"
       ],
       "watch": [
-        "Duckens Nazon",
-        "Scott McTominay"
+        "Duckens Nazon, Frantzdy Pierrot",
+        "Scott McTominay, Andy Robertson"
       ]
     },
     {
@@ -366,16 +369,16 @@
         "l": "0"
       },
       "headline": [
-        "ROUND OF 16 · OUT TO GO FURTHER",
-        "SEMI-FINALISTS · THE NEARLY MEN"
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN"
       ],
       "hook": [
-        "IRVINE — THE ONE TO WATCH",
+        "IRVINE \u2014 THE ONE TO WATCH",
         "CAN ARDA SHINE AGAIN?"
       ],
       "watch": [
-        "Jackson Irvine",
-        "Arda Güler"
+        "Jackson Irvine, Mathew Leckie",
+        "Arda G\u00fcler, Hakan \u00c7alhano\u011flu"
       ]
     },
     {
@@ -421,8 +424,8 @@
         "CAN CHONG DELIVER?"
       ],
       "watch": [
-        "Jamal Musiala",
-        "Tahith Chong"
+        "Jamal Musiala, Florian Wirtz",
+        "Tahith Chong, Leandro Bacuna"
       ]
     },
     {
@@ -460,16 +463,16 @@
         "l": "0"
       },
       "headline": [
-        "RUNNERS-UP ONCE · STILL CHASING THE CROWN",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "RUNNERS-UP ONCE \u00b7 STILL CHASING THE CROWN",
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
         "DIJK CARRIES THE HOPES",
         "CAN MITOMA DELIVER?"
       ],
       "watch": [
-        "Virgil van Dijk",
-        "Kaoru Mitoma"
+        "Virgil van Dijk, Memphis Depay",
+        "Kaoru Mitoma, Takefusa Kubo"
       ]
     },
     {
@@ -507,16 +510,16 @@
         "l": "0"
       },
       "headline": [
-        "3 WORLD CUPS · OUT TO MAKE THEIR MARK",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "3 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK",
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
         "HALLER LEADS THE CHARGE",
         "CAICEDO CARRIES THE HOPES"
       ],
       "watch": [
-        "Sébastien Haller",
-        "Moisés Caicedo"
+        "S\u00e9bastien Haller, Simon Adingra",
+        "Mois\u00e9s Caicedo, Enner Valencia"
       ]
     },
     {
@@ -554,16 +557,16 @@
         "l": "0"
       },
       "headline": [
-        "RUNNERS-UP ONCE · STILL CHASING THE CROWN",
-        "6 WORLD CUPS · EYEING A BREAKTHROUGH"
+        "RUNNERS-UP ONCE \u00b7 STILL CHASING THE CROWN",
+        "6 WORLD CUPS \u00b7 EYEING A BREAKTHROUGH"
       ],
       "hook": [
         "ISAK CARRIES THE HOPES",
-        "MEJBRI — THE ONE TO WATCH"
+        "MEJBRI \u2014 THE ONE TO WATCH"
       ],
       "watch": [
-        "Alexander Isak",
-        "Hannibal Mejbri"
+        "Alexander Isak, Viktor Gy\u00f6keres",
+        "Hannibal Mejbri, Youssef Msakni"
       ]
     },
     {
@@ -601,16 +604,16 @@
         "l": "0"
       },
       "headline": [
-        "1x CHAMPIONS · CHASING MORE GLORY",
+        "1x CHAMPIONS \u00b7 CHASING MORE GLORY",
         "FIRST-EVER WORLD CUP"
       ],
       "hook": [
         "YAMAL LEADS THE CHARGE",
-        "MENDES — THE ONE TO WATCH"
+        "MENDES \u2014 THE ONE TO WATCH"
       ],
       "watch": [
-        "Lamine Yamal",
-        "Ryan Mendes"
+        "Lamine Yamal, Pedri",
+        "Ryan Mendes, Garry Rodrigues"
       ]
     },
     {
@@ -648,16 +651,16 @@
         "l": "0"
       },
       "headline": [
-        "SEMI-FINALISTS · THE NEARLY MEN",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN",
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
-        "BRUYNE — THE TALISMAN",
-        "SALAH — THE PHARAOH RETURNS"
+        "BRUYNE \u2014 THE TALISMAN",
+        "SALAH \u2014 THE PHARAOH RETURNS"
       ],
       "watch": [
-        "Kevin De Bruyne",
-        "Mohamed Salah"
+        "Kevin De Bruyne, Romelu Lukaku",
+        "Mohamed Salah, Mostafa Mohamed"
       ]
     },
     {
@@ -695,16 +698,16 @@
         "l": "1"
       },
       "headline": [
-        "ROUND OF 16 · OUT TO GO FURTHER",
-        "2x CHAMPIONS · CHASING MORE GLORY"
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER",
+        "2x CHAMPIONS \u00b7 CHASING MORE GLORY"
       ],
       "hook": [
         "AL-DAWSARI READY FOR THE STAGE",
         "VALVERDE LEADS THE CHARGE"
       ],
       "watch": [
-        "Salem Al-Dawsari",
-        "Federico Valverde"
+        "Salem Al-Dawsari, Firas Al-Buraikan",
+        "Federico Valverde, Darwin N\u00fa\u00f1ez"
       ]
     },
     {
@@ -742,16 +745,16 @@
         "l": "0"
       },
       "headline": [
-        "6 WORLD CUPS · EYEING A BREAKTHROUGH",
-        "2 WORLD CUPS · OUT TO MAKE THEIR MARK"
+        "6 WORLD CUPS \u00b7 EYEING A BREAKTHROUGH",
+        "2 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK"
       ],
       "hook": [
         "CAN TAREMI DELIVER?",
         "WOOD LEADS THE CHARGE"
       ],
       "watch": [
-        "Mehdi Taremi",
-        "Chris Wood"
+        "Mehdi Taremi, Ali Gholizadeh",
+        "Chris Wood, Joe Bell"
       ]
     },
     {
@@ -789,16 +792,16 @@
         "l": "1"
       },
       "headline": [
-        "2x CHAMPIONS · CHASING MORE GLORY",
+        "2x CHAMPIONS \u00b7 CHASING MORE GLORY",
         "QUARTER-FINALS THEIR FINEST HOUR"
       ],
       "hook": [
-        "MBAPPÉ — THE HEIR TO THE THRONE",
-        "MANÉ OUT TO MAKE HISTORY"
+        "MBAPP\u00c9 \u2014 THE HEIR TO THE THRONE",
+        "MAN\u00c9 OUT TO MAKE HISTORY"
       ],
       "watch": [
-        "Kylian Mbappé",
-        "Sadio Mané"
+        "Kylian Mbapp\u00e9, Antoine Griezmann",
+        "Sadio Man\u00e9, Ismaila Sarr"
       ]
     },
     {
@@ -837,15 +840,15 @@
       },
       "headline": [
         "ON THE GREATEST STAGE",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
         "CAN HUSSEIN DELIVER?",
-        "HAALAND — THE GOAL MACHINE"
+        "HAALAND \u2014 THE GOAL MACHINE"
       ],
       "watch": [
-        "Aymen Hussein",
-        "Erling Haaland"
+        "Aymen Hussein, Amjad Attwan",
+        "Erling Haaland, Martin \u00d8degaard"
       ]
     },
     {
@@ -883,16 +886,16 @@
         "l": "0"
       },
       "headline": [
-        "3x CHAMPIONS · CHASING MORE GLORY",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "3x CHAMPIONS \u00b7 CHASING MORE GLORY",
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
-        "MESSI — THE LAST DANCE",
+        "MESSI \u2014 THE LAST DANCE",
         "ALL EYES ON MAHREZ"
       ],
       "watch": [
-        "Lionel Messi",
-        "Riyad Mahrez"
+        "Lionel Messi, Juli\u00e1n \u00c1lvarez",
+        "Riyad Mahrez, Youcef Atal"
       ]
     },
     {
@@ -930,7 +933,7 @@
         "l": "0"
       },
       "headline": [
-        "SEMI-FINALISTS · THE NEARLY MEN",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN",
         "FIRST-EVER WORLD CUP"
       ],
       "hook": [
@@ -938,8 +941,8 @@
         "AL-TAMARI OUT TO MAKE HISTORY"
       ],
       "watch": [
-        "Marcel Sabitzer",
-        "Mousa Al-Tamari"
+        "Marcel Sabitzer, Christoph Baumgartner",
+        "Mousa Al-Tamari, Yazan Al-Naimat"
       ]
     },
     {
@@ -977,16 +980,16 @@
         "l": "0"
       },
       "headline": [
-        "SEMI-FINALISTS · THE NEARLY MEN",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN",
         "ON THE GREATEST STAGE"
       ],
       "hook": [
-        "RONALDO — ONE LAST CROWN?",
+        "RONALDO \u2014 ONE LAST CROWN?",
         "CAN BAKAMBU DELIVER?"
       ],
       "watch": [
-        "Cristiano Ronaldo",
-        "Cédric Bakambu"
+        "Cristiano Ronaldo, Bruno Fernandes",
+        "C\u00e9dric Bakambu, Th\u00e9o Bongonda"
       ]
     },
     {
@@ -1024,16 +1027,16 @@
         "l": "1"
       },
       "headline": [
-        "1x CHAMPIONS · CHASING MORE GLORY",
-        "RUNNERS-UP ONCE · STILL CHASING THE CROWN"
+        "1x CHAMPIONS \u00b7 CHASING MORE GLORY",
+        "RUNNERS-UP ONCE \u00b7 STILL CHASING THE CROWN"
       ],
       "hook": [
         "KANE HUNTS THE CROWN",
-        "MODRIĆ — ONE MORE MIRACLE?"
+        "MODRI\u0106 \u2014 ONE MORE MIRACLE?"
       ],
       "watch": [
-        "Harry Kane",
-        "Luka Modrić"
+        "Harry Kane, Jude Bellingham",
+        "Luka Modri\u0107, Mateo Kova\u010di\u0107"
       ]
     },
     {
@@ -1079,8 +1082,8 @@
         "GODOY OUT TO MAKE HISTORY"
       ],
       "watch": [
-        "Mohammed Kudus",
-        "Aníbal Godoy"
+        "Mohammed Kudus, Antoine Semenyo",
+        "An\u00edbal Godoy, Rolando Blackburn"
       ]
     },
     {
@@ -1123,11 +1126,11 @@
       ],
       "hook": [
         "KHUSANOV CARRIES THE HOPES",
-        "CAN DÍAZ DELIVER?"
+        "CAN D\u00cdAZ DELIVER?"
       ],
       "watch": [
-        "Abdukodir Khusanov",
-        "Luis Díaz"
+        "Abdukodir Khusanov, Otabek Shukurov",
+        "Luis D\u00edaz, James Rodr\u00edguez"
       ]
     },
     {
@@ -1166,15 +1169,15 @@
       },
       "headline": [
         "ON THE GREATEST STAGE",
-        "3 WORLD CUPS · OUT TO MAKE THEIR MARK"
+        "3 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK"
       ],
       "hook": [
         "ALL EYES ON SCHICK",
         "TAU OUT TO MAKE HISTORY"
       ],
       "watch": [
-        "Patrik Schick",
-        "Percy Tau"
+        "Patrik Schick, Tom\u00e1\u0161 Sou\u010dek",
+        "Percy Tau, Lyle Foster"
       ]
     },
     {
@@ -1212,16 +1215,16 @@
         "l": "0"
       },
       "headline": [
-        "12 TRIES · NEVER PAST THE QUARTERS",
+        "12 TRIES \u00b7 NEVER PAST THE QUARTERS",
         "ON THE GREATEST STAGE"
       ],
       "hook": [
         "XHAKA LEADS THE CHARGE",
-        "CAN DŽEKO DELIVER?"
+        "CAN D\u017dEKO DELIVER?"
       ],
       "watch": [
-        "Granit Xhaka",
-        "Edin Džeko"
+        "Granit Xhaka, Xherdan Shaqiri",
+        "Edin D\u017eeko, Ermedin Demirovi\u0107"
       ]
     },
     {
@@ -1259,7 +1262,7 @@
         "l": "0"
       },
       "headline": [
-        "2 WORLD CUPS · OUT TO MAKE THEIR MARK",
+        "2 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK",
         "ON THE GREATEST STAGE"
       ],
       "hook": [
@@ -1267,8 +1270,8 @@
         "AFIF LEADS THE CHARGE"
       ],
       "watch": [
-        "Alphonso Davies",
-        "Akram Afif"
+        "Alphonso Davies, Jonathan David",
+        "Akram Afif, Almoez Ali"
       ]
     },
     {
@@ -1306,16 +1309,16 @@
         "l": "0"
       },
       "headline": [
-        "17 TRIES · NEVER PAST THE QUARTERS",
-        "SEMI-FINALISTS · THE NEARLY MEN"
+        "17 TRIES \u00b7 NEVER PAST THE QUARTERS",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN"
       ],
       "hook": [
-        "CAN GIMÉNEZ DELIVER?",
+        "CAN GIM\u00c9NEZ DELIVER?",
         "SON CARRIES KOREA'S HOPES"
       ],
       "watch": [
-        "Santiago Giménez",
-        "Heung-min Son"
+        "Santiago Gim\u00e9nez, Hirving Lozano",
+        "Heung-min Son, Lee Jae-sung"
       ]
     },
     {
@@ -1353,16 +1356,16 @@
         "l": "0"
       },
       "headline": [
-        "SEMI-FINALISTS · THE NEARLY MEN",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN",
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
-        "PULISIC — THE ONE TO WATCH",
-        "IRVINE — THE ONE TO WATCH"
+        "PULISIC \u2014 THE ONE TO WATCH",
+        "IRVINE \u2014 THE ONE TO WATCH"
       ],
       "watch": [
-        "Christian Pulisic",
-        "Jackson Irvine"
+        "Christian Pulisic, Weston McKennie",
+        "Jackson Irvine, Mathew Leckie"
       ]
     },
     {
@@ -1400,16 +1403,16 @@
         "l": "1"
       },
       "headline": [
-        "8 TRIES · CHASING A FIRST KNOCKOUT",
-        "SEMI-FINALISTS · THE NEARLY MEN"
+        "8 TRIES \u00b7 CHASING A FIRST KNOCKOUT",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN"
       ],
       "hook": [
-        "MCTOMINAY — THE ONE TO WATCH",
+        "MCTOMINAY \u2014 THE ONE TO WATCH",
         "ALL EYES ON HAKIMI"
       ],
       "watch": [
-        "Scott McTominay",
-        "Achraf Hakimi"
+        "Scott McTominay, Andy Robertson",
+        "Achraf Hakimi, Hakim Ziyech"
       ]
     },
     {
@@ -1451,12 +1454,12 @@
         "ON THE GREATEST STAGE"
       ],
       "hook": [
-        "VINI JR. — THE NEW KING?",
-        "NAZON — THE TALISMAN"
+        "VINI JR. \u2014 THE NEW KING?",
+        "NAZON \u2014 THE TALISMAN"
       ],
       "watch": [
-        "Vinicius Junior",
-        "Duckens Nazon"
+        "Vinicius Junior, Rodrygo",
+        "Duckens Nazon, Frantzdy Pierrot"
       ]
     },
     {
@@ -1494,16 +1497,16 @@
         "l": "0"
       },
       "headline": [
-        "SEMI-FINALISTS · THE NEARLY MEN",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN",
         "QUARTER-FINALS THEIR FINEST HOUR"
       ],
       "hook": [
         "CAN ARDA SHINE AGAIN?",
-        "CAN ALMIRÓN DELIVER?"
+        "CAN ALMIR\u00d3N DELIVER?"
       ],
       "watch": [
-        "Arda Güler",
-        "Miguel Almirón"
+        "Arda G\u00fcler, Hakan \u00c7alhano\u011flu",
+        "Miguel Almir\u00f3n, Julio Enciso"
       ]
     },
     {
@@ -1541,16 +1544,16 @@
         "l": "0"
       },
       "headline": [
-        "RUNNERS-UP ONCE · STILL CHASING THE CROWN",
-        "RUNNERS-UP ONCE · STILL CHASING THE CROWN"
+        "RUNNERS-UP ONCE \u00b7 STILL CHASING THE CROWN",
+        "RUNNERS-UP ONCE \u00b7 STILL CHASING THE CROWN"
       ],
       "hook": [
         "DIJK CARRIES THE HOPES",
         "ISAK CARRIES THE HOPES"
       ],
       "watch": [
-        "Virgil van Dijk",
-        "Alexander Isak"
+        "Virgil van Dijk, Memphis Depay",
+        "Alexander Isak, Viktor Gy\u00f6keres"
       ]
     },
     {
@@ -1589,15 +1592,15 @@
       },
       "headline": [
         "4-TIME WORLD CHAMPIONS",
-        "3 WORLD CUPS · OUT TO MAKE THEIR MARK"
+        "3 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK"
       ],
       "hook": [
         "CAN MUSIALA DELIVER?",
         "HALLER LEADS THE CHARGE"
       ],
       "watch": [
-        "Jamal Musiala",
-        "Sébastien Haller"
+        "Jamal Musiala, Florian Wirtz",
+        "S\u00e9bastien Haller, Simon Adingra"
       ]
     },
     {
@@ -1635,7 +1638,7 @@
         "l": "0"
       },
       "headline": [
-        "ROUND OF 16 · OUT TO GO FURTHER",
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER",
         "FIRST-EVER WORLD CUP"
       ],
       "hook": [
@@ -1643,8 +1646,8 @@
         "CAN CHONG DELIVER?"
       ],
       "watch": [
-        "Moisés Caicedo",
-        "Tahith Chong"
+        "Mois\u00e9s Caicedo, Enner Valencia",
+        "Tahith Chong, Leandro Bacuna"
       ]
     },
     {
@@ -1682,16 +1685,16 @@
         "l": "1"
       },
       "headline": [
-        "6 WORLD CUPS · EYEING A BREAKTHROUGH",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "6 WORLD CUPS \u00b7 EYEING A BREAKTHROUGH",
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
-        "MEJBRI — THE ONE TO WATCH",
+        "MEJBRI \u2014 THE ONE TO WATCH",
         "CAN MITOMA DELIVER?"
       ],
       "watch": [
-        "Hannibal Mejbri",
-        "Kaoru Mitoma"
+        "Hannibal Mejbri, Youssef Msakni",
+        "Kaoru Mitoma, Takefusa Kubo"
       ]
     },
     {
@@ -1729,16 +1732,16 @@
         "l": "0"
       },
       "headline": [
-        "1x CHAMPIONS · CHASING MORE GLORY",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "1x CHAMPIONS \u00b7 CHASING MORE GLORY",
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
         "YAMAL LEADS THE CHARGE",
         "AL-DAWSARI READY FOR THE STAGE"
       ],
       "watch": [
-        "Lamine Yamal",
-        "Salem Al-Dawsari"
+        "Lamine Yamal, Pedri",
+        "Salem Al-Dawsari, Firas Al-Buraikan"
       ]
     },
     {
@@ -1776,16 +1779,16 @@
         "l": "0"
       },
       "headline": [
-        "SEMI-FINALISTS · THE NEARLY MEN",
-        "6 WORLD CUPS · EYEING A BREAKTHROUGH"
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN",
+        "6 WORLD CUPS \u00b7 EYEING A BREAKTHROUGH"
       ],
       "hook": [
-        "BRUYNE — THE TALISMAN",
+        "BRUYNE \u2014 THE TALISMAN",
         "CAN TAREMI DELIVER?"
       ],
       "watch": [
-        "Kevin De Bruyne",
-        "Mehdi Taremi"
+        "Kevin De Bruyne, Romelu Lukaku",
+        "Mehdi Taremi, Ali Gholizadeh"
       ]
     },
     {
@@ -1823,16 +1826,16 @@
         "l": "0"
       },
       "headline": [
-        "2x CHAMPIONS · CHASING MORE GLORY",
+        "2x CHAMPIONS \u00b7 CHASING MORE GLORY",
         "FIRST-EVER WORLD CUP"
       ],
       "hook": [
         "VALVERDE LEADS THE CHARGE",
-        "MENDES — THE ONE TO WATCH"
+        "MENDES \u2014 THE ONE TO WATCH"
       ],
       "watch": [
-        "Federico Valverde",
-        "Ryan Mendes"
+        "Federico Valverde, Darwin N\u00fa\u00f1ez",
+        "Ryan Mendes, Garry Rodrigues"
       ]
     },
     {
@@ -1870,16 +1873,16 @@
         "l": "0"
       },
       "headline": [
-        "2 WORLD CUPS · OUT TO MAKE THEIR MARK",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "2 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK",
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
         "WOOD LEADS THE CHARGE",
-        "SALAH — THE PHARAOH RETURNS"
+        "SALAH \u2014 THE PHARAOH RETURNS"
       ],
       "watch": [
-        "Chris Wood",
-        "Mohamed Salah"
+        "Chris Wood, Joe Bell",
+        "Mohamed Salah, Mostafa Mohamed"
       ]
     },
     {
@@ -1917,16 +1920,16 @@
         "l": "0"
       },
       "headline": [
-        "3x CHAMPIONS · CHASING MORE GLORY",
-        "SEMI-FINALISTS · THE NEARLY MEN"
+        "3x CHAMPIONS \u00b7 CHASING MORE GLORY",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN"
       ],
       "hook": [
-        "MESSI — THE LAST DANCE",
+        "MESSI \u2014 THE LAST DANCE",
         "ALL EYES ON SABITZER"
       ],
       "watch": [
-        "Lionel Messi",
-        "Marcel Sabitzer"
+        "Lionel Messi, Juli\u00e1n \u00c1lvarez",
+        "Marcel Sabitzer, Christoph Baumgartner"
       ]
     },
     {
@@ -1964,16 +1967,16 @@
         "l": "0"
       },
       "headline": [
-        "2x CHAMPIONS · CHASING MORE GLORY",
+        "2x CHAMPIONS \u00b7 CHASING MORE GLORY",
         "ON THE GREATEST STAGE"
       ],
       "hook": [
-        "MBAPPÉ — THE HEIR TO THE THRONE",
+        "MBAPP\u00c9 \u2014 THE HEIR TO THE THRONE",
         "CAN HUSSEIN DELIVER?"
       ],
       "watch": [
-        "Kylian Mbappé",
-        "Aymen Hussein"
+        "Kylian Mbapp\u00e9, Antoine Griezmann",
+        "Aymen Hussein, Amjad Attwan"
       ]
     },
     {
@@ -2011,16 +2014,16 @@
         "l": "0"
       },
       "headline": [
-        "ROUND OF 16 · OUT TO GO FURTHER",
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER",
         "QUARTER-FINALS THEIR FINEST HOUR"
       ],
       "hook": [
-        "HAALAND — THE GOAL MACHINE",
-        "MANÉ OUT TO MAKE HISTORY"
+        "HAALAND \u2014 THE GOAL MACHINE",
+        "MAN\u00c9 OUT TO MAKE HISTORY"
       ],
       "watch": [
-        "Erling Haaland",
-        "Sadio Mané"
+        "Erling Haaland, Martin \u00d8degaard",
+        "Sadio Man\u00e9, Ismaila Sarr"
       ]
     },
     {
@@ -2059,15 +2062,15 @@
       },
       "headline": [
         "FIRST-EVER WORLD CUP",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
         "AL-TAMARI OUT TO MAKE HISTORY",
         "ALL EYES ON MAHREZ"
       ],
       "watch": [
-        "Mousa Al-Tamari",
-        "Riyad Mahrez"
+        "Mousa Al-Tamari, Yazan Al-Naimat",
+        "Riyad Mahrez, Youcef Atal"
       ]
     },
     {
@@ -2105,16 +2108,16 @@
         "l": "0"
       },
       "headline": [
-        "SEMI-FINALISTS · THE NEARLY MEN",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN",
         "FIRST-EVER WORLD CUP"
       ],
       "hook": [
-        "RONALDO — ONE LAST CROWN?",
+        "RONALDO \u2014 ONE LAST CROWN?",
         "KHUSANOV CARRIES THE HOPES"
       ],
       "watch": [
-        "Cristiano Ronaldo",
-        "Abdukodir Khusanov"
+        "Cristiano Ronaldo, Bruno Fernandes",
+        "Abdukodir Khusanov, Otabek Shukurov"
       ]
     },
     {
@@ -2152,7 +2155,7 @@
         "l": "0"
       },
       "headline": [
-        "1x CHAMPIONS · CHASING MORE GLORY",
+        "1x CHAMPIONS \u00b7 CHASING MORE GLORY",
         "QUARTER-FINALS THEIR FINEST HOUR"
       ],
       "hook": [
@@ -2160,8 +2163,8 @@
         "KUDUS CARRIES THE HOPES"
       ],
       "watch": [
-        "Harry Kane",
-        "Mohammed Kudus"
+        "Harry Kane, Jude Bellingham",
+        "Mohammed Kudus, Antoine Semenyo"
       ]
     },
     {
@@ -2200,15 +2203,15 @@
       },
       "headline": [
         "ON THE GREATEST STAGE",
-        "RUNNERS-UP ONCE · STILL CHASING THE CROWN"
+        "RUNNERS-UP ONCE \u00b7 STILL CHASING THE CROWN"
       ],
       "hook": [
         "GODOY OUT TO MAKE HISTORY",
-        "MODRIĆ — ONE MORE MIRACLE?"
+        "MODRI\u0106 \u2014 ONE MORE MIRACLE?"
       ],
       "watch": [
-        "Aníbal Godoy",
-        "Luka Modrić"
+        "An\u00edbal Godoy, Rolando Blackburn",
+        "Luka Modri\u0107, Mateo Kova\u010di\u0107"
       ]
     },
     {
@@ -2250,12 +2253,12 @@
         "ON THE GREATEST STAGE"
       ],
       "hook": [
-        "CAN DÍAZ DELIVER?",
+        "CAN D\u00cdAZ DELIVER?",
         "CAN BAKAMBU DELIVER?"
       ],
       "watch": [
-        "Luis Díaz",
-        "Cédric Bakambu"
+        "Luis D\u00edaz, James Rodr\u00edguez",
+        "C\u00e9dric Bakambu, Th\u00e9o Bongonda"
       ]
     },
     {
@@ -2293,16 +2296,16 @@
         "l": "0"
       },
       "headline": [
-        "12 TRIES · NEVER PAST THE QUARTERS",
-        "2 WORLD CUPS · OUT TO MAKE THEIR MARK"
+        "12 TRIES \u00b7 NEVER PAST THE QUARTERS",
+        "2 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK"
       ],
       "hook": [
         "XHAKA LEADS THE CHARGE",
         "ALL EYES ON DAVIES"
       ],
       "watch": [
-        "Granit Xhaka",
-        "Alphonso Davies"
+        "Granit Xhaka, Xherdan Shaqiri",
+        "Alphonso Davies, Jonathan David"
       ]
     },
     {
@@ -2344,12 +2347,12 @@
         "ON THE GREATEST STAGE"
       ],
       "hook": [
-        "CAN DŽEKO DELIVER?",
+        "CAN D\u017dEKO DELIVER?",
         "AFIF LEADS THE CHARGE"
       ],
       "watch": [
-        "Edin Džeko",
-        "Akram Afif"
+        "Edin D\u017eeko, Ermedin Demirovi\u0107",
+        "Akram Afif, Almoez Ali"
       ]
     },
     {
@@ -2387,16 +2390,16 @@
         "l": "0"
       },
       "headline": [
-        "SEMI-FINALISTS · THE NEARLY MEN",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN",
         "ON THE GREATEST STAGE"
       ],
       "hook": [
         "ALL EYES ON HAKIMI",
-        "NAZON — THE TALISMAN"
+        "NAZON \u2014 THE TALISMAN"
       ],
       "watch": [
-        "Achraf Hakimi",
-        "Duckens Nazon"
+        "Achraf Hakimi, Hakim Ziyech",
+        "Duckens Nazon, Frantzdy Pierrot"
       ]
     },
     {
@@ -2434,16 +2437,16 @@
         "l": "3"
       },
       "headline": [
-        "8 TRIES · CHASING A FIRST KNOCKOUT",
+        "8 TRIES \u00b7 CHASING A FIRST KNOCKOUT",
         "5-TIME WORLD CHAMPIONS"
       ],
       "hook": [
-        "MCTOMINAY — THE ONE TO WATCH",
-        "VINI JR. — THE NEW KING?"
+        "MCTOMINAY \u2014 THE ONE TO WATCH",
+        "VINI JR. \u2014 THE NEW KING?"
       ],
       "watch": [
-        "Scott McTominay",
-        "Vinicius Junior"
+        "Scott McTominay, Andy Robertson",
+        "Vinicius Junior, Rodrygo"
       ]
     },
     {
@@ -2481,16 +2484,16 @@
         "l": "0"
       },
       "headline": [
-        "3 WORLD CUPS · OUT TO MAKE THEIR MARK",
-        "SEMI-FINALISTS · THE NEARLY MEN"
+        "3 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN"
       ],
       "hook": [
         "TAU OUT TO MAKE HISTORY",
         "SON CARRIES KOREA'S HOPES"
       ],
       "watch": [
-        "Percy Tau",
-        "Heung-min Son"
+        "Percy Tau, Lyle Foster",
+        "Heung-min Son, Lee Jae-sung"
       ]
     },
     {
@@ -2529,15 +2532,15 @@
       },
       "headline": [
         "ON THE GREATEST STAGE",
-        "17 TRIES · NEVER PAST THE QUARTERS"
+        "17 TRIES \u00b7 NEVER PAST THE QUARTERS"
       ],
       "hook": [
         "ALL EYES ON SCHICK",
-        "CAN GIMÉNEZ DELIVER?"
+        "CAN GIM\u00c9NEZ DELIVER?"
       ],
       "watch": [
-        "Patrik Schick",
-        "Santiago Giménez"
+        "Patrik Schick, Tom\u00e1\u0161 Sou\u010dek",
+        "Santiago Gim\u00e9nez, Hirving Lozano"
       ]
     },
     {
@@ -2576,15 +2579,15 @@
       },
       "headline": [
         "FIRST-EVER WORLD CUP",
-        "3 WORLD CUPS · OUT TO MAKE THEIR MARK"
+        "3 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK"
       ],
       "hook": [
         "CAN CHONG DELIVER?",
         "HALLER LEADS THE CHARGE"
       ],
       "watch": [
-        "Tahith Chong",
-        "Sébastien Haller"
+        "Tahith Chong, Leandro Bacuna",
+        "S\u00e9bastien Haller, Simon Adingra"
       ]
     },
     {
@@ -2622,7 +2625,7 @@
         "l": "1"
       },
       "headline": [
-        "ROUND OF 16 · OUT TO GO FURTHER",
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER",
         "4-TIME WORLD CHAMPIONS"
       ],
       "hook": [
@@ -2630,8 +2633,8 @@
         "CAN MUSIALA DELIVER?"
       ],
       "watch": [
-        "Moisés Caicedo",
-        "Jamal Musiala"
+        "Mois\u00e9s Caicedo, Enner Valencia",
+        "Jamal Musiala, Florian Wirtz"
       ]
     },
     {
@@ -2669,16 +2672,16 @@
         "l": "0"
       },
       "headline": [
-        "6 WORLD CUPS · EYEING A BREAKTHROUGH",
-        "RUNNERS-UP ONCE · STILL CHASING THE CROWN"
+        "6 WORLD CUPS \u00b7 EYEING A BREAKTHROUGH",
+        "RUNNERS-UP ONCE \u00b7 STILL CHASING THE CROWN"
       ],
       "hook": [
-        "MEJBRI — THE ONE TO WATCH",
+        "MEJBRI \u2014 THE ONE TO WATCH",
         "DIJK CARRIES THE HOPES"
       ],
       "watch": [
-        "Hannibal Mejbri",
-        "Virgil van Dijk"
+        "Hannibal Mejbri, Youssef Msakni",
+        "Virgil van Dijk, Memphis Depay"
       ]
     },
     {
@@ -2716,16 +2719,16 @@
         "l": "0"
       },
       "headline": [
-        "ROUND OF 16 · OUT TO GO FURTHER",
-        "RUNNERS-UP ONCE · STILL CHASING THE CROWN"
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER",
+        "RUNNERS-UP ONCE \u00b7 STILL CHASING THE CROWN"
       ],
       "hook": [
         "CAN MITOMA DELIVER?",
         "ISAK CARRIES THE HOPES"
       ],
       "watch": [
-        "Kaoru Mitoma",
-        "Alexander Isak"
+        "Kaoru Mitoma, Takefusa Kubo",
+        "Alexander Isak, Viktor Gy\u00f6keres"
       ]
     },
     {
@@ -2763,16 +2766,16 @@
         "l": "0"
       },
       "headline": [
-        "SEMI-FINALISTS · THE NEARLY MEN",
-        "SEMI-FINALISTS · THE NEARLY MEN"
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN"
       ],
       "hook": [
         "CAN ARDA SHINE AGAIN?",
-        "PULISIC — THE ONE TO WATCH"
+        "PULISIC \u2014 THE ONE TO WATCH"
       ],
       "watch": [
-        "Arda Güler",
-        "Christian Pulisic"
+        "Arda G\u00fcler, Hakan \u00c7alhano\u011flu",
+        "Christian Pulisic, Weston McKennie"
       ]
     },
     {
@@ -2811,15 +2814,15 @@
       },
       "headline": [
         "QUARTER-FINALS THEIR FINEST HOUR",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
-        "CAN ALMIRÓN DELIVER?",
-        "IRVINE — THE ONE TO WATCH"
+        "CAN ALMIR\u00d3N DELIVER?",
+        "IRVINE \u2014 THE ONE TO WATCH"
       ],
       "watch": [
-        "Miguel Almirón",
-        "Jackson Irvine"
+        "Miguel Almir\u00f3n, Julio Enciso",
+        "Jackson Irvine, Mathew Leckie"
       ]
     },
     {
@@ -2857,16 +2860,16 @@
         "l": "0"
       },
       "headline": [
-        "ROUND OF 16 · OUT TO GO FURTHER",
-        "2x CHAMPIONS · CHASING MORE GLORY"
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER",
+        "2x CHAMPIONS \u00b7 CHASING MORE GLORY"
       ],
       "hook": [
-        "HAALAND — THE GOAL MACHINE",
-        "MBAPPÉ — THE HEIR TO THE THRONE"
+        "HAALAND \u2014 THE GOAL MACHINE",
+        "MBAPP\u00c9 \u2014 THE HEIR TO THE THRONE"
       ],
       "watch": [
-        "Erling Haaland",
-        "Kylian Mbappé"
+        "Erling Haaland, Martin \u00d8degaard",
+        "Kylian Mbapp\u00e9, Antoine Griezmann"
       ]
     },
     {
@@ -2908,12 +2911,12 @@
         "ON THE GREATEST STAGE"
       ],
       "hook": [
-        "MANÉ OUT TO MAKE HISTORY",
+        "MAN\u00c9 OUT TO MAKE HISTORY",
         "CAN HUSSEIN DELIVER?"
       ],
       "watch": [
-        "Sadio Mané",
-        "Aymen Hussein"
+        "Sadio Man\u00e9, Ismaila Sarr",
+        "Aymen Hussein, Amjad Attwan"
       ]
     },
     {
@@ -2952,15 +2955,15 @@
       },
       "headline": [
         "FIRST-EVER WORLD CUP",
-        "ROUND OF 16 · OUT TO GO FURTHER"
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER"
       ],
       "hook": [
-        "MENDES — THE ONE TO WATCH",
+        "MENDES \u2014 THE ONE TO WATCH",
         "AL-DAWSARI READY FOR THE STAGE"
       ],
       "watch": [
-        "Ryan Mendes",
-        "Salem Al-Dawsari"
+        "Ryan Mendes, Garry Rodrigues",
+        "Salem Al-Dawsari, Firas Al-Buraikan"
       ]
     },
     {
@@ -2998,16 +3001,16 @@
         "l": "0"
       },
       "headline": [
-        "2x CHAMPIONS · CHASING MORE GLORY",
-        "1x CHAMPIONS · CHASING MORE GLORY"
+        "2x CHAMPIONS \u00b7 CHASING MORE GLORY",
+        "1x CHAMPIONS \u00b7 CHASING MORE GLORY"
       ],
       "hook": [
         "VALVERDE LEADS THE CHARGE",
         "YAMAL LEADS THE CHARGE"
       ],
       "watch": [
-        "Federico Valverde",
-        "Lamine Yamal"
+        "Federico Valverde, Darwin N\u00fa\u00f1ez",
+        "Lamine Yamal, Pedri"
       ]
     },
     {
@@ -3045,16 +3048,16 @@
         "l": "0"
       },
       "headline": [
-        "2 WORLD CUPS · OUT TO MAKE THEIR MARK",
-        "SEMI-FINALISTS · THE NEARLY MEN"
+        "2 WORLD CUPS \u00b7 OUT TO MAKE THEIR MARK",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN"
       ],
       "hook": [
         "WOOD LEADS THE CHARGE",
-        "BRUYNE — THE TALISMAN"
+        "BRUYNE \u2014 THE TALISMAN"
       ],
       "watch": [
-        "Chris Wood",
-        "Kevin De Bruyne"
+        "Chris Wood, Joe Bell",
+        "Kevin De Bruyne, Romelu Lukaku"
       ]
     },
     {
@@ -3092,16 +3095,16 @@
         "l": "0"
       },
       "headline": [
-        "ROUND OF 16 · OUT TO GO FURTHER",
-        "6 WORLD CUPS · EYEING A BREAKTHROUGH"
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER",
+        "6 WORLD CUPS \u00b7 EYEING A BREAKTHROUGH"
       ],
       "hook": [
-        "SALAH — THE PHARAOH RETURNS",
+        "SALAH \u2014 THE PHARAOH RETURNS",
         "CAN TAREMI DELIVER?"
       ],
       "watch": [
-        "Mohamed Salah",
-        "Mehdi Taremi"
+        "Mohamed Salah, Mostafa Mohamed",
+        "Mehdi Taremi, Ali Gholizadeh"
       ]
     },
     {
@@ -3140,15 +3143,15 @@
       },
       "headline": [
         "ON THE GREATEST STAGE",
-        "1x CHAMPIONS · CHASING MORE GLORY"
+        "1x CHAMPIONS \u00b7 CHASING MORE GLORY"
       ],
       "hook": [
         "GODOY OUT TO MAKE HISTORY",
         "KANE HUNTS THE CROWN"
       ],
       "watch": [
-        "Aníbal Godoy",
-        "Harry Kane"
+        "An\u00edbal Godoy, Rolando Blackburn",
+        "Harry Kane, Jude Bellingham"
       ]
     },
     {
@@ -3186,16 +3189,16 @@
         "l": "0"
       },
       "headline": [
-        "RUNNERS-UP ONCE · STILL CHASING THE CROWN",
+        "RUNNERS-UP ONCE \u00b7 STILL CHASING THE CROWN",
         "QUARTER-FINALS THEIR FINEST HOUR"
       ],
       "hook": [
-        "MODRIĆ — ONE MORE MIRACLE?",
+        "MODRI\u0106 \u2014 ONE MORE MIRACLE?",
         "KUDUS CARRIES THE HOPES"
       ],
       "watch": [
-        "Luka Modrić",
-        "Mohammed Kudus"
+        "Luka Modri\u0107, Mateo Kova\u010di\u0107",
+        "Mohammed Kudus, Antoine Semenyo"
       ]
     },
     {
@@ -3234,15 +3237,15 @@
       },
       "headline": [
         "QUARTER-FINALS THEIR FINEST HOUR",
-        "SEMI-FINALISTS · THE NEARLY MEN"
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN"
       ],
       "hook": [
-        "CAN DÍAZ DELIVER?",
-        "RONALDO — ONE LAST CROWN?"
+        "CAN D\u00cdAZ DELIVER?",
+        "RONALDO \u2014 ONE LAST CROWN?"
       ],
       "watch": [
-        "Luis Díaz",
-        "Cristiano Ronaldo"
+        "Luis D\u00edaz, James Rodr\u00edguez",
+        "Cristiano Ronaldo, Bruno Fernandes"
       ]
     },
     {
@@ -3288,8 +3291,8 @@
         "KHUSANOV CARRIES THE HOPES"
       ],
       "watch": [
-        "Cédric Bakambu",
-        "Abdukodir Khusanov"
+        "C\u00e9dric Bakambu, Th\u00e9o Bongonda",
+        "Abdukodir Khusanov, Otabek Shukurov"
       ]
     },
     {
@@ -3327,16 +3330,16 @@
         "l": "1"
       },
       "headline": [
-        "ROUND OF 16 · OUT TO GO FURTHER",
-        "SEMI-FINALISTS · THE NEARLY MEN"
+        "ROUND OF 16 \u00b7 OUT TO GO FURTHER",
+        "SEMI-FINALISTS \u00b7 THE NEARLY MEN"
       ],
       "hook": [
         "ALL EYES ON MAHREZ",
         "ALL EYES ON SABITZER"
       ],
       "watch": [
-        "Riyad Mahrez",
-        "Marcel Sabitzer"
+        "Riyad Mahrez, Youcef Atal",
+        "Marcel Sabitzer, Christoph Baumgartner"
       ]
     },
     {
@@ -3375,15 +3378,15 @@
       },
       "headline": [
         "FIRST-EVER WORLD CUP",
-        "3x CHAMPIONS · CHASING MORE GLORY"
+        "3x CHAMPIONS \u00b7 CHASING MORE GLORY"
       ],
       "hook": [
         "AL-TAMARI OUT TO MAKE HISTORY",
-        "MESSI — THE LAST DANCE"
+        "MESSI \u2014 THE LAST DANCE"
       ],
       "watch": [
-        "Mousa Al-Tamari",
-        "Lionel Messi"
+        "Mousa Al-Tamari, Yazan Al-Naimat",
+        "Lionel Messi, Juli\u00e1n \u00c1lvarez"
       ]
     },
     {

@@ -1,17 +1,25 @@
 import Link from "next/link";
 
-/**
- * A single WC26 match tile for the grid. Uses the optimized thumbnail still;
- * a video badge marks matches whose Short has been rendered.
- */
 export default function MatchCard({ m }) {
+  // Post-match video takes priority; fall back to pre-match
+  const activeVideoId = m.hasPostVideo ? m.youtubePostId : (m.hasVideo ? m.youtubeId : null);
+  const isResult = m.hasPostVideo && m.scoreA != null;
+
   return (
     <Link
       href={`/wc26/${m.slug}`}
       className="group block rounded-xl overflow-hidden border border-shadow bg-gunmetal/40 hover:border-steel transition"
     >
       <div className="relative aspect-[9/16] bg-shadow">
-        {m.hasThumb ? (
+        {activeVideoId ? (
+          <iframe
+            className="w-full h-full pointer-events-none"
+            src={`https://www.youtube.com/embed/${activeVideoId}?autoplay=0&rel=0&modestbranding=1`}
+            title={`${m.teamA} vs ${m.teamB}`}
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : m.hasThumb ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={`/wc26/thumbs/${m.slug}.jpg`}
@@ -29,20 +37,33 @@ export default function MatchCard({ m }) {
             </span>
           </div>
         )}
-        {m.hasVideo && (
-          <span className="absolute top-2 right-2 bg-brand text-ink text-[10px] font-black px-2 py-0.5 rounded-full">
-            ▶ VIDEO
+
+        {/* Badge: RESULT or VIDEO */}
+        {isResult ? (
+          <span className="absolute top-2 right-2 bg-gold text-ink text-[10px] font-black px-2 py-0.5 rounded-full">
+            FT
           </span>
-        )}
+        ) : activeVideoId ? (
+          <span className="absolute top-2 right-2 bg-brand text-ink text-[10px] font-black px-2 py-0.5 rounded-full">
+            ▶ SHORT
+          </span>
+        ) : null}
+
         {m.group && (
           <span className="absolute top-2 left-2 bg-ink/80 text-silver text-[10px] font-bold px-2 py-0.5 rounded">
             GRP {m.group}
           </span>
         )}
       </div>
+
       <div className="px-3 py-2">
         <p className="text-silver text-sm font-bold leading-tight truncate">
-          {m.teamA} <span className="text-steel font-normal">v</span> {m.teamB}
+          {m.teamA}
+          {isResult
+            ? <span className="text-gold mx-1">{m.scoreA}–{m.scoreB}</span>
+            : <span className="text-steel font-normal"> v </span>
+          }
+          {m.teamB}
         </p>
         <p className="text-steel text-[11px] mt-0.5 truncate">
           {m.date}

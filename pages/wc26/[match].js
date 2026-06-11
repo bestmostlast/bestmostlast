@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "../../components/SiteFooter";
-import { loadMatches } from "../../lib/wc26";
+import { loadMatches, loadSquadValues } from "../../lib/wc26";
 import { teamSlug } from "../../lib/teamSlug";
 
 export async function getStaticPaths() {
@@ -16,7 +16,15 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const matches = loadMatches();
   const m = matches.find((x) => x.slug === params.match) || null;
-  return { props: { m } };
+  const sv = loadSquadValues();
+  const squadValues = m
+    ? {
+        a: sv.teams[m.teamA] || null,
+        b: sv.teams[m.teamB] || null,
+        source: sv._meta.source,
+      }
+    : null;
+  return { props: { m, squadValues } };
 }
 
 function StatRow({ label, a, b }) {
@@ -30,7 +38,52 @@ function StatRow({ label, a, b }) {
   );
 }
 
-export default function MatchPage({ m }) {
+function MarketValueBar({ teamA, teamB, valA, valB }) {
+  if (!valA || !valB) return null;
+  const total = valA.total_m + valB.total_m;
+  const pctA = Math.round((valA.total_m / total) * 100);
+  const pctB = 100 - pctA;
+  const fmt = (v) => v >= 1000 ? `€${(v / 1000).toFixed(2)}bn` : `€${v}m`;
+  return (
+    <section className="mb-6">
+      <h2 className="text-lg font-bold text-silver mb-3">Squad market value</h2>
+      <div className="flex justify-between text-xs text-steel mb-1">
+        <span className="font-semibold text-silver">{teamA}</span>
+        <span className="font-semibold text-silver">{teamB}</span>
+      </div>
+      <div className="flex h-3 rounded-full overflow-hidden">
+        <div className="bg-data transition-all" style={{ width: `${pctA}%` }} />
+        <div className="bg-brand transition-all" style={{ width: `${pctB}%` }} />
+      </div>
+      <div className="flex justify-between mt-1">
+        <div>
+          <span className="text-data font-bold text-sm">{fmt(valA.total_m)}</span>
+          <span className="text-steel text-xs ml-1">avg {fmt(valA.avg_m)}/player</span>
+        </div>
+        <div className="text-right">
+          <span className="text-brand font-bold text-sm">{fmt(valB.total_m)}</span>
+          <span className="text-steel text-xs mr-1">avg {fmt(valB.avg_m)}/player</span>
+        </div>
+      </div>
+      {valA.total_m !== valB.total_m && (
+        <p className="text-steel text-xs mt-2 text-center">
+          {valA.total_m > valB.total_m ? teamA : teamB} squad valued{" "}
+          <span className="text-silver font-semibold">{fmt(Math.abs(valA.total_m - valB.total_m))} more</span>
+          {" · "}
+          <span className="text-silver font-semibold">
+            {(Math.max(valA.total_m, valB.total_m) / Math.min(valA.total_m, valB.total_m)).toFixed(1)}×
+          </span>{" "}
+          the gap
+        </p>
+      )}
+      <p className="text-[10px] text-steel/50 mt-2 text-right">
+        Source: Transfermarkt (approx.)
+      </p>
+    </section>
+  );
+}
+
+export default function MatchPage({ m, squadValues }) {
   if (!m) return null;
 
   return (
@@ -77,43 +130,83 @@ export default function MatchPage({ m }) {
           <div className="grid md:grid-cols-[auto_1fr] gap-8 items-start">
             {/* Media */}
             <div className="w-full max-w-[320px] mx-auto md:mx-0">
-              <div className="aspect-[9/16] rounded-2xl overflow-hidden border border-shadow bg-shadow">
-                {m.hasVideo && m.youtubeId ? (
-                  <iframe
-                    className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${m.youtubeId}`}
-                    title={`${m.teamA} vs ${m.teamB} — WC 2026 Short`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                ) : m.hasThumb ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={`/wc26/thumbs/${m.slug}.jpg`}
-                    alt={`${m.teamA} vs ${m.teamB} card`}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-steel text-sm">
-                    Card coming soon
+              {/* Post-match Short */}
+              {m.hasPostVideo && m.youtubePostId && (
+                <div className="mb-4">
+                  <p className="text-[10px] uppercase tracking-widest text-gold font-bold mb-1">Full Time</p>
+                  <div className="aspect-[9/16] rounded-2xl overflow-hidden border border-gold/40 bg-shadow">
+                    <iframe
+                      className="w-full h-full"
+                      src={`https://www.youtube.com/embed/${m.youtubePostId}`}
+                      title={`${m.teamA} vs ${m.teamB} — Full Time`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
                   </div>
+                  <a
+                    href={m.postVideoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 block text-center text-gold text-sm font-bold hover:underline"
+                  >
+                    ▶ Watch on YouTube
+                  </a>
+                </div>
+              )}
+
+              {/* Pre-match Short */}
+              <div>
+                {m.hasPostVideo && <p className="text-[10px] uppercase tracking-widest text-steel font-bold mb-1">Preview Short</p>}
+                <div className="aspect-[9/16] rounded-2xl overflow-hidden border border-shadow bg-shadow">
+                  {m.hasVideo && m.youtubeId ? (
+                    <iframe
+                      className="w-full h-full"
+                      src={`https://www.youtube.com/embed/${m.youtubeId}`}
+                      title={`${m.teamA} vs ${m.teamB} — WC 2026 Preview`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : m.hasThumb ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={`/wc26/thumbs/${m.slug}.jpg`}
+                      alt={`${m.teamA} vs ${m.teamB} card`}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-steel text-sm">
+                      Card coming soon
+                    </div>
+                  )}
+                </div>
+                {m.hasVideo && m.videoUrl && (
+                  <a
+                    href={m.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 block text-center text-brand text-sm font-bold hover:underline"
+                  >
+                    ▶ Open on YouTube
+                  </a>
+                )}
+                {!m.hasVideo && m.hasThumb && (
+                  <p className="text-center text-steel text-xs mt-2">Preview Short coming soon</p>
+                )}
+                {!m.hasVideo && !m.hasThumb && (
+                  <p className="text-center text-steel/60 text-xs mt-1">
+                    <span className="text-gold/70">🗓</span>{" "}
+                    Publishes{" "}
+                    <span className="text-silver font-semibold">
+                      {new Date(m.date + "T12:00:00Z").toLocaleDateString("en-GB", {
+                        weekday: "short",
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </span>
+                  </p>
                 )}
               </div>
-              {m.hasVideo && m.videoUrl && !m.youtubeId && (
-                <a
-                  href={m.videoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 block text-center text-brand text-sm font-bold hover:underline"
-                >
-                  ▶ Watch the Short
-                </a>
-              )}
-              {!m.hasVideo && m.hasThumb && (
-                <p className="text-center text-steel text-xs mt-2">
-                  Video Short coming soon
-                </p>
-              )}
             </div>
 
             {/* Data */}
@@ -145,6 +238,15 @@ export default function MatchPage({ m }) {
                     ))}
                   </div>
                 </section>
+              )}
+
+              {squadValues && (
+                <MarketValueBar
+                  teamA={m.teamA}
+                  teamB={m.teamB}
+                  valA={squadValues.a}
+                  valB={squadValues.b}
+                />
               )}
 
               {(m.watch[0] || m.watch[1]) && (
