@@ -265,6 +265,8 @@ def check_post(state):
         slug = row.get('slug', '')
         if not slug or slug in processed:
             continue
+        if row.get('espn_verified', '').strip() != '1':
+            continue  # never upload from manually-entered placeholder data
         score_a = row.get('score_a', '').strip()
         score_b = row.get('score_b', '').strip()
         if not score_a or not score_b:

@@ -67,7 +67,7 @@ def save_results(rows):
         'table_2_name','table_2_pld','table_2_pts','table_2_gd','table_2_gf',
         'table_3_name','table_3_pld','table_3_pts','table_3_gd','table_3_gf',
         'table_4_name','table_4_pld','table_4_pts','table_4_gd','table_4_gf',
-        'ratings_a','ratings_b','cards_a','cards_b','headline','comment',
+        'ratings_a','ratings_b','cards_a','cards_b','headline','comment','espn_verified',
     ]
     with open(RESULTS, 'w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction='ignore')
@@ -274,6 +274,7 @@ def fetch_completed_match(espn_event, fixture):
         'cards_b':   cards_b,
         'headline':  '',
         'comment':   '',
+        'espn_verified': '1',
     }
 
 def poll_date(date_str):
