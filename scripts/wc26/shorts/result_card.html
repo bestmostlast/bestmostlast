@@ -642,10 +642,17 @@ function phaseTable(t,s,e){
 
   const teams=[];
   for(let i=1;i<=4;i++){
-    const nm=current[`table_${i}_name`]; if(!nm) continue;
+    const nm=current[`table_${i}_name`]; if(!nm||!nm.trim()) continue;
     teams.push({pos:i,name:nm,pld:current[`table_${i}_pld`]||'0',pts:current[`table_${i}_pts`]||'0',
       gd:current[`table_${i}_gd`]||'0',gf:current[`table_${i}_gf`]||'0',
       hi:nm===current.team_a||nm===current.team_b});
+  }
+
+  if(!teams.length){
+    ctx.font='500 42px Barlow Semi Condensed'; ctx.fillStyle='rgba(207,214,228,0.45)';
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillText('Standings updating…', W/2, BT+300);
+    ctx.restore(); return;
   }
 
   const COL_X=[W*0.06,W*0.14,W*0.60,W*0.68,W*0.76,W*0.88];

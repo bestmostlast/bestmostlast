@@ -128,11 +128,10 @@ def build_pre_sentences(slug):
             for r in _csv.DictReader(open(h2h_file)):
                 if r.get('slug', '') == slug:
                     h2h_context = (
-                        f"WC appearances: {team_a} {r.get('wc_a','')}x, {team_b} {r.get('wc_b','')}x. "
-                        f"H2H: played {r.get('h2h_played','?')}, {team_a} won {r.get('h2h_w_a','?')}, "
-                        f"{team_b} won {r.get('h2h_w_b','?')}, drawn {r.get('h2h_d','?')}. "
-                        f"Top scorer {team_a}: {r.get('top_scorer_a','')}. Top scorer {team_b}: {r.get('top_scorer_b','')}. "
-                        f"Player to watch {team_a}: {r.get('watch_a','')}. Player to watch {team_b}: {r.get('watch_b','')}."
+                        f"WC appearances: {team_a} {r.get('WCs_a','')}x, {team_b} {r.get('WCs_b','')}x. "
+                        f"H2H record: {team_a} won {r.get('H2H_W_a','0')}, {team_b} won {r.get('H2H_W_b','0')}, drawn {r.get('H2H_D_a','0')} — total {r.get('H2H_GP_a','0')} meetings. "
+                        f"Top WC scorer {team_a}: {r.get('Top1_a','')}. Top WC scorer {team_b}: {r.get('Top1_b','')}. "
+                        f"Key player {team_a}: {r.get('Star1_a','')}. Key player {team_b}: {r.get('Star1_b','')}."
                     )
                     break
     except Exception:
