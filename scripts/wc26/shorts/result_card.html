@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WC26 Result Short — card renderer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;500;600;700;800;900&family=Anton&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Barlow Semi Condensed',sans-serif; background:#0f0f13; color:#e0e0e0; display:flex; gap:24px; padding:24px; }
+  #panel { width:300px; flex:0 0 300px; }
+  #panel h1 { font-size:18px; color:#fff; margin-bottom:12px; }
+  .field { margin-bottom:10px; }
+  .field label { display:block; font-size:11px; text-transform:uppercase; letter-spacing:.5px; color:#888; margin-bottom:4px; }
+  .field input, .field select { width:100%; background:#1e1e28; border:1px solid #333; color:#e0e0e0; padding:8px; border-radius:6px; font-size:13px; }
+  button { width:100%; padding:10px; border:none; border-radius:6px; font-weight:700; cursor:pointer; margin-top:6px; background:#5865f2; color:#fff; }
+  button.sec { background:#2d2d3a; color:#ccc; }
+  .hint { font-size:10px; color:#555; margin-top:6px; line-height:1.5; }
+  #stage { flex:1; display:flex; justify-content:center; align-items:flex-start; }
+  canvas { width:405px; height:720px; box-shadow:0 8px 40px rgba(0,0,0,.6); border-radius:8px; }
+</style>
+</head>
+<body>
+<div id="panel">
+  <h1>WC26 Result Short</h1>
+
+  <div class="field"><label>Results CSV</label><input type="file" id="csvFile" accept=".csv" /></div>
+  <div class="field"><label>Match</label><select id="matchSel"><option>load CSV first…</option></select></div>
+  <div class="field"><label>Stadium background</label><input type="file" id="bgFile" accept="image/*" /></div>
+  <div class="field"><label>Flag — Team A</label><input type="file" id="flagA" accept="image/*" /></div>
+  <div class="field"><label>Flag — Team B</label><input type="file" id="flagB" accept="image/*" /></div>
+  <div class="field"><label>POTM photo</label><input type="file" id="potmPhoto" accept="image/*" /></div>
+  <div class="field"><label>BML banner+crown (splash)</label><input type="file" id="splashComboFile" accept="image/*" /></div>
+  <div class="field"><label>BML banner+crown (header bg)</label><input type="file" id="headerBgFile" accept="image/*" /></div>
+  <div class="field"><label>Crown watermark</label><input type="file" id="crownWMFile" accept="image/*" /></div>
+  <div class="field"><label>Crown simple (footer)</label><input type="file" id="crownSimpleFile" accept="image/*" /></div>
+
+  <div class="field" style="margin-top:10px;">
+    <label>Preview t (0–1)</label>
+    <input type="range" id="scrub" min="0" max="1" step="0.001" value="0.08" style="width:100%;margin-top:4px;" />
+  </div>
+  <button id="btnPlay">▶ Play</button>
+  <button class="sec" id="btnSnap">📷 Snapshot PNG</button>
+
+  <p class="hint">
+    <b>CSV columns:</b><br>
+    scorers_a/b: "Mbappé 23,45 / Giroud 67"<br>
+    ratings_a/b: "Mbappé 9.1 / Giroud 7.4"<br>
+    cards_a/b: "Smith Y / Jones R / Brown YR"<br>
+    headline, comment, potm_name/team/goals/assists/rating<br>
+    table_1..4_name/pld/pts/gd/gf
+  </p>
+</div>
+
+<div id="stage">
+  <canvas id="c" width="1080" height="1920"></canvas>
+</div>
+
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const W = 1080, H = 1920;
+
+const assets = {
+  bg:null, flagA:null, flagB:null, potm:null,
+  splashCombo:null, headerBg:null, crownWM:null, crownSimple:null
+};
+let current = null, rows = [], animId = null, tNow = 0.08;
+
+// ── CSV ───────────────────────────────────────────────────────────────────────
+function parseCSV(text){
+  const lines = text.trim().split('\n');
+  const headers = lines[0].split(',').map(h=>h.trim());
+  return lines.slice(1).map(line=>{
+    const vals = line.split(',');
+    const obj = {};
+    headers.forEach((h,i)=>obj[h]=(vals[i]||'').trim());
+    return obj;
+  });
+}
+document.getElementById('csvFile').addEventListener('change', e=>{
+  const f=e.target.files[0]; if(!f) return;
+  f.text().then(txt=>{
+    rows=parseCSV(txt);
+    const sel=document.getElementById('matchSel');
+    sel.innerHTML=rows.map((r,i)=>`<option value="${i}">${r.match_no}. ${r.team_a} vs ${r.team_b}</option>`).join('');
+    sel.dispatchEvent(new Event('change'));
+  });
+});
+document.getElementById('matchSel').addEventListener('change', e=>{
+  current=rows[+e.target.value]||null; draw(tNow);
+});
+
+// ── ASSET LOADERS ─────────────────────────────────────────────────────────────
+function loadImg(src){ return new Promise((res,rej)=>{ const i=new Image(); i.crossOrigin='anonymous'; i.onload=()=>res(i); i.onerror=rej; i.src=src; }); }
+function fileImg(id, key){ document.getElementById(id).addEventListener('change', e=>{
+  const f=e.target.files[0]; if(!f) return;
+  loadImg(URL.createObjectURL(f)).then(img=>{ assets[key]=img; draw(tNow); });
+}); }
+fileImg('bgFile','bg'); fileImg('flagA','flagA'); fileImg('flagB','flagB');
+fileImg('potmPhoto','potm');
+fileImg('splashComboFile','splashCombo'); fileImg('headerBgFile','headerBg');
+fileImg('crownWMFile','crownWM'); fileImg('crownSimpleFile','crownSimple');
+
+// auto-load brand from relative paths
+(async()=>{
+  async function tryLoad(paths){ for(const p of paths){ try{ return await loadImg(p); }catch{} } return null; }
+  assets.splashCombo = await tryLoad(['_shared/brand/bmlbannerandcrown.png']);
+  assets.headerBg    = await tryLoad(['_shared/brand/bmlbannerandcrown.png']);
+  assets.crownWM     = await tryLoad(['_shared/brand/crown_wm.png']);
+  assets.crownSimple = await tryLoad(['_shared/brand/bmlcrownsimple.png']);
+  draw(tNow);
+})();
+
+// ── PLAY / SCRUB ──────────────────────────────────────────────────────────────
+document.getElementById('scrub').addEventListener('input', e=>{ tNow=+e.target.value; draw(tNow); });
+document.getElementById('btnPlay').addEventListener('click', ()=>{
+  if(animId){ cancelAnimationFrame(animId); animId=null; document.getElementById('btnPlay').textContent='▶ Play'; return; }
+  document.getElementById('btnPlay').textContent='⏹ Stop';
+  const dur=35000, start=performance.now()-tNow*dur;
+  function frame(now){
+    tNow=Math.min(1,(now-start)/dur);
+    document.getElementById('scrub').value=tNow;
+    draw(tNow);
+    if(tNow<1) animId=requestAnimationFrame(frame);
+    else{ animId=null; document.getElementById('btnPlay').textContent='▶ Play'; }
+  }
+  animId=requestAnimationFrame(frame);
+});
+document.getElementById('btnSnap').addEventListener('click', ()=>{
+  draw(tNow);
+  const a=document.createElement('a');
+  a.download=(current?`result-${current.slug}`:'result')+'.png';
+  a.href=canvas.toDataURL('image/png'); a.click();
+});
+
+// ── HELPERS ───────────────────────────────────────────────────────────────────
+function ease(t,s,e){ return Math.max(0,Math.min(1,(t-s)/(e-s))); }
+function easeOut(x){ return 1-Math.pow(1-x,3); }
+
+function roundRect(x,y,w,h,r){
+  ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath();
+}
+function coverCircle(img,cx,cy,R){
+  const s=Math.max(2*R/img.width,2*R/img.height);
+  const w=img.width*s, h=img.height*s;
+  const top=cy-R, overflow=h-2*R;
+  ctx.drawImage(img,cx-w/2,top-Math.min(overflow*0.10,overflow),w,h);
+}
+function coverDrawPan(img,ox,oy,scale){
+  const ir=img.width/img.height,cr=W/H; let dw,dh;
+  if(ir>cr){dh=H;dw=H*ir;}else{dw=W;dh=W/ir;}
+  dw*=scale;dh*=scale;
+  ctx.drawImage(img,(W-dw)/2+ox,(H-dh)/2+oy,dw,dh);
+}
+function drawFlag(img,cx,y,w,h){
+  const x=cx-w/2;
+  if(img){
+    ctx.save(); roundRect(x,y,w,h,12); ctx.clip();
+    const s=Math.max(w/img.width,h/img.height);
+    const dw=img.width*s,dh=img.height*s;
+    ctx.drawImage(img,cx-dw/2,y+h/2-dh/2,dw,dh);
+    ctx.restore();
+    ctx.strokeStyle='rgba(255,255,255,0.3)'; ctx.lineWidth=3; roundRect(x,y,w,h,12); ctx.stroke();
+  } else { ctx.fillStyle='rgba(255,255,255,0.08)'; roundRect(x,y,w,h,12); ctx.fill(); }
+}
+function fitText(txt,cx,y,maxW,startSize){
+  let size=startSize||46; ctx.textAlign='center';
+  do{ ctx.font='500 '+size+'px Barlow Semi Condensed'; if(ctx.measureText(txt).width<=maxW) break; size-=2; }while(size>22);
+  ctx.fillText(txt,cx,y);
+}
+function dtSpacedRow(txt,y,targetW,color,weight){
+  if(!txt) return;
+  ctx.fillStyle=color;
+  let size=44; ctx.font=weight+' '+size+'px Barlow Semi Condensed';
+  while(ctx.measureText(txt).width>targetW&&size>16){ size--; ctx.font=weight+' '+size+'px Barlow Semi Condensed'; }
+  const chars=[...txt], baseW=chars.reduce((s,c)=>s+ctx.measureText(c).width,0);
+  const gap=(targetW-baseW)/Math.max(1,chars.length-1);
+  let x=W/2-targetW/2; ctx.textAlign='left';
+  for(const c of chars){ ctx.fillText(c,x,y); x+=ctx.measureText(c).width+gap; }
+}
+function drawSpacedToWidth(txt,y,targetW,color){
+  ctx.fillStyle=color;
+  let size=32; ctx.font='300 '+size+'px Barlow Semi Condensed';
+  while(ctx.measureText(txt).width>targetW*0.66&&size>16){ size--; ctx.font='300 '+size+'px Barlow Semi Condensed'; }
+  const chars=[...txt], baseW=chars.reduce((s,c)=>s+ctx.measureText(c).width,0);
+  const gap=(targetW-baseW)/Math.max(1,chars.length-1);
+  let x=W/2-targetW/2; ctx.textAlign='left';
+  for(const c of chars){ ctx.fillText(c,x,y); x+=ctx.measureText(c).width+gap; }
+}
+function wrapCtx(txt,maxW,style,size,maxLines){
+  ctx.font=style+' '+size+'px Barlow Semi Condensed';
+  const words=txt.split(' '),lines=[];let cur='';
+  for(const w of words){
+    const test=cur?cur+' '+w:w;
+    if(ctx.measureText(test).width<=maxW||!cur){cur=test;}
+    else{lines.push(cur);cur=w;if(lines.length===maxLines-1)break;}
+  }
+  if(cur)lines.push(cur);
+  return lines.slice(0,maxLines);
+}
+
+// ── TEAM COLOURS ─────────────────────────────────────────────────────────────
+const TEAM_COLORS = {
+  'Mexico':'#1f9e4a','South Africa':'#e8c500','Brazil':'#ffd000','Argentina':'#6cace4',
+  'Germany':'#f2c200','France':'#3b6fd4','Spain':'#e23b3b','Italy':'#3b8fe0','England':'#e23b3b',
+  'Netherlands':'#ff7a1a','Portugal':'#e23b3b','Belgium':'#f2c200','Croatia':'#e23b3b',
+  'Uruguay':'#6cace4','Colombia':'#ffdd00','USA':'#4d7dd6','United States':'#4d7dd6',
+  'Japan':'#e23b3b','South Korea':'#3b6fd4','Morocco':'#1f9e4a','Senegal':'#1f9e4a',
+  'Ghana':'#ffd000','Nigeria':'#1f9e4a','Cameroon':'#1f9e4a','Australia':'#f2c200',
+  'Turkey':'#e23b3b','Türkiye':'#e23b3b','Switzerland':'#e23b3b','Poland':'#e23b3b',
+  'Denmark':'#e23b3b','Sweden':'#f2c200','Canada':'#e23b3b','Qatar':'#7a1f3d',
+  'Saudi Arabia':'#1f9e4a','Iran':'#1f9e4a','Ecuador':'#ffd000','Paraguay':'#e23b3b',
+  'Costa Rica':'#e23b3b','Serbia':'#e23b3b','Wales':'#e23b3b','Scotland':'#3b6fd4',
+  'Czech Republic':'#3b6fd4','Tunisia':'#e23b3b','Egypt':'#e23b3b','Algeria':'#1f9e4a',
+  'Norway':'#e23b3b','Austria':'#e23b3b','Greece':'#3b6fd4','Curacao':'#3b6fd4',
+  'Haiti':'#3b6fd4','Jordan':'#e23b3b','Uzbekistan':'#3b8fe0','New Zealand':'#cfd6e4',
+  'Bosnia & Herzegovina':'#3b6fd4','Panama':'#e23b3b','Honduras':'#3b6fd4',
+  'Cape Verde':'#1f4fb0','DR Congo':'#1f9e4a','Iraq':'#1f9e4a','Ivory Coast':'#ff7a1a',
+};
+const teamColor=(name,fb)=>TEAM_COLORS[name]||fb||'#ffffff';
+
+// ── CARD ICONS ────────────────────────────────────────────────────────────────
+function drawYellowCard(x,y,sz){ const w=sz*0.65,h=sz; roundRect(x-w/2,y-h/2,w,h,3); ctx.fillStyle='#FFD24A'; ctx.fill(); }
+function drawRedCard(x,y,sz)   { const w=sz*0.65,h=sz; roundRect(x-w/2,y-h/2,w,h,3); ctx.fillStyle='#e23b3b'; ctx.fill(); }
+function drawDoubleYellow(x,y,sz){
+  const w=sz*0.65,h=sz,off=4;
+  roundRect(x-w/2+off,y-h/2-off,w,h,3); ctx.fillStyle='rgba(180,140,20,0.6)'; ctx.fill();
+  roundRect(x-w/2,y-h/2,w,h,3); ctx.fillStyle='#FFD24A'; ctx.fill();
+}
+
+// ── PARSERS ───────────────────────────────────────────────────────────────────
+function parseScorers(str){
+  if(!str||str==='-'||!str.trim()) return [];
+  return str.split('/').map(s=>{ s=s.trim(); const m=s.match(/^(.+?)\s+([\d,+\s]+)$/); return m?{name:m[1].trim(),minutes:m[2].trim()}:{name:s,minutes:''}; }).filter(s=>s.name);
+}
+function parseRatings(str){
+  const map={};
+  if(!str||str==='-') return map;
+  str.split('/').forEach(s=>{ s=s.trim(); const m=s.match(/^(.+?)\s+([\d.]+)$/); if(m) map[m[1].trim()]=m[2]; });
+  return map;
+}
+function parseCards(str){
+  if(!str||str==='-'||!str.trim()) return [];
+  return str.split('/').map(s=>{ s=s.trim(); const m=s.match(/^(.+?)\s+(Y|R|YR)$/i); return m?{name:m[1].trim(),type:m[2].toUpperCase()}:null; }).filter(Boolean);
+}
+
+// ── TIMELINE ─────────────────────────────────────────────────────────────────
+// 39s: S0 splash(4) · S1 result(11) · S2 stats(8) · S3 POTM(8) · S4 table(8)
+const S0=4/39, S1=15/39, S2=23/39, S3=31/39;
+
+// ── MAIN DRAW ─────────────────────────────────────────────────────────────────
+function draw(t){
+  if(t===undefined) t=0.08;
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle='#0d0d12'; ctx.fillRect(0,0,W,H);
+
+  if(t<S0){ drawSplash(t/S0); return; }
+
+  // ── shared band geometry (same as pre-match card) ─────────────────────────
+  const BANDH=72;
+  const FLAG_BOTTOM=372+136+72;
+  const NAMES_BOT=FLAG_BOTTOM+BANDH;
+  const STAD_BOT=NAMES_BOT+BANDH;
+  const HEADER_H=STAD_BOT;
+  window._bands={FLAG_BOTTOM,NAMES_BOT,STAD_BOT};
+
+  // banner+crown bg behind flags
+  if(assets.headerBg){
+    ctx.save();
+    ctx.beginPath(); ctx.rect(0,0,W,FLAG_BOTTOM); ctx.clip();
+    const iw=assets.headerBg.width,ih=assets.headerBg.height;
+    const dw=W*1.04*1.05*0.95,dh=dw*ih/iw;
+    ctx.globalAlpha=0.52;
+    ctx.drawImage(assets.headerBg,W/2-dw/2,-8-(105+62-60+136-72),dw,dh);
+    ctx.restore();
+  }
+  ctx.fillStyle='#000000'; ctx.fillRect(0,FLAG_BOTTOM,W,NAMES_BOT-FLAG_BOTTOM);
+  ctx.fillStyle='#0E1518'; ctx.fillRect(0,NAMES_BOT,W,STAD_BOT-NAMES_BOT);
+
+  // stadium photo
+  if(assets.bg){
+    ctx.save();
+    ctx.beginPath(); ctx.rect(0,HEADER_H,W,H-HEADER_H); ctx.clip();
+    ctx.globalAlpha=0.55; coverDrawPan(assets.bg,0,150,0.8);
+    ctx.restore();
+  }
+  ctx.fillStyle='rgba(10,10,18,0.28)'; ctx.fillRect(0,HEADER_H,W,H-HEADER_H);
+
+  // crown watermark behind body content
+  if(assets.crownWM){
+    const im=assets.crownWM,asp=im.width/im.height;
+    const dw=W,dh=dw/asp,bodyCy=(STAD_BOT+H)/2-100;
+    ctx.save();
+    ctx.beginPath(); ctx.rect(0,STAD_BOT,W,H-STAD_BOT); ctx.clip();
+    ctx.globalAlpha=0.10;
+    ctx.drawImage(im,W/2-dw/2,bodyCy-dh/2,dw,dh);
+    ctx.restore();
+  }
+
+  drawHeader(t);
+
+  if     (t<S1) phaseResult(t,S0+0.01,S1-0.01);
+  else if(t<S2) phaseStats(t,S1+0.01,S2-0.01);
+  else if(t<S3) phasePOTM(t,S2+0.01,S3-0.01);
+  else           phaseTable(t,S3+0.01,0.99);
+
+  drawFooter(t);
+}
+
+// ── S0: PURE BML SPLASH ───────────────────────────────────────────────────────
+function drawSplash(p){
+  ctx.fillStyle='#000'; ctx.fillRect(0,0,W,H);
+  let alpha=p<0.30?p/0.30:p>0.80?(1-p)/0.20:1;
+  alpha=Math.max(0,Math.min(1,alpha));
+  const zoom=1.0+0.10*p;
+  const im=assets.splashCombo; if(!im) return;
+  const sy=im.height*0.20,sh=im.height*0.80,sw=im.width,asp=sw/sh;
+  const dw=W*0.94*zoom,dh=dw/asp;
+  ctx.save(); ctx.globalAlpha=alpha;
+  ctx.drawImage(im,0,sy,sw,sh,W/2-dw/2,H/2-dh/2,dw,dh);
+  ctx.restore();
+}
+
+// ── HEADER: pre-match format exactly ──────────────────────────────────────────
+// Flags left/right · FT score between flags (replaces date/time) · team names band · stadium band
+function drawHeader(t){
+  if(!current) return;
+  const bands=window._bands;
+  const e=easeOut(Math.min(1,(t-S0)/0.10));
+
+  const G=40,flagH=210*0.9*0.95,flagW=flagH*1.5,flagY=168+136+72;
+  const colA=G+flagW/2,colB=W-G-flagW/2;
+  const slide=(1-e)*W*0.55;
+
+  drawFlag(assets.flagA,colA-slide,flagY,flagW,flagH);
+  drawFlag(assets.flagB,colB+slide,flagY,flagW,flagH);
+
+  // FT score centred between flags (where date/time lives in pre-match)
+  const gapW=(colB-flagW/2)-(colA+flagW/2);
+  const scoreStr=current?`${current.score_a}  –  ${current.score_b}`:'';
+  ctx.save(); ctx.globalAlpha=e; ctx.textAlign='center'; ctx.textBaseline='alphabetic';
+
+  // big score — fixed 160px across all screens
+  ctx.font='900 160px Barlow Semi Condensed';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(scoreStr,W/2,flagY+flagH-10);
+
+  ctx.restore();
+
+  // crown between names row (below flags)
+  if(assets.crownSimple){
+    const cs=90;
+    ctx.save(); ctx.globalAlpha=0.50;
+    ctx.drawImage(assets.crownSimple,W/2-cs/2,flagY+flagH-6,cs,cs);
+    ctx.restore();
+  }
+
+  // team names in the black band
+  const nameY=flagY+flagH+58;
+  ctx.save(); ctx.globalAlpha=e; ctx.textAlign='center';
+  if(current){
+    ctx.fillStyle=teamColor(current.team_a,'#fff'); fitText(current.team_a.toUpperCase(),colA,nameY,flagW+60,56);
+    ctx.fillStyle=teamColor(current.team_b,'#fff'); fitText(current.team_b.toUpperCase(),colB,nameY,flagW+60,56);
+  }
+  ctx.restore();
+
+  // stadium in the INK band
+  ctx.save(); ctx.globalAlpha=e; ctx.textAlign='center';
+  ctx.fillStyle='#ffd24a'; ctx.font='500 46px Barlow Semi Condensed';
+  const venue=current?(current.venue||''):'';
+  ctx.fillText(venue.toUpperCase(),W/2,(bands.NAMES_BOT+bands.STAD_BOT)/2+16);
+  ctx.restore();
+}
+
+
+// ── S1: SCORERS + CARDS/PENS ROW ──────────────────────────────────────────────
+function phaseResult(t,s,e){
+  if(!current) return;
+  const p=easeOut(ease(t,s,s+0.10));
+  const BT=window._bands.STAD_BOT+32;
+  const colA=teamColor(current.team_a,'#c9cede');
+  const colB=teamColor(current.team_b,'#c9cede');
+  ctx.save(); ctx.globalAlpha=p;
+
+  const scorersA=parseScorers(current.scorers_a);
+  const scorersB=parseScorers(current.scorers_b);
+  const cardsA  =parseCards(current.cards_a);
+  const cardsB  =parseCards(current.cards_b);
+
+  const midX=W/2, startY=BT+16, ROW_H=110, GAP=12, SIDE_W=W*0.455;
+  const scorerRows=Math.max(scorersA.length,scorersB.length,1);
+  const CARD_SZ=32;
+
+  // centre divider
+  ctx.strokeStyle='rgba(255,255,255,0.10)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(midX,startY); ctx.lineTo(midX,startY+scorerRows*(ROW_H+GAP)); ctx.stroke();
+
+  for(let i=0;i<scorerRows;i++){
+    const rowY=startY+i*(ROW_H+GAP);
+    const sA=scorersA[i],sB=scorersB[i];
+    const cA=sA?cardsA.find(c=>c.name===sA.name):null;
+    const cB=sB?cardsB.find(c=>c.name===sB.name):null;
+    // card icon sits just inside the divider; text nudges away from it
+    const cardOffA=cA?CARD_SZ+14:0, cardOffB=cB?CARD_SZ+14:0;
+
+    if(sA){
+      roundRect(W*0.06,rowY,SIDE_W-8,ROW_H,10);
+      ctx.fillStyle='rgba(255,255,255,0.08)'; ctx.fill();
+      ctx.textAlign='right'; ctx.textBaseline='top';
+      ctx.font='700 48px Barlow Semi Condensed'; ctx.fillStyle=colA;
+      ctx.fillText(sA.name,midX-20-cardOffA,rowY+14);
+      ctx.font='300 34px Barlow Semi Condensed'; ctx.fillStyle='rgba(255,255,255,0.45)';
+      ctx.fillText(sA.minutes+"'",midX-20-cardOffA,rowY+62);
+      if(cA){
+        if(cA.type==='Y') drawYellowCard(midX-CARD_SZ*0.5-6,rowY+ROW_H/2,CARD_SZ);
+        else if(cA.type==='R') drawRedCard(midX-CARD_SZ*0.5-6,rowY+ROW_H/2,CARD_SZ);
+        else drawDoubleYellow(midX-CARD_SZ*0.5-6,rowY+ROW_H/2,CARD_SZ);
+      }
+    }
+    if(sB){
+      roundRect(midX+8,rowY,SIDE_W-8,ROW_H,10);
+      ctx.fillStyle='rgba(255,255,255,0.08)'; ctx.fill();
+      ctx.textAlign='left'; ctx.textBaseline='top';
+      ctx.font='700 48px Barlow Semi Condensed'; ctx.fillStyle=colB;
+      ctx.fillText(sB.name,midX+20+cardOffB,rowY+14);
+      ctx.font='300 34px Barlow Semi Condensed'; ctx.fillStyle='rgba(255,255,255,0.45)';
+      ctx.fillText(sB.minutes+"'",midX+20+cardOffB,rowY+62);
+      if(cB){
+        if(cB.type==='Y') drawYellowCard(midX+CARD_SZ*0.5+6,rowY+ROW_H/2,CARD_SZ);
+        else if(cB.type==='R') drawRedCard(midX+CARD_SZ*0.5+6,rowY+ROW_H/2,CARD_SZ);
+        else drawDoubleYellow(midX+CARD_SZ*0.5+6,rowY+ROW_H/2,CARD_SZ);
+      }
+    }
+  }
+
+  // extra cards (players not in scorer list) below scorer rows
+  const extraCardsA=cardsA.filter(c=>!scorersA.find(s=>s.name===c.name));
+  const extraCardsB=cardsB.filter(c=>!scorersB.find(s=>s.name===c.name));
+  let extraY=startY+scorerRows*(ROW_H+GAP)+18;
+
+  if(extraCardsA.length||extraCardsB.length){
+    let xL=midX-20;
+    [...extraCardsA].reverse().forEach(c=>{
+      ctx.font='300 28px Barlow Semi Condensed';
+      const nw=ctx.measureText(c.name).width;
+      if(c.type==='Y') drawYellowCard(xL,extraY+CARD_SZ/2,CARD_SZ);
+      else if(c.type==='R') drawRedCard(xL,extraY+CARD_SZ/2,CARD_SZ);
+      else drawDoubleYellow(xL,extraY+CARD_SZ/2,CARD_SZ);
+      ctx.textAlign='right'; ctx.textBaseline='middle'; ctx.fillStyle='rgba(207,214,228,0.55)';
+      ctx.fillText(c.name,xL-CARD_SZ*0.5-8,extraY+CARD_SZ/2);
+      xL-=CARD_SZ+8+nw+14;
+    });
+    let xR=midX+20;
+    extraCardsB.forEach(c=>{
+      ctx.font='300 28px Barlow Semi Condensed';
+      const nw=ctx.measureText(c.name).width;
+      if(c.type==='Y') drawYellowCard(xR,extraY+CARD_SZ/2,CARD_SZ);
+      else if(c.type==='R') drawRedCard(xR,extraY+CARD_SZ/2,CARD_SZ);
+      else drawDoubleYellow(xR,extraY+CARD_SZ/2,CARD_SZ);
+      ctx.textAlign='left'; ctx.textBaseline='middle'; ctx.fillStyle='rgba(207,214,228,0.55)';
+      ctx.fillText(c.name,xR+CARD_SZ*0.5+8,extraY+CARD_SZ/2);
+      xR+=CARD_SZ+8+nw+14;
+    });
+    extraY+=CARD_SZ+16;
+  }
+
+  if(current.penalties_a||current.penalties_b){
+    ctx.textAlign='center'; ctx.textBaseline='top';
+    ctx.font='600 42px Barlow Semi Condensed'; ctx.fillStyle='rgba(207,214,228,0.70)';
+    ctx.fillText(`${current.penalties_a}  –  ${current.penalties_b}`,W/2,extraY);
+    ctx.font='300 30px Barlow Semi Condensed'; ctx.fillStyle='rgba(207,214,228,0.40)';
+    ctx.fillText('pen.',W/2,extraY+48);
+  }
+
+  ctx.restore();
+}
+
+function hexA(hex,a){
+  const n=parseInt((hex||'#888').replace('#',''),16);
+  return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`;
+}
+
+// ── S2: MATCH STATS ───────────────────────────────────────────────────────────
+function phaseStats(t,s,e){
+  if(!current) return;
+  const p=easeOut(ease(t,s,s+0.10));
+  const BT=window._bands.STAD_BOT+32;
+  const colA=teamColor(current.team_a,'#c9cede');
+  const colB=teamColor(current.team_b,'#c9cede');
+  ctx.save(); ctx.globalAlpha=p;
+  ctx.textAlign='center'; ctx.textBaseline='top';
+
+  const stats=[
+    {label:'Possession', a:current.poss_a,    b:current.poss_b,    unit:'%'},
+    {label:'Shots',      a:current.shots_a,   b:current.shots_b,   unit:''},
+    {label:'On target',  a:current.sot_a,     b:current.sot_b,     unit:''},
+    {label:'xG',         a:current.xg_a,      b:current.xg_b,      unit:''},
+    {label:'Corners',    a:current.corners_a, b:current.corners_b, unit:''},
+    {label:'Yellows',    a:current.yellow_a,  b:current.yellow_b,  unit:'',icon:'yellow'},
+    {label:'Reds',       a:current.red_a,     b:current.red_b,     unit:'',icon:'red'},
+  ].filter(st=>st.a!==''&&st.a!==undefined&&st.a!==null);
+
+  const ROW_H=95,sY=BT+16,GAP=9,mX=W/2;
+  const barX=W*0.06,barW=W*0.88;
+
+  // pick black or white for max contrast against a hex bg
+  function contrastText(hex){
+    const n=parseInt((hex||'#888').replace('#',''),16);
+    const r=(n>>16)&255,g=(n>>8)&255,b=n&255;
+    const lum=(0.299*r+0.587*g+0.114*b)/255;
+    return lum>0.55?'#111114':'#ffffff';
+  }
+
+  stats.forEach((st,i)=>{
+    const y=sY+i*(ROW_H+GAP);
+    const aNum=parseFloat(st.a)||0,bNum=parseFloat(st.b)||0;
+    const aWin=aNum>bNum,bWin=bNum>aNum;
+    const total=aNum+bNum;
+
+    if(st.icon==='yellow'||st.icon==='red'){
+      // card rows: neutral bg, card icon centred, values flanking
+      ctx.fillStyle='rgba(255,255,255,0.08)'; roundRect(barX,y,barW,ROW_H,10); ctx.fill();
+      if(st.icon==='yellow'){ ctx.save(); drawYellowCard(mX,y+ROW_H/2,30); ctx.restore(); }
+      else { ctx.save(); drawRedCard(mX,y+ROW_H/2,30); ctx.restore(); }
+      ctx.font='800 58px Barlow Semi Condensed'; ctx.textBaseline='middle';
+      ctx.textAlign='right'; ctx.fillStyle=aWin?colA:'rgba(180,185,200,0.55)'; ctx.fillText(st.a,barX+barW*0.42,y+ROW_H/2);
+      ctx.textAlign='left';  ctx.fillStyle=bWin?colB:'rgba(180,185,200,0.55)'; ctx.fillText(st.b,barX+barW*0.58,y+ROW_H/2);
+      return;
+    }
+
+    // solid split bar: A side left, B side right, proportional
+    const frac = total>0 ? aNum/total : 0.5;
+
+    // dark base so neither side looks washed out
+    ctx.fillStyle='rgba(10,10,18,0.85)'; roundRect(barX,y,barW,ROW_H,10); ctx.fill();
+
+    // winner gets full solid team colour; loser gets a dim 25% tint
+    ctx.save();
+    ctx.beginPath(); roundRect(barX,y,barW,ROW_H,10); ctx.clip();
+    ctx.fillStyle=aWin ? colA : hexA(colA,0.25); ctx.fillRect(barX,y,barW*frac,ROW_H);
+    ctx.fillStyle=bWin ? colB : hexA(colB,0.25); ctx.fillRect(barX+barW*frac,y,barW*(1-frac),ROW_H);
+    ctx.restore();
+
+    // divider
+    ctx.strokeStyle='rgba(0,0,0,0.40)'; ctx.lineWidth=2;
+    ctx.beginPath(); ctx.moveTo(barX+barW*frac,y+8); ctx.lineTo(barX+barW*frac,y+ROW_H-8); ctx.stroke();
+
+    // label — centred, always bright white
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.font='600 30px Barlow Semi Condensed'; ctx.fillStyle='rgba(255,255,255,0.95)';
+    ctx.fillText(st.label,mX,y+ROW_H/2);
+
+    // values — winner white, loser dimmed; always readable against dark base
+    const aValX=barX+barW*frac*0.5;
+    const bValX=barX+barW*frac+barW*(1-frac)*0.5;
+    ctx.font='800 58px Barlow Semi Condensed'; ctx.textBaseline='middle'; ctx.textAlign='center';
+    ctx.fillStyle=aWin?'#ffffff':'rgba(255,255,255,0.45)';
+    ctx.fillText(st.a+(st.unit||''),aValX,y+ROW_H/2);
+    ctx.fillStyle=bWin?'#ffffff':'rgba(255,255,255,0.45)';
+    ctx.fillText(st.b+(st.unit||''),bValX,y+ROW_H/2);
+  });
+  ctx.restore();
+}
+
+// ── S3: POTM + HEADLINE ───────────────────────────────────────────────────────
+function phasePOTM(t,s,e){
+  if(!current) return;
+  const p=easeOut(ease(t,s,s+0.10));
+  const BT=window._bands.STAD_BOT+32;
+  ctx.save(); ctx.globalAlpha=p;
+  ctx.textAlign='center'; ctx.textBaseline='top';
+
+  ctx.font='700 36px Barlow Semi Condensed'; ctx.fillStyle='rgba(255,210,74,0.75)';
+  ctx.fillText('PLAYER OF THE MATCH',W/2,BT);
+
+  const cx=W/2,cy=BT+196,R=150;
+  ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2);
+  ctx.fillStyle='rgba(255,255,255,0.06)'; ctx.fill();
+  if(assets.potm){
+    ctx.save(); ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.clip();
+    coverCircle(assets.potm,cx,cy,R); ctx.restore();
+  } else {
+    ctx.save(); ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.clip();
+    ctx.fillStyle='rgba(255,210,74,0.08)'; ctx.fill();
+    ctx.font='150px Barlow Semi Condensed'; ctx.textBaseline='middle'; ctx.fillStyle='rgba(255,210,74,0.25)';
+    ctx.fillText('★',cx,cy+4); ctx.restore();
+  }
+  ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2);
+  ctx.strokeStyle='rgba(255,210,74,0.6)'; ctx.lineWidth=5; ctx.stroke();
+
+  const nY=BT+380;
+  ctx.font='900 68px Barlow Semi Condensed'; ctx.fillStyle='#ffffff';
+  ctx.fillText(current.potm_name||'—',W/2,nY);
+  ctx.font='600 40px Barlow Semi Condensed'; ctx.fillStyle='rgba(255,210,74,0.85)';
+  ctx.fillText(current.potm_team||'',W/2,nY+72);
+
+  const pills=[
+    current.potm_goals  ?`⚽ ${current.potm_goals} goal${+current.potm_goals>1?'s':''}`:null,
+    current.potm_assists?`🎯 ${current.potm_assists} assist${+current.potm_assists>1?'s':''}`:null,
+    current.potm_rating ?`★ ${current.potm_rating}`:null,
+  ].filter(Boolean);
+  const pY=nY+132,pH=56,pGap=14;
+  ctx.font='600 32px Barlow Semi Condensed';
+  const pWs=pills.map(s=>ctx.measureText(s).width+40);
+  const totW=pWs.reduce((a,b)=>a+b,0)+pGap*(pills.length-1);
+  let px=W/2-totW/2;
+  pills.forEach((st,i)=>{
+    const pw=pWs[i];
+    roundRect(px,pY,pw,pH,pH/2); ctx.fillStyle='rgba(255,210,74,0.15)'; ctx.fill();
+    ctx.strokeStyle='rgba(255,210,74,0.4)'; ctx.lineWidth=2; ctx.stroke();
+    ctx.textAlign='left'; ctx.textBaseline='middle'; ctx.fillStyle='#c9cede';
+    ctx.fillText(st,px+20,pY+pH/2); px+=pw+pGap;
+  });
+
+  if(current.headline){
+    const cTop=pY+pH+28;
+    ctx.strokeStyle='rgba(255,210,74,0.25)'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(W*0.1,cTop); ctx.lineTo(W*0.9,cTop); ctx.stroke();
+    const hlLines=wrapCtx(current.headline,W*0.84,'800',50,2);
+    ctx.textAlign='center'; ctx.textBaseline='top';
+    ctx.font='800 50px Barlow Semi Condensed'; ctx.fillStyle='#ffffff';
+    let hy=cTop+14; hlLines.forEach(ln=>{ctx.fillText(ln,W/2,hy);hy+=56;});
+    if(current.comment){
+      const cmLines=wrapCtx(current.comment,W*0.82,'300 italic',34,4);
+      ctx.font='300 italic 34px Barlow Semi Condensed'; ctx.fillStyle='rgba(205,210,224,0.78)';
+      let cy2=hy+8; cmLines.forEach(ln=>{ctx.fillText(ln,W/2,cy2);cy2+=40;});
+    }
+  }
+  ctx.restore();
+}
+
+// ── S4: GROUP TABLE ───────────────────────────────────────────────────────────
+function phaseTable(t,s,e){
+  if(!current) return;
+  const p=easeOut(ease(t,s,s+0.10));
+  const BT=window._bands.STAD_BOT+32;
+  ctx.save(); ctx.globalAlpha=p;
+  ctx.textAlign='center'; ctx.textBaseline='top';
+  ctx.font='700 38px Barlow Semi Condensed'; ctx.fillStyle='rgba(255,210,74,0.75)';
+  ctx.fillText(current.group?`GROUP ${current.group} STANDINGS`:'STANDINGS',W/2,BT);
+
+  const teams=[];
+  for(let i=1;i<=4;i++){
+    const nm=current[`table_${i}_name`]; if(!nm) continue;
+    teams.push({pos:i,name:nm,pld:current[`table_${i}_pld`]||'0',pts:current[`table_${i}_pts`]||'0',
+      gd:current[`table_${i}_gd`]||'0',gf:current[`table_${i}_gf`]||'0',
+      hi:nm===current.team_a||nm===current.team_b});
+  }
+
+  const COL_X=[W*0.06,W*0.14,W*0.60,W*0.68,W*0.76,W*0.88];
+  const ALIGN=['center','left','center','center','center','center'];
+  const ROW_H=100,sY=BT+62,GAP=8;
+
+  ctx.font='300 34px Barlow Semi Condensed'; ctx.fillStyle='rgba(207,214,228,0.45)';
+  ['#','Team','Pld','GD','GF','Pts'].forEach((h,i)=>{ctx.textAlign=ALIGN[i];ctx.fillText(h,COL_X[i],sY);});
+
+  teams.forEach((tm,i)=>{
+    const y=sY+50+i*(ROW_H+GAP);
+    const tmCol=teamColor(tm.name,'#c9cede');
+    roundRect(W*0.04,y,W*0.92,ROW_H,10);
+    ctx.fillStyle=tm.hi?hexA(tmCol,0.20):'rgba(255,255,255,0.08)'; ctx.fill();
+    if(tm.hi){ctx.strokeStyle=hexA(tmCol,0.45);ctx.lineWidth=2;ctx.stroke();}
+    [tm.pos,tm.name,tm.pld,tm.gd,tm.gf,tm.pts].forEach((v,j)=>{
+      ctx.textAlign=ALIGN[j]; ctx.textBaseline='middle';
+      if(j===5){ctx.font='800 64px Barlow Semi Condensed';ctx.fillStyle=tm.hi?tmCol:'#ffffff';}
+      else if(j===1){ctx.font='700 50px Barlow Semi Condensed';ctx.fillStyle=tm.hi?tmCol:'#c9cede';}
+      else{ctx.font='400 46px Barlow Semi Condensed';ctx.fillStyle='rgba(207,214,228,0.70)';}
+      ctx.fillText(v,COL_X[j],y+ROW_H/2);
+    });
+  });
+  ctx.restore();
+}
+
+// ── FOOTER ────────────────────────────────────────────────────────────────────
+function drawFooter(t){
+  const targetW=W*0.60,y2=H-56,y1=y2-58;
+  const pulse=0.85+0.15*Math.sin(t*Math.PI*8);
+  const blockTop=y1-30,blockBot=y2+8,blockH=blockBot-blockTop;
+  const crown=assets.crownSimple;
+  if(crown){
+    const cs=blockH;
+    const textLeft=W/2-targetW/2,textRight=W/2+targetW/2;
+    const leftCx=(0+textLeft)/2,rightCx=(textRight+W)/2;
+    ctx.save(); ctx.globalAlpha=0.50;
+    ctx.drawImage(crown,leftCx-cs/2,blockTop,cs,cs);
+    ctx.drawImage(crown,rightCx-cs/2,blockTop,cs,cs);
+    ctx.restore();
+  }
+  ctx.save(); ctx.globalAlpha=pulse;
+  drawSpacedToWidth('WORLD CUP 2026',y1,targetW,'rgba(255,210,74,0.92)');
+  ctx.restore();
+  drawSpacedToWidth('BESTMOSTLAST.COM',y2,targetW,'rgba(207,214,228,0.55)');
+}
+
+draw(0.08);
+</script>
+</body>
+</html>

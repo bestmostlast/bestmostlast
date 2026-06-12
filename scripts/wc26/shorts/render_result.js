@@ -14,7 +14,7 @@ const NO_MUSIC  = process.argv.includes('--no-music');
 const SKIP_DONE = process.argv.includes('--resume');
 const ONLY      = process.argv.find(a => a.startsWith('m0') || /^\d+$/.test(a));
 
-const FPS        = 30, SECS = 35;
+const FPS        = 30, SECS = 39;
 const HERE       = __dirname;
 const CSV        = path.join(HERE, '..', 'data', 'results.csv');
 const MUSIC_DIR  = path.join(HERE, '_shared', 'music');
