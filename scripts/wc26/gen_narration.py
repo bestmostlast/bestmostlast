@@ -117,39 +117,60 @@ Respond ONLY in this exact JSON:
 
 def build_pre_sentences(slug):
     parts = slug.split('-vs-')
-    if len(parts) == 2:
-        team_a = parts[0].split('-', 1)[1].replace('-', ' ').title()
-        team_b = parts[1].replace('-', ' ').title()
+    team_a = parts[0].split('-', 1)[1].replace('-', ' ').title() if len(parts) == 2 else 'Team A'
+    team_b = parts[1].replace('-', ' ').title() if len(parts) == 2 else 'Team B'
 
-        prompt = f"""You write spoken narration for 25-second YouTube Shorts previewing football matches.
+    # Pull H2H data from CSV to give DeepSeek real numbers
+    h2h_context = ''
+    try:
+        import csv as _csv
+        h2h_file = HERE / 'data' / 'h2h_short.csv'
+        if h2h_file.exists():
+            for r in _csv.DictReader(open(h2h_file)):
+                if r.get('slug', '') == slug:
+                    h2h_context = (
+                        f"WC appearances: {team_a} {r.get('wc_a','')}x, {team_b} {r.get('wc_b','')}x. "
+                        f"H2H: played {r.get('h2h_played','?')}, {team_a} won {r.get('h2h_w_a','?')}, "
+                        f"{team_b} won {r.get('h2h_w_b','?')}, drawn {r.get('h2h_d','?')}. "
+                        f"Top scorer {team_a}: {r.get('top_scorer_a','')}. Top scorer {team_b}: {r.get('top_scorer_b','')}. "
+                        f"Player to watch {team_a}: {r.get('watch_a','')}. Player to watch {team_b}: {r.get('watch_b','')}."
+                    )
+                    break
+    except Exception:
+        pass
 
-Write EXACTLY 6 sentences previewing {team_a} versus {team_b} at World Cup 2026:
-1. Tournament context — group stage, World Cup 2026
-2. The fixture — who plays who and why it matters
-3. {team_a}'s key strength or danger man to watch
-4. {team_b}'s key strength or danger man to watch
-5. A head-to-head fact or historical note between these two nations
-6. A punchy prediction or hype line to close
+    prompt = f"""You write spoken narration for a 35-second YouTube Short previewing a World Cup match.
+The video shows 5 screens in order. Write ONE sentence per screen that matches what viewers see.
+
+Match: {team_a} vs {team_b} | World Cup 2026
+{h2h_context}
+
+Write EXACTLY 5 sentences, one per screen:
+S1 (World Cup records): Introduce both nations — World Cup history and pedigree in one sentence.
+S2 (Head-to-head stats): Describe the H2H record — wins, draws, and one standout H2H fact.
+S3 (Key players): Name the most dangerous historical and current players for each side.
+S4 (Storyline): Build the narrative — what is at stake, the tactical battle, any rivalry angle.
+S5 (Lineups): Close with a lineup intro — "here are the expected starting elevens" or similar.
 
 Rules:
-- Natural spoken English, 10–18 words per sentence
-- No jargon, no stats abbreviations
+- 12–20 words per sentence to fill each screen's display time
+- Natural spoken English, commentator tone, no jargon
 - No sentence starts with "And"
+- S5 must end with "here are the expected starting elevens" or "let's see the lineups"
 
 Respond ONLY in this exact JSON:
-{{"sentences": ["s1","s2","s3","s4","s5","s6"]}}"""
+{{"sentences": ["s1","s2","s3","s4","s5"]}}"""
 
-        sentences = deepseek_sentences(prompt)
-        if sentences and len(sentences) >= 4:
-            return sentences
+    sentences = deepseek_sentences(prompt)
+    if sentences and len(sentences) >= 4:
+        return sentences
 
     return [
-        "World Cup 2026 group stage action is here.",
-        f"{team_a if len(parts)==2 else 'The home side'} bring quality and momentum into this fixture.",
-        "Their opponents will be looking to cause an upset.",
-        "Head to head, these two nations have had some classic encounters.",
-        "Watch the midfield battle — that is where this game will be won.",
-        "Do not miss this one — it could define the group.",
+        f"World Cup 2026 — {team_a} and {team_b} meet in what promises to be a fierce group stage battle.",
+        f"Head to head, these nations have produced tight encounters with no side dominating.",
+        f"Watch the key men on both sides — pace, experience, and quality will be decisive.",
+        f"Both teams need points badly — this one could define who progresses from the group.",
+        "Here are the expected starting elevens for this World Cup clash.",
     ]
 
 async def _tts_sentence(text, out_path):
