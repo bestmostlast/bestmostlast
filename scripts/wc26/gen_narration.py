@@ -75,7 +75,8 @@ def build_post_sentences(row):
     except Exception:
         poss_b = ''
 
-    prompt = f"""You write spoken narration for 25-second YouTube Shorts about football matches.
+    prompt = f"""You write spoken narration for a 30-second YouTube Short showing a football match result.
+The video shows 4 screens after a splash. Write ONE sentence per screen matching what viewers see.
 
 Match data:
 - {team_a} {score_a}–{score_b} {team_b} | Group {group} | WC2026
@@ -83,37 +84,35 @@ Match data:
 - Shots: {shots_a}–{shots_b} | Possession: {poss_a}%–{poss_b}%
 - Cards: {team_a} Y{yellow_a} R{red_a} | {team_b} Y{yellow_b} R{red_b}
 
-Write EXACTLY 6 sentences for a sports broadcaster to read aloud:
-1. Competition context — group, tournament name
-2. The final result — announce it naturally like a commentator
-3. First goal — scorer full name, minute, any drama
-4. Second goal or key moment — if no second goal, describe the best chance or turning point
-5. Stats — shots and possession as a punchy one-liner
-6. Editorial close — what this result means for the group standings
+Write EXACTLY 4 sentences, one per screen:
+S1 (Result screen — score and scorers): Announce the result and name every scorer with their minute naturally.
+S2 (Stats screen — shots, possession, cards): Describe who dominated the stats — shots on goal, possession, any cards drama.
+S3 (Man of the match / headline screen): Deliver the headline and name the standout player — why they were decisive.
+S4 (Group standings screen): What does this result mean for the group — who goes top, who is in trouble.
 
 Rules:
-- Natural spoken English only — no abbreviations, no slash notation
-- Say "scored in the 67th minute" not "67'"
-- Each sentence 10–18 words — long enough to fill time but punchy
-- No sentence should start with "And"
+- Natural spoken English, commentator tone, 12–18 words per sentence
+- Say "scored in the 67th minute" not "67'" — never raw notation
+- No sentence starts with "And"
 
 Respond ONLY in this exact JSON:
-{{"sentences": ["s1","s2","s3","s4","s5","s6"]}}"""
+{{"sentences": ["s1","s2","s3","s4"]}}"""
 
     sentences = deepseek_sentences(prompt)
     if sentences and len(sentences) >= 4:
         return sentences
 
-    # fallback
+    # fallback — one sentence per screen
     winner = team_a if int(score_a) > int(score_b) else (team_b if int(score_b) > int(score_a) else None)
-    return [s for s in [
-        f"Group {group}, World Cup 2026.",
-        f"{team_a} {score_a}, {team_b} {score_b} — full time.",
-        f"Goals from {scorers_a.replace('/',' and ')}." if scorers_a else f"{team_a} were clinical in front of goal.",
-        f"{scorers_b.replace('/',' and ')} replied for {team_b}." if scorers_b else f"{team_b} struggled to create clear chances.",
-        f"{shots_a} shots to {shots_b}, with {team_a} controlling {poss_a} percent of possession." if shots_a else "The stats told the story of the match.",
-        f"{winner} take three points and move to the top of Group {group}." if winner else f"A point each — honours even in Group {group}.",
-    ] if s]
+    scorers_text = f"{scorers_a.replace('/', ' and ')} for {team_a}" if scorers_a else f"{team_a} were clinical"
+    if scorers_b:
+        scorers_text += f", {scorers_b.replace('/', ' and ')} for {team_b}"
+    return [
+        f"{team_a} beat {team_b} {score_a} nil at the 2026 World Cup — {scorers_text}." if score_b == '0' else f"Full time in Group {group} — {team_a} {score_a}, {team_b} {score_b}, with {scorers_text}.",
+        f"{team_a} dominated the stats with {shots_a} shots to {shots_b} and {poss_a} percent possession." if shots_a else f"The stats reflected {team_a}'s control throughout the ninety minutes.",
+        f"A commanding performance from {team_a} — their key man was the difference on the night.",
+        f"{winner} move to the top of Group {group} with three points from their opening fixture." if winner else f"Honours even in Group {group} — both sides share the spoils.",
+    ]
 
 def build_pre_sentences(slug):
     parts = slug.split('-vs-')
